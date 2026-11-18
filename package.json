@@ -1,0 +1,23 @@
+{
+  "name": "seusite",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Plataforma de criação e hospedagem automatizada de sites com IA para negócios locais e profissionais autônomos",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "engine:generate": "node apps/engine/index.js",
+    "preview": "npx serve sites-output/dra-brenda-santos -l 3000"
+  },
+  "keywords": [
+    "landing-page-generator",
+    "ai",
+    "local-business",
+    "dentistas",
+    "estetica"
+  ],
+  "author": "Peter Silva",
+  "license": "UNLICENSED"
+}

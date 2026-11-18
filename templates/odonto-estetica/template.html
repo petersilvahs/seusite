@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <meta name="keywords" content="{{meta.keywords}}">
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{meta.title}}">
+  <meta property="og:description" content="{{meta.description}}">
+  <meta property="og:image" content="{{profile.heroImage}}">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Ícones Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              dark: 'var(--brand-dark)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              main: 'var(--brand-main)',
+              muted: 'var(--brand-muted)',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: {{theme.primary}};
+      --brand-dark: {{theme.primaryDark}};
+      --brand-secondary: {{theme.secondary}};
+      --brand-accent: {{theme.accent}};
+      --brand-main: {{theme.textMain}};
+      --brand-muted: {{theme.textMuted}};
+    }
+    body {
+      color: var(--brand-main);
+      background-color: #FAF8F5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-rose-200 selection:text-rose-900">
+
+  <!-- Top bar informativa -->
+  <div class="bg-brand-dark text-white text-xs py-2 px-4 text-center tracking-wide font-medium flex items-center justify-center gap-2">
+    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose-200"></i>
+    <span>Atendimentos na Vila da Penha - RJ | Avaliações com Horário Marcado</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-rose-100 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-stone-900">{{profile.name}}</span>
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-semibold">{{profile.tagline}}</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <a href="#procedimentos" class="hover:text-brand-primary transition">Procedimentos</a>
+        <a href="#sobre" class="hover:text-brand-primary transition">Sobre a Dra.</a>
+        <a href="#depoimentos" class="hover:text-brand-primary transition">Resultados</a>
+        <a href="#faq" class="hover:text-brand-primary transition">Dúvidas</a>
+        <a href="#localizacao" class="hover:text-brand-primary transition">Localização</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-rose-200/50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Agendar Consulta</span>
+          <span class="sm:hidden">Agendar</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:py-24 overflow-hidden bg-gradient-to-b from-rose-50/60 via-white to-transparent">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Conteúdo do Hero -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-rose-200/80 text-brand-dark text-xs font-semibold shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>{{profile.cro}} • Harmonização & Estética Dental</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-[1.15] tracking-tight">
+            Realce sua beleza natural com <span class="italic font-normal text-brand-primary">harmonia</span> e precisão.
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            {{profile.bioShort}}
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-primary hover:bg-brand-dark text-white px-8 py-4 rounded-full font-semibold text-base shadow-xl shadow-rose-300/40 hover:shadow-2xl transition duration-300 transform hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-300"></i>
+              <span>Falar no WhatsApp</span>
+            </a>
+
+            <a href="#procedimentos" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-rose-50 text-stone-700 border border-stone-200 px-6 py-4 rounded-full font-medium text-base transition duration-300">
+              <span>Ver Procedimentos</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-stone-400"></i>
+            </a>
+          </div>
+
+          <!-- Mini Prova Social -->
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-6 border-t border-rose-100 text-xs text-stone-500">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-primary"></i>
+              <span>Vila da Penha - RJ</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-brand-primary"></i>
+              <span>Materiais com ANVISA</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+              <span>5.0 no Google</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto da Profissional / Consultório -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Glow de fundo -->
+            <div class="absolute -top-6 -left-6 w-72 h-72 bg-rose-200/60 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-amber-100/60 rounded-full blur-3xl -z-10"></div>
+            
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-stone-100">
+              <img src="{{profile.heroImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="font-serif text-xl font-bold">{{profile.name}}</p>
+                <p class="text-xs text-rose-200 font-medium">{{profile.specialty}}</p>
+              </div>
+            </div>
+
+            <!-- Card flutuante de autoridade -->
+            <div class="absolute -bottom-6 -left-4 sm:left-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-rose-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-rose-100 text-brand-primary flex items-center justify-center font-bold">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-stone-900">Atendimento Premium</p>
+                <p class="text-[11px] text-stone-500">Totalmente exclusivo & individualizado</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas Rápidas -->
+  <section class="py-8 bg-white border-y border-rose-100">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      {{#stats}}
+      <div class="p-3">
+        <p class="font-serif text-3xl font-bold text-brand-primary">{{value}}</p>
+        <p class="text-xs font-medium text-stone-600 mt-1 uppercase tracking-wider">{{label}}</p>
+      </div>
+      {{/stats}}
+    </div>
+  </section>
+
+  <!-- Procedimentos em Destaque -->
+  <section id="procedimentos" class="py-20 bg-[#FAF8F5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Tratamentos Especializados</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+          Procedimentos que transformam com delicadeza e equilíbrio
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base">
+          Tecnologias avançadas e planejamento minucioso para valorizar o melhor do seu rosto e sorriso.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{#services}}
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-rose-100/70 flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent"></div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">{{title}}</h3>
+              <p class="text-stone-600 text-sm leading-relaxed">{{shortDescription}}</p>
+            </div>
+
+            <div class="space-y-3 pt-3 border-t border-rose-50">
+              <ul class="text-xs text-stone-500 space-y-1.5">
+                {{#highlights}}
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary flex-shrink-0"></i>
+                  <span>{{.}}</span>
+                </li>
+                {{/highlights}}
+              </ul>
+
+              <a href="{{contact.whatsappUrl}}&text=Olá Dra. Brenda! Gostaria de saber mais sobre {{title}}." target="_blank" 
+                 class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold bg-rose-50 text-brand-dark hover:bg-brand-primary hover:text-white transition duration-200">
+                <span>Quero saber mais</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        {{/services}}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="{{contact.whatsappUrl}}" target="_blank" 
+           class="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark hover:text-brand-primary underline underline-offset-4">
+          <span>Não sabe qual procedimento é o ideal para você? Faça uma avaliação personalizada</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sobre a Dra. Brenda -->
+  <section id="sobre" class="py-20 bg-white border-t border-rose-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 relative order-2 lg:order-1">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[3/4]">
+            <img src="{{profile.aboutImage}}" alt="Consultório Dra. Brenda Silva Santos" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -top-4 -right-4 bg-brand-primary text-white py-3 px-5 rounded-2xl shadow-lg text-center">
+            <span class="block text-xl font-bold font-serif">Ética</span>
+            <span class="text-[10px] uppercase tracking-widest font-semibold">& Segurança</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Quem vai cuidar de você</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 leading-tight">
+            {{profile.name}}
+          </h2>
+          <p class="text-sm font-semibold text-brand-dark uppercase tracking-wider">
+            {{profile.specialty}} | {{profile.cro}}
+          </p>
+          <div class="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              A beleza mais bonita é aquela que parece ter nascido com você. Acredito na harmonização orofacial e na odontologia estética como instrumentos para resgatar a autoestima de maneira elegante, discreta e sem exageros.
+            </p>
+            <p>
+              Com formação sólida e constantes atualizações nas mais recentes técnicas de anatomia facial, preenchimentos, toxina botulínica e odontologia restauradora, cada plano de tratamento no meu consultório na Vila da Penha é único e feito sob medida para suas proporções e desejos.
+            </p>
+          </div>
+
+          <!-- Diferenciais em pills -->
+          <div class="space-y-3 pt-2">
+            {{#differentials}}
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-100">
+              <h4 class="font-semibold text-stone-900 text-sm flex items-center gap-2">
+                <i data-lucide="sparkle" class="w-4 h-4 text-brand-primary"></i>
+                {{title}}
+              </h4>
+              <p class="text-xs text-stone-600 mt-1 pl-6">{{description}}</p>
+            </div>
+            {{/differentials}}
+          </div>
+
+          <div class="pt-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" 
+               class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-7 py-3.5 rounded-full text-sm font-semibold transition">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Agendar Minha Consulta com a Dra. Brenda</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos de Pacientes -->
+  <section id="depoimentos" class="py-20 bg-[#FAF8F5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Experiências Reais</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+          O carinho e a confiança de quem já transformou o sorriso
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {{#testimonials}}
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-rose-100 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-stone-700 text-sm leading-relaxed italic">
+              "{{comment}}"
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-rose-100">
+            <p class="font-serif font-bold text-stone-900 text-base">{{author}}</p>
+            <p class="text-xs text-brand-primary font-medium">{{role}}</p>
+          </div>
+        </div>
+        {{/testimonials}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ / Perguntas Frequentes -->
+  <section id="faq" class="py-20 bg-white border-t border-rose-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-14 space-y-2">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Tire Suas Dúvidas</span>
+        <h2 class="font-serif text-3xl font-bold text-stone-900">Perguntas Frequentes</h2>
+        <p class="text-stone-600 text-sm">Respostas claras para você se sentir 100% segura(o).</p>
+      </div>
+
+      <div class="space-y-4">
+        {{#faq}}
+        <details class="group bg-stone-50 rounded-2xl p-5 border border-stone-200/80 transition-all duration-200 open:bg-rose-50/40 open:border-rose-200">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-stone-900 text-sm sm:text-base">
+            <span>{{question}}</span>
+            <span class="text-brand-primary transition-transform duration-300 group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-rose-100/60">
+            {{answer}}
+          </p>
+        </details>
+        {{/faq}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Localização e Contato -->
+  <section id="localizacao" class="py-20 bg-[#FAF8F5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-rose-100 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Onde Estamos</span>
+          <h2 class="font-serif text-3xl font-bold text-stone-900">
+            Visite nosso consultório na Vila da Penha
+          </h2>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Ambiente climatizado, aconchegante e preparado com os mais altos padrões de higiene e biossegurança para que sua experiência seja leve e acolhedora.
+          </p>
+
+          <div class="space-y-4 text-sm text-stone-700">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-stone-900">{{contact.address}}</p>
+                <p class="text-xs text-stone-500">Próximo aos principais acessos do bairro</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-stone-900">Horário de Funcionamento</p>
+                <p class="text-xs text-stone-500">{{contact.workingHours}}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-stone-900">WhatsApp / Agendamento</p>
+                <p class="text-xs text-stone-500">{{contact.whatsappFormatted}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="{{contact.whatsappUrl}}" target="_blank" 
+               class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-full text-sm font-semibold shadow-lg shadow-emerald-500/20 transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Agendar Agora pelo WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card Visual de Localização / Rota -->
+        <div class="bg-rose-50/70 p-6 sm:p-8 rounded-3xl border border-rose-200/60 text-center space-y-4">
+          <div class="w-16 h-16 mx-auto rounded-full bg-white shadow-md flex items-center justify-center text-brand-primary">
+            <i data-lucide="navigation" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-900">Fácil Acesso na Vila da Penha</h3>
+          <p class="text-xs text-stone-600 max-w-sm mx-auto">
+            Consulte rotas diretamente pelo Google Maps ou Waze para chegar com tranquilidade no dia da sua consulta.
+          </p>
+          <a href="{{contact.googleMapsUrl}}" target="_blank" rel="noopener noreferrer" 
+             class="inline-flex items-center gap-2 bg-white hover:bg-stone-50 text-stone-900 border border-stone-200 px-5 py-2.5 rounded-full text-xs font-semibold shadow-sm transition">
+            <i data-lucide="map" class="w-4 h-4 text-brand-primary"></i>
+            <span>Abrir no Google Maps</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-stone-900 text-stone-300 py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div>
+          <p class="font-serif text-lg font-bold text-white">{{profile.name}}</p>
+          <p class="text-xs text-rose-300 mt-1">{{profile.cro}} • {{profile.tagline}}</p>
+          <p class="text-xs text-stone-400 mt-1">{{contact.address}}</p>
+        </div>
+
+        <div class="text-xs text-stone-400 text-center md:text-right space-y-1">
+          <p>© 2026 {{profile.name}}. Todos os direitos reservados.</p>
+          <p class="text-[11px] text-stone-500">As imagens de procedimentos são de caráter ilustrativo, de acordo com o código de ética odontológica (CFO/CRO).</p>
+          <p class="text-[11px] text-stone-400 pt-2">
+            Desenvolvido por <a href="https://github.com/petersilvahs/seusite" class="text-rose-300 hover:underline">SeuSite</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <span class="hidden sm:inline-block bg-white text-stone-800 text-xs font-bold py-1.5 px-3 rounded-full shadow-lg border border-rose-100 animate-pulse-subtle">
+      Agende pelo WhatsApp
+    </span>
+    <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+       class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 relative group"
+       aria-label="Falar com Dra. Brenda no WhatsApp">
+      <i data-lucide="message-circle" class="w-8 h-8 fill-white/20"></i>
+      <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-rose-500 border-2 border-white rounded-full"></span>
+    </a>
+  </div>
+
+  <script>
+    // Inicializa os ícones do Lucide
+    lucide.createIcons();
+  </script>
+</body>
+</html>

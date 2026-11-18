@@ -1,0 +1,13 @@
+# Dependências
+node_modules/
+.npm/
+
+# Builds e outputs locais (os sites gerados podem ser gerados sob demanda ou versionados se desejar)
+.DS_Store
+*.log
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/

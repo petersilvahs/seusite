@@ -1,0 +1,173 @@
+{
+  "id": "dra-brenda-santos",
+  "template": "odonto-estetica",
+  "meta": {
+    "title": "Dra. Brenda Silva Santos | Odontologia & Harmonização Facial na Vila da Penha - RJ",
+    "description": "Consultório odontológico especializado em Harmonização Facial, Botox, Clareamento Dental e Estética do Sorriso na Vila da Penha, Rio de Janeiro. CRO-RJ 56732.",
+    "keywords": "dentista vila da penha, harmonizacao facial rj, botox rj, clareamento dental vila da penha, dra brenda santos"
+  },
+  "profile": {
+    "name": "Dra. Brenda Silva Santos",
+    "tagline": "Odontologia & Harmonização Facial",
+    "cro": "CRO-RJ 56732",
+    "specialty": "Cirurgiã-Dentista & Especialista em Estética Orofacial",
+    "bioShort": "Combinando ciência, precisão e arte para valorizar a sua melhor versão com naturalidade, delicadeza e segurança.",
+    "heroImage": "https://images.unsplash.com/photo-1594824813511-10c598c48405?auto=format&fit=crop&w=800&q=80",
+    "aboutImage": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+  },
+  "contact": {
+    "whatsapp": "21983461702",
+    "whatsappFormatted": "(21) 98346-1702",
+    "whatsappMessage": "Olá Dra. Brenda! Vim pelo site e gostaria de agendar uma consulta de avaliação.",
+    "address": "Vila da Penha, Rio de Janeiro - RJ",
+    "neighborhood": "Vila da Penha",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "googleMapsUrl": "https://maps.google.com/?q=Vila+da+Penha,+Rio+de+Janeiro+-+RJ",
+    "workingHours": "Segunda a Sexta: 09h às 19h | Sábados com agendamento prévio",
+    "whatsappClean": "5521983461702",
+    "whatsappUrl": "https://wa.me/5521983461702?text=Ol%C3%A1%20Dra.%20Brenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o."
+  },
+  "theme": {
+    "primary": "#C2847A",
+    "primaryDark": "#A8655B",
+    "secondary": "#FAF3F0",
+    "accent": "#E5B9B0",
+    "textMain": "#2B2625",
+    "textMuted": "#6B5E5B"
+  },
+  "stats": [
+    {
+      "value": "100%",
+      "label": "Planejamento Individualizado"
+    },
+    {
+      "value": "5.0 ★",
+      "label": "Avaliação dos Pacientes"
+    },
+    {
+      "value": "+Segurança",
+      "label": "Procedimentos Guiados e Éticos"
+    }
+  ],
+  "services": [
+    {
+      "id": "harmonizacao",
+      "title": "Harmonização Facial",
+      "shortDescription": "Equilíbrio, sustentação e realce dos traços faciais de forma sutil e natural, respeitando suas características únicas.",
+      "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Preenchimento labial refinado",
+        "Contorno mandibular e mento",
+        "Protocolo exclusivo personalizado"
+      ]
+    },
+    {
+      "id": "botox",
+      "title": "Toxina Botulínica (Botox)",
+      "shortDescription": "Prevenção e suavização de linhas de expressão dinâmicas na testa, glabela e olhos, mantendo sua expressividade natural.",
+      "image": "https://images.unsplash.com/photo-1512290900672-1f02bab996dd?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Efeito 'descansado' e jovial",
+        "Rápida aplicação e sem repouso",
+        "Duração média de 4 a 6 meses"
+      ]
+    },
+    {
+      "id": "clareamento",
+      "title": "Clareamento Dental a Laser",
+      "shortDescription": "Conquiste um sorriso brilhante e rejuvenescido com técnicas seguras de clareamento em consultório e caseiro supervisionado.",
+      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Sem agressão ao esmalte dental",
+        "Resultados visíveis na 1ª sessão",
+        "Protocolo para controle de sensibilidade"
+      ]
+    },
+    {
+      "id": "bioestimuladores",
+      "title": "Bioestimuladores de Colágeno",
+      "shortDescription": "Tratamento para firmeza cutânea que estimula a produção natural de colágeno pelo próprio corpo ao longo do tempo.",
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Melhora na elasticidade da pele",
+        "Tratamento da flacidez facial",
+        "Resultados progressivos e duradouros"
+      ]
+    },
+    {
+      "id": "lentes",
+      "title": "Estética do Sorriso & Resinas",
+      "shortDescription": "Correção de formato, cor, pequenos desalinhamentos e fechamento de diastemas com resinas compostas de alta performance.",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Mínimo desgaste dental",
+        "Harmonia imediata",
+        "Alta durabilidade e brilho natural"
+      ]
+    },
+    {
+      "id": "profilaxia",
+      "title": "Prevenção & Checkup Odontológico",
+      "shortDescription": "Limpeza profilática profunda, remoção de tártaro e manchas, garantindo a saúde periodontal e a base para qualquer procedimento.",
+      "image": "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Check-up minucioso",
+        "Aplicação de flúor protetor",
+        "Saúde gengival em dia"
+      ]
+    }
+  ],
+  "differentials": [
+    {
+      "title": "Naturalidade em Primeiro Lugar",
+      "description": "Procedimentos pensados para embelezar sem transformar. O objetivo é que as pessoas notem que você está mais radiante, sem saber exatamente o que fez."
+    },
+    {
+      "title": "Consulta Individualizada e Humanizada",
+      "description": "Tempo dedicado para ouvir suas expectativas, avaliar proporções faciais e odontológicas, e traçar um planejamento sob medida."
+    },
+    {
+      "title": "Biossegurança e Tecnologias de Ponta",
+      "description": "Utilização rigorosa dos melhores materiais certificados pela ANVISA, garantindo total conforto e previsibilidade nos resultados."
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Camila Oliveira",
+      "role": "Paciente de Harmonização Facial",
+      "comment": "Fiz meu preenchimento labial com a Dra. Brenda e fiquei apaixonada! Tinha muito medo de ficar artificial, mas ela entendeu perfeitamente o que eu queria. Super delicada na aplicação!",
+      "rating": 5
+    },
+    {
+      "author": "Juliana Guimarães",
+      "role": "Paciente de Clareamento & Botox",
+      "comment": "A Dra. Brenda é maravilhosa! O consultório na Vila da Penha é lindo e super aconchegante. Meu sorriso clareou muito e as ruguinhas da testa sumiram. Indico de olhos fechados!",
+      "rating": 5
+    },
+    {
+      "author": "Mariana Ribeiro",
+      "role": "Paciente de Odontologia Estética",
+      "comment": "Profissional extremamente atenciosa e detalhista. Tirou todas as minhas dúvidas com muita paciência. Finalmente sinto orgulho de sorrir nas fotos!",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "Os procedimentos como botox ou preenchimento doem?",
+      "answer": "Utilizamos anestésicos tópicos potentes e produtos que já contêm anestésico na própria fórmula, tornando a aplicação praticamente indolor e muito confortável para o paciente."
+    },
+    {
+      "question": "Quanto tempo dura o efeito da Toxina Botulínica (Botox)?",
+      "answer": "A duração média é de 4 a 6 meses, variando de acordo com o metabolismo de cada pessoa, rotina de atividades físicas e hábitos diários."
+    },
+    {
+      "question": "O clareamento dental causa sensibilidade?",
+      "answer": "Nosso protocolo conta com dessensibilizantes modernos aplicados antes e após o procedimento, minimizando ou eliminando qualquer desconforto durante o clareamento."
+    },
+    {
+      "question": "Como faço para agendar uma avaliação inicial?",
+      "answer": "Basta clicar em qualquer botão de WhatsApp deste site para falar diretamente com nosso atendimento e escolher o melhor dia e horário para sua consulta na Vila da Penha."
+    }
+  ]
+}
