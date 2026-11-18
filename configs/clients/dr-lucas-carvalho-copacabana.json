@@ -1,0 +1,139 @@
+{
+  "id": "dr-lucas-carvalho-copacabana",
+  "template": "odonto-estetica",
+  "meta": {
+    "title": "Dr. Lucas Carvalho | Implantes e Lentes de Contato em Copacabana",
+    "description": "Especialista em Implantes Guiados e Lentes de Contato Dental no Rio de Janeiro. Tecnologia de ponta, conforto absoluto e resultados naturais em Copacabana.",
+    "keywords": "dentista copacabana, implantes dentarios rj, lentes de contato dental rio de janeiro, dr lucas carvalho, clareamento dental copacabana"
+  },
+  "profile": {
+    "name": "Dr. Lucas Carvalho",
+    "tagline": "Excelência em Reabilitação Oral e Estética Avançada no Coração de Copacabana",
+    "cro": "CRO-RJ 48920",
+    "specialty": "Cirurgião-Dentista | Especialista em Implantes e Estética",
+    "bioShort": "Com foco em um atendimento de alta performance e sem dor, o Dr. Lucas Carvalho utiliza tecnologia digital para transformar sorrisos com precisão milimétrica. Referência em Copacabana para pacientes que buscam sofisticação e resultados naturais.",
+    "heroImage": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070",
+    "aboutImage": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2070"
+  },
+  "contact": {
+    "whatsapp": "21991234567",
+    "whatsappFormatted": "(21) 99123-4567",
+    "whatsappMessage": "Olá, Dr. Lucas. Gostaria de agendar uma avaliação para transformar meu sorriso em Copacabana.",
+    "address": "Av. Nossa Senhora de Copacabana, Copacabana, Rio de Janeiro - RJ",
+    "neighborhood": "Copacabana",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "googleMapsUrl": "https://maps.google.com/?q=Dr.+Lucas+Carvalho+Dentista+Copacabana+Rio+de+Janeiro",
+    "workingHours": "Segunda a Sexta: 09h às 19h"
+  },
+  "theme": {
+    "primary": "#1B263B",
+    "primaryDark": "#0D1B2A",
+    "secondary": "#FAF3F0",
+    "accent": "#C5A059",
+    "textMain": "#2B2625",
+    "textMuted": "#6B5E5B"
+  },
+  "stats": [
+    {
+      "value": "15+",
+      "label": "Anos de Experiência"
+    },
+    {
+      "value": "5.0 ★",
+      "label": "Avaliações no Google"
+    },
+    {
+      "value": "+3000",
+      "label": "Sorrisos Transformados"
+    }
+  ],
+  "services": [
+    {
+      "id": "implantes-guiados",
+      "title": "Implantes Guiados",
+      "shortDescription": "Recupere sua mastigação com cirurgias minimamente invasivas, sem cortes desnecessários e recuperação ultra rápida.",
+      "image": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800",
+      "highlights": [
+        "Sem cortes extensos",
+        "Precisão computadorizada",
+        "Pós-operatório confortável"
+      ]
+    },
+    {
+      "id": "lentes-de-contato",
+      "title": "Lentes de Contato Dental",
+      "shortDescription": "Transforme a cor e o formato do seu sorriso com lâminas de porcelana ou resina de altíssima resistência e naturalidade.",
+      "image": "https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&q=80&w=800",
+      "highlights": [
+        "Resistência superior",
+        "Mínimo desgaste dental",
+        "Sorriso de celebridade"
+      ]
+    },
+    {
+      "id": "clareamento-laser",
+      "title": "Clareamento a Laser",
+      "shortDescription": "Dentes visivelmente mais brancos em poucas sessões, com protocolos que minimizam a sensibilidade.",
+      "image": "https://images.unsplash.com/photo-1593059025398-0f5807fa7690?auto=format&fit=crop&q=80&w=800",
+      "highlights": [
+        "Efeito imediato",
+        "Tecnologia de ponta",
+        "Seguro para o esmalte"
+      ]
+    },
+    {
+      "id": "proteses-dentarias",
+      "title": "Próteses Dentárias",
+      "shortDescription": "Reabilitação oral completa com foco em conforto, estética e funcionalidade para você voltar a sorrir com confiança.",
+      "image": "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=800",
+      "highlights": [
+        "Ajuste perfeito",
+        "Aspecto natural",
+        "Durabilidade garantida"
+      ]
+    }
+  ],
+  "differentials": [
+    {
+      "title": "Protocolo Sem Dor",
+      "description": "Utilizamos técnicas anestésicas modernas e procedimentos minimamente invasivos para garantir seu total conforto."
+    },
+    {
+      "title": "Planejamento Digital 3D",
+      "description": "Veja o resultado final do seu tratamento antes mesmo de começar através de simulações digitais avançadas."
+    },
+    {
+      "title": "Localização VIP",
+      "description": "Consultório moderno e discreto no coração de Copacabana, preparado para atender aos pacientes mais exigentes."
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Ricardo Menezes",
+      "role": "Paciente de Implantes",
+      "comment": "O Dr. Lucas é extremamente atencioso. Fiz o implante guiado e a recuperação foi surpreendente, não senti absolutamente nada.",
+      "rating": 5
+    },
+    {
+      "author": "Beatriz Soares",
+      "role": "Paciente de Lentes de Porcelana",
+      "comment": "Minha autoestima mudou completamente. As lentes ficaram tão naturais que ninguém percebe que não são meus dentes originais.",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "O implante dentário dói?",
+      "answer": "Não. Com a técnica de cirurgia guiada e anestesia moderna, o procedimento é indolor e o pós-operatório é muito mais tranquilo que as técnicas tradicionais."
+    },
+    {
+      "question": "Quanto tempo dura o tratamento de lentes?",
+      "answer": "O planejamento e execução levam em média de 2 a 3 consultas. A durabilidade das lentes de porcelana pode ultrapassar 15 anos com a manutenção correta."
+    },
+    {
+      "question": "O consultório aceita planos de saúde?",
+      "answer": "Trabalhamos com foco em atendimento personalizado de forma particular, mas emitimos toda a documentação necessária para você solicitar o reembolso ao seu convênio."
+    }
+  ]
+}

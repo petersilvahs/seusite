@@ -31,11 +31,14 @@ function loadEnv() {
 }
 
 /**
- * Chama a API do Gemini para gerar a estrutura completa do site em JSON
+ * Chama a API do Gemini com fallback automático de modelos
  */
 async function callGemini(apiKey, briefingText) {
-  const model = 'gemini-1.5-flash';
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+  const candidateModels = [
+    'gemini-3-flash-preview',
+    'gemini-3.5-flash',
+    'gemini-flash-latest'
+  ];
 
   const prompt = `
 Briefing do Cliente:
@@ -64,27 +67,45 @@ Responda APENAS com o bloco JSON puro, sem textos adicionais antes ou depois.
     }
   };
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  });
+  let lastError = null;
 
-  if (!res.ok) {
-    const errorText = await res.text();
-    throw new Error(`Falha na API do Gemini (${res.status}): ${errorText}`);
+  for (const model of candidateModels) {
+    try {
+      console.log(`📡 Tentando modelo: ${model}...`);
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(25000)
+      });
+
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.warn(`⚠️ Modelo ${model} retornou ${res.status}. Tentando próximo...`);
+        lastError = new Error(`Falha no modelo ${model} (${res.status}): ${errorText}`);
+        continue;
+      }
+
+      const data = await res.json();
+      const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (!rawText) {
+        lastError = new Error('A IA não retornou conteúdo válido.');
+        continue;
+      }
+
+      const cleanJson = rawText.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
+      return JSON.parse(cleanJson);
+
+    } catch (err) {
+      console.warn(`⚠️ Erro com ${model}: ${err.message}`);
+      lastError = err;
+    }
   }
 
-  const data = await res.json();
-  const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-
-  if (!rawText) {
-    throw new Error('A IA não retornou conteúdo válido.');
-  }
-
-  // Limpa possíveis blocos ```json ... ```
-  const cleanJson = rawText.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
-  return JSON.parse(cleanJson);
+  throw lastError || new Error('Não foi possível gerar com nenhum dos modelos.');
 }
 
 async function main() {
@@ -98,7 +119,6 @@ async function main() {
     process.exit(1);
   }
 
-  // Briefing passado por argumento na linha de comando
   const args = process.argv.slice(2);
   let briefing = args.join(' ').trim();
 
@@ -113,7 +133,6 @@ async function main() {
   try {
     const clientData = await callGemini(apiKey, briefing);
     
-    // Garante que o ID é seguro para nomes de arquivo
     const clientId = (clientData.id || clientData.profile?.name || 'cliente')
       .toLowerCase()
       .normalize('NFD')
@@ -123,17 +142,15 @@ async function main() {
 
     clientData.id = clientId;
 
-    // Salva o JSON em configs/clients/
     const configPath = path.join(projectRoot, 'configs', 'clients', `${clientId}.json`);
     fs.mkdirSync(path.dirname(configPath), { recursive: true });
     fs.writeFileSync(configPath, JSON.stringify(clientData, null, 2), 'utf-8');
     console.log(`💾 Configuração gerada e salva em: configs/clients/${clientId}.json`);
 
-    // Compila o site
     console.log(`🔨 Compilando páginas e estilos para ${clientId}...`);
     const result = compileClientSite(clientData, projectRoot);
 
-    console.log(`\n🎉 Site gerado com sucesso em menos de 10 segundos!`);
+    console.log(`\n🎉 Site gerado com sucesso pela IA!`);
     console.log(`📍 Arquivo: ${result.outputPath}`);
     console.log(`🌐 Para visualizar: npx serve sites-output/${clientId} -l 3000\n`);
 
@@ -144,4 +161,3 @@ async function main() {
 }
 
 main();
-
