@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "engine:generate": "node apps/engine/index.js",
+    "site:ai": "node apps/engine/ai/generate.js",
     "preview": "npx serve sites-output/dra-brenda-santos -l 3000"
   },
   "keywords": [

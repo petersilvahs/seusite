@@ -114,3 +114,4 @@ export function compileClientSite(clientConfig, baseDir) {
     clientId: enrichedData.id
   };
 }
+

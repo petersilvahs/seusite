@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <meta name="keywords" content="{{meta.keywords}}">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{meta.title}}">
+  <meta property="og:description" content="{{meta.description}}">
+  <meta property="og:image" content="{{profile.heroImage}}">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              dark: 'var(--brand-dark)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              main: 'var(--brand-main)',
+              muted: 'var(--brand-muted)',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: {{theme.primary}};
+      --brand-dark: {{theme.primaryDark}};
+      --brand-secondary: {{theme.secondary}};
+      --brand-accent: {{theme.accent}};
+      --brand-main: {{theme.textMain}};
+      --brand-muted: {{theme.textMuted}};
+    }
+    body {
+      color: var(--brand-main);
+      background-color: #FCFBF9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-amber-100 selection:text-amber-900">
+
+  <!-- Top bar -->
+  <div class="bg-stone-900 text-stone-300 text-xs py-2 px-4 text-center tracking-widest uppercase font-medium flex items-center justify-center gap-2">
+    <i data-lucide="heart" class="w-3.5 h-3.5 text-amber-300 fill-amber-300"></i>
+    <span>Agenda aberta para Casamentos e Eventos • Consulte sua data</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="font-serif text-2xl sm:text-3xl font-semibold tracking-wide text-stone-900">{{profile.name}}</span>
+        <span class="text-[10px] uppercase tracking-widest text-brand-primary font-bold">{{profile.tagline}}</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <a href="#experiencia" class="hover:text-brand-primary transition">O que fazemos</a>
+        <a href="#sobre" class="hover:text-brand-primary transition">História</a>
+        <a href="#depoimentos" class="hover:text-brand-primary transition">Noivos</a>
+        <a href="#faq" class="hover:text-brand-primary transition">Dúvidas</a>
+        <a href="#contato" class="hover:text-brand-primary transition">Disponibilidade</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition shadow-md">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-300"></i>
+          <span>Consultar Data</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:py-28 overflow-hidden bg-gradient-to-b from-stone-100/70 via-[#FCFBF9] to-transparent">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-stone-200 text-stone-700 text-xs font-medium shadow-sm">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>{{profile.specialty}}</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal text-stone-900 leading-[1.1] tracking-tight">
+            Momentos que se tornam <span class="italic font-semibold text-brand-primary">inesquecíveis</span> para sempre.
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+            {{profile.bioShort}}
+          </p>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-stone-900 hover:bg-stone-800 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wider uppercase shadow-xl transition transform hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Consultar Agenda no WhatsApp</span>
+            </a>
+
+            <a href="#experiencia" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 text-stone-700 border border-stone-300 px-6 py-4 rounded-full font-medium text-sm transition">
+              <span>Conhecer Detalhes</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-stone-400"></i>
+            </a>
+          </div>
+
+          <div class="pt-6 flex items-center justify-center lg:justify-start gap-8 border-t border-stone-200/80 text-xs text-stone-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-stone-700"></i>
+              <span>{{contact.city}} - {{contact.state}}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-stone-700"></i>
+              <span>Contrato Seguro</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+              <span>5.0 de Avaliação</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-stone-200">
+              <img src="{{profile.heroImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas -->
+  <section class="py-10 bg-white border-y border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      {{#stats}}
+      <div class="p-3">
+        <p class="font-serif text-4xl font-normal text-stone-900">{{value}}</p>
+        <p class="text-xs uppercase tracking-widest text-stone-500 mt-1 font-semibold">{{label}}</p>
+      </div>
+      {{/stats}}
+    </div>
+  </section>
+
+  <!-- Serviços / Experiência -->
+  <section id="experiencia" class="py-20 bg-[#FCFBF9]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Serviços & Pacotes</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-stone-900">
+          Cada história é celebrada com dedicação e excelência
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{#services}}
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-200 flex flex-col group">
+          <div class="h-56 overflow-hidden relative">
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-serif text-2xl font-normal text-stone-900 mb-2">{{title}}</h3>
+              <p class="text-stone-600 text-sm leading-relaxed">{{shortDescription}}</p>
+            </div>
+
+            <div class="space-y-3 pt-3 border-t border-stone-100">
+              <ul class="text-xs text-stone-500 space-y-1.5">
+                {{#highlights}}
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
+                  <span>{{.}}</span>
+                </li>
+                {{/highlights}}
+              </ul>
+
+              <a href="{{contact.whatsappUrl}}&text=Olá! Gostaria de consultar orçamento para {{title}}." target="_blank" 
+                 class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold uppercase tracking-wider bg-stone-100 text-stone-800 hover:bg-stone-900 hover:text-white transition duration-200">
+                <span>Solicitar Proposta</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        {{/services}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Amor & Confiança</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-stone-900">
+          O que dizem os noivos e famílias
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {{#testimonials}}
+        <div class="bg-[#FCFBF9] p-8 rounded-3xl border border-stone-200 flex flex-col justify-between space-y-6">
+          <p class="text-stone-700 text-sm leading-relaxed italic font-light">
+            "{{comment}}"
+          </p>
+
+          <div class="pt-4 border-t border-stone-200">
+            <p class="font-serif font-bold text-stone-900 text-lg">{{author}}</p>
+            <p class="text-xs text-brand-primary font-medium tracking-wide uppercase">{{role}}</p>
+          </div>
+        </div>
+        {{/testimonials}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-[#FCFBF9] border-t border-stone-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 space-y-2">
+        <h2 class="font-serif text-3xl font-normal text-stone-900">Dúvidas Frequentes</h2>
+      </div>
+
+      <div class="space-y-4">
+        {{#faq}}
+        <details class="group bg-white rounded-2xl p-5 border border-stone-200 transition-all duration-200">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-medium text-stone-900 text-sm sm:text-base">
+            <span>{{question}}</span>
+            <span class="text-stone-500 transition-transform duration-300 group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-stone-100">
+            {{answer}}
+          </p>
+        </details>
+        {{/faq}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 py-12 text-center text-xs">
+    <div class="max-w-6xl mx-auto px-4 space-y-3">
+      <p class="font-serif text-xl text-white">{{profile.name}}</p>
+      <p>© 2026 {{profile.name}}. Todos os direitos reservados.</p>
+      <p class="text-[11px] text-stone-400">Desenvolvido por <a href="https://github.com/petersilvahs/seusite" class="text-amber-200 hover:underline">SeuSite</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+       class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+       aria-label="Falar no WhatsApp">
+      <i data-lucide="message-circle" class="w-8 h-8 fill-white/20"></i>
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
