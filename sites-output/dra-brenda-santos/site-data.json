@@ -88,7 +88,7 @@
       "id": "labial",
       "title": "Preenchimento Labial & Contorno",
       "shortDescription": "Lábios desenhados, hidratados e volumizados na medida certa com ácido hialurônico de alta tecnologia.",
-      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80",
+      "image": "./assets/procedimento-preenchimento-labial.webp",
       "highlights": [
         "Volume elegante e sem exageros",
         "Definição do arco do cupido",
@@ -99,7 +99,7 @@
       "id": "botox",
       "title": "Toxina Botulínica (Botox)",
       "shortDescription": "Prevenção e suavização de linhas de expressão dinâmicas na testa, glabela e olhos, mantendo sua expressividade natural.",
-      "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80",
+      "image": "./assets/procedimento-botox.webp",
       "highlights": [
         "Efeito 'descansado' e jovial",
         "Rápida aplicação e sem repouso",
@@ -121,7 +121,7 @@
       "id": "rinomodelacao",
       "title": "Rinomodelação Estruturada",
       "shortDescription": "Ajuste delicado do dorso e ponta nasal sem cirurgia, proporcionando simetria imediata ao perfil do rosto.",
-      "image": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80",
+      "image": "./assets/procedimento-rinomodelacao.webp",
       "highlights": [
         "Procedimento rápido em consultório",
         "Sem cortes e sem pós-operatório cirúrgico",
@@ -132,7 +132,7 @@
       "id": "bioestimuladores",
       "title": "Bioestimuladores de Colágeno",
       "shortDescription": "Tratamento para firmeza cutânea que estimula a produção natural de colágeno pelo próprio corpo ao longo do tempo.",
-      "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80",
+      "image": "./assets/procedimento-bioestimuladores.jpg",
       "highlights": [
         "Melhora na elasticidade da pele",
         "Tratamento da flacidez facial",
