@@ -36,13 +36,39 @@
     "whatsappProductionUrl": "https://wa.me/5511991100088?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20produ%C3%A7%C3%A3o%20audiovisual%20completa."
   },
   "theme": {
-    "primary": "#F59E0B",
-    "primaryDark": "#D97706",
+    "primary": "#04cddb",
+    "primaryDark": "#03a7b3",
     "secondary": "#07090E",
-    "accent": "#E2B714",
+    "accent": "#38e1ed",
     "textMain": "#F8FAFC",
     "textMuted": "#94A3B8"
   },
+  "instagramFeed": [
+    {
+      "title": "Mantecorp Pielus Forte",
+      "category": "Campanha Skincare",
+      "image": "./assets/insta-feed-1.jpg",
+      "url": "https://www.instagram.com/p/DVBW5aojuqR/"
+    },
+    {
+      "title": "Episol Protetor com Cor Nº 1",
+      "category": "Moda & Beleza",
+      "image": "./assets/insta-feed-2.jpg",
+      "url": "https://www.instagram.com/p/DI33tlxuNzG/"
+    },
+    {
+      "title": "Episol Sec Acqua 60",
+      "category": "Take de Produto & Textura",
+      "image": "./assets/insta-feed-3.jpg",
+      "url": "https://www.instagram.com/p/DKXtAV8PWx_/"
+    },
+    {
+      "title": "Produção Audiovisual Vortex",
+      "category": "Bastidores & Set de Gravação",
+      "image": "./assets/insta-feed-4.jpg",
+      "url": "https://www.instagram.com/p/C_nl2wcxmgd/"
+    }
+  ],
   "stats": [
     {
       "value": "R$ 50/h",
