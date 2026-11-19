@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <meta name="keywords" content="{{meta.keywords}}">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{meta.title}}">
+  <meta property="og:description" content="{{meta.description}}">
+  <meta property="og:image" content="{{profile.heroImage}}">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              dark: 'var(--brand-dark)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              main: 'var(--brand-main)',
+              muted: 'var(--brand-muted)',
+            }
+          },
+          fontFamily: {
+            display: ['"Outfit"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: {{theme.primary}};
+      --brand-dark: {{theme.primaryDark}};
+      --brand-secondary: {{theme.secondary}};
+      --brand-accent: {{theme.accent}};
+      --brand-main: {{theme.textMain}};
+      --brand-muted: {{theme.textMuted}};
+    }
+    body {
+      color: var(--brand-main);
+      background-color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-teal-200 selection:text-teal-900">
+
+  <!-- Top bar -->
+  <div class="bg-brand-dark text-white text-xs py-2 px-4 text-center tracking-wide font-medium flex items-center justify-center gap-2">
+    <i data-lucide="activity" class="w-3.5 h-3.5 text-teal-300"></i>
+    <span>Tratamento da Dor, Reabilitação e Mobilidade • Avaliação Personalizada com Horário Marcado</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-slate-900">{{profile.name}}</span>
+        <span class="text-xs uppercase tracking-wider text-brand-primary font-bold">{{profile.specialty}}</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#tratamentos" class="hover:text-brand-primary transition">Tratamentos</a>
+        <a href="#sobre" class="hover:text-brand-primary transition">Profissional</a>
+        <a href="#depoimentos" class="hover:text-brand-primary transition">Resultados</a>
+        <a href="#faq" class="hover:text-brand-primary transition">Dúvidas</a>
+        <a href="#clinica" class="hover:text-brand-primary transition">Clínica</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Agendar Avaliação</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:py-24 overflow-hidden bg-gradient-to-b from-teal-50/60 via-white to-transparent">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-teal-200 text-teal-800 text-xs font-bold shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>{{profile.cro}} • Fisioterapia Baseada em Evidências</span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+            Recupere seus movimentos e viva <span class="text-brand-primary">livre das dores</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            {{profile.bioShort}}
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-primary hover:bg-brand-dark text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider shadow-xl shadow-teal-500/20 hover:shadow-2xl transition duration-300 transform hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-200"></i>
+              <span>Agendar Minha Avaliação</span>
+            </a>
+
+            <a href="#tratamentos" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-6 py-4 rounded-full font-semibold text-sm transition">
+              <span>Ver Tratamentos</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400"></i>
+            </a>
+          </div>
+
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-6 border-t border-slate-200 text-xs text-slate-500 font-medium">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-primary"></i>
+              <span>{{contact.city}} - {{contact.state}}</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary"></i>
+              <span>Sem Tratamentos Genéricos</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+              <span>5.0 no Google</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -top-6 -left-6 w-72 h-72 bg-teal-200/50 rounded-full blur-3xl -z-10"></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] bg-slate-200">
+              <img src="{{profile.heroImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="font-display text-xl font-bold">{{profile.name}}</p>
+                <p class="text-xs text-teal-200 font-semibold">{{profile.specialty}} | {{profile.cro}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas -->
+  <section class="py-8 bg-white border-y border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      {{#stats}}
+      <div class="p-3">
+        <p class="font-display text-4xl font-extrabold text-brand-primary">{{value}}</p>
+        <p class="text-xs font-bold text-slate-600 mt-1 uppercase tracking-wider">{{label}}</p>
+      </div>
+      {{/stats}}
+    </div>
+  </section>
+
+  <!-- Tratamentos / Serviços -->
+  <section id="tratamentos" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Planos Terapêuticos</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900">
+          Abordagens avançadas para resolver a causa da sua dor
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Tratamentos focados na raiz do problema para evitar recidivas e devolver sua qualidade de vida.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{#services}}
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900 mb-2">{{title}}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{{shortDescription}}</p>
+            </div>
+
+            <div class="space-y-3 pt-3 border-t border-slate-100">
+              <ul class="text-xs text-slate-500 space-y-1.5">
+                {{#highlights}}
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary flex-shrink-0"></i>
+                  <span>{{.}}</span>
+                </li>
+                {{/highlights}}
+              </ul>
+
+              <a href="{{contact.whatsappUrl}}&text=Olá! Gostaria de agendar avaliação para {{title}}." target="_blank" 
+                 class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold bg-teal-50 text-brand-dark hover:bg-brand-primary hover:text-white transition duration-200">
+                <span>Agendar Avaliação</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        {{/services}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 relative order-2 lg:order-1">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[3/4]">
+            <img src="{{profile.aboutImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Quem Cuida de Você</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900">
+            {{profile.name}}
+          </h2>
+          <p class="text-sm font-bold text-brand-dark uppercase tracking-wider">
+            {{profile.specialty}} | {{profile.cro}}
+          </p>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Acredito que o movimento é o melhor remédio. Minha prática clínica é focada em devolver a sua autonomia, permitindo que você volte a praticar esportes, brincar com seus filhos e trabalhar sem limitações.
+            </p>
+            <p>
+              Com avaliação biomecânica minuciosa, traço um plano de reabilitação exclusivo com técnicas manuais, exercícios terapêuticos e tecnologia moderna.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            {{#differentials}}
+            <div class="p-4 rounded-2xl bg-teal-50/50 border border-teal-100">
+              <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-brand-primary"></i>
+                {{title}}
+              </h4>
+              <p class="text-xs text-slate-600 mt-1 pl-6">{{description}}</p>
+            </div>
+            {{/differentials}}
+          </div>
+
+          <div class="pt-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" 
+               class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Agendar Minha Consulta</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-20 bg-[#F8FAFC] border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Casos Reais</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900">
+          Vidas transformadas pelo movimento
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {{#testimonials}}
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "{{comment}}"
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <p class="font-display font-bold text-slate-900 text-base">{{author}}</p>
+            <p class="text-xs text-brand-primary font-semibold">{{role}}</p>
+          </div>
+        </div>
+        {{/testimonials}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-14 space-y-2">
+        <h2 class="font-display text-3xl font-bold text-slate-900">Perguntas Frequentes</h2>
+        <p class="text-slate-600 text-sm">Tudo o que você precisa saber sobre o tratamento.</p>
+      </div>
+
+      <div class="space-y-4">
+        {{#faq}}
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200 transition-all duration-200">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-slate-900 text-sm sm:text-base">
+            <span>{{question}}</span>
+            <span class="text-brand-primary transition-transform duration-300 group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed pt-2 border-t border-slate-200">
+            {{answer}}
+          </p>
+        </details>
+        {{/faq}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clínica / Localização -->
+  <section id="clinica" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-200 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Onde Estamos</span>
+          <h2 class="font-display text-3xl font-bold text-slate-900">
+            Espaço Completo para sua Reabilitação
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Ambiente moderno, climatizado e equipado com recursos de última geração para sua recuperação física.
+          </p>
+
+          <div class="space-y-4 text-sm text-slate-700">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-slate-900">{{contact.address}}</p>
+                <p class="text-xs text-slate-500">{{contact.neighborhood}}, {{contact.city}} - {{contact.state}}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-slate-900">Horários de Atendimento</p>
+                <p class="text-xs text-slate-500">{{contact.workingHours}}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5"></i>
+              <div>
+                <p class="font-bold text-slate-900">Contato / WhatsApp</p>
+                <p class="text-xs text-slate-500">{{contact.whatsappFormatted}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="{{contact.whatsappUrl}}" target="_blank" 
+               class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg shadow-emerald-500/20 transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Falar no WhatsApp e Agendar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-teal-50/70 p-6 sm:p-8 rounded-3xl border border-teal-200 text-center space-y-4">
+          <div class="w-16 h-16 mx-auto rounded-full bg-white shadow-md flex items-center justify-center text-brand-primary">
+            <i data-lucide="navigation" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900">Fácil Localização</h3>
+          <p class="text-xs text-slate-600 max-w-sm mx-auto">
+            Abra a rota diretamente pelo Google Maps ou Waze para chegar sem complicações.
+          </p>
+          <a href="{{contact.googleMapsUrl}}" target="_blank" rel="noopener noreferrer" 
+             class="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 border border-slate-200 px-5 py-2.5 rounded-full text-xs font-bold shadow-sm transition">
+            <i data-lucide="map" class="w-4 h-4 text-brand-primary"></i>
+            <span>Como Chegar</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-slate-900 text-slate-400 py-12 text-center md:text-left text-xs border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="font-display text-lg font-bold text-white">{{profile.name}}</p>
+        <p class="text-xs text-teal-300 mt-1">{{profile.cro}} • {{profile.specialty}}</p>
+        <p class="text-xs text-slate-500 mt-1">{{contact.address}}</p>
+      </div>
+
+      <div class="text-center md:text-right space-y-1">
+        <p>© 2026 {{profile.name}}. Todos os direitos reservados.</p>
+        <p class="text-[11px] text-slate-500">Em conformidade com as diretrizes do CREFITO.</p>
+        <p class="text-[11px] text-slate-400 pt-1">
+          Desenvolvido por <a href="https://github.com/petersilvahs/seusite" class="text-teal-300 hover:underline">SeuSite</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+       class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+       aria-label="Agendar Consulta">
+      <i data-lucide="message-circle" class="w-8 h-8 fill-white/20"></i>
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

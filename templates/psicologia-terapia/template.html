@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <meta name="keywords" content="{{meta.keywords}}">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{meta.title}}">
+  <meta property="og:description" content="{{meta.description}}">
+  <meta property="og:image" content="{{profile.heroImage}}">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              dark: 'var(--brand-dark)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              main: 'var(--brand-main)',
+              muted: 'var(--brand-muted)',
+            }
+          },
+          fontFamily: {
+            serif: ['"Lora"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: {{theme.primary}};
+      --brand-dark: {{theme.primaryDark}};
+      --brand-secondary: {{theme.secondary}};
+      --brand-accent: {{theme.accent}};
+      --brand-main: {{theme.textMain}};
+      --brand-muted: {{theme.textMuted}};
+    }
+    body {
+      color: var(--brand-main);
+      background-color: #FAF8F5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Lora', Georgia, serif;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.5s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-100 selection:text-emerald-900">
+
+  <!-- Top bar -->
+  <div class="bg-brand-dark text-white text-xs py-2 px-4 text-center tracking-wide font-medium flex items-center justify-center gap-2">
+    <i data-lucide="heart" class="w-3.5 h-3.5 text-emerald-200"></i>
+    <span>Atendimentos Online (Brasil e Exterior) e Presenciais • Sigilo Ético Absoluto</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/70 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col">
+        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-stone-900">{{profile.name}}</span>
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-semibold">{{profile.specialty}}</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <a href="#como-ajudo" class="hover:text-brand-primary transition">Como Posso Ajudar</a>
+        <a href="#sobre" class="hover:text-brand-primary transition">Sobre Mim</a>
+        <a href="#modalidades" class="hover:text-brand-primary transition">Atendimento</a>
+        <a href="#faq" class="hover:text-brand-primary transition">Dúvidas</a>
+        <a href="#contato" class="hover:text-brand-primary transition">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide shadow-sm hover:shadow transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Agendar Sessão</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:py-24 overflow-hidden bg-gradient-to-b from-stone-100/60 via-white to-transparent">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200 text-stone-700 text-xs font-medium shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>{{profile.cro}} • Psicoterapia Acolhedora</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-stone-900 leading-[1.2] tracking-tight">
+            Um espaço seguro para você se escutar, <span class="italic font-semibold text-brand-primary">se compreender</span> e florescer.
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+            {{profile.bioShort}}
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-primary hover:bg-brand-dark text-white px-8 py-4 rounded-full font-medium text-sm shadow-lg shadow-emerald-900/10 hover:shadow-xl transition duration-300 transform hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-200"></i>
+              <span>Agendar Primeira Sessão</span>
+            </a>
+
+            <a href="#como-ajudo" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 text-stone-700 border border-stone-200 px-6 py-4 rounded-full font-medium text-sm transition">
+              <span>Como Funciona a Terapia</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-stone-400"></i>
+            </a>
+          </div>
+
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-6 border-t border-stone-200 text-xs text-stone-500">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="laptop" class="w-4 h-4 text-brand-primary"></i>
+              <span>Online ou Presencial</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="lock" class="w-4 h-4 text-brand-primary"></i>
+              <span>Sigilo Profissional</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-brand-primary"></i>
+              <span>Sem Julgamentos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -top-6 -left-6 w-72 h-72 bg-emerald-100/60 rounded-full blur-3xl -z-10"></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[4/5] bg-stone-100">
+              <img src="{{profile.heroImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/50 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="font-serif text-xl">{{profile.name}}</p>
+                <p class="text-xs text-emerald-100 font-light">{{profile.specialty}} | {{profile.cro}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas / Frases de Impacto -->
+  <section class="py-8 bg-white border-y border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      {{#stats}}
+      <div class="p-3">
+        <p class="font-serif text-3xl text-brand-primary font-normal">{{value}}</p>
+        <p class="text-xs text-stone-500 mt-1 uppercase tracking-wider font-medium">{{label}}</p>
+      </div>
+      {{/stats}}
+    </div>
+  </section>
+
+  <!-- Como Posso Ajudar (Serviços/Demandas) -->
+  <section id="como-ajudo" class="py-20 bg-[#FAF8F5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-semibold">Demandas Comuns</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-stone-900">
+          Você não precisa carregar tudo isso sozinho(a)
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base font-light">
+          A psicoterapia é um processo de autoconhecimento que oferece ferramentas práticas para lidar com os desafios da vida.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{#services}}
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-stone-200/80 flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-serif text-xl font-normal text-stone-900 mb-2">{{title}}</h3>
+              <p class="text-stone-600 text-sm leading-relaxed font-light">{{shortDescription}}</p>
+            </div>
+
+            <div class="space-y-3 pt-3 border-t border-stone-100">
+              <ul class="text-xs text-stone-500 space-y-1.5 font-light">
+                {{#highlights}}
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary flex-shrink-0"></i>
+                  <span>{{.}}</span>
+                </li>
+                {{/highlights}}
+              </ul>
+
+              <a href="{{contact.whatsappUrl}}&text=Olá! Gostaria de entender mais sobre a terapia para {{title}}." target="_blank" 
+                 class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-medium bg-stone-100 text-stone-800 hover:bg-brand-primary hover:text-white transition duration-200">
+                <span>Conversar sobre isso</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        {{/services}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 relative order-2 lg:order-1">
+          <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[3/4]">
+            <img src="{{profile.aboutImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-semibold">Trajetória e Propósito</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-stone-900">
+            {{profile.name}}
+          </h2>
+          <p class="text-xs font-semibold text-brand-dark uppercase tracking-wider">
+            {{profile.specialty}} | {{profile.cro}}
+          </p>
+          <div class="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed font-light">
+            <p>
+              Entendo a terapia como um caminho de reencontro com quem você realmente é, desatando nós do passado e construindo respostas mais saudáveis para o presente.
+            </p>
+            <p>
+              Em cada sessão, ofereço uma presença atenta, técnica e genuinamente humana, onde seus sentimentos são acolhidos no seu próprio tempo, com respeito e dignidade.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            {{#differentials}}
+            <div class="p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/70">
+              <h4 class="font-semibold text-stone-900 text-sm flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary"></i>
+                {{title}}
+              </h4>
+              <p class="text-xs text-stone-600 mt-1 pl-6 font-light">{{description}}</p>
+            </div>
+            {{/differentials}}
+          </div>
+
+          <div class="pt-4">
+            <a href="{{contact.whatsappUrl}}" target="_blank" 
+               class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-7 py-3.5 rounded-full text-xs font-medium uppercase tracking-wider transition">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Agendar Minha Sessão Inicial</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos / Experiências -->
+  <section class="py-20 bg-[#FAF8F5] border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <h2 class="font-serif text-3xl sm:text-4xl font-normal text-stone-900">
+          Relatos de quem deu esse passo
+        </h2>
+        <p class="text-stone-500 text-xs italic">
+          *Nomes preservados em respeito ao sigilo ético (Resolução CFP).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {{#testimonials}}
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200/80 flex flex-col justify-between space-y-6">
+          <p class="text-stone-700 text-sm leading-relaxed italic font-light">
+            "{{comment}}"
+          </p>
+
+          <div class="pt-4 border-t border-stone-100">
+            <p class="font-serif font-bold text-stone-900 text-base">{{author}}</p>
+            <p class="text-xs text-brand-primary font-medium">{{role}}</p>
+          </div>
+        </div>
+        {{/testimonials}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-14 space-y-2">
+        <h2 class="font-serif text-3xl font-normal text-stone-900">Perguntas Frequentes</h2>
+        <p class="text-stone-600 text-sm font-light">Dúvidas comuns sobre como funcionam os atendimentos.</p>
+      </div>
+
+      <div class="space-y-4">
+        {{#faq}}
+        <details class="group bg-[#FAF8F5] rounded-2xl p-5 border border-stone-200/80 transition-all duration-200">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-medium text-stone-900 text-sm sm:text-base">
+            <span>{{question}}</span>
+            <span class="text-brand-primary transition-transform duration-300 group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-stone-200 font-light">
+            {{answer}}
+          </p>
+        </details>
+        {{/faq}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contato / Modalidades -->
+  <section id="contato" class="py-20 bg-[#FAF8F5]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-8">
+      <h2 class="font-serif text-3xl sm:text-4xl font-normal text-stone-900">
+        Dê o primeiro passo para o seu bem-estar emocional
+      </h2>
+      <p class="text-stone-600 text-sm sm:text-base max-w-xl mx-auto font-light">
+        Sinta-se à vontade para enviar uma mensagem. Tiramos todas as suas dúvidas sobre horários e valores sem nenhum compromisso.
+      </p>
+
+      <div class="pt-4">
+        <a href="{{contact.whatsappUrl}}" target="_blank" 
+           class="inline-flex items-center gap-3 bg-emerald-700 hover:bg-emerald-800 text-white px-9 py-4 rounded-full text-sm font-medium shadow-xl shadow-emerald-900/10 transition transform hover:-translate-y-0.5">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Falar no WhatsApp: {{contact.whatsappFormatted}}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-stone-900 text-stone-400 py-12 text-center text-xs border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p class="font-serif text-lg text-white">{{profile.name}}</p>
+      <p class="text-xs text-stone-400">{{profile.cro}} • {{profile.specialty}}</p>
+      <p>© 2026 {{profile.name}}. Todos os direitos reservados.</p>
+      <p class="text-[11px] text-stone-500 pt-1">
+        Desenvolvido por <a href="https://github.com/petersilvahs/seusite" class="text-emerald-300 hover:underline">SeuSite</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flutuante -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+       class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+       aria-label="Falar com Psicóloga(o)">
+      <i data-lucide="message-circle" class="w-8 h-8 fill-white/20"></i>
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
