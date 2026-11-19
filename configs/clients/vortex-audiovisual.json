@@ -2,160 +2,197 @@
   "id": "vortex-audiovisual",
   "template": "audiovisual-criativo",
   "meta": {
-    "title": "VORTEX | Produtora Audiovisual & Criativa",
-    "description": "Filmes comerciais, vídeos institucionais e conteúdos de alto impacto para marcas que desejam liderar a atenção no digital.",
-    "keywords": "produtora audiovisual, filmmaker rj, videos comerciais, producao de video, vortex audiovisual"
+    "title": "VORTEX | Produtora Audiovisual & Locação de Estúdio em São Paulo",
+    "description": "Estúdio privativo e climatizado na Bela Vista a partir de R$ 50/h. Fundo infinito, iluminação inclusa, camarim com vista panorâmica e equipe completa de produção.",
+    "keywords": "locacao de estudio sp, aluguel de estudio fotografico sp, estudio audiovisual sao paulo, pro vortex, estudio bela vista sp, filmagem e fotografia sp"
   },
   "profile": {
     "name": "VORTEX",
-    "tagline": "Produtora Audiovisual & Criativa",
-    "cro": "Produção Cinematográfica",
-    "specialty": "Filmes Comerciais, Reels Estratégicos & Conteúdo de Marca",
-    "bioShort": "Criamos filmes e produções visuais de alto padrão que prendem a atenção do público, constroem autoridade e transformam visualizações em negócios para a sua marca.",
-    "heroImage": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80",
-    "aboutImage": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"
+    "tagline": "Produtora Audiovisual & Locação de Estúdio",
+    "cro": "Produção Cinematográfica & Locação",
+    "specialty": "Locação de Estúdio a partir de R$ 50/h & Produções Audiovisuais em SP",
+    "bioShort": "Sua parceira audiovisual no centro de São Paulo. Oferecemos estrutura completa, privativa e climatizada com o melhor custo-benefício da cidade, além de equipe de ponta para elevar o nível das suas gravações.",
+    "heroImage": "./assets/estudio-fundo-infinito.jpg",
+    "aboutImage": "./assets/camarim-vortex.jpg"
   },
   "contact": {
-    "whatsapp": "21999999999",
-    "whatsappFormatted": "(21) 99999-9999",
-    "whatsappMessage": "Olá equipe VORTEX! Gostaria de solicitar um orçamento para uma produção audiovisual.",
-    "address": "Rio de Janeiro - RJ",
-    "neighborhood": "Atendimento Nacional",
-    "city": "Rio de Janeiro",
-    "state": "RJ",
-    "googleMapsUrl": "https://maps.google.com/?q=Rio+de+Janeiro+-+RJ",
-    "workingHours": "Segunda a Sexta: 09h às 19h"
+    "whatsapp": "11991100088",
+    "whatsappFormatted": "(11) 99110-0088",
+    "whatsappMessage": "Olá equipe Vortex! Gostaria de saber mais sobre a locação do estúdio e disponibilidade de datas.",
+    "whatsappRentMessage": "Olá! Gostaria de alugar o estúdio na Vortex.",
+    "whatsappProductionMessage": "Olá! Gostaria de solicitar um orçamento para produção audiovisual completa.",
+    "instagram": "pro.vortex",
+    "instagramUrl": "https://www.instagram.com/pro.vortex/",
+    "address": "Avenida Brigadeiro Luís Antônio, nº 388 – Bela Vista",
+    "neighborhood": "Bela Vista (Em frente ao Teatro Renault)",
+    "city": "São Paulo",
+    "state": "SP",
+    "googleMapsUrl": "https://www.google.com/maps/place/Pro.Vortex/@-23.5537034,-46.6412997,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59c2163126bf:0xab5b3b7bb75d475d!8m2!3d-23.5537034!4d-46.6387248!16s%2Fg%2F11v3_xy0cm?entry=ttu",
+    "tourDriveUrl": "https://drive.google.com/file/d/1Po9o7v-R6i0fU-kGZ7Dr-4tf1VBxlI4i/view?usp=drive_link",
+    "workingHours": "Segunda a Domingo: Horários flexíveis mediante agendamento prévio"
   },
   "theme": {
-    "primary": "#E2B714",
-    "primaryDark": "#C59F0B",
-    "secondary": "#0A0D14",
-    "accent": "#F59E0B",
-    "textMain": "#F1F5F9",
+    "primary": "#F59E0B",
+    "primaryDark": "#D97706",
+    "secondary": "#07090E",
+    "accent": "#E2B714",
+    "textMain": "#F8FAFC",
     "textMuted": "#94A3B8"
   },
   "stats": [
-    { "value": "+100", "label": "Projetos Produzidos" },
-    { "value": "+5M", "label": "Visualizações Geradas" },
-    { "value": "4K RAW", "label": "Qualidade de Cinema" }
+    { "value": "R$ 50/h", "label": "Melhor Custo-Benefício de SP" },
+    { "value": "100%", "label": "Espaço Privativo & Climatizado" },
+    { "value": "Incluso", "label": "Iluminação Profissional Completa" },
+    { "value": "Bela Vista", "label": "A 10 min do Metrô Japão/Liberdade" }
   ],
   "cases": [
     {
-      "title": "Campanha Publicitária de Verão",
-      "subtitle": "Direção, captação e color grading cinematográfico para marca de lifestyle",
-      "image": "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80"
+      "title": "Campanha de Moda & Lookbook",
+      "subtitle": "Captação em fundo infinito com iluminação suave de alta potência para catálogo de marca.",
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+      "tag": "Moda & E-commerce"
     },
     {
-      "title": "Série de Reels Estratégicos",
-      "subtitle": "Captação vertical com ritmo dinâmico para retenção máxima no Instagram e TikTok",
-      "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80"
+      "title": "Filme Comercial & Publicidade",
+      "subtitle": "Direção, iluminação de cinema e captação 4K com atores para lançamento de produto.",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
+      "tag": "Comercial & Cinema"
     },
     {
-      "title": "Documentário Corporativo",
-      "subtitle": "Narrativa de marca contando a trajetória e bastidores de uma empresa de tecnologia",
-      "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80"
+      "title": "Série de Reels & Conteúdo Digital",
+      "subtitle": "Gravação dinâmica na recepção cenográfica com troca rápida de figurinos no camarim.",
+      "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+      "tag": "Social Media & Reels"
     },
     {
-      "title": "Cobertura de Evento Exclusivo",
-      "subtitle": "Aftermovie com edição acelerada entregue em até 24h para repercussão imediata",
-      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+      "title": "Podcast & Entrevistas Corporativas",
+      "subtitle": "Cenário elegante com poltronas de couro preto, microfones dedicados e isolamento acústico.",
+      "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80",
+      "tag": "Podcast & Entrevista"
     }
   ],
   "services": [
     {
-      "id": "comerciais",
-      "title": "Filmes Comerciais & Publicidade",
-      "shortDescription": "Produções com padrão cinema para comerciais de TV, YouTube Ads e lançamentos de produtos de alta conversão.",
-      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
-      "highlights": ["Roteiro e storyboard completo", "Equipe de cinema com iluminação e áudio direto", "Color grading padrão Hollywood"]
+      "id": "locacao-estudio",
+      "title": "Locação de Estúdio Fotográfico & Vídeo",
+      "shortDescription": "Fundo infinito em papel branco, 3 tochas, 1 octabox, 1 rebatedor, radioflash, poltronas, banquetas e fundos em tecido.",
+      "image": "./assets/estudio-fundo-infinito.jpg",
+      "highlights": [
+        "R$ 50/h de Segunda a Sexta",
+        "R$ 75/h Fins de semana e feriados (mín. 3h)",
+        "Iluminação profissional inclusa no valor"
+      ]
     },
     {
-      "id": "reels",
-      "title": "Reels & Vídeos Verticais Estratégicos",
-      "shortDescription": "Conteúdos dinâmicos pensados para o algoritmo do Instagram e TikTok, combinando retenção com gatilhos de venda.",
-      "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=600&q=80",
-      "highlights": ["Hooks magnéticos nos primeiros 3 segundos", "Edição moderna com sound effects envolventes", "Captação otimizada para smartphones"]
+      "id": "camarim-copa",
+      "title": "Camarim com Vista & Copa Completa",
+      "shortDescription": "Camarim climatizado amplo com arara, manequim, steamer a vapor, ring light, projetor e copa com café e frigobar.",
+      "image": "./assets/camarim-vortex.jpg",
+      "highlights": [
+        "Vista panorâmica da cidade de São Paulo",
+        "Ambiente exclusivo para modelos e clientes",
+        "Café, água gelada, micro-ondas e frigobar"
+      ]
     },
     {
-      "id": "institucionais",
-      "title": "Vídeos Institucionais & Corporativos",
-      "shortDescription": "Apresente a infraestrutura, missão e pessoas da sua empresa com sobriedade, sofisticação e profissionalismo.",
+      "id": "recepcao-cenarios",
+      "title": "Recepção Ampla com 2 Ambientes",
+      "shortDescription": "Espaço aconchegante para receber clientes com 2 ambientes que também servem de cenário para produções.",
+      "image": "./assets/recepcao-cenarios.jpg",
+      "highlights": [
+        "Dois cenários decorados prontos para gravar",
+        "Sala de reunião privativa integrada",
+        "Ideal para podcasts, bate-papos e fotos lifestyle"
+      ]
+    },
+    {
+      "id": "adicionais-equipamentos",
+      "title": "Locação de Câmeras & Fundos Coloridos",
+      "shortDescription": "Turbine seu setup alugando equipamentos e acessórios sem precisar transportar todo o seu acervo.",
+      "image": "./assets/equipamentos-adicionais.jpg",
+      "highlights": [
+        "Câmeras Canon 7D ou SL2 (R$ 75/h)",
+        "Fundos coloridos em papel (R$ 80/metro pisado)",
+        "Microfones profissionais direcionais e lapela"
+      ]
+    },
+    {
+      "id": "equipe-completa",
+      "title": "Produção Audiovisual Completa (Equipe)",
+      "shortDescription": "Os melhores profissionais de São Paulo à sua disposição: direção, fotografia, filmmaker, maquiagem e stylist.",
       "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
-      "highlights": ["Entrevistas e depoimentos de diretoria", "Captação aérea com drone 4K", "Trilha sonora licenciada exclusiva"]
+      "highlights": [
+        "Direção criativa e roteiro estratégico",
+        "Fotógrafo e filmmaker dedicados",
+        "Stylist, figurino e maquiagem profissional"
+      ]
     },
     {
-      "id": "eventos",
-      "title": "Cobertura Audiovisual de Eventos",
-      "shortDescription": "Transforme conferências, festivais e feiras de negócios em aftermovies inesquecíveis para gerar desejo para as próximas edições.",
-      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
-      "highlights": ["Equipe ágil sem atrapalhar o evento", "Entrega de reels durante o próprio evento", "Filme oficial pós-evento em alta resolução"]
-    },
-    {
-      "id": "socialmedia",
-      "title": "Social Media & Criação de Conteúdo",
-      "shortDescription": "Pacotes mensais de gravação e edição de conteúdo recorrente para empresários e especialistas que querem liderar seu nicho.",
-      "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
-      "highlights": ["Planejamento de calendário mensal", "1 dia de captação rende o mês inteiro", "Direção de postura e fala para câmeras"]
-    },
-    {
-      "id": "posproducao",
-      "title": "Pós-Produção & Motion Graphics",
-      "shortDescription": "Finalização de alto nível para projetos que já foram gravados: corte rítmico, animações em motion e tratamento de cor.",
+      "id": "edicao-pos",
+      "title": "Edição, Motion & Color Grading",
+      "shortDescription": "Finalização de padrão cinematográfico para o seu material bruto com cortes dinâmicos e tratamento de cor.",
       "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
-      "highlights": ["Efeitos visuais e motion design", "Tratamento e mixagem de áudio", "Versões em múltiplos formatos (16:9, 9:16, 1:1)"]
+      "highlights": [
+        "Color grading profissional em DaVinci Resolve",
+        "Edição vertical com retenção para Reels/TikTok",
+        "Entrega ágil com rodadas de aprovação"
+      ]
     }
   ],
   "differentials": [
     {
-      "title": "Equipamento Cinema de Ponta",
-      "description": "Gravamos com câmeras de cinema profissional, lentes primes de altíssima nitidez, iluminação de estúdio e captação de áudio cristalina."
+      "title": "O Melhor Custo-Benefício de São Paulo",
+      "description": "Taxa de locação justa e transparente (R$ 50/h de Seg a Sex) garantindo acesso a uma estrutura completa sem estourar o orçamento do seu projeto."
     },
     {
-      "title": "Visão Estratégica de Negócios",
-      "description": "Não fazemos apenas vídeos bonitos: cada plano, corte e palavra é pensado para gerar autoridade e vendas reais para o seu produto ou serviço."
+      "title": "Localização Privilegiada no Centro de SP",
+      "description": "Av. Brigadeiro Luís Antônio, 388 (em frente ao Teatro Renault), a apenas 10 minutos a pé do Metrô Japão/Liberdade com estacionamento na porta."
     },
     {
-      "title": "Agilidade e Pontualidade Rigorosa",
-      "description": "Prazos de entrega acordados em contrato e respeitados com rigor, com canal direto no WhatsApp durante todo o projeto."
+      "title": "Espaço 100% Exclusivo e Privativo",
+      "description": "Durante o seu horário reservado, o estúdio, camarim, copa e áreas de apoio ficam dedicados exclusivamente para você e seu cliente."
     }
   ],
   "testimonials": [
     {
-      "author": "Matheus Albuquerque",
-      "role": "CEO • TechFlow Software",
-      "comment": "A VORTEX transformou a imagem da nossa empresa. O vídeo institucional que produziram aumentou nossa conversão de vendas em reuniões de forma imediata. Padrão impecável!",
+      "author": "Lucas Mantovani",
+      "role": "Fotógrafo de Moda & Publicidade",
+      "comment": "O estúdio da Vortex é o melhor achado do centro de SP. Estrutura impecável, tochas com luz maravilhosa e o camarim climatizado faz as modelos se sentirem em casa. R$ 50/hora é imbatível!",
       "rating": 5
     },
     {
-      "author": "Renata Vasconcellos",
-      "role": "Diretora de Marketing • Aura Cosméticos",
-      "comment": "Nossos Reels nunca tiveram tanto alcance quanto depois que a VORTEX assumiu a captação e edição. A qualidade de cor e o ritmo dos cortes são outro nível!",
+      "author": "Camila Resende",
+      "role": "Produtora de Conteúdo & Infoprodutora",
+      "comment": "Gravamos nosso curso inteiro lá. Usamos o fundo infinito para as aulas teóricas e a recepção decorada para entrevistas. Tudo muito limpo, café gostoso e atendimento nota 10.",
       "rating": 5
     },
     {
       "author": "Felipe Diniz",
-      "role": "Produtor Geral • Festival Sunset Music",
-      "comment": "A entrega do aftermovie foi absurdamente rápida e capturou exatamente a energia do público. Recomendamos de olhos fechados para qualquer marca exigente.",
+      "role": "Diretor Criativo • Agência Blend",
+      "comment": "Alugamos com frequência para campanhas comerciais de clientes nossos. A pontualidade e o suporte da equipe no local são excelentes. Recomendo de olhos fechados!",
       "rating": 5
     }
   ],
   "faq": [
     {
-      "question": "Como funciona o processo de orçamento e contratação?",
-      "answer": "Basta nos chamar no WhatsApp contando uma breve ideia do seu projeto ou data do evento. Alinhamos os objetivos e enviamos uma proposta detalhada com prazos e opções de investimento."
+      "question": "Quanto custa a locação do estúdio?",
+      "answer": "De segunda a sexta-feira o valor é R$ 50,00 a hora. Aos fins de semana e feriados o valor é R$ 75,00 a hora (com reserva mínima de 3 horas)."
     },
     {
-      "question": "Vocês atendem apenas no Rio de Janeiro ou em todo o Brasil?",
-      "answer": "Nossa base de produção é no Rio de Janeiro, mas realizamos captações e coberturas comerciais em qualquer cidade do Brasil e exterior."
+      "question": "A iluminação já está inclusa no valor da hora?",
+      "answer": "Sim! A locação já inclui o fundo infinito em papel branco, 3 tochas profissionais, 1 octabox, 1 rebatedor, radioflash, além de poltrona de couro preto, banquetas e fundos em tecido."
     },
     {
-      "question": "Quanto tempo leva para receber o vídeo pronto?",
-      "answer": "O prazo varia conforme a complexidade do projeto: Reels e vídeos para redes sociais são entregues entre 3 a 5 dias úteis, enquanto produções comerciais completas levam de 10 a 15 dias com rodadas de aprovação."
+      "question": "Onde fica localizado o estúdio da Vortex?",
+      "answer": "Estamos na Avenida Brigadeiro Luís Antônio, nº 388, Bela Vista – São Paulo/SP. Fica em frente ao famoso Teatro Renault, a 10 minutos a pé do Metrô Japão/Liberdade, com ponto de ônibus e estacionamento na porta."
     },
     {
-      "question": "Quem escreve o roteiro dos vídeos?",
-      "answer": "Nossa equipe criativa cuida de toda a estruturação de roteiro, ganchos narrativos e sugestões de cena em conjunto com a sua aprovação antes de qualquer dia de gravação."
+      "question": "Posso contratar apenas o espaço ou vocês também têm equipe?",
+      "answer": "Você pode tanto alugar apenas o estúdio e trazer sua própria equipe e câmera, quanto contratar a equipe completa da Vortex (direção, fotógrafo, filmmaker, maquiagem, figurino e edição)."
+    },
+    {
+      "question": "Como faço para reservar uma data ou agendar uma visita?",
+      "answer": "Basta nos chamar no WhatsApp no número (11) 99110-0088 informando o dia, horário desejado e tipo de produção. Confirmamos a disponibilidade e passamos as instruções de forma imediata!"
     }
   ]
 }
-

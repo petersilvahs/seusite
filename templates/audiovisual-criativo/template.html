@@ -15,7 +15,7 @@
   <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -60,41 +60,50 @@
     .font-display {
       font-family: 'Syne', sans-serif;
     }
-    .glow-primary {
-      box-shadow: 0 0 50px -10px var(--brand-primary);
+    .glow-amber {
+      box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.35);
     }
   </style>
 </head>
-<body class="antialiased selection:bg-amber-400 selection:text-black">
+<body class="antialiased selection:bg-amber-400 selection:text-black pb-20 md:pb-0">
 
-  <!-- Top bar -->
-  <div class="bg-black text-xs py-2 px-4 text-center tracking-widest uppercase font-semibold text-zinc-400 border-b border-white/5 flex items-center justify-center gap-2">
-    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-    <span>Agenda aberta para produções audiovisuais & projetos comerciais</span>
+  <!-- Top bar informativa -->
+  <div class="bg-black/90 text-xs py-2.5 px-4 text-center tracking-wider uppercase font-semibold text-zinc-300 border-b border-white/5 flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0"></span>
+    <span class="truncate">Estúdio Privativo em SP a partir de R$ 50/h • Iluminação Inclusa • Bela Vista</span>
+    <a href="{{contact.whatsappRentUrl}}" target="_blank" class="hidden sm:inline-block text-brand-primary underline hover:text-white font-bold ml-1">Reservar</a>
   </div>
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-40 bg-[#07090E]/80 backdrop-blur-xl border-b border-white/5 transition-all">
+  <header class="sticky top-0 z-40 bg-[#07090E]/90 backdrop-blur-xl border-b border-white/5 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
-      <a href="#" class="flex items-center gap-2">
-        <span class="font-display text-2xl sm:text-3xl font-extrabold tracking-tighter text-white uppercase">{{profile.name}}</span>
-        <span class="text-brand-primary text-2xl font-black">.</span>
+      <a href="#" class="flex items-center gap-1.5 group">
+        <span class="font-display text-2xl sm:text-3xl font-extrabold tracking-tighter text-white uppercase group-hover:text-brand-primary transition">{{profile.name}}</span>
+        <span class="w-2 h-2 rounded-full bg-brand-primary"></span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-zinc-400">
-        <a href="#portfolio" class="hover:text-white transition">Projetos</a>
-        <a href="#servicos" class="hover:text-white transition">Soluções</a>
-        <a href="#sobre" class="hover:text-white transition">Sobre</a>
-        <a href="#clientes" class="hover:text-white transition">Marcas</a>
-        <a href="#contato" class="hover:text-white transition">Contato</a>
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-zinc-400">
+        <a href="#locacao" class="hover:text-white transition">Aluguel do Estúdio</a>
+        <a href="#espaco" class="hover:text-white transition">O Espaço</a>
+        <a href="#portfolio" class="hover:text-white transition">Produções & Cases</a>
+        <a href="#equipe" class="hover:text-white transition">Equipe Completa</a>
+        <a href="#localizacao" class="hover:text-white transition">Localização</a>
+        <a href="#faq" class="hover:text-white transition">FAQ</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center gap-2 bg-white hover:bg-zinc-200 text-black px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition">
-          <i data-lucide="play" class="w-3.5 h-3.5 fill-black"></i>
-          <span>Pedir Orçamento</span>
+        <a href="{{contact.instagramUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="hidden sm:inline-flex items-center gap-1.5 text-zinc-400 hover:text-white text-xs font-semibold px-3 py-2 rounded-full border border-white/10 hover:border-white/30 transition"
+           title="Instagram @{{contact.instagram}}">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-500"></i>
+          <span>@{{contact.instagram}}</span>
+        </a>
+
+        <a href="{{contact.whatsappRentUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-brand-primary hover:bg-amber-400 text-black px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-lg shadow-amber-500/10">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span class="whitespace-nowrap">Reservar Estúdio</span>
         </a>
       </div>
 
@@ -102,47 +111,71 @@
   </header>
 
   <!-- Hero Cinematográfico -->
-  <section class="relative pt-16 pb-24 md:py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-t from-[#07090E] via-transparent to-transparent z-10"></div>
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-indigo-500/10 via-amber-500/10 to-transparent blur-[140px] pointer-events-none"></div>
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#07090E] via-transparent to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-amber-500/15 via-orange-500/10 to-transparent blur-[140px] pointer-events-none"></div>
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-20 text-center space-y-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-20 text-center space-y-6">
       
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-zinc-300">
-        <i data-lucide="film" class="w-3.5 h-3.5 text-brand-primary"></i>
-        <span>{{profile.specialty}}</span>
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] sm:text-xs uppercase tracking-widest text-zinc-300">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-primary shrink-0"></i>
+        <span>Bela Vista • São Paulo (Em frente ao Teatro Renault)</span>
       </div>
 
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05] uppercase max-w-5xl mx-auto">
-        Vídeos que prendem a atenção e <span class="text-brand-primary underline decoration-white/20 underline-offset-8">vendem a sua marca</span>.
+      <h1 class="font-display text-3xl sm:text-5xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] uppercase max-w-5xl mx-auto">
+        Estúdio Privativo em SP <span class="text-brand-primary block sm:inline">a partir de R$ 50/h</span> com Iluminação Inclusa.
       </h1>
 
-      <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed font-light">
-        {{profile.bioShort}}
+      <p class="text-sm sm:text-lg text-zinc-300 max-w-2xl mx-auto leading-relaxed font-light">
+        Estrutura completa e climatizada para fotos e filmagens: fundo infinito branco, tochas, camarim amplo com vista panorâmica, recepção cenográfica e equipe de produção sob demanda.
       </p>
 
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-primary hover:opacity-90 text-black px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition transform hover:-translate-y-0.5">
+      <!-- Botões de Ação Principal -->
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto">
+        <a href="{{contact.whatsappRentUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-primary hover:bg-amber-400 text-black px-7 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5">
           <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-          <span>Solicitar Proposta no WhatsApp</span>
+          <span>Alugar Estúdio no WhatsApp</span>
         </a>
 
-        <a href="#portfolio" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-4 rounded-full font-bold text-xs uppercase tracking-wider transition">
-          <span>Ver Projetos Recentes</span>
-          <i data-lucide="arrow-down" class="w-4 h-4 text-zinc-400"></i>
+        <a href="{{contact.tourDriveUrl}}" target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/5 hover:bg-white/10 text-white border border-white/15 px-6 py-4 rounded-full font-bold text-xs uppercase tracking-wider transition">
+          <i data-lucide="video" class="w-4 h-4 text-brand-primary"></i>
+          <span>Assistir Tour Virtual (Vídeo)</span>
         </a>
       </div>
 
-      <!-- Banner de Imagem / Mockup Showreel -->
-      <div class="pt-10 max-w-4xl mx-auto">
-        <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-video relative group bg-zinc-950">
-          <img src="{{profile.heroImage}}" alt="{{profile.name}}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition flex items-center justify-center">
-            <a href="{{contact.whatsappUrl}}" target="_blank" class="w-20 h-20 rounded-full bg-white/90 text-black flex items-center justify-center shadow-2xl group-hover:scale-110 transition duration-300">
-              <i data-lucide="play" class="w-8 h-8 fill-black translate-x-0.5"></i>
+      <!-- Quick Trust Badges -->
+      <div class="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-zinc-400">
+        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Sem burocracia</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> 100% Privativo na sua reserva</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Estacionamento em frente</span>
+      </div>
+
+      <!-- Vitrine Principal / Foto do Estúdio com Play para o Tour -->
+      <div class="pt-8 max-w-4xl mx-auto">
+        <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[16/10] sm:aspect-video relative group bg-zinc-950">
+          <img src="{{profile.heroImage}}" alt="Estúdio VORTEX Fundo Infinito" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20 group-hover:bg-black/40 transition"></div>
+          
+          <!-- Selo no canto -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md border border-white/10 px-3.5 py-1.5 rounded-full text-xs font-bold text-white flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Espaço Real VORTEX</span>
+          </div>
+
+          <!-- Botão Central de Tour Virtual -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+            <a href="{{contact.tourDriveUrl}}" target="_blank" rel="noopener noreferrer" 
+               class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-primary/95 hover:bg-brand-primary text-black flex items-center justify-center shadow-2xl group-hover:scale-110 transition duration-300 mb-3">
+              <i data-lucide="play" class="w-7 h-7 sm:w-8 sm:h-8 fill-black translate-x-0.5"></i>
             </a>
+            <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-white drop-shadow-md">
+              Clique para assistir ao Tour Virtual
+            </span>
+            <span class="text-[11px] text-zinc-300 drop-shadow-sm mt-0.5">
+              Conheça o estúdio, camarim panorâmico e recepção
+            </span>
           </div>
         </div>
       </div>
@@ -150,31 +183,395 @@
     </div>
   </section>
 
-  <!-- Métricas -->
-  <section class="py-12 bg-black border-y border-white/5">
-    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+  <!-- Métricas Rápidas -->
+  <section class="py-10 bg-black border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
       {{#stats}}
-      <div>
-        <p class="font-display text-4xl sm:text-5xl font-extrabold text-white">{{value}}</p>
-        <p class="text-xs uppercase tracking-widest text-zinc-500 mt-1 font-semibold">{{label}}</p>
+      <div class="p-3">
+        <p class="font-display text-2xl sm:text-4xl font-black text-white">{{value}}</p>
+        <p class="text-[11px] sm:text-xs uppercase tracking-widest text-zinc-400 mt-1 font-semibold">{{label}}</p>
       </div>
       {{/stats}}
     </div>
   </section>
 
-  <!-- Portfólio / Casos Recentes -->
-  <section id="portfolio" class="py-24 bg-[#07090E]">
+  <!-- SEÇÃO DE ALUGUEL & TABELA DE PREÇOS -->
+  <section id="locacao" class="py-20 md:py-28 bg-[#0B0E14] relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Transparência Total</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
+          Valores de Locação do Estúdio
+        </h2>
+        <p class="text-zinc-400 text-sm">
+          Sem taxas ocultas. Você aluga o espaço com iluminação profissional e infraestrutura completa inclusas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Card 1: Segunda a Sexta -->
+        <div class="bg-zinc-950/80 rounded-3xl p-8 border border-white/10 flex flex-col justify-between hover:border-white/20 transition relative">
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-zinc-300 text-xs font-semibold uppercase tracking-wider">
+                Segunda a Sexta
+              </span>
+              <h3 class="font-display text-2xl font-bold text-white uppercase">Diárias & Horas Úteis</h3>
+              <div class="flex items-baseline gap-1 pt-2">
+                <span class="text-zinc-400 text-sm font-medium">R$</span>
+                <span class="font-display text-5xl font-extrabold text-white">50</span>
+                <span class="text-zinc-400 text-sm">,00 / hora</span>
+              </div>
+              <p class="text-xs text-zinc-400">O melhor custo-benefício de São Paulo para fotógrafos e criadores.</p>
+            </div>
+
+            <hr class="border-white/5">
+
+            <ul class="space-y-3 text-xs text-zinc-300">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Fundo infinito em papel branco (3m de largura)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>3 tochas, 1 octabox, 1 rebatedor e radioflash</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Camarim climatizado amplo com vista panorâmica</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Recepção com 2 ambientes cenográficos para gravação</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Copa com café, água gelada, frigobar e micro-ondas</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <a href="https://wa.me/{{contact.whatsappClean}}?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20est%C3%BAdio%20Vortex%20para%20dia%20de%20semana%20(R%24%2050%2Fh)." target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Reservar Seg a Sex</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Fins de Semana e Feriados (Destaque) -->
+        <div class="bg-gradient-to-b from-zinc-900 to-black rounded-3xl p-8 border-2 border-brand-primary flex flex-col justify-between relative shadow-2xl glow-amber">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-primary text-black font-extrabold text-[10px] uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+            Mais Procurado
+          </div>
+
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-brand-primary/20 text-brand-primary text-xs font-semibold uppercase tracking-wider">
+                Fim de Semana & Feriados
+              </span>
+              <h3 class="font-display text-2xl font-bold text-white uppercase">Sábados, Domingos & Feriados</h3>
+              <div class="flex items-baseline gap-1 pt-2">
+                <span class="text-zinc-400 text-sm font-medium">R$</span>
+                <span class="font-display text-5xl font-extrabold text-brand-primary">75</span>
+                <span class="text-zinc-400 text-sm">,00 / hora</span>
+              </div>
+              <p class="text-xs text-amber-200/80 font-medium">Mínimo de 3 horas de locação</p>
+            </div>
+
+            <hr class="border-white/10">
+
+            <ul class="space-y-3 text-xs text-zinc-200">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span class="font-medium">Espaço 100% exclusivo e privativo para sua produção</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Fundo infinito branco + iluminação profissional completa</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>3 fundos de tecido (branco, bordô, amarelo) e cimento queimado</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Camarim completo: arara, steamer a vapor, ring light e projetor</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary shrink-0 mt-0.5"></i>
+                <span>Sala de reunião privativa para briefing e aprovações</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <a href="https://wa.me/{{contact.whatsappClean}}?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20est%C3%BAdio%20Vortex%20para%20fim%20de%20semana%20ou%20feriado%20(R%24%2075%2Fh)." target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-brand-primary hover:bg-amber-400 text-black py-4 px-6 rounded-full text-xs font-extrabold uppercase tracking-widest transition shadow-lg shadow-amber-500/30">
+              <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+              <span>Garantir Data no Fim de Semana</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Adicionais & Upgrades -->
+        <div class="bg-zinc-950/80 rounded-3xl p-8 border border-white/10 flex flex-col justify-between hover:border-white/20 transition relative">
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-zinc-300 text-xs font-semibold uppercase tracking-wider">
+                Opcionais sob Demanda
+              </span>
+              <h3 class="font-display text-2xl font-bold text-white uppercase">Equipamentos & Upgrades</h3>
+              <p class="text-xs text-zinc-400 pt-1">Turbine sua gravação sem carregar peso extra.</p>
+            </div>
+
+            <hr class="border-white/5">
+
+            <div class="space-y-4 text-xs">
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/5 space-y-1">
+                <div class="flex justify-between items-center text-white font-bold">
+                  <span>Câmera Canon 7D ou SL2</span>
+                  <span class="text-brand-primary font-mono">R$ 75/h</span>
+                </div>
+                <p class="text-[11px] text-zinc-400">Pronta para uso com lente e baterias carregadas.</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/5 space-y-1">
+                <div class="flex justify-between items-center text-white font-bold">
+                  <span>Fundos Coloridos em Papel</span>
+                  <span class="text-brand-primary font-mono">R$ 80/m</span>
+                </div>
+                <p class="text-[11px] text-zinc-400">Cores vibrantes para lookbooks e campanhas (valor por metro pisado).</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/5 space-y-1">
+                <div class="flex justify-between items-center text-white font-bold">
+                  <span>Microfones Profissionais</span>
+                  <span class="text-brand-primary font-mono">Sob consulta</span>
+                </div>
+                <p class="text-[11px] text-zinc-400">Lapela sem fio e direcionais para captação cristalina.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <a href="https://wa.me/{{contact.whatsappClean}}?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20dos%20equipamentos%20adicionais%20para%20loca%C3%A7%C3%A3o." target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition">
+              <i data-lucide="plus-circle" class="w-4 h-4"></i>
+              <span>Consultar Adicionais</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra de Itens Inclusos Detalhada -->
+      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-zinc-950 border border-white/10">
+        <h4 class="font-display text-lg font-bold text-white uppercase flex items-center gap-2 mb-4">
+          <i data-lucide="package-check" class="w-5 h-5 text-brand-primary"></i>
+          <span>Todos os itens já inclusos no valor da locação:</span>
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs text-zinc-300">
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>Fundo infinito em papel branco</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>3 tochas de alta potência</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>1 Octabox com difusor</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>1 Rebatedor profissional</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>Radioflash sem fio universal</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>Poltrona em couro preto e banquetas</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>Fundos de tecido (branco, bordô, amarelo)</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>Fundo textura cimento queimado</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-xl">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary"></i>
+            <span>Camarim, Copa, Recepção e Reunião</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- O ESPAÇO & AMBIENTES REAIS -->
+  <section id="espaco" class="py-20 md:py-28 bg-[#07090E] border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Galeria Real</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase mt-1">
+            Conheça Nossos Ambientes
+          </h2>
+          <p class="text-zinc-400 text-sm mt-2 max-w-xl">
+            Espaços climatizados e pensados nos mínimos detalhes para o conforto da sua equipe, modelos e clientes.
+          </p>
+        </div>
+        
+        <a href="{{contact.tourDriveUrl}}" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-brand-primary hover:text-white transition">
+          <i data-lucide="video" class="w-4 h-4"></i>
+          <span>Abrir Tour Virtual Completo</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Grid de Espaços com Fotos Reais da Apresentação -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Espaço 1: Fundo Infinito -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden border border-white/10 group hover:border-brand-primary/50 transition">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/estudio-fundo-infinito.jpg" alt="Estúdio com Fundo Infinito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white uppercase tracking-wider">
+              Estúdio Principal
+            </span>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="font-display text-lg font-bold text-white uppercase">Fundo Infinito & Iluminação</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Fundo branco de 3 metros de largura, 3 tochas profissionais, octabox, rebatedor e rádioflash. Poltrona de couro e fundos alternativos inclusos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Espaço 2: Camarim com Vista -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden border border-white/10 group hover:border-brand-primary/50 transition">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/camarim-vortex.jpg" alt="Camarim Climatizado com Vista" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white uppercase tracking-wider">
+              Área de Apoio
+            </span>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="font-display text-lg font-bold text-white uppercase">Camarim Climatizado Panorâmico</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Ar-condicionado, vista panorâmica de São Paulo, arara para figurinos, manequim, steamer a vapor, ring light e projetor multimídia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Espaço 3: Recepção Cenográfica -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden border border-white/10 group hover:border-brand-primary/50 transition">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/recepcao-cenarios.jpg" alt="Recepção Cenográfica" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white uppercase tracking-wider">
+              Cenários Extras
+            </span>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="font-display text-lg font-bold text-white uppercase">Recepção com 2 Cenários</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Dois ambientes elegantes e decorados ideais para gravações de podcasts, bate-papos, entrevistas corporativas e fotos estilo lifestyle.
+            </p>
+          </div>
+        </div>
+
+        <!-- Espaço 4: Copa & Cantinho do Café -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden border border-white/10 group hover:border-brand-primary/50 transition">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/copa-cafe.jpg" alt="Copa Completa e Café" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white uppercase tracking-wider">
+              Conforto & Apoio
+            </span>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="font-display text-lg font-bold text-white uppercase">Copa & Cantinho do Café</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Cafeteira, filtro de água gelada, frigobar, micro-ondas e área para refeições rápidas e catering da sua equipe e convidados.
+            </p>
+          </div>
+        </div>
+
+        <!-- Espaço 5: Equipamentos Adicionais -->
+        <div class="bg-zinc-950 rounded-3xl overflow-hidden border border-white/10 group hover:border-brand-primary/50 transition">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/equipamentos-adicionais.jpg" alt="Equipamentos Adicionais" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            <span class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white uppercase tracking-wider">
+              Locação Adicional
+            </span>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="font-display text-lg font-bold text-white uppercase">Câmeras Canon & Fundos Coloridos</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Câmeras Canon 7D e SL2 disponíveis a R$ 75/h, fundos coloridos em papel a R$ 80/m pisado e microfones para gravações audiovisuais.
+            </p>
+          </div>
+        </div>
+
+        <!-- Espaço 6: Tour Virtual Interativo -->
+        <div class="bg-gradient-to-br from-zinc-900 to-black rounded-3xl p-8 border border-brand-primary/40 flex flex-col justify-between relative">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-primary/20 text-brand-primary flex items-center justify-center">
+              <i data-lucide="video" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-white uppercase">Assista ao Tour Virtual</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Veja o vídeo completo gravado em alta resolução mostrando todos os ângulos do estúdio, camarim, recepção e iluminação.
+            </p>
+          </div>
+
+          <div class="pt-6">
+            <a href="{{contact.tourDriveUrl}}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 bg-brand-primary hover:bg-amber-400 text-black px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition w-full justify-center">
+              <i data-lucide="play" class="w-4 h-4 fill-black"></i>
+              <span>Abrir Vídeo no Drive</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUÇÕES & CASES DE SUCESSO -->
+  <section id="portfolio" class="py-20 md:py-28 bg-[#0B0E14] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
         <div>
-          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Projetos em Destaque</span>
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Portfólio & Criatividade</span>
           <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase mt-1">
-            Produções que geram resultado
+            Produções Gravadas no Estúdio
           </h2>
+          <p class="text-zinc-400 text-sm mt-2 max-w-xl">
+            Projetos realizados na Vortex por fotógrafos, criadores e pela nossa própria equipe de produção.
+          </p>
         </div>
-        <a href="{{contact.whatsappUrl}}" target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-zinc-300 hover:text-white transition">
-          <span>Ver mais no Instagram</span>
+        <a href="{{contact.instagramUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-zinc-300 hover:text-white transition px-4 py-2 rounded-full border border-white/10 hover:border-white/30">
+          <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i>
+          <span>Ver mais no @{{contact.instagram}}</span>
           <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-primary"></i>
         </a>
       </div>
@@ -184,132 +581,282 @@
         <div class="rounded-3xl overflow-hidden border border-white/10 bg-zinc-950 flex flex-col group hover:border-brand-primary/50 transition duration-300">
           <div class="aspect-[16/10] overflow-hidden relative">
             <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+            
+            <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-brand-primary uppercase tracking-wider">
+              {{tag}}
+            </span>
+
             <div class="absolute bottom-6 left-6 right-6">
-              <h3 class="font-display text-2xl font-bold text-white uppercase">{{title}}</h3>
-              <p class="text-xs text-zinc-400 mt-1">{{subtitle}}</p>
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-white uppercase">{{title}}</h3>
+              <p class="text-xs text-zinc-300 mt-1 leading-relaxed">{{subtitle}}</p>
             </div>
           </div>
         </div>
         {{/cases}}
       </div>
 
+      <!-- Banner de Instagram -->
+      <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-zinc-950 via-zinc-900 to-black border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div class="space-y-1">
+          <h4 class="font-display text-xl font-bold text-white uppercase flex items-center justify-center sm:justify-start gap-2">
+            <i data-lucide="instagram" class="w-5 h-5 text-pink-500"></i>
+            <span>Acompanhe o dia a dia das gravações</span>
+          </h4>
+          <p class="text-xs text-zinc-400">Postamos bastidores diários, ensaios e disponibilidades de datas no nosso perfil.</p>
+        </div>
+        <a href="{{contact.instagramUrl}}" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-white text-black hover:bg-zinc-200 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition whitespace-nowrap">
+          <span>Seguir @{{contact.instagram}}</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- Soluções / Serviços -->
-  <section id="servicos" class="py-24 bg-black border-t border-white/5">
+  <!-- SERVIÇOS DE EQUIPE COMPLETA (PRODUÇÃO SOB DEMANDA) -->
+  <section id="equipe" class="py-20 md:py-28 bg-[#07090E] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">O que entregamos</span>
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Produção Audiovisual Completa</span>
         <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
-          Soluções Completas de Imagem
+          Não tem equipe? Nós cuidamos de tudo.
+        </h2>
+        <p class="text-zinc-400 text-sm">
+          Além da locação simples, disponibilizamos os melhores profissionais do mercado de São Paulo para executar sua ideia do roteiro à entrega final.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-white/5 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+            <i data-lucide="clapperboard" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white uppercase">Direção Criativa & Roteiro</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Concepção da narrativa, roteiro estratégico e direção de cena para elevar a autoridade visual da sua marca.</p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-white/5 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white uppercase">Fotografia & Iluminação</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Fotógrafos experientes em moda, e-commerce, retratos profissionais e produtos com iluminação milimétrica.</p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-white/5 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+            <i data-lucide="video" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white uppercase">Filmmaker & Captação 4K</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Operação de câmeras de cinema, gimbals, captação dinâmica para Reels, comerciais e conteúdos de marca.</p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-white/5 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white uppercase">Maquiagem & Hairstylist</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Profissionais de beleza dedicados no camarim climatizado para garantir pele e cabelo impecáveis durante toda a sessão.</p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-white/5 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+            <i data-lucide="shirt" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white uppercase">Stylist & Figurino</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Curadoria de roupas, styling profissional e preparação de looks na arara e steamer a vapor do estúdio.</p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-zinc-950 border border-white/5 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+            <i data-lucide="wand-2" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display text-lg font-bold text-white uppercase">Edição & Color Grading</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Pós-produção avançada em DaVinci Resolve, cortes dinâmicos de alta retenção, motion graphics e sound design.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="{{contact.whatsappProductionUrl}}" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-3 bg-brand-primary hover:bg-amber-400 text-black px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition shadow-lg shadow-amber-500/20">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+          <span>Solicitar Orçamento de Produção Completa</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO PRIVILEGIADA -->
+  <section id="localizacao" class="py-20 md:py-28 bg-[#0B0E14] border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Acesso Fácil & Central</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
+            Localização Privilegiada no Centro de São Paulo
+          </h2>
+          <p class="text-zinc-300 text-sm leading-relaxed">
+            Localizado no coração da Bela Vista, em um dos pontos mais acessíveis e tradicionais da capital paulista.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="p-4 rounded-2xl bg-zinc-950 border border-white/5 flex items-start gap-3.5">
+              <i data-lucide="map-pin" class="w-5 h-5 text-brand-primary shrink-0 mt-0.5"></i>
+              <div>
+                <p class="text-xs font-bold text-white uppercase">Endereço Oficial</p>
+                <p class="text-xs text-zinc-400 mt-0.5">{{contact.address}} – {{contact.city}} - {{contact.state}}</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-zinc-950 border border-white/5 flex items-start gap-3.5">
+              <i data-lucide="landmark" class="w-5 h-5 text-brand-primary shrink-0 mt-0.5"></i>
+              <div>
+                <p class="text-xs font-bold text-white uppercase">Ponto de Referência</p>
+                <p class="text-xs text-zinc-400 mt-0.5">Exatamente em frente ao famoso <strong class="text-white">Teatro Renault</strong>.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-zinc-950 border border-white/5 flex items-start gap-3.5">
+              <i data-lucide="train" class="w-5 h-5 text-brand-primary shrink-0 mt-0.5"></i>
+              <div>
+                <p class="text-xs font-bold text-white uppercase">Metrô & Estacionamento</p>
+                <p class="text-xs text-zinc-400 mt-0.5">A apenas 10 minutos a pé do Metrô Japão/Liberdade. Ponto de ônibus na calçada e estacionamento privativo bem em frente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="{{contact.googleMapsUrl}}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition">
+              <i data-lucide="external-link" class="w-4 h-4 text-brand-primary"></i>
+              <span>Abrir no Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative aspect-[4/3] bg-zinc-950 group">
+            <img src="./assets/mapa-localizacao.jpg" alt="Mapa de Localização Vortex" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
+            
+            <a href="{{contact.googleMapsUrl}}" target="_blank" rel="noopener noreferrer"
+               class="absolute bottom-6 right-6 bg-brand-primary hover:bg-amber-400 text-black px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-xl">
+              <i data-lucide="map" class="w-4 h-4"></i>
+              <span>Como Chegar</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS DE QUEM JÁ GRAVOU -->
+  <section class="py-20 md:py-28 bg-[#07090E] border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Quem Já Gravou Aqui</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
+          Avaliação de Fotógrafos & Marcas
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {{#services}}
-        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/5 flex flex-col justify-between space-y-6 hover:border-white/20 transition">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {{#testimonials}}
+        <div class="p-8 rounded-3xl bg-zinc-950 border border-white/5 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 text-brand-primary border border-white/10 flex items-center justify-center">
-              <i data-lucide="film" class="w-6 h-6"></i>
+            <div class="flex items-center gap-1 text-brand-primary">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
             </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase">{{title}}</h3>
-            <p class="text-zinc-400 text-xs leading-relaxed">{{shortDescription}}</p>
-            
-            <ul class="space-y-2 pt-2 text-xs text-zinc-400">
-              {{#highlights}}
-              <li class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-primary flex-shrink-0"></i>
-                <span>{{.}}</span>
-              </li>
-              {{/highlights}}
-            </ul>
+            <p class="text-xs text-zinc-300 leading-relaxed italic">
+              "{{comment}}"
+            </p>
           </div>
 
-          <a href="{{contact.whatsappUrl}}&text=Olá! Gostaria de consultar orçamento para {{title}}." target="_blank" 
-             class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-brand-primary transition pt-4 border-t border-white/5">
-            <span>Solicitar Orçamento</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
+          <div class="pt-4 border-t border-white/5">
+            <p class="font-bold text-white text-xs uppercase">{{author}}</p>
+            <p class="text-[11px] text-zinc-500 mt-0.5">{{role}}</p>
+          </div>
         </div>
-        {{/services}}
+        {{/testimonials}}
       </div>
 
     </div>
   </section>
 
-  <!-- Sobre a Produtora -->
-  <section id="sobre" class="py-24 bg-[#07090E] border-t border-white/5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-5 relative">
-          <div class="rounded-3xl overflow-hidden border border-white/10 aspect-[4/5] bg-zinc-900 shadow-2xl">
-            <img src="{{profile.aboutImage}}" alt="{{profile.name}}" class="w-full h-full object-cover">
-          </div>
-        </div>
+  <!-- FAQ DETALHADO -->
+  <section id="faq" class="py-20 md:py-28 bg-[#0B0E14] border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Dúvidas Frequentes</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
+          Tudo o que você precisa saber
+        </h2>
+      </div>
 
-        <div class="lg:col-span-7 space-y-6">
-          <span class="text-xs uppercase tracking-widest text-brand-primary font-bold">Por trás das lentes</span>
-          <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
-            {{profile.name}}
-          </h2>
-          <p class="text-xs font-bold uppercase tracking-widest text-zinc-400">
-            {{profile.specialty}}
+      <div class="space-y-4">
+        {{#faq}}
+        <details class="group bg-zinc-950 rounded-2xl border border-white/5 p-6 open:border-brand-primary/40 transition">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white uppercase tracking-wider">
+            <span>{{question}}</span>
+            <span class="text-brand-primary group-open:rotate-180 transition-transform duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-xs text-zinc-400 mt-4 leading-relaxed pl-1 font-light">
+            {{answer}}
           </p>
-
-          <div class="space-y-4 text-zinc-400 text-sm leading-relaxed font-light">
-            <p>
-              Em um mundo dominado pelo consumo rápido de conteúdo, vídeos comuns passam despercebidos. Nosso foco é criar filmes comerciais e conteúdos digitais que geram conexão imediata, desejo e autoridade.
-            </p>
-            <p>
-              Do roteiro estratégico à pós-produção cinematográfica com color grading profissional e sound design envolvente, cada projeto é pensado para destacar sua marca no mercado.
-            </p>
-          </div>
-
-          <div class="space-y-3 pt-2">
-            {{#differentials}}
-            <div class="p-4 rounded-2xl bg-zinc-950 border border-white/5">
-              <h4 class="font-bold text-white text-xs uppercase tracking-wider flex items-center gap-2">
-                <i data-lucide="check-circle" class="w-4 h-4 text-brand-primary"></i>
-                {{title}}
-              </h4>
-              <p class="text-xs text-zinc-400 mt-1 pl-6">{{description}}</p>
-            </div>
-            {{/differentials}}
-          </div>
-
-          <div class="pt-4">
-            <a href="{{contact.whatsappUrl}}" target="_blank" 
-               class="inline-flex items-center gap-2 bg-brand-primary text-black px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition">
-              <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
-              <span>Falar Diretamente com a Produção</span>
-            </a>
-          </div>
-
-        </div>
-
+        </details>
+        {{/faq}}
       </div>
+
     </div>
   </section>
 
-  <!-- CTA / Contato -->
-  <section id="contato" class="py-24 bg-black border-t border-white/5">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8">
-      <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
-        Pronto para elevar o nível visual da sua marca?
+  <!-- CTA FINAL DE CONVERSÃO -->
+  <section class="py-20 md:py-28 bg-black border-t border-white/5 relative overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-amber-500/10 blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8 relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-brand-primary font-semibold">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Agenda Flexível & Atendimento Imediato</span>
+      </div>
+
+      <h2 class="font-display text-3xl sm:text-6xl font-black text-white uppercase tracking-tight leading-[1.1]">
+        Pronto para gravar no melhor estúdio de SP?
       </h2>
-      <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-light">
-        Mande uma mensagem agora no WhatsApp contando sobre seu projeto, evento ou empresa. Responderemos com um orçamento sob medida.
+      
+      <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
+        Envie uma mensagem no WhatsApp informando a data, horário desejado ou a necessidade da sua produção. Confirmamos disponibilidade na hora!
       </p>
 
-      <div class="pt-4">
-        <a href="{{contact.whatsappUrl}}" target="_blank" 
-           class="inline-flex items-center gap-3 bg-brand-primary hover:opacity-90 text-black px-9 py-4 rounded-full text-xs font-bold uppercase tracking-widest shadow-2xl transition transform hover:-translate-y-0.5">
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="{{contact.whatsappRentUrl}}" target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-primary hover:bg-amber-400 text-black px-9 py-4 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-2xl shadow-amber-500/20 transition transform hover:-translate-y-0.5">
           <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
           <span>Chamar no WhatsApp: {{contact.whatsappFormatted}}</span>
+        </a>
+
+        <a href="{{contact.tourDriveUrl}}" target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition">
+          <i data-lucide="video" class="w-4 h-4 text-brand-primary"></i>
+          <span>Ver Tour Virtual</span>
         </a>
       </div>
     </div>
@@ -317,21 +864,46 @@
 
   <!-- Footer -->
   <footer class="bg-[#05070A] text-zinc-500 py-12 text-xs border-t border-white/5 text-center">
-    <div class="max-w-6xl mx-auto px-4 space-y-2">
-      <p class="font-display text-xl font-bold text-white uppercase">{{profile.name}}</p>
-      <p>© 2026 {{profile.name}}. Todos os direitos reservados.</p>
-      <p class="text-[11px] text-zinc-600 pt-1">
-        Desenvolvido por <a href="https://github.com/petersilvahs/seusite" class="text-brand-primary hover:underline">SeuSite</a>
+    <div class="max-w-6xl mx-auto px-4 space-y-3">
+      <p class="font-display text-2xl font-black text-white uppercase tracking-wider">{{profile.name}}</p>
+      <p class="text-zinc-400">{{contact.address}} • {{contact.neighborhood}} • {{contact.city}} - {{contact.state}}</p>
+      <div class="flex items-center justify-center gap-4 text-zinc-400 pt-1">
+        <a href="{{contact.instagramUrl}}" target="_blank" class="hover:text-white flex items-center gap-1">
+          <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          <span>@{{contact.instagram}}</span>
+        </a>
+        <span>•</span>
+        <a href="{{contact.whatsappRentUrl}}" target="_blank" class="hover:text-white flex items-center gap-1">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>{{contact.whatsappFormatted}}</span>
+        </a>
+      </div>
+      <p class="text-[11px] text-zinc-600 pt-3">
+        © 2026 {{profile.name}}. Todos os direitos reservados.
       </p>
     </div>
   </footer>
 
-  <!-- WhatsApp Flutuante -->
-  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-    <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+  <!-- WhatsApp Flutuante no Desktop -->
+  <div class="hidden md:flex fixed bottom-6 right-6 z-50 items-center gap-3">
+    <a href="{{contact.whatsappRentUrl}}" target="_blank" rel="noopener noreferrer" 
        class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
-       aria-label="Pedir Orçamento">
+       aria-label="Reservar no WhatsApp">
       <i data-lucide="message-circle" class="w-8 h-8 fill-white/20"></i>
+    </a>
+  </div>
+
+  <!-- Barra Fixa Mobile (Bottom Bar) para Conversão Instantânea -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#07090E]/95 backdrop-blur-lg border-t border-white/10 p-3 flex items-center gap-3">
+    <a href="{{contact.tourDriveUrl}}" target="_blank" rel="noopener noreferrer"
+       class="w-12 h-12 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-primary"
+       title="Assistir Tour Virtual">
+      <i data-lucide="video" class="w-5 h-5"></i>
+    </a>
+    <a href="{{contact.whatsappRentUrl}}" target="_blank" rel="noopener noreferrer" 
+       class="flex-1 inline-flex items-center justify-center gap-2 bg-brand-primary hover:bg-amber-400 text-black py-3.5 px-4 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg shadow-amber-500/20">
+      <i data-lucide="message-circle" class="w-4 h-4 fill-black shrink-0"></i>
+      <span class="truncate">Alugar Estúdio (R$ 50/h)</span>
     </a>
   </div>
 
@@ -340,4 +912,3 @@
   </script>
 </body>
 </html>
-

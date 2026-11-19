@@ -26,7 +26,9 @@
     "googleMapsUrl": "https://maps.google.com/?q=Vila+da+Penha,+Rio+de+Janeiro+-+RJ",
     "workingHours": "Segunda a Sexta: 09h às 19h | Sábados com agendamento prévio",
     "whatsappClean": "5521983461702",
-    "whatsappUrl": "https://wa.me/5521983461702?text=Ol%C3%A1%20Dra.%20Brenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o."
+    "whatsappUrl": "https://wa.me/5521983461702?text=Ol%C3%A1%20Dra.%20Brenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o.",
+    "whatsappRentUrl": "https://wa.me/5521983461702?text=Ol%C3%A1%20Dra.%20Brenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o.",
+    "whatsappProductionUrl": "https://wa.me/5521983461702?text=Ol%C3%A1%20Dra.%20Brenda!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o."
   },
   "theme": {
     "primary": "#C2847A",

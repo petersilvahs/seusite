@@ -27,7 +27,9 @@
     "googleMapsUrl": "https://maps.google.com/?q=Curitiba+-+PR",
     "workingHours": "Segunda a Sexta: 08h às 18h",
     "whatsappClean": "5541988849182",
-    "whatsappUrl": "https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto."
+    "whatsappUrl": "https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto.",
+    "whatsappRentUrl": "https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto.",
+    "whatsappProductionUrl": "https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto."
   },
   "theme": {
     "primary": "#00A3FF",

@@ -26,7 +26,9 @@
     "googleMapsUrl": "https://maps.google.com/?q=Dr.+Lucas+Carvalho+Dentista+Copacabana+Rio+de+Janeiro",
     "workingHours": "Segunda a Sexta: 09h às 19h",
     "whatsappClean": "5521991234567",
-    "whatsappUrl": "https://wa.me/5521991234567?text=Ol%C3%A1%2C%20Dr.%20Lucas.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20transformar%20meu%20sorriso%20em%20Copacabana."
+    "whatsappUrl": "https://wa.me/5521991234567?text=Ol%C3%A1%2C%20Dr.%20Lucas.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20transformar%20meu%20sorriso%20em%20Copacabana.",
+    "whatsappRentUrl": "https://wa.me/5521991234567?text=Ol%C3%A1%2C%20Dr.%20Lucas.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20transformar%20meu%20sorriso%20em%20Copacabana.",
+    "whatsappProductionUrl": "https://wa.me/5521991234567?text=Ol%C3%A1%2C%20Dr.%20Lucas.%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20transformar%20meu%20sorriso%20em%20Copacabana."
   },
   "theme": {
     "primary": "#1B263B",

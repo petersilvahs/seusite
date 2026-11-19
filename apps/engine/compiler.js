@@ -72,16 +72,20 @@ function renderVariables(template, currentContext, rootContext = currentContext)
  */
 export function compileClientSite(clientConfig, baseDir) {
   // Prepara dados derivados (como o link completo do WhatsApp)
-  const phoneClean = clientConfig.contact.whatsapp.replace(/\D/g, '');
+  const phoneClean = clientConfig.contact.whatsapp ? clientConfig.contact.whatsapp.replace(/\D/g, '') : '';
   const phoneWithCountry = phoneClean.startsWith('55') ? phoneClean : `55${phoneClean}`;
-  const encodedMsg = encodeURIComponent(clientConfig.contact.whatsappMessage || 'Olá! Gostaria de agendar uma consulta.');
+  const encodedMsg = encodeURIComponent(clientConfig.contact.whatsappMessage || 'Olá! Gostaria de mais informações.');
+  const encodedRentMsg = encodeURIComponent(clientConfig.contact.whatsappRentMessage || clientConfig.contact.whatsappMessage || 'Olá! Gostaria de alugar o estúdio.');
+  const encodedProdMsg = encodeURIComponent(clientConfig.contact.whatsappProductionMessage || clientConfig.contact.whatsappMessage || 'Olá! Gostaria de solicitar um orçamento para produção audiovisual.');
   
   const enrichedData = {
     ...clientConfig,
     contact: {
       ...clientConfig.contact,
       whatsappClean: phoneWithCountry,
-      whatsappUrl: `https://wa.me/${phoneWithCountry}?text=${encodedMsg}`
+      whatsappUrl: `https://wa.me/${phoneWithCountry}?text=${encodedMsg}`,
+      whatsappRentUrl: `https://wa.me/${phoneWithCountry}?text=${encodedRentMsg}`,
+      whatsappProductionUrl: `https://wa.me/${phoneWithCountry}?text=${encodedProdMsg}`
     }
   };
 
