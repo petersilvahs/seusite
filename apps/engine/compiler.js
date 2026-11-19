@@ -102,6 +102,14 @@ export function compileClientSite(clientConfig, baseDir) {
   const outputDir = path.join(baseDir, 'sites-output', enrichedData.id);
   fs.mkdirSync(outputDir, { recursive: true });
 
+  // Copia assets dedicados do cliente se existirem
+  const clientAssetsDir = path.join(baseDir, 'configs', 'clients', 'assets', enrichedData.id);
+  const outputAssetsDir = path.join(outputDir, 'assets');
+  if (fs.existsSync(clientAssetsDir)) {
+    fs.mkdirSync(outputAssetsDir, { recursive: true });
+    fs.cpSync(clientAssetsDir, outputAssetsDir, { recursive: true });
+  }
+
   const outputPath = path.join(outputDir, 'index.html');
   fs.writeFileSync(outputPath, compiledHtml, 'utf-8');
 

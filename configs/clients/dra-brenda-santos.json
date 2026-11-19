@@ -12,8 +12,8 @@
     "cro": "CRO-RJ 56732",
     "specialty": "Cirurgiã-Dentista & Especialista em Estética Orofacial",
     "bioShort": "Combinando ciência, precisão e arte para valorizar a sua melhor versão com naturalidade, delicadeza e segurança.",
-    "heroImage": "https://images.unsplash.com/photo-1594824813511-10c598c48405?auto=format&fit=crop&w=800&q=80",
-    "aboutImage": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+    "heroImage": "./assets/brenda-hero.jpg",
+    "aboutImage": "./assets/brenda-about.jpg"
   },
   "contact": {
     "whatsapp": "21983461702",
