@@ -41,18 +41,23 @@
   ],
   "cases": [
     {
-      "title": "Preenchimento Labial com Naturalidade",
-      "subtitle": "Definição de contorno e volume refinado com ácido hialurônico",
+      "title": "Preenchimento Labial Natural",
+      "subtitle": "Contorno labial bem desenhado e hidratação com volume sob medida",
       "image": "./assets/labial-antes-depois.jpg"
     },
     {
-      "title": "Harmonização de Perfil Facial",
-      "subtitle": "Equilíbrio de proporções entre lábios, mento e linha mandibular",
+      "title": "Harmonização de Perfil Completo",
+      "subtitle": "Equilíbrio tridimensional entre mento, lábios e mandíbula",
       "image": "./assets/harmonizacao-perfil.jpg"
     },
     {
+      "title": "Rinomodelação de Perfil",
+      "subtitle": "Harmonia do dorso e ponta nasal sem cortes cirúrgicos",
+      "image": "./assets/rino-depois.jpg"
+    },
+    {
       "title": "Projeção e Contorno de Perfil",
-      "subtitle": "Realce sutil dos lábios mantendo a harmonia anatômica da paciente",
+      "subtitle": "Projeção sutil e elegante respeitando a anatomia da face",
       "image": "./assets/labial-perfil.jpg"
     }
   ],
@@ -61,14 +66,14 @@
       "id": "harmonizacao",
       "title": "Harmonização Facial Personalizada",
       "shortDescription": "Equilíbrio, sustentação e realce dos traços faciais de forma sutil e natural, respeitando suas características únicas.",
-      "image": "./assets/harmonizacao-perfil.jpg",
+      "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80",
       "highlights": ["Preenchimento labial refinado", "Contorno mandibular e mento", "Protocolo exclusivo personalizado"]
     },
     {
       "id": "labial",
       "title": "Preenchimento Labial & Contorno",
       "shortDescription": "Lábios desenhados, hidratados e volumizados na medida certa com ácido hialurônico de alta tecnologia.",
-      "image": "./assets/labial-close.jpg",
+      "image": "https://images.unsplash.com/photo-1512290903048-791eae4e0159?auto=format&fit=crop&w=600&q=80",
       "highlights": ["Volume elegante e sem exageros", "Definição do arco do cupido", "Resultado imediato e natural"]
     },
     {
@@ -87,16 +92,16 @@
     },
     {
       "id": "rinomodelacao",
-      "title": "Rinomodelação & Harmonização",
+      "title": "Rinomodelação Estruturada",
       "shortDescription": "Ajuste delicado do dorso e ponta nasal sem cirurgia, proporcionando simetria imediata ao perfil do rosto.",
-      "image": "./assets/rino-depois.jpg",
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
       "highlights": ["Procedimento rápido em consultório", "Sem cortes e sem pós-operatório cirúrgico", "Harmonia imediata de perfil"]
     },
     {
       "id": "bioestimuladores",
       "title": "Bioestimuladores de Colágeno",
       "shortDescription": "Tratamento para firmeza cutânea que estimula a produção natural de colágeno pelo próprio corpo ao longo do tempo.",
-      "image": "./assets/labial-angulo.jpg",
+      "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
       "highlights": ["Melhora na elasticidade da pele", "Tratamento da flacidez facial", "Resultados progressivos e duradouros"]
     }
   ],
