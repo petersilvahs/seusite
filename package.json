@@ -4,10 +4,8 @@
   "type": "module",
   "private": true,
   "description": "Plataforma de criação e hospedagem automatizada de sites com IA para negócios locais e profissionais autônomos",
-  "workspaces": [
-    "apps/*"
-  ],
   "scripts": {
+    "build": "node apps/engine/index.js",
     "engine:generate": "node apps/engine/index.js",
     "site:ai": "node apps/engine/ai/generate.js",
     "preview": "npx serve sites-output/dra-brenda-santos -l 3000"

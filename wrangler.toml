@@ -1,0 +1,6 @@
+name = "dra-brenda-santos"
+compatibility_date = "2024-11-01"
+
+[assets]
+directory = "./sites-output/dra-brenda-santos"
+binding = "ASSETS"
