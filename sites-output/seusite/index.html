@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -120,17 +120,17 @@ x<!DOCTYPE html>
       <!-- Badge superior -->
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-white/10 text-xs font-semibold text-slate-300 shadow-inner">
         <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Sites Profissionais com Inteligência Artificial • Entrega em 24 Horas</span>
+        <span>Sites Profissionais sob Medida • Para Qualquer Negócio • Entrega em 24h</span>
       </div>
 
       <!-- Título de Impacto -->
       <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] max-w-4xl mx-auto">
-        Transforme seguidores do Instagram em <span class="gradient-text">clientes pagantes</span> com um site profissional.
+        Transforme seguidores em <span class="gradient-text">clientes pagantes</span> com um site profissional.
       </h1>
 
       <!-- Subtítulo persuasivo -->
-      <p class="text-base sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-normal">
-        Para pequenos empreendedores, autônomos e prestadores de serviço. Criamos sua página oficial com design de alto padrão, copy persuasiva e botão direto para o seu WhatsApp.
+      <p class="text-base sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-normal">
+        Para autônomos, prestadores de serviços, produtoras, lojas e pequenos empreendedores de qualquer segmento. Criamos sua página oficial com design moderno, alta velocidade e botão direto para o seu WhatsApp.
       </p>
 
       <!-- Botões de Ação -->
@@ -230,12 +230,12 @@ x<!DOCTYPE html>
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Estruturas Especializadas</span>
+        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Soluções Para Qualquer Segmento</span>
         <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white">
-          Modelos desenhados para cada especialidade
+          Estruturas sob medida para o seu negócio
         </h2>
         <p class="text-slate-400 text-sm sm:text-base">
-          Nada de sites genéricos. Nossos templates respeitam o código de ética do seu conselho e focam no que seu cliente realmente busca.
+          Do prestador de serviços à produtora audiovisual, do consultório ao comércio local. Cada página é construída com o posicionamento visual ideal para atrair clientes.
         </p>
       </div>
 
@@ -707,57 +707,106 @@ x<!DOCTYPE html>
             Receba uma demonstração gratuita do site do seu negócio
           </h2>
           <p class="text-slate-300 text-sm leading-relaxed">
-            Preencha seus dados abaixo. Nossa equipe prepara uma versão de teste exclusiva para você ver no celular em até 24 horas.
+            Preencha os detalhes da sua marca abaixo. Nossa equipe monta uma versão de teste exclusiva e personalizada para você ver no celular em até 24 horas.
           </p>
         </div>
 
-        <!-- Formulário rápido -->
-        <form class="max-w-md mx-auto space-y-4 text-left" onsubmit="event.preventDefault(); alert('Solicitação recebida com sucesso! Em breve entraremos em contato com a demonstração.');">
+        <!-- Formulário ultra personalizado -->
+        <form id="leadForm" class="max-w-xl mx-auto space-y-5 text-left" onsubmit="handleFormSubmit(event)">
           
-          <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu Nome ou Nome da Empresa</label>
-            <input type="text" required placeholder="Ex: Dra. Juliana Santos ou Barbearia Silva" 
-                   class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu Nome ou da Empresa *</label>
+              <input type="text" id="leadName" required placeholder="Ex: VORTEX, Dra. Brenda, Lucas..." 
+                     class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu @ do Instagram *</label>
+              <input type="text" id="leadInsta" required placeholder="@seu.perfil" 
+                     class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+            </div>
           </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu @ do Instagram</label>
-            <input type="text" required placeholder="@seu.perfil" 
-                   class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp com DDD *</label>
+              <input type="tel" id="leadPhone" required placeholder="(XX) 99999-9999" 
+                     class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Ramo / Área de Atuação *</label>
+              <select id="leadNiche" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+                <option value="Audiovisual / Filmmaker / Social Media">Audiovisual, Filmmaker ou Social Media</option>
+                <option value="Estética / Odontologia / Beleza">Estética, Odontologia ou Beleza</option>
+                <option value="Medicina / Clínica Especializada">Médico(a) ou Consultório Clínico</option>
+                <option value="Psicologia / Terapia / Saúde Mental">Psicologia ou Saúde Mental</option>
+                <option value="Fisioterapia / Pilates / Reabilitação">Fisioterapia, Pilates ou Quiropraxia</option>
+                <option value="Arquitetura / Engenharia / Reformas">Arquitetura, Design ou Engenharia</option>
+                <option value="Advocacia / Consultoria">Advocacia ou Consultoria Empresarial</option>
+                <option value="Eventos / Casamentos / Gastronomia">Eventos, Casamentos ou Gastronomia</option>
+                <option value="Outro Negócio / Prestador de Serviço">Outro Negócio ou Serviço</option>
+              </select>
+            </div>
           </div>
 
+          <!-- Cores de preferência -->
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu WhatsApp (com DDD)</label>
-            <input type="tel" required placeholder="(XX) 99999-9999" 
-                   class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Sua Especialidade ou Segmento</label>
-            <select class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
-              <option value="audiovisual">Produtora Audiovisual, Filmmaker ou Social Media</option>
-              <option value="odonto">Odontologia & Harmonização Orofacial</option>
-              <option value="medicina">Médico(a) ou Clínica Médica</option>
-              <option value="psicologia">Psicólogo(a) ou Terapeuta</option>
-              <option value="fisioterapia">Fisioterapeuta, Pilates ou Quiropraxia</option>
-              <option value="casamentos">Casamentos, Eventos ou Buffet</option>
-              <option value="outro">Outro Negócio Local ou Prestador de Serviço</option>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+              🎨 Cores de preferência da sua marca
+            </label>
+            <select id="leadColors" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+              <option value="Dark Cinematográfico (Preto & Dourado / Amarelo)">Dark Cinematográfico (Preto & Dourado / Âmbar)</option>
+              <option value="Clean & Corporativo (Azul Petróleo & Branco)">Clean & Corporativo (Azul Petróleo, Marinho & Branco)</option>
+              <option value="Sofisticado & Suave (Nude, Rose Gold & Champagne)">Sofisticado & Suave (Nude, Rose Gold & Champagne)</option>
+              <option value="Natural & Equilibrado (Verde Sage, Areia & Tons Terrosos)">Natural & Equilibrado (Verde Sage, Areia & Linho)</option>
+              <option value="Vibrante & Moderno (Roxo Neon / Índigo Tech)">Vibrante & Moderno (Roxo Neon / Índigo Tech)</option>
+              <option value="Deixar a equipe do SeuSite escolher a melhor paleta">Deixar a equipe do SeuSite escolher a melhor paleta</option>
             </select>
           </div>
 
-          <div class="pt-2">
+          <!-- Principal Objetivo -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+              🎯 Qual é o principal objetivo do seu site?
+            </label>
+            <select id="leadGoal" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+              <option value="Receber pedidos de orçamento de clientes no WhatsApp">Receber pedidos de orçamento de clientes no WhatsApp</option>
+              <option value="Agendamento rápido de consultas e atendimentos">Agendamento rápido de consultas e atendimentos</option>
+              <option value="Apresentar portfólio profissional para passar autoridade">Apresentar portfólio profissional para passar autoridade</option>
+              <option value="Substituir meu link amador na bio do Instagram">Substituir meu link amador na bio do Instagram</option>
+            </select>
+          </div>
+
+          <div class="pt-3">
             <button type="submit" 
-                    class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 hover:opacity-95 text-white py-4 px-6 rounded-xl text-sm font-bold uppercase tracking-wider shadow-xl shadow-indigo-500/25 transition">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              <span>Quero Receber Minha Demonstração</span>
+                    class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 hover:opacity-95 text-white py-4 px-6 rounded-xl text-sm font-bold uppercase tracking-wider shadow-xl shadow-indigo-500/25 transition transform hover:-translate-y-0.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+              <span>Gerar Minha Demonstração Personalizada</span>
             </button>
           </div>
 
+          <div id="formFeedback" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs text-center space-y-1">
+            <p class="font-bold text-sm">🎉 Solicitação recebida com sucesso!</p>
+            <p>Nossa equipe já está gerando a prévia personalizada com base no seu Instagram e cores selecionadas. Em breve você receberá o link!</p>
+          </div>
+
           <p class="text-[11px] text-center text-slate-400">
-            🔒 Seus dados estão 100% seguros. Não enviamos spam.
+            🔒 Seus dados estão 100% seguros. Você só contrata se amar o resultado.
           </p>
 
         </form>
+
+        <script>
+          function handleFormSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            feedback.classList.remove('hidden');
+            feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            document.getElementById('leadForm').reset();
+          }
+        </script>
 
       </div>
 
