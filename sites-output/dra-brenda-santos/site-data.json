@@ -3,15 +3,15 @@
   "template": "odonto-estetica",
   "meta": {
     "title": "Dra. Brenda Silva Santos | Odontologia & Harmonização Facial na Vila da Penha - RJ",
-    "description": "Consultório odontológico especializado em Harmonização Facial, Botox, Clareamento Dental e Estética do Sorriso na Vila da Penha, Rio de Janeiro. CRO-RJ 56732.",
-    "keywords": "dentista vila da penha, harmonizacao facial rj, botox rj, clareamento dental vila da penha, dra brenda santos"
+    "description": "Consultório odontológico especializado em Harmonização Facial, Botox, Preenchimento Labial e Clareamento Dental na Vila da Penha, Rio de Janeiro. CRO-RJ 56732.",
+    "keywords": "dentista vila da penha, harmonizacao facial rj, botox rj, preenchimento labial rj, dra brenda santos"
   },
   "profile": {
     "name": "Dra. Brenda Silva Santos",
-    "tagline": "Odontologia & Harmonização Facial",
+    "tagline": "Odontologia & Harmonização Orofacial",
     "cro": "CRO-RJ 56732",
     "specialty": "Cirurgiã-Dentista & Especialista em Estética Orofacial",
-    "bioShort": "Combinando ciência, precisão e arte para valorizar a sua melhor versão com naturalidade, delicadeza e segurança.",
+    "bioShort": "Combinando ciência, precisão e arte para valorizar a sua melhor versão com naturalidade, delicadeza e total segurança.",
     "heroImage": "./assets/brenda-hero.jpg",
     "aboutImage": "./assets/brenda-about.jpg"
   },
@@ -50,16 +50,44 @@
       "label": "Procedimentos Guiados e Éticos"
     }
   ],
+  "cases": [
+    {
+      "title": "Preenchimento Labial com Naturalidade",
+      "subtitle": "Definição de contorno e volume refinado com ácido hialurônico",
+      "image": "./assets/labial-antes-depois.jpg"
+    },
+    {
+      "title": "Harmonização de Perfil Facial",
+      "subtitle": "Equilíbrio de proporções entre lábios, mento e linha mandibular",
+      "image": "./assets/harmonizacao-perfil.jpg"
+    },
+    {
+      "title": "Projeção e Contorno de Perfil",
+      "subtitle": "Realce sutil dos lábios mantendo a harmonia anatômica da paciente",
+      "image": "./assets/labial-perfil.jpg"
+    }
+  ],
   "services": [
     {
       "id": "harmonizacao",
-      "title": "Harmonização Facial",
+      "title": "Harmonização Facial Personalizada",
       "shortDescription": "Equilíbrio, sustentação e realce dos traços faciais de forma sutil e natural, respeitando suas características únicas.",
-      "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80",
+      "image": "./assets/harmonizacao-perfil.jpg",
       "highlights": [
         "Preenchimento labial refinado",
         "Contorno mandibular e mento",
         "Protocolo exclusivo personalizado"
+      ]
+    },
+    {
+      "id": "labial",
+      "title": "Preenchimento Labial & Contorno",
+      "shortDescription": "Lábios desenhados, hidratados e volumizados na medida certa com ácido hialurônico de alta tecnologia.",
+      "image": "./assets/labial-close.jpg",
+      "highlights": [
+        "Volume elegante e sem exageros",
+        "Definição do arco do cupido",
+        "Resultado imediato e natural"
       ]
     },
     {
@@ -85,36 +113,25 @@
       ]
     },
     {
+      "id": "rinomodelacao",
+      "title": "Rinomodelação & Harmonização",
+      "shortDescription": "Ajuste delicado do dorso e ponta nasal sem cirurgia, proporcionando simetria imediata ao perfil do rosto.",
+      "image": "./assets/rino-depois.jpg",
+      "highlights": [
+        "Procedimento rápido em consultório",
+        "Sem cortes e sem pós-operatório cirúrgico",
+        "Harmonia imediata de perfil"
+      ]
+    },
+    {
       "id": "bioestimuladores",
       "title": "Bioestimuladores de Colágeno",
       "shortDescription": "Tratamento para firmeza cutânea que estimula a produção natural de colágeno pelo próprio corpo ao longo do tempo.",
-      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+      "image": "./assets/labial-angulo.jpg",
       "highlights": [
         "Melhora na elasticidade da pele",
         "Tratamento da flacidez facial",
         "Resultados progressivos e duradouros"
-      ]
-    },
-    {
-      "id": "lentes",
-      "title": "Estética do Sorriso & Resinas",
-      "shortDescription": "Correção de formato, cor, pequenos desalinhamentos e fechamento de diastemas com resinas compostas de alta performance.",
-      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
-      "highlights": [
-        "Mínimo desgaste dental",
-        "Harmonia imediata",
-        "Alta durabilidade e brilho natural"
-      ]
-    },
-    {
-      "id": "profilaxia",
-      "title": "Prevenção & Checkup Odontológico",
-      "shortDescription": "Limpeza profilática profunda, remoção de tártaro e manchas, garantindo a saúde periodontal e a base para qualquer procedimento.",
-      "image": "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80",
-      "highlights": [
-        "Check-up minucioso",
-        "Aplicação de flúor protetor",
-        "Saúde gengival em dia"
       ]
     }
   ],
@@ -135,14 +152,14 @@
   "testimonials": [
     {
       "author": "Camila Oliveira",
-      "role": "Paciente de Harmonização Facial",
+      "role": "Paciente de Preenchimento Labial",
       "comment": "Fiz meu preenchimento labial com a Dra. Brenda e fiquei apaixonada! Tinha muito medo de ficar artificial, mas ela entendeu perfeitamente o que eu queria. Super delicada na aplicação!",
       "rating": 5
     },
     {
       "author": "Juliana Guimarães",
-      "role": "Paciente de Clareamento & Botox",
-      "comment": "A Dra. Brenda é maravilhosa! O consultório na Vila da Penha é lindo e super aconchegante. Meu sorriso clareou muito e as ruguinhas da testa sumiram. Indico de olhos fechados!",
+      "role": "Paciente de Harmonização & Botox",
+      "comment": "A Dra. Brenda é maravilhosa! O consultório na Vila da Penha é lindo e super aconchegante. Minhas ruguinhas sumiram e meu perfil ficou muito mais harmônico. Indico de olhos fechados!",
       "rating": 5
     },
     {
@@ -158,16 +175,16 @@
       "answer": "Utilizamos anestésicos tópicos potentes e produtos que já contêm anestésico na própria fórmula, tornando a aplicação praticamente indolor e muito confortável para o paciente."
     },
     {
-      "question": "Quanto tempo dura o efeito da Toxina Botulínica (Botox)?",
-      "answer": "A duração média é de 4 a 6 meses, variando de acordo com o metabolismo de cada pessoa, rotina de atividades físicas e hábitos diários."
+      "question": "Quanto tempo dura o efeito do Preenchimento e da Toxina Botulínica?",
+      "answer": "O preenchimento labial dura em média de 9 a 14 meses, enquanto a toxina botulínica tem duração média de 4 a 6 meses, variando de acordo com o metabolismo e hábitos de cada paciente."
     },
     {
       "question": "O clareamento dental causa sensibilidade?",
       "answer": "Nosso protocolo conta com dessensibilizantes modernos aplicados antes e após o procedimento, minimizando ou eliminando qualquer desconforto durante o clareamento."
     },
     {
-      "question": "Como faço para agendar uma avaliação inicial?",
-      "answer": "Basta clicar em qualquer botão de WhatsApp deste site para falar diretamente com nosso atendimento e escolher o melhor dia e horário para sua consulta na Vila da Penha."
+      "question": "Como faço para agendar uma avaliação inicial na Vila da Penha?",
+      "answer": "Basta clicar em qualquer botão de WhatsApp deste site para falar diretamente com nosso atendimento e escolher o melhor dia e horário para sua consulta."
     }
   ]
 }
