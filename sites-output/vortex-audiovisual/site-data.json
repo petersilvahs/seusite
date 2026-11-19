@@ -1,0 +1,195 @@
+{
+  "id": "vortex-audiovisual",
+  "template": "audiovisual-criativo",
+  "meta": {
+    "title": "VORTEX | Produtora Audiovisual & Criativa",
+    "description": "Filmes comerciais, vídeos institucionais e conteúdos de alto impacto para marcas que desejam liderar a atenção no digital.",
+    "keywords": "produtora audiovisual, filmmaker rj, videos comerciais, producao de video, vortex audiovisual"
+  },
+  "profile": {
+    "name": "VORTEX",
+    "tagline": "Produtora Audiovisual & Criativa",
+    "cro": "Produção Cinematográfica",
+    "specialty": "Filmes Comerciais, Reels Estratégicos & Conteúdo de Marca",
+    "bioShort": "Criamos filmes e produções visuais de alto padrão que prendem a atenção do público, constroem autoridade e transformam visualizações em negócios para a sua marca.",
+    "heroImage": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80",
+    "aboutImage": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"
+  },
+  "contact": {
+    "whatsapp": "21999999999",
+    "whatsappFormatted": "(21) 99999-9999",
+    "whatsappMessage": "Olá equipe VORTEX! Gostaria de solicitar um orçamento para uma produção audiovisual.",
+    "address": "Rio de Janeiro - RJ",
+    "neighborhood": "Atendimento Nacional",
+    "city": "Rio de Janeiro",
+    "state": "RJ",
+    "googleMapsUrl": "https://maps.google.com/?q=Rio+de+Janeiro+-+RJ",
+    "workingHours": "Segunda a Sexta: 09h às 19h",
+    "whatsappClean": "5521999999999",
+    "whatsappUrl": "https://wa.me/5521999999999?text=Ol%C3%A1%20equipe%20VORTEX!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20uma%20produ%C3%A7%C3%A3o%20audiovisual."
+  },
+  "theme": {
+    "primary": "#E2B714",
+    "primaryDark": "#C59F0B",
+    "secondary": "#0A0D14",
+    "accent": "#F59E0B",
+    "textMain": "#F1F5F9",
+    "textMuted": "#94A3B8"
+  },
+  "stats": [
+    {
+      "value": "+100",
+      "label": "Projetos Produzidos"
+    },
+    {
+      "value": "+5M",
+      "label": "Visualizações Geradas"
+    },
+    {
+      "value": "4K RAW",
+      "label": "Qualidade de Cinema"
+    }
+  ],
+  "cases": [
+    {
+      "title": "Campanha Publicitária de Verão",
+      "subtitle": "Direção, captação e color grading cinematográfico para marca de lifestyle",
+      "image": "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Série de Reels Estratégicos",
+      "subtitle": "Captação vertical com ritmo dinâmico para retenção máxima no Instagram e TikTok",
+      "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Documentário Corporativo",
+      "subtitle": "Narrativa de marca contando a trajetória e bastidores de uma empresa de tecnologia",
+      "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Cobertura de Evento Exclusivo",
+      "subtitle": "Aftermovie com edição acelerada entregue em até 24h para repercussão imediata",
+      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "services": [
+    {
+      "id": "comerciais",
+      "title": "Filmes Comerciais & Publicidade",
+      "shortDescription": "Produções com padrão cinema para comerciais de TV, YouTube Ads e lançamentos de produtos de alta conversão.",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Roteiro e storyboard completo",
+        "Equipe de cinema com iluminação e áudio direto",
+        "Color grading padrão Hollywood"
+      ]
+    },
+    {
+      "id": "reels",
+      "title": "Reels & Vídeos Verticais Estratégicos",
+      "shortDescription": "Conteúdos dinâmicos pensados para o algoritmo do Instagram e TikTok, combinando retenção com gatilhos de venda.",
+      "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Hooks magnéticos nos primeiros 3 segundos",
+        "Edição moderna com sound effects envolventes",
+        "Captação otimizada para smartphones"
+      ]
+    },
+    {
+      "id": "institucionais",
+      "title": "Vídeos Institucionais & Corporativos",
+      "shortDescription": "Apresente a infraestrutura, missão e pessoas da sua empresa com sobriedade, sofisticação e profissionalismo.",
+      "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Entrevistas e depoimentos de diretoria",
+        "Captação aérea com drone 4K",
+        "Trilha sonora licenciada exclusiva"
+      ]
+    },
+    {
+      "id": "eventos",
+      "title": "Cobertura Audiovisual de Eventos",
+      "shortDescription": "Transforme conferências, festivais e feiras de negócios em aftermovies inesquecíveis para gerar desejo para as próximas edições.",
+      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Equipe ágil sem atrapalhar o evento",
+        "Entrega de reels durante o próprio evento",
+        "Filme oficial pós-evento em alta resolução"
+      ]
+    },
+    {
+      "id": "socialmedia",
+      "title": "Social Media & Criação de Conteúdo",
+      "shortDescription": "Pacotes mensais de gravação e edição de conteúdo recorrente para empresários e especialistas que querem liderar seu nicho.",
+      "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Planejamento de calendário mensal",
+        "1 dia de captação rende o mês inteiro",
+        "Direção de postura e fala para câmeras"
+      ]
+    },
+    {
+      "id": "posproducao",
+      "title": "Pós-Produção & Motion Graphics",
+      "shortDescription": "Finalização de alto nível para projetos que já foram gravados: corte rítmico, animações em motion e tratamento de cor.",
+      "image": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Efeitos visuais e motion design",
+        "Tratamento e mixagem de áudio",
+        "Versões em múltiplos formatos (16:9, 9:16, 1:1)"
+      ]
+    }
+  ],
+  "differentials": [
+    {
+      "title": "Equipamento Cinema de Ponta",
+      "description": "Gravamos com câmeras de cinema profissional, lentes primes de altíssima nitidez, iluminação de estúdio e captação de áudio cristalina."
+    },
+    {
+      "title": "Visão Estratégica de Negócios",
+      "description": "Não fazemos apenas vídeos bonitos: cada plano, corte e palavra é pensado para gerar autoridade e vendas reais para o seu produto ou serviço."
+    },
+    {
+      "title": "Agilidade e Pontualidade Rigorosa",
+      "description": "Prazos de entrega acordados em contrato e respeitados com rigor, com canal direto no WhatsApp durante todo o projeto."
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Matheus Albuquerque",
+      "role": "CEO • TechFlow Software",
+      "comment": "A VORTEX transformou a imagem da nossa empresa. O vídeo institucional que produziram aumentou nossa conversão de vendas em reuniões de forma imediata. Padrão impecável!",
+      "rating": 5
+    },
+    {
+      "author": "Renata Vasconcellos",
+      "role": "Diretora de Marketing • Aura Cosméticos",
+      "comment": "Nossos Reels nunca tiveram tanto alcance quanto depois que a VORTEX assumiu a captação e edição. A qualidade de cor e o ritmo dos cortes são outro nível!",
+      "rating": 5
+    },
+    {
+      "author": "Felipe Diniz",
+      "role": "Produtor Geral • Festival Sunset Music",
+      "comment": "A entrega do aftermovie foi absurdamente rápida e capturou exatamente a energia do público. Recomendamos de olhos fechados para qualquer marca exigente.",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "Como funciona o processo de orçamento e contratação?",
+      "answer": "Basta nos chamar no WhatsApp contando uma breve ideia do seu projeto ou data do evento. Alinhamos os objetivos e enviamos uma proposta detalhada com prazos e opções de investimento."
+    },
+    {
+      "question": "Vocês atendem apenas no Rio de Janeiro ou em todo o Brasil?",
+      "answer": "Nossa base de produção é no Rio de Janeiro, mas realizamos captações e coberturas comerciais em qualquer cidade do Brasil e exterior."
+    },
+    {
+      "question": "Quanto tempo leva para receber o vídeo pronto?",
+      "answer": "O prazo varia conforme a complexidade do projeto: Reels e vídeos para redes sociais são entregues entre 3 a 5 dias úteis, enquanto produções comerciais completas levam de 10 a 15 dias com rodadas de aprovação."
+    },
+    {
+      "question": "Quem escreve o roteiro dos vídeos?",
+      "answer": "Nossa equipe criativa cuida de toda a estruturação de roteiro, ganchos narrativos e sugestões de cena em conjunto com a sua aprovação antes de qualquer dia de gravação."
+    }
+  ]
+}

@@ -12,15 +12,16 @@ Selecione o campo "template" baseado na área do cliente:
 - "psicologia-terapia": Psicologia, Psicanálise, Terapia, Saúde Mental, Atendimento Online/Presencial.
 - "fisioterapia-bemestar": Fisioterapia, Reabilitação, Dor na Coluna, Pilates, Quiropraxia, Nutrição.
 - "casamentos": Casamentos, Buffets, Fotografia de Eventos, Cerimonialistas.
+- "audiovisual-criativo": Produtoras audiovisuais, Filmmakers, Videomakers, Social Media, Fotógrafos Publicitários, Criadores de Conteúdo.
 
 DIRETRIZES FUNDAMENTAIS:
-1. Tom de Voz: Elegante, acolhedor, profissional e persuasivo, sem promessas milagrosas (respeitando as normas de conselhos como CFM, CFO, CFP, CREFITO).
-2. Foco em Conversão: Todas as chamadas para ação (CTAs) devem conduzir a pessoa de forma natural a agendar uma consulta/avaliação no WhatsApp.
+1. Tom de Voz: Elegante, acolhedor, profissional e persuasivo, sem promessas milagrosas (respeitando as normas de conselhos como CFM, CFO, CFP, CREFITO quando aplicável).
+2. Foco em Conversão: Todas as chamadas para ação (CTAs) devem conduzir a pessoa de forma natural a agendar uma consulta/orçamento no WhatsApp.
 3. Personalização: Incorpore a cidade/bairro fornecidos para otimizar o SEO local e criar identificação geográfica imediata com o público.
 4. Schema JSON obrigatório:
 {
   "id": "slug-do-cliente",
-  "template": "odonto-estetica | medicina-clinica | psicologia-terapia | fisioterapia-bemestar | casamentos",
+  "template": "odonto-estetica | medicina-clinica | psicologia-terapia | fisioterapia-bemestar | casamentos | audiovisual-criativo",
   "meta": {
     "title": "...",
     "description": "...",
