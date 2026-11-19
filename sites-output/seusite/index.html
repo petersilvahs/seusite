@@ -131,18 +131,19 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#EEF2FF',
-              100: '#E0E7FF',
-              500: '#6366F1',
-              600: '#4F46E5',
-              700: '#4338CA',
-              900: '#1E1B4B',
-              dark: '#07090E',
-              card: '#0F1420',
-              border: '#1A2336',
-              orange: '#FF5500',
-              accent: '#FF6B00'
+            agency: {
+              cream: '#FAF8F5',
+              sand: '#F2EFEB',
+              card: '#FFFFFF',
+              border: '#E8E4DB',
+              ink: '#111216',
+              muted: '#525660',
+              orange: '#FF3D00',
+              orangeHover: '#E03600',
+              green: '#0C3E33',
+              wine: '#681729',
+              blue: '#1D4ED8',
+              amber: '#D97706'
             }
           },
           fontFamily: {
@@ -157,58 +158,29 @@
 
   <style>
     body {
-      background-color: #07090E;
-      color: #E2E8F0;
+      background-color: #FAF8F5;
+      color: #111216;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
     .font-display {
       font-family: 'Syne', 'Outfit', sans-serif;
-    }
-    .gradient-orange {
-      background: linear-gradient(135deg, #FF6B00 0%, #FF3D00 50%, #FF8A00 100%);
-    }
-    .gradient-text-orange {
-      background: linear-gradient(135deg, #FFA048 0%, #FF5500 50%, #FF1E56 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #FFFFFF 20%, #CBD5E1 50%, #94A3B8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .glow-orange {
-      box-shadow: 0 0 50px -10px rgba(255, 85, 0, 0.35);
-    }
-    .glow-subtle {
-      box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.25);
     }
     /* Estilo Sticker Agência */
     .sticker {
       display: inline-flex;
       align-items: center;
       gap: 0.375rem;
-      padding: 0.25rem 0.75rem;
+      padding: 0.35rem 0.85rem;
       border-radius: 9999px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
+      font-weight: 900;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
-    }
-    /* Scroll animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.12);
     }
     /* Floating animations */
     @keyframes float-smooth {
-      0%, 100% { transform: translateY(0px) rotate(-1deg); }
-      50% { transform: translateY(-8px) rotate(1.5deg); }
+      0%, 100% { transform: translateY(0px) rotate(-1.5deg); }
+      50% { transform: translateY(-8px) rotate(1deg); }
     }
     @keyframes float-reverse {
       0%, 100% { transform: translateY(0px) rotate(1.5deg); }
@@ -230,47 +202,47 @@
     }
   </style>
 </head>
-<body class="antialiased selection:bg-orange-500 selection:text-white bg-[#07090E] text-slate-200">
+<body class="antialiased selection:bg-[#FF3D00] selection:text-white bg-[#FAF8F5] text-[#111216]">
 
   <!-- Barra de Progresso de Leitura no Topo -->
-  <div id="scrollProgress" class="fixed top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-orange-500 via-amber-400 to-rose-500 z-50 transition-all duration-75"></div>
+  <div id="scrollProgress" class="fixed top-0 left-0 h-[3px] w-0 bg-[#FF3D00] z-50 transition-all duration-75"></div>
 
-  <!-- Top bar de oferta estilo agência -->
-  <div class="bg-gradient-to-r from-orange-950/40 via-[#0F1422] to-purple-950/40 border-b border-white/5 text-xs py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
-    <span class="inline-flex items-center gap-1.5 bg-orange-500/20 border border-orange-400/30 text-orange-300 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
+  <!-- Top bar de oferta estilo agência (Light & Clean) -->
+  <div class="bg-[#F2EFEB] border-b border-[#E8E4DB] text-xs py-2 px-4 text-center font-semibold text-stone-800 flex items-center justify-center gap-2">
+    <span class="inline-flex items-center gap-1.5 bg-[#FF3D00] text-white px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider">
       ⚡ Garantia Total
     </span>
-    <span class="text-slate-300 text-[11px] sm:text-xs">Veja a demonstração do seu site <strong>pronta no seu celular antes de pagar</strong> qualquer valor!</span>
+    <span class="text-stone-700 text-[11px] sm:text-xs">Veja a demonstração do seu site <strong>pronta no seu celular antes de pagar</strong> qualquer valor!</span>
   </div>
 
   <!-- Navbar Estilo Cápsula Flutuante -->
   <header class="sticky top-3 z-40 px-4 sm:px-6 transition-all">
-    <div class="max-w-6xl mx-auto bg-[#0F1420]/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl shadow-black/50">
+    <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-xl border border-[#E8E4DB] rounded-full px-5 py-3 flex items-center justify-between shadow-lg shadow-stone-900/5">
       
       <!-- Logo -->
       <a href="#" class="flex items-center gap-2.5 group">
-        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-orange-500 to-rose-500 flex items-center justify-center text-white shadow-lg shadow-orange-500/25 group-hover:scale-105 transition">
+        <div class="w-9 h-9 rounded-full bg-[#FF3D00] flex items-center justify-center text-white shadow-md shadow-orange-500/25 group-hover:scale-105 transition">
           <i data-lucide="sparkles" class="w-4 h-4"></i>
         </div>
         <div class="flex flex-col">
-          <span class="font-display text-xl sm:text-2xl font-black tracking-tight text-white">SeuSite<span class="text-orange-500">.</span></span>
+          <span class="font-display text-xl sm:text-2xl font-black tracking-tight text-[#111216]">SeuSite<span class="text-[#FF3D00]">.</span></span>
         </div>
       </a>
 
       <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-300">
-        <a href="#como-funciona" class="hover:text-orange-400 transition">Como Funciona</a>
-        <a href="#modelos" class="hover:text-orange-400 transition">Modelos</a>
-        <a href="#comparativo" class="hover:text-orange-400 transition">Comparativo</a>
-        <a href="#planos" class="hover:text-orange-400 transition">Valores</a>
-        <a href="#faq" class="hover:text-orange-400 transition">Dúvidas</a>
+      <nav class="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-stone-600">
+        <a href="#como-funciona" class="hover:text-[#FF3D00] transition">Como Funciona</a>
+        <a href="#modelos" class="hover:text-[#FF3D00] transition">Modelos</a>
+        <a href="#comparativo" class="hover:text-[#FF3D00] transition">Comparativo</a>
+        <a href="#planos" class="hover:text-[#FF3D00] transition">Valores</a>
+        <a href="#faq" class="hover:text-[#FF3D00] transition">Dúvidas</a>
       </nav>
 
       <!-- CTA Nav -->
       <div class="flex items-center gap-3">
         <a href="#contato" 
-           class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-rose-600 hover:opacity-95 text-white px-4 sm:px-5 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-orange-500/20 active:scale-95 transition">
-          <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-300"></i>
+           class="inline-flex items-center gap-2 bg-[#FF3D00] hover:bg-[#E03600] text-white px-4 sm:px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wider shadow-lg shadow-orange-500/20 active:scale-95 transition">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-200"></i>
           <span>Pedir Amostra</span>
         </a>
       </div>
@@ -278,86 +250,84 @@
     </div>
   </header>
 
-  <!-- Hero Section (Vibe Agência Criativa & Mobile First) -->
-  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
-    <!-- Glows de fundo estilo agência -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[350px] bg-gradient-to-tr from-orange-600/15 via-rose-600/15 to-purple-600/15 blur-[140px] rounded-full -z-10"></div>
-
+  <!-- Hero Section (Vibe "We are big stars" - Fundo Claro Quente & Laranja Elétrico) -->
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-[#FAF8F5]">
+    
     <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-7 relative">
       
       <!-- Mini pills flutuantes em volta (Inspirado no Noura - visíveis em tablets e desktops) -->
       <div class="hidden lg:block absolute -top-4 left-4 animate-float-1 pointer-events-none">
-        <div class="inline-flex items-center gap-2 bg-[#0F1420]/90 border border-white/10 rounded-2xl px-3.5 py-2 shadow-2xl backdrop-blur-md">
-          <div class="w-6 h-6 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center font-bold text-xs">
+        <div class="inline-flex items-center gap-2.5 bg-white border border-[#E8E4DB] rounded-2xl p-3 shadow-xl text-left">
+          <div class="w-8 h-8 rounded-xl bg-orange-100 text-[#FF3D00] flex items-center justify-center font-bold text-sm">
             🎬
           </div>
-          <div class="text-left text-[11px] leading-tight">
-            <p class="font-bold text-white">VORTEX Audiovisual</p>
-            <p class="text-slate-400 text-[10px]">+350% pedidos de vídeo</p>
+          <div class="text-[11px] leading-tight">
+            <p class="font-bold text-[#111216]">VORTEX Audiovisual</p>
+            <p class="text-[#FF3D00] font-semibold text-[10px]">+350% orçamentos no Whats</p>
           </div>
         </div>
       </div>
 
       <div class="hidden lg:block absolute top-12 right-4 animate-float-2 pointer-events-none">
-        <div class="inline-flex items-center gap-2 bg-[#0F1420]/90 border border-white/10 rounded-2xl px-3.5 py-2 shadow-2xl backdrop-blur-md">
-          <div class="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+        <div class="inline-flex items-center gap-2.5 bg-white border border-[#E8E4DB] rounded-2xl p-3 shadow-xl text-left">
+          <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
             🩺
           </div>
-          <div class="text-left text-[11px] leading-tight">
-            <p class="font-bold text-white">Dra. Brenda Santos</p>
-            <p class="text-emerald-400 text-[10px]">Agenda no WhatsApp lotada</p>
+          <div class="text-[11px] leading-tight">
+            <p class="font-bold text-[#111216]">Dra. Brenda Santos</p>
+            <p class="text-emerald-700 font-semibold text-[10px]">Agenda no WhatsApp lotada</p>
           </div>
         </div>
       </div>
 
-      <!-- Sticker superior de impacto -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-xs font-extrabold text-orange-400 shadow-lg shadow-orange-500/10 rotate-[-1.5deg] hover:rotate-0 transition">
-        <span class="flex h-2 w-2 rounded-full bg-orange-400 animate-ping"></span>
+      <!-- Sticker superior estilo "ĆAO!" do print de referência -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#681729] text-amber-300 text-xs font-black shadow-md rotate-[-2.5deg] hover:rotate-0 transition">
+        <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-ping"></span>
         <span>⚡ DESIGN DE AGÊNCIA • PREÇO DE AUTÔNOMO • EM 24H</span>
       </div>
 
       <!-- Título de Impacto Brutalista (Syne + Outfit) -->
-      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.98] max-w-4xl mx-auto uppercase">
-        Sites que <span class="gradient-text-orange underline decoration-orange-500/40 decoration-wavy decoration-2">vendem</span>.<br>
+      <h1 class="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#111216] tracking-tight leading-[0.93] max-w-5xl mx-auto uppercase">
+        Sites que <span class="text-[#FF3D00] underline decoration-[#FF3D00]/30 decoration-wavy decoration-4">vendem</span>.<br class="hidden sm:inline">
         No ar em 24h.
       </h1>
 
       <!-- Subtítulo persuasivo -->
-      <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
-        Ter apenas link na bio não passa autoridade. Criamos a página oficial do seu negócio com design cinematográfico, alta velocidade no 4G e botão direto para o seu WhatsApp.
+      <p class="text-base sm:text-lg md:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed font-normal">
+        Ter apenas link na bio não passa autoridade. Criamos a página oficial do seu negócio com design cinematográfico, alta velocidade no celular e botão direto para o seu WhatsApp.
       </p>
 
       <!-- Botões de Ação Mobile First -->
       <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-md mx-auto">
         <a href="#contato" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-500 via-orange-600 to-rose-600 hover:opacity-95 text-white px-8 py-4 rounded-2xl text-sm font-extrabold uppercase tracking-wider shadow-xl shadow-orange-500/25 active:scale-95 transition transform hover:-translate-y-0.5">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#FF3D00] hover:bg-[#E03600] text-white px-8 py-4 rounded-2xl text-sm font-black uppercase tracking-wider shadow-xl shadow-orange-500/25 active:scale-95 transition transform hover:-translate-y-0.5">
           <i data-lucide="sparkles" class="w-4 h-4 text-amber-200"></i>
           <span>Pedir Amostra Gratuita</span>
         </a>
 
         <a href="#modelos" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0F1420] hover:bg-slate-800 text-slate-200 border border-white/10 px-6 py-4 rounded-2xl text-sm font-bold transition active:scale-95">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 text-[#111216] border-2 border-[#111216] px-6 py-4 rounded-2xl text-sm font-bold transition active:scale-95 shadow-sm">
           <span>Explorar Nichos</span>
-          <i data-lucide="arrow-down" class="w-4 h-4 text-orange-400"></i>
+          <i data-lucide="arrow-down" class="w-4 h-4 text-[#FF3D00]"></i>
         </a>
       </div>
 
       <!-- Selos de Credibilidade em Pílulas -->
-      <div class="pt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-400">
-        <div class="inline-flex items-center gap-1.5 bg-[#0F1420] border border-white/5 px-3 py-1.5 rounded-full">
-          <i data-lucide="clock" class="w-3.5 h-3.5 text-orange-400"></i>
+      <div class="pt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-stone-700">
+        <div class="inline-flex items-center gap-1.5 bg-white border border-[#E8E4DB] px-3.5 py-1.5 rounded-full shadow-sm font-semibold">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#FF3D00]"></i>
           <span>Entrega em 24h</span>
         </div>
-        <div class="inline-flex items-center gap-1.5 bg-[#0F1420] border border-white/5 px-3 py-1.5 rounded-full">
-          <i data-lucide="smartphone" class="w-3.5 h-3.5 text-orange-400"></i>
+        <div class="inline-flex items-center gap-1.5 bg-white border border-[#E8E4DB] px-3.5 py-1.5 rounded-full shadow-sm font-semibold">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5 text-[#FF3D00]"></i>
           <span>100% Mobile First</span>
         </div>
-        <div class="inline-flex items-center gap-1.5 bg-[#0F1420] border border-white/5 px-3 py-1.5 rounded-full">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-orange-400"></i>
+        <div class="inline-flex items-center gap-1.5 bg-white border border-[#E8E4DB] px-3.5 py-1.5 rounded-full shadow-sm font-semibold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#FF3D00]"></i>
           <span>Hospedagem Inclusa</span>
         </div>
-        <div class="inline-flex items-center gap-1.5 bg-[#0F1420] border border-white/5 px-3 py-1.5 rounded-full">
-          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <div class="inline-flex items-center gap-1.5 bg-white border border-[#E8E4DB] px-3.5 py-1.5 rounded-full shadow-sm font-semibold">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
           <span>Sem Risco / Pague se Amar</span>
         </div>
       </div>
@@ -365,19 +335,16 @@
     </div>
   </section>
 
-  <!-- Por Que Ter Um Site / Motivos da Presença Digital -->
-  <section id="por-que-ter-site" class="py-20 bg-[#090D18] border-t border-white/5 relative overflow-hidden">
-    <!-- Glow de fundo sutil -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-indigo-600/10 blur-[140px] rounded-full -z-10"></div>
-
+  <!-- Por Que Ter Um Site / Motivos da Presença Digital (Fundo Quente Sand) -->
+  <section id="por-que-ter-site" class="py-20 bg-[#F2EFEB] border-t border-[#E8E4DB] relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Por Que Só o Instagram Não Basta?</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white">
+        <span class="text-xs uppercase tracking-widest text-[#FF3D00] font-black">Por Que Só o Instagram Não Basta?</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-[#111216] uppercase tracking-tight">
           4 motivos para consolidar sua presença digital agora
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
           O perfil nas redes atrai a curiosidade inicial, mas é o site oficial com domínio próprio que passa a segurança para o cliente pagar mais caro e fechar negócio com você.
         </p>
       </div>
@@ -385,73 +352,73 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         <!-- Motivo 1 -->
-        <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-white/5 hover:border-indigo-500/30 transition flex flex-col items-center text-center group">
-          <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 border border-blue-200 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
             <i data-lucide="shield-check" class="w-7 h-7"></i>
           </div>
           <div class="mb-3">
-            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-bold text-indigo-300 bg-indigo-500/20 border border-indigo-500/30 px-3.5 py-1 rounded-full whitespace-nowrap">
+            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-extrabold text-blue-700 bg-blue-50 border border-blue-200 px-3.5 py-1 rounded-full whitespace-nowrap">
               Sem Leilão de Preço
             </span>
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-3">
             Autoridade Imediata & Confiança
           </h3>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-md mx-auto">
+          <p class="text-stone-600 text-sm leading-relaxed max-w-md mx-auto">
             O cliente pesquisa seu nome antes de contratar. Um site com domínio próprio e visual impecável transmite a solidez de uma empresa consolidada, eliminando a desconfiança e permitindo cobrar valores superiores.
           </p>
         </div>
 
         <!-- Motivo 2 -->
-        <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-white/5 hover:border-purple-500/30 transition flex flex-col items-center text-center group">
-          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
             <i data-lucide="eye" class="w-7 h-7"></i>
           </div>
           <div class="mb-3">
-            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-bold text-purple-300 bg-purple-500/20 border border-purple-500/30 px-3.5 py-1 rounded-full whitespace-nowrap">
+            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-extrabold text-purple-700 bg-purple-50 border border-purple-200 px-3.5 py-1 rounded-full whitespace-nowrap">
               Sem Distrações
             </span>
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-3">
             100% da Atenção do Cliente
           </h3>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-md mx-auto">
+          <p class="text-stone-600 text-sm leading-relaxed max-w-md mx-auto">
             No feed do Instagram, seu cliente é disputado por notificações, vídeos curtos e concorrentes patrocinados. No seu site oficial, a atenção dele é 100% focada no seu trabalho, no seu portfólio e na sua proposta.
           </p>
         </div>
 
         <!-- Motivo 3 -->
-        <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-white/5 hover:border-amber-500/30 transition flex flex-col items-center text-center group">
-          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 border border-amber-200 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
             <i data-lucide="search" class="w-7 h-7"></i>
           </div>
           <div class="mb-3">
-            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-bold text-amber-300 bg-amber-500/20 border border-amber-500/30 px-3.5 py-1 rounded-full whitespace-nowrap">
+            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-extrabold text-amber-700 bg-amber-50 border border-amber-200 px-3.5 py-1 rounded-full whitespace-nowrap">
               Intenção de Compra
             </span>
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-3">
             Encontrado no Google por Quem Quer Comprar
           </h3>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-md mx-auto">
+          <p class="text-stone-600 text-sm leading-relaxed max-w-md mx-auto">
             Quem está pronto para contratar com urgência não fica navegando no feed — vai direto ao Google. Um site bem indexado posiciona sua marca exatamente na frente de clientes prontos para fechar.
           </p>
         </div>
 
         <!-- Motivo 4 -->
-        <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-white/5 hover:border-emerald-500/30 transition flex flex-col items-center text-center group">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
             <i data-lucide="message-circle" class="w-7 h-7"></i>
           </div>
           <div class="mb-3">
-            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-bold text-emerald-300 bg-emerald-500/20 border border-emerald-500/30 px-3.5 py-1 rounded-full whitespace-nowrap">
+            <span class="inline-flex items-center text-[11px] uppercase tracking-wider font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3.5 py-1 rounded-full whitespace-nowrap">
               Lead Aquecido
             </span>
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-3">
             Máquina de Vendas 24h no WhatsApp
           </h3>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-md mx-auto">
+          <p class="text-stone-600 text-sm leading-relaxed max-w-md mx-auto">
             O site tira dúvidas frequentes, exibe provas sociais e filtra curiosos antes do clique. O contato que chega no seu WhatsApp já sabe o que você faz, confia no seu trabalho e chega pronto para agendar.
           </p>
         </div>
@@ -461,16 +428,16 @@
     </div>
   </section>
 
-  <!-- Como Funciona -->
-  <section id="como-funciona" class="py-20 bg-brand-dark/50 border-t border-white/5">
+  <!-- Como Funciona (Light Agency) -->
+  <section id="como-funciona" class="py-20 bg-[#FAF8F5] border-t border-[#E8E4DB]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Processo Descomplicado</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+        <span class="text-xs uppercase tracking-widest text-[#FF3D00] font-black">Processo Descomplicado</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-[#111216] uppercase tracking-tight">
           Como colocamos seu site no ar em 3 passos
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-stone-600 text-sm sm:text-base">
           Você foca no seu trabalho, nós cuidamos de toda a parte técnica, design e hospedagem.
         </p>
       </div>
@@ -478,35 +445,35 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Passo 1 -->
-        <div class="bg-brand-card p-8 rounded-3xl border border-white/5 relative group hover:border-indigo-500/40 transition">
-          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex items-center justify-center text-lg font-bold font-display mb-6">
-            1
+        <div class="bg-white p-8 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-lg transition">
+          <div class="font-display text-4xl font-black text-[#FF3D00] mb-4">
+            01
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-2">Envie seu Instagram</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-2">Envie seu Instagram</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
             Basta nos passar o seu @ do Instagram e seus contatos básicos. Não exigimos briefings longos nem formulários cansativos.
           </p>
         </div>
 
         <!-- Passo 2 -->
-        <div class="bg-brand-card p-8 rounded-3xl border border-white/5 relative group hover:border-indigo-500/40 transition">
-          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 border border-purple-500/20 flex items-center justify-center text-lg font-bold font-display mb-6">
-            2
+        <div class="bg-white p-8 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-lg transition">
+          <div class="font-display text-4xl font-black text-[#111216] mb-4">
+            02
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-2">Montamos em 24h</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-2">Montamos em 24h</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
             Nossa Inteligência Artificial e equipe estruturam toda a copy persuasiva, organizam os procedimentos, fotos e botões de WhatsApp.
           </p>
         </div>
 
         <!-- Passo 3 -->
-        <div class="bg-brand-card p-8 rounded-3xl border border-white/5 relative group hover:border-indigo-500/40 transition">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-lg font-bold font-display mb-6">
-            3
+        <div class="bg-white p-8 rounded-3xl border border-[#E8E4DB] shadow-sm hover:shadow-lg transition">
+          <div class="font-display text-4xl font-black text-emerald-600 mb-4">
+            03
           </div>
-          <h3 class="font-display text-xl font-bold text-white mb-2">Você Aprova e Publicamos</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Você visualiza a versão de demonstração no seu celular. Gostou? Conectamos seu domínio oficial e o site já está atraindo pacientes!
+          <h3 class="font-display text-xl font-bold text-[#111216] mb-2">Você Aprova e Publicamos</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Você visualiza a versão de demonstração no seu celular. Gostou? Conectamos seu domínio oficial e o site já está atraindo pacientes e clientes!
           </p>
         </div>
 
@@ -516,22 +483,22 @@
   </section>
 
   <!-- Vitrine dos Nichos / Modelos Prontos (Mobile First Swipe Snap) -->
-  <section id="modelos" class="py-20 sm:py-24 bg-[#080B12] border-t border-white/5 relative overflow-hidden">
+  <section id="modelos" class="py-20 sm:py-24 bg-[#F2EFEB] border-t border-[#E8E4DB] relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-orange-400 font-extrabold">Soluções Para Qualquer Segmento</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+        <span class="text-xs uppercase tracking-widest text-[#FF3D00] font-black">Soluções Para Qualquer Segmento</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-[#111216] uppercase tracking-tight">
           Estruturas que se adaptam à sua marca
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-stone-600 text-sm sm:text-base">
           Do prestador de serviços à produtora audiovisual, do consultório ao comércio local. Cada página é desenhada para atrair clientes reais.
         </p>
 
         <!-- Indicador de Swipe no Mobile -->
-        <div class="sm:hidden pt-2 flex items-center justify-center gap-2 text-xs text-orange-400 font-bold">
+        <div class="sm:hidden pt-2 flex items-center justify-center gap-2 text-xs text-[#FF3D00] font-bold">
           <i data-lucide="chevrons-right" class="w-4 h-4 animate-bounce"></i>
-          <span>Deslize para o lado para ver os nichos</span>
+          <span>Deslize para o lado para ver os nichos 👉</span>
         </div>
       </div>
 
@@ -539,21 +506,21 @@
       <div class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 pt-2 px-4 -mx-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible no-scrollbar">
         
         <!-- Modelo 1: Odonto & Harmonização (Case Dra. Brenda) -->
-        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-rose-400/50 transition duration-300 flex flex-col group hover:-translate-y-1.5 shadow-xl">
-          <div class="h-48 overflow-hidden relative bg-stone-900">
+        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#E8E4DB] shadow-md hover:shadow-xl transition duration-300 flex flex-col group hover:-translate-y-1.5">
+          <div class="h-48 overflow-hidden relative bg-stone-100">
             <img src="./assets/case-odonto.jpg" onerror="this.src='https://images.unsplash.com/photo-1594824813511-10c598c48405?auto=format&fit=crop&w=600&q=80'" alt="Odonto e Estética" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-rose-500/90 text-white text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">
+            <div class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] uppercase tracking-wider font-black px-2.5 py-1 rounded-full shadow-sm">
               Odontologia & Estética
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-display text-xl font-bold text-white mb-1">Dentistas & Harmonização Facial</h3>
-              <p class="text-slate-400 text-xs leading-relaxed">
+              <h3 class="font-display text-xl font-bold text-[#111216] mb-1">Dentistas & Harmonização Facial</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
                 Paleta elegante nude/rose, galeria de casos reais (antes e depois), CRO em evidência e agendamento para tratamentos estéticos.
               </p>
             </div>
-            <a href="/dra-brenda-santos" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-rose-300 hover:text-white transition">
+            <a href="/dra-brenda-santos" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-rose-600 hover:text-rose-800 transition">
               <span>Ver Modelo da Dra. Brenda no Ar</span>
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
             </a>
@@ -561,21 +528,21 @@
         </div>
 
         <!-- Modelo 2: Audiovisual, Filmmakers & Social Media (Case VORTEX) -->
-        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition duration-300 flex flex-col group hover:-translate-y-1.5 shadow-xl">
-          <div class="h-48 overflow-hidden relative bg-black">
+        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#E8E4DB] shadow-md hover:shadow-xl transition duration-300 flex flex-col group hover:-translate-y-1.5">
+          <div class="h-48 overflow-hidden relative bg-stone-900">
             <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80" alt="Audiovisual e Social Media" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-yellow-500 text-black text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-full backdrop-blur-sm">
+            <div class="absolute top-3 left-3 bg-amber-500 text-stone-950 text-[10px] uppercase tracking-wider font-black px-2.5 py-1 rounded-full shadow-sm">
               Audiovisual & Criativos
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-display text-xl font-bold text-white mb-1">Produtoras, Filmmakers & Criadores</h3>
-              <p class="text-slate-400 text-xs leading-relaxed">
-                Design cinematográfico escuro, vitrine de showreel/vídeos em alta definição, cases de marcas atendidas e botão de proposta no WhatsApp.
+              <h3 class="font-display text-xl font-bold text-[#111216] mb-1">Produtoras, Filmmakers & Criadores</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
+                Design cinematográfico, vitrine de showreel/vídeos em alta definição, cases de marcas atendidas e botão de proposta no WhatsApp.
               </p>
             </div>
-            <a href="/vortex-audiovisual" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-yellow-300 hover:text-white transition">
+            <a href="/vortex-audiovisual" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-amber-600 hover:text-amber-800 transition">
               <span>Ver Modelo da VORTEX no Ar</span>
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
             </a>
@@ -583,21 +550,21 @@
         </div>
 
         <!-- Modelo 3: Medicina & Clínicas -->
-        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-sky-400/50 transition duration-300 flex flex-col group hover:-translate-y-1.5 shadow-xl">
-          <div class="h-48 overflow-hidden relative bg-slate-900">
+        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#E8E4DB] shadow-md hover:shadow-xl transition duration-300 flex flex-col group hover:-translate-y-1.5">
+          <div class="h-48 overflow-hidden relative bg-stone-100">
             <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Médicos e Clínicas" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-sky-600/90 text-white text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">
+            <div class="absolute top-3 left-3 bg-sky-600 text-white text-[10px] uppercase tracking-wider font-black px-2.5 py-1 rounded-full shadow-sm">
               Médicos & Clínicas
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-display text-xl font-bold text-white mb-1">Consultórios Médicos Especializados</h3>
-              <p class="text-slate-400 text-xs leading-relaxed">
-                Design sóbrio azul marinho/dourado, foco em CRM/RQE, valorização da consulta particular e agendamento humanizado.
+              <h3 class="font-display text-xl font-bold text-[#111216] mb-1">Consultórios Médicos Especializados</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
+                Design sóbrio azul marinho, foco em CRM/RQE, valorização da consulta particular e agendamento humanizado.
               </p>
             </div>
-            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-sky-300 hover:text-white transition">
+            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-sky-600 hover:text-sky-800 transition">
               <span>Quero um modelo assim</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
@@ -605,21 +572,21 @@
         </div>
 
         <!-- Modelo 4: Psicologia & Terapia -->
-        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-emerald-400/50 transition duration-300 flex flex-col group hover:-translate-y-1.5 shadow-xl">
-          <div class="h-48 overflow-hidden relative bg-stone-900">
+        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#E8E4DB] shadow-md hover:shadow-xl transition duration-300 flex flex-col group hover:-translate-y-1.5">
+          <div class="h-48 overflow-hidden relative bg-stone-100">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Psicologia e Terapia" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-emerald-600/90 text-white text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">
+            <div class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] uppercase tracking-wider font-black px-2.5 py-1 rounded-full shadow-sm">
               Psicologia & Terapia
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-display text-xl font-bold text-white mb-1">Psicólogos & Terapeutas</h3>
-              <p class="text-slate-400 text-xs leading-relaxed">
+              <h3 class="font-display text-xl font-bold text-[#111216] mb-1">Psicólogos & Terapeutas</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
                 Visual sereno e acolhedor em verde sage, destaque para atendimento online para todo o Brasil e sigilo ético (CRP).
               </p>
             </div>
-            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-300 hover:text-white transition">
+            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition">
               <span>Quero um modelo assim</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
@@ -627,21 +594,21 @@
         </div>
 
         <!-- Modelo 5: Fisioterapia & Bem-Estar -->
-        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-teal-400/50 transition duration-300 flex flex-col group hover:-translate-y-1.5 shadow-xl">
-          <div class="h-48 overflow-hidden relative bg-slate-900">
+        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#E8E4DB] shadow-md hover:shadow-xl transition duration-300 flex flex-col group hover:-translate-y-1.5">
+          <div class="h-48 overflow-hidden relative bg-stone-100">
             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Fisioterapia e Pilates" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-teal-600/90 text-white text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">
+            <div class="absolute top-3 left-3 bg-teal-700 text-white text-[10px] uppercase tracking-wider font-black px-2.5 py-1 rounded-full shadow-sm">
               Fisioterapia & Pilates
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-display text-xl font-bold text-white mb-1">Fisioterapeutas & Reabilitação</h3>
-              <p class="text-slate-400 text-xs leading-relaxed">
+              <h3 class="font-display text-xl font-bold text-[#111216] mb-1">Fisioterapeutas & Reabilitação</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
                 Foco no alívio da dor, tratamentos biomecânicos, estrutura da clínica e agendamento de avaliações posturais.
               </p>
             </div>
-            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-teal-300 hover:text-white transition">
+            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-teal-700 hover:text-teal-900 transition">
               <span>Quero um modelo assim</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
@@ -649,21 +616,21 @@
         </div>
 
         <!-- Modelo 6: Casamentos & Eventos -->
-        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-brand-card rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/50 transition duration-300 flex flex-col group hover:-translate-y-1.5 shadow-xl">
-          <div class="h-48 overflow-hidden relative bg-stone-900">
+        <div class="w-[82vw] max-w-[340px] sm:w-auto flex-shrink-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#E8E4DB] shadow-md hover:shadow-xl transition duration-300 flex flex-col group hover:-translate-y-1.5">
+          <div class="h-48 overflow-hidden relative bg-stone-100">
             <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Casamentos e Buffets" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute top-3 left-3 bg-amber-600/90 text-white text-[10px] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full backdrop-blur-sm">
+            <div class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] uppercase tracking-wider font-black px-2.5 py-1 rounded-full shadow-sm">
               Casamentos & Buffets
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <h3 class="font-display text-xl font-bold text-white mb-1">Buffets, Noivas & Fotografia</h3>
-              <p class="text-slate-400 text-xs leading-relaxed">
+              <h3 class="font-display text-xl font-bold text-[#111216] mb-1">Buffets, Noivas & Fotografia</h3>
+              <p class="text-stone-600 text-xs leading-relaxed">
                 Visual cinematográfico romântico com galeria de eventos, pacotes de buffet e consulta de datas disponíveis.
               </p>
             </div>
-            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-amber-300 hover:text-white transition">
+            <a href="#contato" class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 hover:text-amber-900 transition">
               <span>Quero um modelo assim</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
@@ -675,38 +642,16 @@
     </div>
   </section>
 
-        <!-- Card Personalizado -->
-        <div class="bg-gradient-to-br from-indigo-950/60 to-purple-950/60 rounded-3xl p-6 border border-indigo-500/30 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-bold">
-              <i data-lucide="plus" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white">Outro Nicho ou Segmento?</h3>
-            <p class="text-slate-300 text-xs leading-relaxed">
-              Advocacia, Arquitetura, Estética Automotiva, Gastronomia ou Barbearia? Nossa IA personaliza o layout completo para qualquer área.
-            </p>
-          </div>
-          <a href="#contato" class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-indigo-950 hover:bg-indigo-50 transition">
-            <span>Consultar Meu Nicho</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Comparativo: Linktree vs Agência vs SeuSite -->
-  <section id="comparativo" class="py-24 bg-brand-dark border-t border-white/5">
+  <!-- Comparativo: Linktree vs Agência vs SeuSite (Bloco Verde Floresta Agência do Print) -->
+  <section id="comparativo" class="py-24 bg-[#0C3E33] text-white relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Comparativo de Mercado</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white">
+        <span class="text-xs uppercase tracking-widest text-emerald-400 font-black">Comparativo de Mercado</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
           Qual a melhor opção para o seu negócio?
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-emerald-100/80 text-sm sm:text-base">
           Veja por que empreendedores inteligentes escolhem o SeuSite em vez de links amadores ou agências com contratos abusivos.
         </p>
       </div>
@@ -714,129 +659,129 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
         <!-- Opção 1: Link na Bio Amador -->
-        <div class="bg-red-950/10 border border-red-500/20 rounded-3xl p-8 flex flex-col justify-between space-y-6">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-8 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-2xl bg-red-500/15 text-red-400 flex items-center justify-center font-bold">
+            <div class="w-12 h-12 rounded-2xl bg-white/15 text-rose-300 flex items-center justify-center font-bold">
               <i data-lucide="smartphone" class="w-6 h-6"></i>
             </div>
             <div>
-              <span class="text-[11px] uppercase tracking-wider font-bold text-red-400">Opção Gratuita</span>
+              <span class="text-[11px] uppercase tracking-wider font-extrabold text-rose-300">Opção Gratuita</span>
               <h3 class="font-display text-2xl font-bold text-white mt-1">Link Amador na Bio</h3>
-              <p class="text-xs text-slate-400 mt-1">Linktree e agrupadores de links</p>
+              <p class="text-xs text-emerald-100/70 mt-1">Linktree e agrupadores de links</p>
             </div>
 
-            <div class="pt-2 border-t border-white/5 space-y-1">
-              <p class="text-xs text-slate-400 font-semibold">Investimento: R$ 0</p>
-              <p class="text-xs text-red-400 font-medium">Mas perde até 70% dos clientes</p>
+            <div class="pt-2 border-t border-white/10 space-y-1">
+              <p class="text-xs text-emerald-200 font-semibold">Investimento: R$ 0</p>
+              <p class="text-xs text-rose-300 font-medium">Mas perde até 70% dos clientes</p>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-300 pt-3">
+            <ul class="space-y-3 text-xs text-emerald-50 pt-3">
               <li class="flex items-start gap-2.5">
-                <i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="x" class="w-4 h-4 text-rose-300 flex-shrink-0 mt-0.5"></i>
                 <span>Sem domínio próprio (passa amadorismo).</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="x" class="w-4 h-4 text-rose-300 flex-shrink-0 mt-0.5"></i>
                 <span>Botões frios sem fotos de trabalhos ou diferenciais.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="x" class="w-4 h-4 text-rose-300 flex-shrink-0 mt-0.5"></i>
                 <span>Zero presença no Google quando alguém pesquisa sua área.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="x" class="w-4 h-4 text-rose-300 flex-shrink-0 mt-0.5"></i>
                 <span>O cliente compara você apenas por preço baixo.</span>
               </li>
             </ul>
           </div>
           <div class="pt-4 text-center">
-            <span class="text-[11px] text-slate-500">Pouca conversão comercial</span>
+            <span class="text-[11px] text-emerald-200/60">Pouca conversão comercial</span>
           </div>
         </div>
 
         <!-- Opção 2: Agência Tradicional -->
-        <div class="bg-slate-900/40 border border-white/10 rounded-3xl p-8 flex flex-col justify-between space-y-6">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-8 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-2xl bg-slate-800 text-slate-300 flex items-center justify-center font-bold">
+            <div class="w-12 h-12 rounded-2xl bg-white/15 text-amber-300 flex items-center justify-center font-bold">
               <i data-lucide="building" class="w-6 h-6"></i>
             </div>
             <div>
-              <span class="text-[11px] uppercase tracking-wider font-bold text-slate-400">Opção Corporativa</span>
+              <span class="text-[11px] uppercase tracking-wider font-extrabold text-amber-300">Opção Corporativa</span>
               <h3 class="font-display text-2xl font-bold text-white mt-1">Agência Tradicional</h3>
-              <p class="text-xs text-slate-400 mt-1">Desenvolvedores e agências de marketing</p>
+              <p class="text-xs text-emerald-100/70 mt-1">Desenvolvedores e agências de marketing</p>
             </div>
 
-            <div class="pt-2 border-t border-white/5 space-y-1">
-              <p class="text-xs text-slate-400 font-semibold">Investimento: R$ 3.000 a R$ 8.000</p>
-              <p class="text-xs text-amber-400 font-medium">Prazo demorado: 30 a 60 dias</p>
+            <div class="pt-2 border-t border-white/10 space-y-1">
+              <p class="text-xs text-emerald-200 font-semibold">Investimento: R$ 3.000 a R$ 8.000</p>
+              <p class="text-xs text-amber-300 font-medium">Prazo demorado: 30 a 60 dias</p>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-300 pt-3">
+            <ul class="space-y-3 text-xs text-emerald-50 pt-3">
               <li class="flex items-start gap-2.5">
-                <i data-lucide="minus" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="minus" class="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5"></i>
                 <span>Custo inacessível para quem é autônomo.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="minus" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="minus" class="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5"></i>
                 <span>Reuniões intermináveis e briefings exaustivos.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="minus" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="minus" class="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5"></i>
                 <span>Contratos anuais com taxas ocultas de manutenção.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="minus" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="minus" class="w-4 h-4 text-amber-300 flex-shrink-0 mt-0.5"></i>
                 <span>Qualquer alteração simples vira um chamado demorado.</span>
               </li>
             </ul>
           </div>
           <div class="pt-4 text-center">
-            <span class="text-[11px] text-slate-500">Caro e burocrático</span>
+            <span class="text-[11px] text-emerald-200/60">Caro e burocrático</span>
           </div>
         </div>
 
         <!-- Opção 3: SeuSite (O Equilíbrio Perfeito) -->
-        <div class="bg-gradient-to-b from-[#161D31] to-brand-card border-2 border-indigo-500/70 rounded-3xl p-8 flex flex-col justify-between space-y-6 glow relative">
-          <div class="absolute -top-3.5 right-8 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg">
+        <div class="bg-white text-[#111216] border-4 border-[#FF3D00] rounded-3xl p-8 flex flex-col justify-between space-y-6 shadow-2xl relative">
+          <div class="absolute -top-3.5 right-8 bg-[#FF3D00] text-white text-[10px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg">
             Recomendado
           </div>
 
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center font-bold">
+            <div class="w-12 h-12 rounded-2xl bg-orange-100 text-[#FF3D00] flex items-center justify-center font-bold">
               <i data-lucide="sparkles" class="w-6 h-6"></i>
             </div>
             <div>
-              <span class="text-[11px] uppercase tracking-wider font-bold text-indigo-300">A Solução Inteligente</span>
-              <h3 class="font-display text-2xl font-bold text-white mt-1">SeuSite</h3>
-              <p class="text-xs text-indigo-200 mt-1">Sites profissionais em 24h com IA</p>
+              <span class="text-[11px] uppercase tracking-wider font-black text-[#FF3D00]">A Solução Inteligente</span>
+              <h3 class="font-display text-2xl font-bold text-[#111216] mt-1">SeuSite</h3>
+              <p class="text-xs text-stone-500 mt-1">Sites profissionais em 24h com IA</p>
             </div>
 
-            <div class="pt-2 border-t border-white/10 space-y-1">
-              <p class="text-xs text-slate-300 font-semibold">Investimento: A partir de R$ 350</p>
-              <p class="text-xs text-emerald-400 font-bold">Entrega em até 24h com teste grátis</p>
+            <div class="pt-2 border-t border-stone-200 space-y-1">
+              <p class="text-xs text-stone-700 font-semibold">Investimento: A partir de R$ 350</p>
+              <p class="text-xs text-emerald-600 font-bold">Entrega em até 24h com teste grátis</p>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-200 pt-3">
+            <ul class="space-y-3 text-xs text-stone-700 pt-3">
               <li class="flex items-start gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                 <span>Página oficial de alto padrão com domínio próprio.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                 <span>Montado em 24 horas usando suas fotos e dados do Instagram.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                 <span>Botões de WhatsApp inteligentes e otimização para o Google.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
                 <span>Hospedagem ultra-rápida e suporte direto via WhatsApp inclusos.</span>
               </li>
             </ul>
           </div>
           <div class="pt-4">
-            <a href="#contato" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-95 text-white py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition">
+            <a href="#contato" class="w-full inline-flex items-center justify-center gap-2 bg-[#FF3D00] hover:bg-[#E03600] text-white py-3 px-4 rounded-xl text-xs font-black uppercase tracking-wider shadow-md transition active:scale-95">
               <span>Pedir Amostra Grátis</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
@@ -848,16 +793,16 @@
     </div>
   </section>
 
-  <!-- Planos & Preços -->
-  <section id="planos" class="py-24 bg-[#080B12] border-t border-white/5">
+  <!-- Planos & Preços (Light Agency) -->
+  <section id="planos" class="py-24 bg-[#FAF8F5] border-t border-[#E8E4DB]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Investimento Transparente</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white">
+        <span class="text-xs uppercase tracking-widest text-[#FF3D00] font-black">Investimento Transparente</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-[#111216] uppercase tracking-tight">
           Planos simples, sem surpresas
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base">
+        <p class="text-stone-600 text-sm sm:text-base">
           Cancele quando quiser. Você só paga o setup após aprovar a versão de demonstração.
         </p>
       </div>
@@ -865,106 +810,106 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
         
         <!-- Plano 1: Presença Digital -->
-        <div class="bg-brand-card p-8 sm:p-10 rounded-3xl border border-white/10 flex flex-col justify-between space-y-8">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-[#E8E4DB] shadow-sm flex flex-col justify-between space-y-8">
           <div class="space-y-6">
-            <div class="inline-block bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            <div class="inline-block bg-stone-100 text-stone-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-stone-200">
               Essencial
             </div>
             <div>
-              <h3 class="font-display text-2xl font-bold text-white">Presença Digital</h3>
-              <p class="text-xs text-slate-400 mt-1">Ideal para profissionais que estão começando no digital.</p>
+              <h3 class="font-display text-2xl font-bold text-[#111216]">Presença Digital</h3>
+              <p class="text-xs text-stone-500 mt-1">Ideal para profissionais que estão começando no digital.</p>
             </div>
 
             <div class="space-y-1">
               <div class="flex items-baseline gap-2">
-                <span class="text-xs text-slate-400">Setup único:</span>
-                <span class="font-display text-3xl font-extrabold text-white">R$ 350</span>
+                <span class="text-xs text-stone-500">Setup único:</span>
+                <span class="font-display text-3xl font-extrabold text-[#111216]">R$ 350</span>
               </div>
-              <p class="text-xs text-indigo-400 font-semibold">+ R$ 49/mês (Hospedagem & Suporte)</p>
+              <p class="text-xs text-[#FF3D00] font-bold">+ R$ 49/mês (Hospedagem & Suporte)</p>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-300 pt-4 border-t border-white/10">
+            <ul class="space-y-3 text-xs text-stone-700 pt-4 border-t border-stone-100">
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Site de 1 página completo e ultrarrápido</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Até 6 procedimentos ou serviços em destaque</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Galeria de fotos reais e depoimentos</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Hospedagem em Nuvem ultrarrápida (Cloudflare)</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Certificado de Segurança SSL (Cadeado HTTPS)</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Pequenas alterações mensais de textos inclusas</span>
               </li>
             </ul>
           </div>
 
-          <a href="#contato" class="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition">
+          <a href="#contato" class="w-full inline-flex items-center justify-center gap-2 bg-[#111216] hover:bg-stone-800 text-white py-3.5 px-6 rounded-2xl text-xs font-bold uppercase tracking-wider transition active:scale-95">
             <span>Começar com Este</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
 
         <!-- Plano 2: Autoridade Pro (Destaque) -->
-        <div class="bg-gradient-to-b from-[#161D31] to-brand-card p-8 sm:p-10 rounded-3xl border-2 border-indigo-500/60 flex flex-col justify-between space-y-8 relative glow">
-          <div class="absolute -top-3.5 right-8 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border-2 border-[#FF3D00] shadow-xl flex flex-col justify-between space-y-8 relative">
+          <div class="absolute -top-3.5 right-8 bg-[#FF3D00] text-white text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
             Mais Escolhido
           </div>
 
           <div class="space-y-6">
-            <div class="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-indigo-500/30">
+            <div class="inline-block bg-orange-100 text-[#FF3D00] text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-orange-200">
               Completo
             </div>
             <div>
-              <h3 class="font-display text-2xl font-bold text-white">Autoridade Pro</h3>
-              <p class="text-xs text-slate-300 mt-1">Para quem deseja se consolidar como referência no seu bairro ou cidade.</p>
+              <h3 class="font-display text-2xl font-bold text-[#111216]">Autoridade Pro</h3>
+              <p class="text-xs text-stone-500 mt-1">Para quem deseja se consolidar como referência no seu bairro ou cidade.</p>
             </div>
 
             <div class="space-y-1">
               <div class="flex items-baseline gap-2">
-                <span class="text-xs text-slate-400">Setup único:</span>
-                <span class="font-display text-3xl font-extrabold text-white">R$ 497</span>
+                <span class="text-xs text-stone-500">Setup único:</span>
+                <span class="font-display text-3xl font-extrabold text-[#111216]">R$ 497</span>
               </div>
-              <p class="text-xs text-indigo-300 font-semibold">+ R$ 79/mês (Tudo Incluso)</p>
+              <p class="text-xs text-[#FF3D00] font-bold">+ R$ 79/mês (Tudo Incluso)</p>
             </div>
 
-            <ul class="space-y-3 text-xs text-slate-200 pt-4 border-t border-white/10">
+            <ul class="space-y-3 text-xs text-stone-700 pt-4 border-t border-stone-100">
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span><strong>Tudo do Plano Essencial</strong></span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span><strong>Domínio próprio .com.br registrado e configurado</strong></span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Galeria de transformações com antes e depois interativo</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Otimização de SEO Local (para buscas no Google da sua cidade)</span>
               </li>
               <li class="flex items-center gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
                 <span>Suporte prioritário via WhatsApp direto</span>
               </li>
             </ul>
           </div>
 
-          <a href="#contato" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-95 text-white py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg shadow-indigo-500/30 transition">
+          <a href="#contato" class="w-full inline-flex items-center justify-center gap-2 bg-[#FF3D00] hover:bg-[#E03600] text-white py-3.5 px-6 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg shadow-orange-500/25 transition active:scale-95">
             <span>Pedir Amostra Grátis deste Plano</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
@@ -975,88 +920,88 @@
     </div>
   </section>
 
-  <!-- Depoimento Real / Prova Social -->
-  <section class="py-20 bg-brand-dark border-t border-white/5">
+  <!-- Depoimento Real / Prova Social (Light Sand) -->
+  <section class="py-20 bg-[#F2EFEB] border-t border-[#E8E4DB]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="bg-gradient-to-r from-indigo-950/40 via-brand-card to-purple-950/40 p-8 sm:p-12 rounded-3xl border border-white/10 flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-indigo-400/50 flex-shrink-0 shadow-xl bg-stone-800">
+      <div class="bg-white p-8 sm:p-12 rounded-3xl border border-[#E8E4DB] shadow-md flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left">
+        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-[#FF3D00] flex-shrink-0 shadow-lg bg-stone-100">
           <img src="./assets/brenda-about.jpg" onerror="this.src='https://images.unsplash.com/photo-1594824813511-10c598c48405?auto=format&fit=crop&w=300&q=80'" alt="Dra. Brenda Silva Santos" loading="lazy" decoding="async" class="w-full h-full object-cover">
         </div>
         <div class="space-y-3">
-          <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-400">
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-500">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
           </div>
-          <p class="text-sm sm:text-base text-slate-200 italic leading-relaxed">
+          <p class="text-sm sm:text-base text-stone-700 italic leading-relaxed">
             "Eu sempre quis um site que passasse a elegância dos procedimentos que realizo no consultório, mas achava que demoraria semanas e custaria uma fortuna. Com o SeuSite, vi a prévia no mesmo dia, ficou lindo no celular e minhas pacientes já chegam agendando pelo WhatsApp com muita facilidade!"
           </p>
           <div>
-            <p class="font-display font-bold text-white text-base">Dra. Brenda Silva Santos</p>
-            <p class="text-xs text-indigo-300 font-semibold">Cirurgiã-Dentista • CRO-RJ 56732</p>
+            <p class="font-display font-black text-[#111216] text-base">Dra. Brenda Silva Santos</p>
+            <p class="text-xs text-[#FF3D00] font-bold">Cirurgiã-Dentista • CRO-RJ 56732</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-20 bg-[#080B12] border-t border-white/5">
+  <!-- FAQ (Light Clean) -->
+  <section id="faq" class="py-20 bg-[#FAF8F5] border-t border-[#E8E4DB]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       
       <div class="text-center mb-14 space-y-2">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Transparência Total</span>
-        <h2 class="font-display text-3xl font-extrabold text-white">Perguntas Frequentes</h2>
+        <span class="text-xs uppercase tracking-widest text-[#FF3D00] font-black">Transparência Total</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-[#111216] uppercase tracking-tight">Perguntas Frequentes</h2>
       </div>
 
       <div class="space-y-4">
         
-        <details class="group bg-brand-card rounded-2xl p-6 border border-white/5 transition open:border-indigo-500/40">
-          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-white text-sm sm:text-base">
+        <details class="group bg-white rounded-2xl p-6 border border-[#E8E4DB] shadow-sm transition open:border-[#FF3D00]">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-[#111216] text-sm sm:text-base">
             <span>Preciso entender de tecnologia ou programação?</span>
-            <span class="text-indigo-400 transition-transform duration-300 group-open:rotate-180">
+            <span class="text-[#FF3D00] transition-transform duration-300 group-open:rotate-180">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
           </summary>
-          <p class="text-slate-400 text-sm mt-3 leading-relaxed pt-2 border-t border-white/5">
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-stone-100">
             Zero! Cuidamos de 100% de todo o processo técnico: redação dos textos, tratamento das fotos, registro de domínio, servidores em nuvem e segurança. Você só nos envia suas fotos e aprova o resultado.
           </p>
         </details>
 
-        <details class="group bg-brand-card rounded-2xl p-6 border border-white/5 transition open:border-indigo-500/40">
-          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-white text-sm sm:text-base">
+        <details class="group bg-white rounded-2xl p-6 border border-[#E8E4DB] shadow-sm transition open:border-[#FF3D00]">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-[#111216] text-sm sm:text-base">
             <span>Como funciona a demonstração gratuita sem compromisso?</span>
-            <span class="text-indigo-400 transition-transform duration-300 group-open:rotate-180">
+            <span class="text-[#FF3D00] transition-transform duration-300 group-open:rotate-180">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
           </summary>
-          <p class="text-slate-400 text-sm mt-3 leading-relaxed pt-2 border-t border-white/5">
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-stone-100">
             Você nos passa seu @ do Instagram e montamos uma prévia real do seu site em até 24 horas. Nós enviamos o link no seu celular para você navegar. Se gostar e quiser colocar no ar oficialmente, você contrata. Se não gostar, não paga absolutamente nada!
           </p>
         </details>
 
-        <details class="group bg-brand-card rounded-2xl p-6 border border-white/5 transition open:border-indigo-500/40">
-          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-white text-sm sm:text-base">
+        <details class="group bg-white rounded-2xl p-6 border border-[#E8E4DB] shadow-sm transition open:border-[#FF3D00]">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-[#111216] text-sm sm:text-base">
             <span>Posso usar meu próprio domínio (ex: meunome.com.br)?</span>
-            <span class="text-indigo-400 transition-transform duration-300 group-open:rotate-180">
+            <span class="text-[#FF3D00] transition-transform duration-300 group-open:rotate-180">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
           </summary>
-          <p class="text-slate-400 text-sm mt-3 leading-relaxed pt-2 border-t border-white/5">
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-stone-100">
             Sim! Se você já tiver o domínio registrado, conectamos gratuitamente. Se ainda não tiver, nós mesmos compramos e configuramos no Plano Autoridade Pro.
           </p>
         </details>
 
-        <details class="group bg-brand-card rounded-2xl p-6 border border-white/5 transition open:border-indigo-500/40">
-          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-white text-sm sm:text-base">
+        <details class="group bg-white rounded-2xl p-6 border border-[#E8E4DB] shadow-sm transition open:border-[#FF3D00]">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-[#111216] text-sm sm:text-base">
             <span>E se eu precisar alterar fotos, preços ou procedimentos depois?</span>
-            <span class="text-indigo-400 transition-transform duration-300 group-open:rotate-180">
+            <span class="text-[#FF3D00] transition-transform duration-300 group-open:rotate-180">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
           </summary>
-          <p class="text-slate-400 text-sm mt-3 leading-relaxed pt-2 border-t border-white/5">
+          <p class="text-stone-600 text-sm mt-3 leading-relaxed pt-2 border-t border-stone-100">
             A mensalidade cobre todo o suporte contínuo! Basta mandar uma mensagem no nosso WhatsApp avisando a alteração desejada e atualizamos para você em poucas horas.
           </p>
         </details>
@@ -1066,18 +1011,18 @@
     </div>
   </section>
 
-  <!-- Seção de Contato / Formulário de Pedido de Demonstração -->
-  <section id="contato" class="py-24 bg-gradient-to-b from-brand-dark via-[#101626] to-[#0B0F19] border-t border-white/5">
+  <!-- Seção de Contato / Formulário de Pedido de Demonstração (Light Sand) -->
+  <section id="contato" class="py-24 bg-[#F2EFEB] border-t border-[#E8E4DB]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       
-      <div class="bg-gradient-to-br from-indigo-950/40 to-brand-card p-8 sm:p-14 rounded-3xl border border-indigo-500/30 text-center space-y-8 glow">
+      <div class="bg-white p-8 sm:p-14 rounded-3xl border-2 border-[#E8E4DB] shadow-2xl text-center space-y-8">
         
         <div class="space-y-3 max-w-xl mx-auto">
-          <span class="text-xs uppercase tracking-widest text-indigo-400 font-bold">Sem Risco para Você</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          <span class="text-xs uppercase tracking-widest text-[#FF3D00] font-black">Sem Risco para Você</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-[#111216] uppercase tracking-tight">
             Receba uma demonstração gratuita do site do seu negócio
           </h2>
-          <p class="text-slate-300 text-sm leading-relaxed">
+          <p class="text-stone-600 text-sm leading-relaxed">
             Preencha os detalhes da sua marca abaixo. Nossa equipe monta uma versão de teste exclusiva e personalizada para você ver no celular em até 24 horas.
           </p>
         </div>
@@ -1087,28 +1032,28 @@
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu Nome ou da Empresa *</label>
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">Seu Nome ou da Empresa *</label>
               <input type="text" id="leadName" required placeholder="Ex: VORTEX, Dra. Brenda, Lucas..." 
-                     class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+                     class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu @ do Instagram *</label>
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">Seu @ do Instagram *</label>
               <input type="text" id="leadInsta" required placeholder="@seu.perfil" 
-                     class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+                     class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp com DDD *</label>
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">WhatsApp com DDD *</label>
               <input type="tel" id="leadPhone" required placeholder="(XX) 99999-9999" 
-                     class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+                     class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Ramo / Área de Atuação *</label>
-              <select id="leadNiche" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+              <label class="block text-xs font-bold text-stone-700 mb-1.5">Ramo / Área de Atuação *</label>
+              <select id="leadNiche" class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
                 <option value="Audiovisual / Filmmaker / Social Media">Audiovisual, Filmmaker ou Social Media</option>
                 <option value="Estética / Odontologia / Beleza">Estética, Odontologia ou Beleza</option>
                 <option value="Medicina / Clínica Especializada">Médico(a) ou Consultório Clínico</option>
@@ -1124,10 +1069,10 @@
 
           <!-- Cores de preferência -->
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">
               🎨 Cores de preferência da sua marca
             </label>
-            <select id="leadColors" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+            <select id="leadColors" class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
               <option value="Dark Cinematográfico (Preto & Dourado / Amarelo)">Dark Cinematográfico (Preto & Dourado / Âmbar)</option>
               <option value="Clean & Corporativo (Azul Petróleo & Branco)">Clean & Corporativo (Azul Petróleo, Marinho & Branco)</option>
               <option value="Sofisticado & Suave (Nude, Rose Gold & Champagne)">Sofisticado & Suave (Nude, Rose Gold & Champagne)</option>
@@ -1139,10 +1084,10 @@
 
           <!-- Principal Objetivo -->
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">
               🎯 Qual é o principal objetivo do seu site?
             </label>
-            <select id="leadGoal" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
+            <select id="leadGoal" class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
               <option value="Receber pedidos de orçamento de clientes no WhatsApp">Receber pedidos de orçamento de clientes no WhatsApp</option>
               <option value="Agendamento rápido de consultas e atendimentos">Agendamento rápido de consultas e atendimentos</option>
               <option value="Apresentar portfólio profissional para passar autoridade">Apresentar portfólio profissional para passar autoridade</option>
@@ -1152,37 +1097,37 @@
 
           <!-- Resumo da Marca / Serviços (Opcional) -->
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">
-              📝 Conte um pouco sobre sua marca ou serviços principais <span class="text-slate-500 font-normal">(Opcional)</span>
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">
+              📝 Conte um pouco sobre sua marca ou serviços principais <span class="text-stone-400 font-normal">(Opcional)</span>
             </label>
             <textarea id="leadBrandStory" rows="3" placeholder="Ex: Somos uma produtora especializada em vídeos para marcas, atuamos há 4 anos com foco em estética minimalista e dinamismo..." 
-                      class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition resize-none"></textarea>
+                      class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition resize-none"></textarea>
           </div>
 
           <!-- Link do material/apresentação (Opcional) -->
           <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1.5">
-              🔗 Link da apresentação da sua marca ou catálogo <span class="text-slate-500 font-normal">(Opcional)</span>
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">
+              🔗 Link da apresentação da sua marca ou catálogo <span class="text-stone-400 font-normal">(Opcional)</span>
             </label>
             <input type="url" id="leadAssetLink" placeholder="Ex: Link do Google Drive, PDF, Behance, Notion ou Portfólio" 
-                   class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-white/10 text-white text-sm focus:outline-none focus:border-indigo-500 transition">
-            <p class="text-[11px] text-slate-500 mt-1">Se tiver manual da marca, fotos ou PDF institucional, compartilhe o link aqui.</p>
+                   class="w-full px-4 py-3 rounded-xl bg-[#FAF8F5] border border-[#D5CFBF] text-[#111216] text-sm focus:outline-none focus:border-[#FF3D00] focus:bg-white transition">
+            <p class="text-[11px] text-stone-500 mt-1">Se tiver manual da marca, fotos ou PDF institucional, compartilhe o link aqui.</p>
           </div>
 
           <div class="pt-3">
             <button type="submit" 
-                    class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-orange-500 via-orange-600 to-rose-600 hover:opacity-95 text-white py-4 px-6 rounded-2xl text-sm font-black uppercase tracking-wider shadow-xl shadow-orange-500/25 active:scale-95 transition transform hover:-translate-y-0.5">
+                    class="w-full inline-flex items-center justify-center gap-2.5 bg-[#FF3D00] hover:bg-[#E03600] text-white py-4 px-6 rounded-2xl text-sm font-black uppercase tracking-wider shadow-xl shadow-orange-500/25 active:scale-95 transition transform hover:-translate-y-0.5">
               <i data-lucide="sparkles" class="w-4 h-4 text-amber-200"></i>
               <span>Gerar Minha Demonstração Personalizada</span>
             </button>
           </div>
 
-          <div id="formFeedback" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs text-center space-y-1">
+          <div id="formFeedback" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs text-center space-y-1">
             <p class="font-bold text-sm">🎉 Solicitação recebida com sucesso!</p>
             <p>Nossa equipe já está gerando a prévia personalizada com base no seu Instagram e cores selecionadas. Em breve você receberá o link!</p>
           </div>
 
-          <p class="text-[11px] text-center text-slate-400">
+          <p class="text-[11px] text-center text-stone-500">
             🔒 Seus dados estão 100% seguros. Você só contrata se amar o resultado.
           </p>
 
@@ -1204,16 +1149,16 @@
   </section>
 
   <!-- Rodapé -->
-  <footer class="bg-[#05070B] text-slate-500 py-12 pb-24 sm:pb-12 text-xs border-t border-white/5">
+  <footer class="bg-[#111216] text-stone-400 py-12 pb-24 sm:pb-12 text-xs border-t border-stone-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
       <div>
-        <p class="font-display text-lg font-black text-white">SeuSite<span class="text-orange-500">.</span></p>
-        <p class="text-xs text-slate-400 mt-1">Criação rápida e inteligente de páginas de alta conversão para profissionais autônomos.</p>
+        <p class="font-display text-lg font-black text-white">SeuSite<span class="text-[#FF3D00]">.</span></p>
+        <p class="text-xs text-stone-400 mt-1">Criação rápida e inteligente de páginas de alta conversão para profissionais autônomos.</p>
       </div>
 
       <div class="space-y-1 text-center md:text-right">
         <p>© 2026 SeuSite. Todos os direitos reservados.</p>
-        <p class="text-[11px] text-slate-600">Hospedagem em Nuvem de Alta Velocidade & Certificado SSL Ativo.</p>
+        <p class="text-[11px] text-stone-500">Hospedagem em Nuvem de Alta Velocidade & Certificado SSL Ativo.</p>
       </div>
     </div>
   </footer>
@@ -1221,12 +1166,12 @@
   <!-- Floating Mobile Action Bar (Fixo no rodapé exclusivo para celular) -->
   <div class="sm:hidden fixed bottom-4 left-4 right-4 z-40">
     <a href="#contato" 
-       class="flex items-center justify-between bg-gradient-to-r from-orange-500 via-rose-600 to-indigo-600 text-white font-bold p-3.5 pl-5 rounded-2xl shadow-2xl shadow-orange-500/40 border border-white/20 active:scale-95 transition">
+       class="flex items-center justify-between bg-[#111216] text-white font-bold p-3.5 pl-5 rounded-2xl shadow-2xl border border-stone-800 active:scale-95 transition">
       <div class="flex items-center gap-2">
         <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
         <span class="text-xs tracking-wide uppercase font-black">Ver Amostra do Meu Site</span>
       </div>
-      <div class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
+      <div class="w-8 h-8 rounded-xl bg-[#FF3D00] flex items-center justify-center shadow-md">
         <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
       </div>
     </a>
@@ -1243,18 +1188,6 @@
       const bar = document.getElementById('scrollProgress');
       if (bar) bar.style.width = scrolled + '%';
     });
-
-    // Reveal Suave no Scroll estilo agência
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
 </body>
 </html>
-
