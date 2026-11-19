@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anblick Engenharia | Soluções em Engenharia de Alta Performance</title>
+  <meta name="description" content="Simulações numéricas computacionais (CFD, FEA), mecânica da fratura, integridade estrutural e projetos industriais complexos em Curitiba e São Paulo.">
+  <meta name="keywords" content="engenharia mecanica, simulacao numerica, CFD, FEA, mecanica da fratura, integridade estrutural, projetos industriais, Anblick Engenharia">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anblick Engenharia | Soluções em Engenharia de Alta Performance">
+  <meta property="og:description" content="Simulações numéricas computacionais (CFD, FEA), mecânica da fratura, integridade estrutural e projetos industriais complexos em Curitiba e São Paulo.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Fontes do Google: Plus Jakarta Sans & JetBrains Mono para precisão técnica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              dark: 'var(--brand-dark)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              main: 'var(--brand-main)',
+              muted: 'var(--brand-muted)',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: #00A3FF;
+      --brand-dark: #0284C7;
+      --brand-secondary: #0B0F19;
+      --brand-accent: #38BDF8;
+      --brand-main: #F8FAFC;
+      --brand-muted: #94A3B8;
+    }
+    html, body {
+      overflow-x: hidden;
+      background-color: #0B0F19;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .tech-grid {
+      background-image: radial-gradient(rgba(0, 163, 255, 0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .blueprint-border {
+      border: 1px solid rgba(56, 189, 248, 0.18);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#00A3FF] selection:text-white pb-20 sm:pb-0">
+
+  <!-- Top bar técnica -->
+  <div class="bg-[#070A10] text-[11px] sm:text-xs py-2 px-4 text-center tracking-wider text-slate-400 border-b border-slate-800 flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+    <span class="font-mono text-cyan-300">CREA-PR / CREA-SP • Registro e Emissão de ART em Todo o Brasil</span>
+    <span class="hidden sm:inline text-slate-600">|</span>
+    <span class="hidden sm:inline">Engenharia de Alta Performance &bull; Curitiba &bull; São Paulo &bull; Atendimento Brasil</span>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-40 bg-[#0B0F19]/90 backdrop-blur-xl border-b border-slate-800 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
+          <i data-lucide="cpu" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Anblick Engenharia</span>
+          <span class="text-cyan-400 font-extrabold">.</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-400">
+        <a href="#solucoes" class="hover:text-cyan-400 transition">Soluções</a>
+        <a href="#simulacoes" class="hover:text-cyan-400 transition">CFD & FEA</a>
+        <a href="#casos" class="hover:text-cyan-400 transition">Projetos</a>
+        <a href="#diferenciais" class="hover:text-cyan-400 transition">Metodologia</a>
+        <a href="#contato" class="hover:text-cyan-400 transition">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg shadow-cyan-500/20 active:scale-95 transition">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Falar com Engenheiro</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden tech-grid">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/40 via-[#0B0F19] to-[#0B0F19] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-xs font-mono uppercase tracking-wider text-cyan-300">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span>Simulações Numéricas CFD / FEA & Engenharia Industrial</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15] max-w-4xl mx-auto">
+        Transformamos desafios complexos em <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">soluções de engenharia precisas</span>
+      </h1>
+
+      <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+        Transformamos desafios físicos e industriais em soluções digitais precisas. Reduza custos de prototipagem, antecipe falhas mecânicas e maximize a eficiência operacional da sua indústria.
+      </p>
+
+      <!-- CTAs Hero -->
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+        <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" rel="noopener noreferrer" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider shadow-xl shadow-cyan-500/25 active:scale-95 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Solicitar Avaliação Técnica no WhatsApp</span>
+        </a>
+
+        <a href="#solucoes" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider active:scale-95 transition">
+          <span>Ver Especialidades</span>
+          <i data-lucide="arrow-down" class="w-4 h-4 text-cyan-400"></i>
+        </a>
+      </div>
+
+      <!-- Imagem Principal / Mockup Técnico -->
+      <div class="pt-8 sm:pt-12 max-w-5xl mx-auto">
+        <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900 relative">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Anblick Engenharia" class="w-full h-56 sm:h-96 object-cover object-center brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-wrap items-center justify-between gap-3 bg-slate-950/85 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border border-slate-800">
+            <div class="flex items-center gap-3 text-left">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Simulação Computacional Avançada</p>
+                <p class="text-[11px] text-slate-400">CFD &bull; FEA &bull; Mecânica da Fratura &bull; Otimização Estrutural</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+              <span>Fale com nossos especialistas</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Métricas e Credenciais Técnicas -->
+  <section class="py-10 bg-[#070A10] border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      
+      <div class="p-3">
+        <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-mono">+150</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Simulações & Análises Realizadas</p>
+      </div>
+      
+      <div class="p-3">
+        <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-mono">100%</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Conformidade Normativa (NR / ASME)</p>
+      </div>
+      
+      <div class="p-3">
+        <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-mono">Zero</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Retrabalho com Validação Prévia</p>
+      </div>
+      
+      <div class="p-3">
+        <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-mono">Curitiba & SP</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Bases Físicas & Suporte Nacional</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Soluções em Engenharia (Services) -->
+  <section id="solucoes" class="py-16 sm:py-24 bg-[#0B0F19]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Expertise Técnica &bull; NR &bull; ASME &bull; ISO</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Soluções Industriais Integradas
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          Da análise de integridade mecânica ao desenvolvimento de projetos industriais completos, antecipando falhas e reduzindo custos operacionais.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Fluidodinâmica Computacional (CFD)" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">Fluidodinâmica Computacional (CFD)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Simulações numéricas de escoamento de fluidos, transferência de calor e aerodinâmica para equipamentos de alta complexidade.</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Mapeamento de perda de carga e turbulência</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Otimização geométrica de dutos e válvulas</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Simulação de troca térmica e resfriamento</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Análise de Elementos Finitos (FEA)" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">Análise de Elementos Finitos (FEA)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Avaliação estrutural e mecânica estática e dinâmica para garantia de integridade, identificação de fadiga e redução de peso.</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Análise de tensões de Von Mises e deformações</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Estudo de flambagem e estabilidade elastoplástica</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Cálculo de vida em fadiga sob cargas cíclicas</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Mecânica da Fratura & Integridade" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">Mecânica da Fratura & Integridade</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Determinação da taxa de crescimento de trincas e previsão de falhas mecânicas para tomada de decisão preventiva.</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Avaliação de Fitness-For-Service (FFS)</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Critérios de integridade conforme API 579 / BS 7910</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Prevenção de paradas não programadas em plantas</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80" alt="Laudos Técnicos, NR-12 e NR-13" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">Laudos Técnicos, NR-12 e NR-13</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Conformidade regulatória completa para máquinas, linhas de produção, caldeiras e vasos de pressão com ART.</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Apreciação de riscos e laudos conforme NR-12</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Inspeção e prontuário de segurança NR-13</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Emissão de ART assinada por engenheiro responsável</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=600&q=80" alt="Climatização Industrial & HVAC" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">Climatização Industrial & HVAC</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Dimensionamento térmico e ventilação de precisão para indústrias, salas limpas e instalações hospitalares críticas.</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Controle de temperatura, umidade e particulados</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Plano de Manutenção, Operação e Controle (PMOC)</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Projetos em conformidade com as normas ANVISA e ABNT</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=600&q=80" alt="Energia Renovável (Solar & Eólica)" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">Energia Renovável (Solar & Eólica)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">Projetos de engenharia para usinas fotovoltaicas eólicas com foco em confiabilidade estrutural e retorno sobre investimento.</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Dimensionamento e homologação junto às concessionárias</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Análise estrutural de fixação em coberturas e solo</span>
+              </li>
+              
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Estudos de viabilidade técnica e financeira</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Destaque CFD & Simulações Computacionais -->
+  <section id="simulacoes" class="py-16 sm:py-24 bg-[#070A10] border-y border-slate-800 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-5 text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/80 border border-blue-800/60 text-xs font-mono text-cyan-300">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Simulações Numéricas Avançadas</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Validação Digital Antes da Fabricação Física
+          </h2>
+
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Reduza custos com protótipos e retrabalho. Através de simulações em CFD (Fluidodinâmica Computacional) e FEA (Análise de Elementos Finitos), analisamos escoamentos, tensões, fadiga e transferência de calor em ambiente 100% digital.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <p class="text-xs font-bold text-cyan-400 font-mono">CFD & Escoamento</p>
+              <p class="text-xs text-slate-400 mt-1">Identificação de zonas de estagnação, perda de carga e turbulência para máxima eficiência energética.</p>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <p class="text-xs font-bold text-blue-400 font-mono">FEA & Estruturas</p>
+              <p class="text-xs text-slate-400 mt-1">Mapeamento de concentração de tensões, flambagem, fadiga e integridade estrutural com laudos ART.</p>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" 
+               class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg active:scale-95 transition">
+              <i data-lucide="file-check" class="w-4 h-4"></i>
+              <span>Solicitar Simulação para Seu Projeto</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Simulação de Engenharia" class="w-full h-80 sm:h-96 object-cover brightness-85">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute bottom-5 left-5 right-5 bg-slate-950/90 backdrop-blur-md p-4 rounded-xl border border-slate-800 text-left">
+              <p class="text-xs font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Precisão baseada em normas técnicas
+              </p>
+              <p class="text-[11px] text-slate-400 mt-1">Relatórios técnicos detalhados com emissão de ART/CREA para auditorias e certificações industriais.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projetos & Cases Realizados -->
+  <section id="casos" class="py-16 sm:py-24 bg-[#0B0F19]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Portfólio em Campo</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+            Projetos & Aplicações
+          </h2>
+        </div>
+        <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300">
+          <span>Ver mais no portfólio oficial</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-slate-900/70 rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Otimização de Escoamento CFD" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-cyan-300 text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full border border-cyan-800/50">
+              CFD & Fluidodinâmica
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Otimização de Escoamento CFD</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">Redução de 28% na perda de carga e eliminação de zonas de estagnação em tubulação industrial de alta vazão.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/70 rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Análise Estrutural e Fadiga FEA" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-cyan-300 text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full border border-cyan-800/50">
+              FEA & Estruturas
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Análise Estrutural e Fadiga FEA</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">Mapeamento tridimensional de tensões em pórtico rolante e estrutura pesada com dimensionamento otimizado de soldas.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/70 rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Integridade de Vasos sob Pressão" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-cyan-300 text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full border border-cyan-800/50">
+              NR-13 & Segurança
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Integridade de Vasos sob Pressão</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">Inspeção e laudo técnico com cálculo de espessura mínima requerida e vida útil conforme norma NR-13 e ASME VIII.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/70 rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="h-44 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" alt="Sistema Industrial de Climatização" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-cyan-300 text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full border border-cyan-800/50">
+              HVAC Industrial
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white mb-1.5">Sistema Industrial de Climatização</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">Modelagem térmica e controle de fluxo para salas limpas hospitalares e ambientes industriais controlados.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Diferenciais / Metodologia -->
+  <section id="diferenciais" class="py-16 bg-[#070A10] border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Por que a Anblick Engenharia</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Excelência Técnica Sem Burocracia
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Validação Digital Prévia</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Simulamos o comportamento real do equipamento antes de cortar o primeiro aço, economizando milhares de reais em protótipos e retrabalhos.</p>
+        </div>
+        
+        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Rigor Normativo & Emissão de ART</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Todos os relatórios e projetos são desenvolvidos por engenheiros legalmente habilitados com emissão de ART do CREA para respaldo jurídico e operacional.</p>
+        </div>
+        
+        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Comunicação Técnica Clara e Direta</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Desmistificamos a complexidade da engenharia: entregamos relatórios técnicos executivos e diretos ao ponto para sua equipe e diretoria.</p>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Depoimentos de Clientes Industriais -->
+  <section class="py-16 sm:py-24 bg-[#0B0F19]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Confiança no Mercado</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          O Que Nossos Clientes Dizem
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs gap-1">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
+              "A simulação em CFD realizada pela Anblick nos permitiu redesenhar nosso queimador industrial sem precisar de 4 rodadas de testes físicos. Economizamos mais de 3 semanas de cronograma."
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/60">
+            <p class="text-xs font-bold text-white">Carlos Eduardo Mendes</p>
+            <p class="text-[11px] text-slate-400">Gerente de Engenharia • Indústria Metalmecânica</p>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs gap-1">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
+              "O laudo de integridade e a análise de elementos finitos nos deram a segurança necessária para operar o reator sob pressão com total conformidade com a NR-13."
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/60">
+            <p class="text-xs font-bold text-white">Mariana Fagundes</p>
+            <p class="text-[11px] text-slate-400">Coordenadora de Manutenção • Química & Fertilizantes</p>
+          </div>
+        </div>
+        
+        <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs gap-1">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
+              "Equipe extremamente técnica e ágil. A clareza nas reuniões e a entrega pontual dos relatórios fizeram da Anblick nossa parceira fixa de engenharia."
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/60">
+            <p class="text-xs font-bold text-white">Roberto Silveira</p>
+            <p class="text-[11px] text-slate-400">Diretor Operacional • Logística & Estruturas</p>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-[#070A10] border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-10 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Dúvidas Frequentes</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
+          <h3 class="text-sm font-bold text-white mb-2">Vocês emitem ART (Anotação de Responsabilidade Técnica)?</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Sim! Todos os projetos, laudos, simulações e inspeções contam com emissão de ART registrada no CREA, garantindo validade jurídica e técnica para auditorias, seguradoras e órgãos reguladores.</p>
+        </div>
+        
+        <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
+          <h3 class="text-sm font-bold text-white mb-2">Como funciona o processo de simulação computacional (CFD/FEA)?</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Recebemos o modelo CAD 3D ou especificações do seu equipamento, aplicamos as condições de contorno e propriedades de materiais no software e geramos um relatório técnico detalhado com mapa de tensões, escoamentos e recomendações práticas de otimização.</p>
+        </div>
+        
+        <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
+          <h3 class="text-sm font-bold text-white mb-2">A Anblick atende empresas fora de Curitiba e São Paulo?</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Sim. As análises de simulação computacional e projetos executivos são realizados 100% em ambiente digital para clientes em todo o Brasil e exterior. Vistorias e perícias presenciais são agendadas sob demanda.</p>
+        </div>
+        
+        <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
+          <h3 class="text-sm font-bold text-white mb-2">Qual o prazo médio para entrega de um laudo ou projeto?</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Varia de acordo com a complexidade técnica: análises pontuais de FEA e laudos normativos são concluídos entre 5 a 10 dias úteis, enquanto projetos estruturais complexos e simulações térmicas completas seguem cronograma acordado em proposta.</p>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contato & CTA Final -->
+  <section id="contato" class="py-16 sm:py-24 bg-[#0B0F19] border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-xs font-mono text-cyan-300">
+        <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+        <span>Canal Direto de Engenharia</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Pronto para Otimizar Seu Projeto?
+      </h2>
+
+      <p class="text-slate-300 text-xs sm:text-base max-w-xl mx-auto leading-relaxed">
+        Fale diretamente com nossa equipe técnica de engenheiros em Curitiba e São Paulo para receber uma análise preliminar do seu desafio.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" rel="noopener noreferrer" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xl shadow-cyan-500/25 active:scale-95 transition">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Falar no WhatsApp: (41) 98884-9182</span>
+        </a>
+
+        <a href="mailto:contato@anblickengenharia.com.br" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 px-6 py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+          <span>contato@anblickengenharia.com.br</span>
+        </a>
+      </div>
+
+      <div class="pt-6 text-xs text-slate-500 font-mono">
+        Atendimento presencial e remoto &bull; Curitiba/PR &bull; São Paulo/SP &bull; Brasil
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#070A10] text-slate-500 py-10 text-xs border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div>
+        <p class="text-white font-bold text-sm">Anblick Engenharia &bull; Engenharia de Alta Performance</p>
+        <p class="text-[11px] text-slate-500 mt-0.5">CREA-PR / CREA-SP • Registro e Emissão de ART em Todo o Brasil &bull; Todos os direitos reservados.</p>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="https://www.anblickengenharia.com.br/" target="_blank" rel="noopener" class="text-cyan-400 hover:underline">Site Institucional Oficial</a>
+        <span>&bull;</span>
+        <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" class="text-slate-400 hover:text-white">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Action Bar -->
+  <div class="sm:hidden fixed bottom-3 left-3 right-3 z-40">
+    <a href="https://wa.me/5541988849182?text=Ol%C3%A1%20equipe%20Anblick%20Engenharia!%20Gostaria%20de%20solicitar%20uma%20consultoria%20t%C3%A9cnica%20%2F%20or%C3%A7amento%20de%20projeto." target="_blank" 
+       class="flex items-center justify-between bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold p-3.5 pl-5 rounded-2xl shadow-2xl active:scale-95 transition">
+      <div class="flex items-center gap-2">
+        <span class="flex h-2.5 w-2.5 rounded-full bg-white animate-pulse"></span>
+        <span class="text-xs uppercase font-extrabold tracking-wider">Falar com Engenheiro</span>
+      </div>
+      <div class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
+        <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

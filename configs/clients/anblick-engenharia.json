@@ -1,0 +1,190 @@
+{
+  "id": "anblick-engenharia",
+  "template": "engenharia-projetos",
+  "meta": {
+    "title": "Anblick Engenharia | Soluções em Engenharia de Alta Performance",
+    "description": "Simulações numéricas computacionais (CFD, FEA), mecânica da fratura, integridade estrutural e projetos industriais complexos em Curitiba e São Paulo.",
+    "keywords": "engenharia mecanica, simulacao numerica, CFD, FEA, mecanica da fratura, integridade estrutural, projetos industriais, Anblick Engenharia"
+  },
+  "profile": {
+    "name": "Anblick Engenharia",
+    "tagline": "Conectando o Futuro com Engenharia de Alta Performance",
+    "crea": "CREA-PR / CREA-SP • Registro e Emissão de ART em Todo o Brasil",
+    "specialty": "Simulações Numéricas CFD / FEA & Engenharia Industrial",
+    "bioShort": "Transformamos desafios físicos e industriais em soluções digitais precisas. Reduza custos de prototipagem, antecipe falhas mecânicas e maximize a eficiência operacional da sua indústria.",
+    "heroImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+    "aboutImage": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80"
+  },
+  "contact": {
+    "whatsapp": "41988849182",
+    "whatsappFormatted": "(41) 98884-9182",
+    "whatsappMessage": "Olá equipe Anblick Engenharia! Gostaria de solicitar uma consultoria técnica / orçamento de projeto.",
+    "email": "contato@anblickengenharia.com.br",
+    "address": "Curitiba - PR & São Paulo - SP",
+    "neighborhood": "Atendimento Nacional",
+    "city": "Curitiba",
+    "state": "PR",
+    "googleMapsUrl": "https://maps.google.com/?q=Curitiba+-+PR",
+    "workingHours": "Segunda a Sexta: 08h às 18h"
+  },
+  "theme": {
+    "primary": "#00A3FF",
+    "primaryDark": "#0284C7",
+    "secondary": "#0B0F19",
+    "accent": "#38BDF8",
+    "textMain": "#F8FAFC",
+    "textMuted": "#94A3B8"
+  },
+  "stats": [
+    { "value": "+150", "label": "Simulações & Análises Realizadas" },
+    { "value": "100%", "label": "Conformidade Normativa (NR / ASME)" },
+    { "value": "Zero", "label": "Retrabalho com Validação Prévia" },
+    { "value": "Curitiba & SP", "label": "Bases Físicas & Suporte Nacional" }
+  ],
+  "cases": [
+    {
+      "title": "Otimização de Escoamento CFD",
+      "subtitle": "Redução de 28% na perda de carga e eliminação de zonas de estagnação em tubulação industrial de alta vazão.",
+      "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      "tag": "CFD & Fluidodinâmica"
+    },
+    {
+      "title": "Análise Estrutural e Fadiga FEA",
+      "subtitle": "Mapeamento tridimensional de tensões em pórtico rolante e estrutura pesada com dimensionamento otimizado de soldas.",
+      "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+      "tag": "FEA & Estruturas"
+    },
+    {
+      "title": "Integridade de Vasos sob Pressão",
+      "subtitle": "Inspeção e laudo técnico com cálculo de espessura mínima requerida e vida útil conforme norma NR-13 e ASME VIII.",
+      "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
+      "tag": "NR-13 & Segurança"
+    },
+    {
+      "title": "Sistema Industrial de Climatização",
+      "subtitle": "Modelagem térmica e controle de fluxo para salas limpas hospitalares e ambientes industriais controlados.",
+      "image": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80",
+      "tag": "HVAC Industrial"
+    }
+  ],
+  "services": [
+    {
+      "id": "cfd",
+      "title": "Fluidodinâmica Computacional (CFD)",
+      "shortDescription": "Simulações numéricas de escoamento de fluidos, transferência de calor e aerodinâmica para equipamentos de alta complexidade.",
+      "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Mapeamento de perda de carga e turbulência",
+        "Otimização geométrica de dutos e válvulas",
+        "Simulação de troca térmica e resfriamento"
+      ]
+    },
+    {
+      "id": "fea",
+      "title": "Análise de Elementos Finitos (FEA)",
+      "shortDescription": "Avaliação estrutural e mecânica estática e dinâmica para garantia de integridade, identificação de fadiga e redução de peso.",
+      "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Análise de tensões de Von Mises e deformações",
+        "Estudo de flambagem e estabilidade elastoplástica",
+        "Cálculo de vida em fadiga sob cargas cíclicas"
+      ]
+    },
+    {
+      "id": "mecanica-fratura",
+      "title": "Mecânica da Fratura & Integridade",
+      "shortDescription": "Determinação da taxa de crescimento de trincas e previsão de falhas mecânicas para tomada de decisão preventiva.",
+      "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Avaliação de Fitness-For-Service (FFS)",
+        "Critérios de integridade conforme API 579 / BS 7910",
+        "Prevenção de paradas não programadas em plantas"
+      ]
+    },
+    {
+      "id": "laudos-nr",
+      "title": "Laudos Técnicos, NR-12 e NR-13",
+      "shortDescription": "Conformidade regulatória completa para máquinas, linhas de produção, caldeiras e vasos de pressão com ART.",
+      "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Apreciação de riscos e laudos conforme NR-12",
+        "Inspeção e prontuário de segurança NR-13",
+        "Emissão de ART assinada por engenheiro responsável"
+      ]
+    },
+    {
+      "id": "hvac",
+      "title": "Climatização Industrial & HVAC",
+      "shortDescription": "Dimensionamento térmico e ventilação de precisão para indústrias, salas limpas e instalações hospitalares críticas.",
+      "image": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Controle de temperatura, umidade e particulados",
+        "Plano de Manutenção, Operação e Controle (PMOC)",
+        "Projetos em conformidade com as normas ANVISA e ABNT"
+      ]
+    },
+    {
+      "id": "energia",
+      "title": "Energia Renovável (Solar & Eólica)",
+      "shortDescription": "Projetos de engenharia para usinas fotovoltaicas eólicas com foco em confiabilidade estrutural e retorno sobre investimento.",
+      "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=600&q=80",
+      "highlights": [
+        "Dimensionamento e homologação junto às concessionárias",
+        "Análise estrutural de fixação em coberturas e solo",
+        "Estudos de viabilidade técnica e financeira"
+      ]
+    }
+  ],
+  "differentials": [
+    {
+      "title": "Validação Digital Prévia",
+      "description": "Simulamos o comportamento real do equipamento antes de cortar o primeiro aço, economizando milhares de reais em protótipos e retrabalhos."
+    },
+    {
+      "title": "Rigor Normativo & Emissão de ART",
+      "description": "Todos os relatórios e projetos são desenvolvidos por engenheiros legalmente habilitados com emissão de ART do CREA para respaldo jurídico e operacional."
+    },
+    {
+      "title": "Comunicação Técnica Clara e Direta",
+      "description": "Desmistificamos a complexidade da engenharia: entregamos relatórios técnicos executivos e diretos ao ponto para sua equipe e diretoria."
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Carlos Eduardo Mendes",
+      "role": "Gerente de Engenharia • Indústria Metalmecânica",
+      "comment": "A simulação em CFD realizada pela Anblick nos permitiu redesenhar nosso queimador industrial sem precisar de 4 rodadas de testes físicos. Economizamos mais de 3 semanas de cronograma.",
+      "rating": 5
+    },
+    {
+      "author": "Mariana Fagundes",
+      "role": "Coordenadora de Manutenção • Química & Fertilizantes",
+      "comment": "O laudo de integridade e a análise de elementos finitos nos deram a segurança necessária para operar o reator sob pressão com total conformidade com a NR-13.",
+      "rating": 5
+    },
+    {
+      "author": "Roberto Silveira",
+      "role": "Diretor Operacional • Logística & Estruturas",
+      "comment": "Equipe extremamente técnica e ágil. A clareza nas reuniões e a entrega pontual dos relatórios fizeram da Anblick nossa parceira fixa de engenharia.",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vocês emitem ART (Anotação de Responsabilidade Técnica)?",
+      "answer": "Sim! Todos os projetos, laudos, simulações e inspeções contam com emissão de ART registrada no CREA, garantindo validade jurídica e técnica para auditorias, seguradoras e órgãos reguladores."
+    },
+    {
+      "question": "Como funciona o processo de simulação computacional (CFD/FEA)?",
+      "answer": "Recebemos o modelo CAD 3D ou especificações do seu equipamento, aplicamos as condições de contorno e propriedades de materiais no software e geramos um relatório técnico detalhado com mapa de tensões, escoamentos e recomendações práticas de otimização."
+    },
+    {
+      "question": "A Anblick atende empresas fora de Curitiba e São Paulo?",
+      "answer": "Sim. As análises de simulação computacional e projetos executivos são realizados 100% em ambiente digital para clientes em todo o Brasil e exterior. Vistorias e perícias presenciais são agendadas sob demanda."
+    },
+    {
+      "question": "Qual o prazo médio para entrega de um laudo ou projeto?",
+      "answer": "Varia de acordo com a complexidade técnica: análises pontuais de FEA e laudos normativos são concluídos entre 5 a 10 dias úteis, enquanto projetos estruturais complexos e simulações térmicas completas seguem cronograma acordado em proposta."
+    }
+  ]
+}

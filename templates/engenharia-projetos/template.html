@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}">
+  <meta name="keywords" content="{{meta.keywords}}">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{meta.title}}">
+  <meta property="og:description" content="{{meta.description}}">
+  <meta property="og:image" content="{{profile.heroImage}}">
+  
+  <!-- Fontes do Google: Plus Jakarta Sans & JetBrains Mono para precisão técnica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              dark: 'var(--brand-dark)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              main: 'var(--brand-main)',
+              muted: 'var(--brand-muted)',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: {{theme.primary}};
+      --brand-dark: {{theme.primaryDark}};
+      --brand-secondary: {{theme.secondary}};
+      --brand-accent: {{theme.accent}};
+      --brand-main: {{theme.textMain}};
+      --brand-muted: {{theme.textMuted}};
+    }
+    html, body {
+      overflow-x: hidden;
+      background-color: #0B0F19;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .tech-grid {
+      background-image: radial-gradient(rgba(0, 163, 255, 0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .blueprint-border {
+      border: 1px solid rgba(56, 189, 248, 0.18);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#00A3FF] selection:text-white pb-20 sm:pb-0">
+
+  <!-- Top bar técnica -->
+  <div class="bg-[#070A10] text-[11px] sm:text-xs py-2 px-4 text-center tracking-wider text-slate-400 border-b border-slate-800 flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+    <span class="font-mono text-cyan-300">{{profile.crea}}</span>
+    <span class="hidden sm:inline text-slate-600">|</span>
+    <span class="hidden sm:inline">Engenharia de Alta Performance &bull; Curitiba &bull; São Paulo &bull; Atendimento Brasil</span>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-40 bg-[#0B0F19]/90 backdrop-blur-xl border-b border-slate-800 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-600 to-blue-500 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
+          <i data-lucide="cpu" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">{{profile.name}}</span>
+          <span class="text-cyan-400 font-extrabold">.</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-400">
+        <a href="#solucoes" class="hover:text-cyan-400 transition">Soluções</a>
+        <a href="#simulacoes" class="hover:text-cyan-400 transition">CFD & FEA</a>
+        <a href="#casos" class="hover:text-cyan-400 transition">Projetos</a>
+        <a href="#diferenciais" class="hover:text-cyan-400 transition">Metodologia</a>
+        <a href="#contato" class="hover:text-cyan-400 transition">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg shadow-cyan-500/20 active:scale-95 transition">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Falar com Engenheiro</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden tech-grid">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/40 via-[#0B0F19] to-[#0B0F19] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-xs font-mono uppercase tracking-wider text-cyan-300">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span>{{profile.specialty}}</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15] max-w-4xl mx-auto">
+        Transformamos desafios complexos em <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">soluções de engenharia precisas</span>
+      </h1>
+
+      <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+        {{profile.bioShort}}
+      </p>
+
+      <!-- CTAs Hero -->
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider shadow-xl shadow-cyan-500/25 active:scale-95 transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Solicitar Avaliação Técnica no WhatsApp</span>
+        </a>
+
+        <a href="#solucoes" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider active:scale-95 transition">
+          <span>Ver Especialidades</span>
+          <i data-lucide="arrow-down" class="w-4 h-4 text-cyan-400"></i>
+        </a>
+      </div>
+
+      <!-- Imagem Principal / Mockup Técnico -->
+      <div class="pt-8 sm:pt-12 max-w-5xl mx-auto">
+        <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-900 relative">
+          <img src="{{profile.heroImage}}" alt="{{profile.name}}" class="w-full h-56 sm:h-96 object-cover object-center brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-wrap items-center justify-between gap-3 bg-slate-950/85 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border border-slate-800">
+            <div class="flex items-center gap-3 text-left">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-white">Simulação Computacional Avançada</p>
+                <p class="text-[11px] text-slate-400">CFD &bull; FEA &bull; Mecânica da Fratura &bull; Otimização Estrutural</p>
+              </div>
+            </div>
+            <a href="{{contact.whatsappUrl}}" target="_blank" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+              <span>Fale com nossos especialistas</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Métricas e Credenciais Técnicas -->
+  <section class="py-10 bg-[#070A10] border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      {{#stats}}
+      <div class="p-3">
+        <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-mono">{{value}}</p>
+        <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">{{label}}</p>
+      </div>
+      {{/stats}}
+    </div>
+  </section>
+
+  <!-- Soluções em Engenharia (Services) -->
+  <section id="solucoes" class="py-16 sm:py-24 bg-[#0B0F19]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Expertise Técnica &bull; NR &bull; ASME &bull; ISO</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Soluções Industriais Integradas
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          Da análise de integridade mecânica ao desenvolvimento de projetos industriais completos, antecipando falhas e reduzindo custos operacionais.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {{#services}}
+        <div class="bg-slate-900/60 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all flex flex-col justify-between p-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="h-40 -mx-6 -mt-6 mb-4 overflow-hidden relative">
+              <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+            <h3 class="text-lg font-bold text-white">{{title}}</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">{{shortDescription}}</p>
+            
+            <ul class="space-y-2 pt-2 border-t border-slate-800/80">
+              {{#highlights}}
+              <li class="flex items-start gap-2 text-xs text-slate-300">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>{{.}}</span>
+              </li>
+              {{/highlights}}
+            </ul>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-800/60">
+            <a href="{{contact.whatsappUrl}}" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition">
+              <span>Consultar Viabilidade</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        {{/services}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Destaque CFD & Simulações Computacionais -->
+  <section id="simulacoes" class="py-16 sm:py-24 bg-[#070A10] border-y border-slate-800 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-6 space-y-5 text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/80 border border-blue-800/60 text-xs font-mono text-cyan-300">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Simulações Numéricas Avançadas</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Validação Digital Antes da Fabricação Física
+          </h2>
+
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Reduza custos com protótipos e retrabalho. Através de simulações em CFD (Fluidodinâmica Computacional) e FEA (Análise de Elementos Finitos), analisamos escoamentos, tensões, fadiga e transferência de calor em ambiente 100% digital.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <p class="text-xs font-bold text-cyan-400 font-mono">CFD & Escoamento</p>
+              <p class="text-xs text-slate-400 mt-1">Identificação de zonas de estagnação, perda de carga e turbulência para máxima eficiência energética.</p>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <p class="text-xs font-bold text-blue-400 font-mono">FEA & Estruturas</p>
+              <p class="text-xs text-slate-400 mt-1">Mapeamento de concentração de tensões, flambagem, fadiga e integridade estrutural com laudos ART.</p>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <a href="{{contact.whatsappUrl}}" target="_blank" 
+               class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider shadow-lg active:scale-95 transition">
+              <i data-lucide="file-check" class="w-4 h-4"></i>
+              <span>Solicitar Simulação para Seu Projeto</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Simulação de Engenharia" class="w-full h-80 sm:h-96 object-cover brightness-85">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute bottom-5 left-5 right-5 bg-slate-950/90 backdrop-blur-md p-4 rounded-xl border border-slate-800 text-left">
+              <p class="text-xs font-bold text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Precisão baseada em normas técnicas
+              </p>
+              <p class="text-[11px] text-slate-400 mt-1">Relatórios técnicos detalhados com emissão de ART/CREA para auditorias e certificações industriais.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projetos & Cases Realizados -->
+  <section id="casos" class="py-16 sm:py-24 bg-[#0B0F19]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Portfólio em Campo</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mt-1">
+            Projetos & Aplicações
+          </h2>
+        </div>
+        <a href="{{contact.whatsappUrl}}" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300">
+          <span>Ver mais no portfólio oficial</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {{#cases}}
+        <div class="bg-slate-900/70 rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="h-44 overflow-hidden relative">
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+            <div class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-sm text-cyan-300 text-[10px] uppercase font-mono font-bold px-2 py-0.5 rounded-full border border-cyan-800/50">
+              {{tag}}
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white mb-1.5">{{title}}</h3>
+              <p class="text-slate-400 text-xs leading-relaxed">{{subtitle}}</p>
+            </div>
+          </div>
+        </div>
+        {{/cases}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Diferenciais / Metodologia -->
+  <section id="diferenciais" class="py-16 bg-[#070A10] border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Por que a {{profile.name}}</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Excelência Técnica Sem Burocracia
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {{#differentials}}
+        <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">{{title}}</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">{{description}}</p>
+        </div>
+        {{/differentials}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Depoimentos de Clientes Industriais -->
+  <section class="py-16 sm:py-24 bg-[#0B0F19]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Confiança no Mercado</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          O Que Nossos Clientes Dizem
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {{#testimonials}}
+        <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 text-xs gap-1">
+              ★★★★★
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed italic">
+              "{{comment}}"
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-slate-800/60">
+            <p class="text-xs font-bold text-white">{{author}}</p>
+            <p class="text-[11px] text-slate-400">{{role}}</p>
+          </div>
+        </div>
+        {{/testimonials}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-[#070A10] border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-10 space-y-2">
+        <span class="text-xs uppercase tracking-wider text-cyan-400 font-bold font-mono">Dúvidas Frequentes</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {{#faq}}
+        <div class="bg-slate-900/80 p-5 rounded-xl border border-slate-800">
+          <h3 class="text-sm font-bold text-white mb-2">{{question}}</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">{{answer}}</p>
+        </div>
+        {{/faq}}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contato & CTA Final -->
+  <section id="contato" class="py-16 sm:py-24 bg-[#0B0F19] border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-xs font-mono text-cyan-300">
+        <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+        <span>Canal Direto de Engenharia</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Pronto para Otimizar Seu Projeto?
+      </h2>
+
+      <p class="text-slate-300 text-xs sm:text-base max-w-xl mx-auto leading-relaxed">
+        Fale diretamente com nossa equipe técnica de engenheiros em Curitiba e São Paulo para receber uma análise preliminar do seu desafio.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xl shadow-cyan-500/25 active:scale-95 transition">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Falar no WhatsApp: {{contact.whatsappFormatted}}</span>
+        </a>
+
+        <a href="mailto:{{contact.email}}" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 px-6 py-4 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          <i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i>
+          <span>{{contact.email}}</span>
+        </a>
+      </div>
+
+      <div class="pt-6 text-xs text-slate-500 font-mono">
+        Atendimento presencial e remoto &bull; Curitiba/PR &bull; São Paulo/SP &bull; Brasil
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#070A10] text-slate-500 py-10 text-xs border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div>
+        <p class="text-white font-bold text-sm">{{profile.name}} &bull; Engenharia de Alta Performance</p>
+        <p class="text-[11px] text-slate-500 mt-0.5">{{profile.crea}} &bull; Todos os direitos reservados.</p>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="https://www.anblickengenharia.com.br/" target="_blank" rel="noopener" class="text-cyan-400 hover:underline">Site Institucional Oficial</a>
+        <span>&bull;</span>
+        <a href="{{contact.whatsappUrl}}" target="_blank" class="text-slate-400 hover:text-white">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Action Bar -->
+  <div class="sm:hidden fixed bottom-3 left-3 right-3 z-40">
+    <a href="{{contact.whatsappUrl}}" target="_blank" 
+       class="flex items-center justify-between bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold p-3.5 pl-5 rounded-2xl shadow-2xl active:scale-95 transition">
+      <div class="flex items-center gap-2">
+        <span class="flex h-2.5 w-2.5 rounded-full bg-white animate-pulse"></span>
+        <span class="text-xs uppercase font-extrabold tracking-wider">Falar com Engenheiro</span>
+      </div>
+      <div class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
+        <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

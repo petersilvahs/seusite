@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://seusite.seusite-agr-br.workers.dev/anblick-engenharia</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://seusite.seusite-agr-br.workers.dev/dra-brenda-santos</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,5 +24,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://seusite.seusite-agr-br.workers.dev/dr-lucas-carvalho-copacabana</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
-
