@@ -24,13 +24,21 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              primary: '{{theme.primary}}',
-              dark: '{{theme.primaryDark}}',
-              accent: '{{theme.accent}}',
-              secondary: '{{theme.secondary}}',
-              main: '{{theme.textMain}}',
-              muted: '{{theme.textMuted}}',
+            tealBrand: {
+              DEFAULT: '#48C1B4',
+              hover: '#36A99D',
+              light: '#72DFD3',
+            },
+            coralBrand: {
+              DEFAULT: '#F89999',
+              hover: '#E07E7E',
+              light: '#FFB5B5',
+            },
+            darkBrand: {
+              bg: '#080C0E',
+              card: '#0F171A',
+              cardHover: '#142024',
+              muted: '#90A8A6',
             }
           },
           fontFamily: {
@@ -44,79 +52,87 @@
 
   <style>
     body {
-      background-color: #07090E;
+      background-color: #080C0E;
       color: #F8FAFC;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
     .font-display {
       font-family: 'Syne', sans-serif;
     }
-    .glow-green {
-      box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.35);
+    .glow-teal {
+      box-shadow: 0 0 50px -10px rgba(72, 193, 180, 0.35);
     }
-    .glow-cyan {
-      box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.3);
+    .glow-coral {
+      box-shadow: 0 0 50px -10px rgba(248, 153, 153, 0.35);
+    }
+    .glow-combo {
+      box-shadow: 0 0 60px -10px rgba(72, 193, 180, 0.25), 0 0 40px -10px rgba(248, 153, 153, 0.2);
     }
     /* Estilos do Simulador de WhatsApp */
     .chat-bubble-bot {
-      background-color: #1F2C34;
+      background-color: #142024;
       color: #E9EDEF;
       border-radius: 0 16px 16px 16px;
+      border: 1px solid rgba(72, 193, 180, 0.15);
     }
     .chat-bubble-user {
-      background-color: #005C4B;
-      color: #E9EDEF;
+      background-color: #0F3733;
+      color: #FFFFFF;
       border-radius: 16px 0 16px 16px;
+      border: 1px solid rgba(72, 193, 180, 0.3);
     }
     /* Scrollbar sutil */
     ::-webkit-scrollbar {
       width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0B0F19;
+      background: #080C0E;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1E293B;
+      background: #19262A;
       border-radius: 3px;
     }
   </style>
 </head>
-<body class="antialiased selection:bg-emerald-500 selection:text-black pb-20 md:pb-0">
+<body class="antialiased selection:bg-[#48C1B4] selection:text-black pb-20 md:pb-0">
 
   <!-- Top bar do Ecossistema -->
-  <div class="bg-black/90 text-xs py-2 px-4 text-center tracking-wider uppercase font-semibold text-zinc-400 border-b border-white/5 flex items-center justify-center gap-2">
-    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
+  <div class="bg-[#05080A] text-xs py-2 px-4 text-center tracking-wider uppercase font-semibold text-zinc-400 border-b border-white/5 flex items-center justify-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-[#F89999] animate-ping shrink-0"></span>
     <span class="truncate">{{profile.badge}}</span>
-    <a href="#combo" class="hidden sm:inline-block text-emerald-400 underline hover:text-white font-bold ml-1">Ver Combo com Site</a>
+    <a href="#combo" class="hidden sm:inline-block text-[#48C1B4] underline hover:text-[#F89999] font-bold ml-1 transition">Ver Combo com Site (30% OFF)</a>
   </div>
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-40 bg-[#07090E]/90 backdrop-blur-xl border-b border-white/5 transition-all">
+  <header class="sticky top-0 z-40 bg-[#080C0E]/90 backdrop-blur-xl border-b border-white/5 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
       
-      <a href="#" class="flex items-center gap-2 group shrink-0">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-black font-extrabold text-xl shadow-lg shadow-emerald-500/20">
-          <i data-lucide="bot" class="w-6 h-6 text-black"></i>
+      <a href="#" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#48C1B4] to-[#F89999] flex items-center justify-center text-black font-extrabold text-xl shadow-lg shadow-[#48C1B4]/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="bot" class="w-6 h-6 text-[#080C0E]"></i>
         </div>
         <div>
-          <span class="font-display text-2xl font-black tracking-tight text-white uppercase group-hover:text-emerald-400 transition">{{profile.name}}</span>
-          <span class="hidden sm:block text-[10px] text-zinc-400 uppercase tracking-widest font-semibold">Grupo SeuSite</span>
+          <span class="font-display text-2xl font-black tracking-tight text-white uppercase group-hover:text-[#48C1B4] transition">{{profile.name}}</span>
+          <span class="hidden sm:block text-[10px] text-[#90A8A6] uppercase tracking-widest font-semibold">Grupo SeuSite</span>
         </div>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-zinc-400">
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-[#90A8A6]">
         <a href="#simulador" class="hover:text-white transition whitespace-nowrap shrink-0">Simulador ao Vivo</a>
         <a href="#recursos" class="hover:text-white transition whitespace-nowrap shrink-0">Recursos</a>
         <a href="#segmentos" class="hover:text-white transition whitespace-nowrap shrink-0">Segmentos</a>
-        <a href="#combo" class="hover:text-emerald-400 transition whitespace-nowrap shrink-0 text-emerald-400">Combo Site + Bot</a>
+        <a href="#combo" class="text-[#F89999] hover:text-white transition whitespace-nowrap shrink-0 flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#F89999]"></i>
+          <span>Combo Site + Bot</span>
+        </a>
         <a href="#planos" class="hover:text-white transition whitespace-nowrap shrink-0">Planos</a>
         <a href="#faq" class="hover:text-white transition whitespace-nowrap shrink-0">FAQ</a>
       </nav>
 
       <div class="flex items-center gap-3 shrink-0">
         <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-lg shadow-emerald-500/20 shrink-0 whitespace-nowrap">
-          <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+           class="inline-flex items-center gap-2 bg-[#48C1B4] hover:bg-[#36A99D] text-[#080C0E] px-4 sm:px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition shadow-lg shadow-[#48C1B4]/20 shrink-0 whitespace-nowrap">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-[#080C0E]"></i>
           <span>Falar com Consultor</span>
         </a>
       </div>
@@ -126,18 +142,18 @@
 
   <!-- Hero Section -->
   <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-t from-[#07090E] via-transparent to-transparent z-10 pointer-events-none"></div>
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-emerald-500/15 via-cyan-500/10 to-transparent blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#080C0E] via-transparent to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-gradient-to-b from-[#48C1B4]/20 via-[#F89999]/15 to-transparent blur-[140px] pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-20 text-center space-y-6">
       
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs uppercase tracking-widest text-emerald-400 font-bold">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#48C1B4]/10 border border-[#48C1B4]/30 text-xs uppercase tracking-widest text-[#48C1B4] font-bold">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#F89999]"></i>
         <span>Atendimento com IA Generativa no WhatsApp</span>
       </div>
 
       <h1 class="font-display text-3xl sm:text-5xl lg:text-7xl font-black text-white tracking-tight leading-[1.08] uppercase max-w-5xl mx-auto">
-        Transforme seu WhatsApp em uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">máquina de vendas 24h</span> com Inteligência Artificial.
+        Transforme seu WhatsApp em uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#48C1B4] via-[#72DFD3] to-[#F89999]">máquina de vendas 24h</span> com Inteligência Artificial.
       </h1>
 
       <p class="text-sm sm:text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed font-light">
@@ -147,73 +163,73 @@
       <!-- Botões de Ação Principal -->
       <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-xl mx-auto">
         <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-black px-7 py-4 rounded-full font-bold text-xs uppercase tracking-widest transition shadow-xl shadow-emerald-500/25 transform hover:-translate-y-0.5">
-          <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#48C1B4] hover:bg-[#36A99D] text-[#080C0E] px-7 py-4 rounded-full font-black text-xs uppercase tracking-widest transition shadow-xl shadow-[#48C1B4]/25 transform hover:-translate-y-0.5">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-[#080C0E]"></i>
           <span>Quero Testar no Meu WhatsApp</span>
         </a>
 
         <a href="#simulador" 
            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/5 hover:bg-white/10 text-white border border-white/15 px-6 py-4 rounded-full font-bold text-xs uppercase tracking-wider transition">
-          <i data-lucide="play" class="w-4 h-4 text-emerald-400"></i>
+          <i data-lucide="play" class="w-4 h-4 text-[#F89999]"></i>
           <span>Ver Simulador ao Vivo</span>
         </a>
       </div>
 
       <!-- Quick Trust Badges -->
-      <div class="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-zinc-400">
-        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Sem necessidade de deixar PC ligado</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Pausa automática se você responder</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Configuração entregue em 48h</span>
+      <div class="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-[#90A8A6]">
+        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#48C1B4]"></i> Sem necessidade de deixar PC ligado</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#48C1B4]"></i> Pausa automática se você responder</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#48C1B4]"></i> Configuração entregue em 48h</span>
       </div>
 
     </div>
   </section>
 
   <!-- Métricas Rápidas -->
-  <section class="py-10 bg-black border-y border-white/5">
+  <section class="py-10 bg-[#05080A] border-y border-white/5">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
       {{#stats}}
       <div class="p-3">
-        <p class="font-display text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">{{value}}</p>
-        <p class="text-[11px] sm:text-xs uppercase tracking-widest text-zinc-400 mt-1 font-semibold">{{label}}</p>
+        <p class="font-display text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#48C1B4] to-[#F89999]">{{value}}</p>
+        <p class="text-[11px] sm:text-xs uppercase tracking-widest text-[#90A8A6] mt-1 font-semibold">{{label}}</p>
       </div>
       {{/stats}}
     </div>
   </section>
 
   <!-- SEÇÃO DO SIMULADOR AO VIVO (INTERATIVO) -->
-  <section id="simulador" class="py-20 md:py-28 bg-[#0B0F19] relative">
+  <section id="simulador" class="py-20 md:py-28 bg-[#0B1013] relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#48C1B4]/10 text-[#48C1B4] text-xs font-bold uppercase tracking-wider border border-[#48C1B4]/20">
           <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
           <span>Experiência Interativa</span>
         </div>
         <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
           Teste o SeuBot Agora Mesmo
         </h2>
-        <p class="text-zinc-400 text-sm">
+        <p class="text-[#90A8A6] text-sm">
           Veja como a IA atende com linguagem natural, tira dúvidas, qualifica o lead e apresenta o ecossistema completo. Clique nos botões para interagir:
         </p>
       </div>
 
       <!-- Mockup Celular WhatsApp Interativo -->
-      <div class="max-w-md mx-auto bg-[#111B21] rounded-[36px] border-4 border-zinc-800 shadow-2xl overflow-hidden glow-green">
+      <div class="max-w-md mx-auto bg-[#0F171A] rounded-[36px] border-4 border-zinc-800 shadow-2xl overflow-hidden glow-teal">
         
         <!-- Header do WhatsApp -->
-        <div class="bg-[#202C33] px-4 py-3 flex items-center justify-between border-b border-white/5">
+        <div class="bg-[#142024] px-4 py-3 flex items-center justify-between border-b border-white/5">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-black font-bold relative">
-              <i data-lucide="bot" class="w-5 h-5 text-black"></i>
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-300 border-2 border-[#202C33] absolute bottom-0 right-0"></span>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#48C1B4] to-[#F89999] flex items-center justify-center text-[#080C0E] font-bold relative">
+              <i data-lucide="bot" class="w-5 h-5 text-[#080C0E]"></i>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#48C1B4] border-2 border-[#142024] absolute bottom-0 right-0"></span>
             </div>
             <div>
               <p class="text-sm font-bold text-white flex items-center gap-1.5">
                 <span>SeuBot IA • Atendimento</span>
-                <i data-lucide="badge-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <i data-lucide="badge-check" class="w-3.5 h-3.5 text-[#48C1B4]"></i>
               </p>
-              <p id="chatStatus" class="text-[11px] text-emerald-400 font-medium">online • responde em 1s</p>
+              <p id="chatStatus" class="text-[11px] text-[#48C1B4] font-medium">online • responde em 1s</p>
             </div>
           </div>
           <div class="flex items-center gap-3 text-zinc-400">
@@ -223,10 +239,10 @@
         </div>
 
         <!-- Área de Conversa -->
-        <div id="chatMessages" class="p-4 space-y-3.5 h-[380px] overflow-y-auto bg-[radial-gradient(#1f2c34_1px,transparent_1px)] [background-size:16px_16px] text-xs">
+        <div id="chatMessages" class="p-4 space-y-3.5 h-[380px] overflow-y-auto bg-[radial-gradient(#1a262a_1px,transparent_1px)] [background-size:16px_16px] text-xs">
           
           <div class="text-center my-2">
-            <span class="bg-[#182229] text-zinc-400 text-[10px] px-2.5 py-1 rounded-full border border-white/5 uppercase tracking-wider">
+            <span class="bg-[#142024] text-[#90A8A6] text-[10px] px-2.5 py-1 rounded-full border border-white/5 uppercase tracking-wider">
               Hoje • Criptografia de Ponta a Ponta
             </span>
           </div>
@@ -243,34 +259,34 @@
         </div>
 
         <!-- Sugestões de Perguntas Rápidas (Chips Clicáveis) -->
-        <div class="bg-[#182229] p-3 border-t border-white/5 space-y-2">
-          <p class="text-[10px] uppercase tracking-wider text-zinc-400 font-bold px-1">Perguntas Rápidas para Testar:</p>
+        <div class="bg-[#0C1316] p-3 border-t border-white/5 space-y-2">
+          <p class="text-[10px] uppercase tracking-wider text-[#90A8A6] font-bold px-1">Perguntas Rápidas para Testar:</p>
           <div class="flex flex-wrap gap-1.5" id="quickPrompts">
             <button onclick="sendSimulatedMessage('Como funciona o atendimento na prática?')" 
-                    class="bg-[#202C33] hover:bg-emerald-500/20 hover:border-emerald-500/50 text-zinc-200 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-medium transition text-left">
+                    class="bg-[#142024] hover:bg-[#48C1B4]/20 hover:border-[#48C1B4]/50 text-zinc-200 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-medium transition text-left">
               ⚡ Como funciona?
             </button>
             <button onclick="sendSimulatedMessage('Vocês também fazem sites oficiais?')" 
-                    class="bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 px-3 py-1.5 rounded-full text-[11px] font-bold transition text-left">
+                    class="bg-[#F89999]/20 hover:bg-[#F89999]/30 text-[#F89999] border border-[#F89999]/40 px-3 py-1.5 rounded-full text-[11px] font-bold transition text-left">
               🌐 Vocês fazem sites? (Combo)
             </button>
             <button onclick="sendSimulatedMessage('Quais são os valores e planos?')" 
-                    class="bg-[#202C33] hover:bg-emerald-500/20 hover:border-emerald-500/50 text-zinc-200 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-medium transition text-left">
+                    class="bg-[#142024] hover:bg-[#48C1B4]/20 hover:border-[#48C1B4]/50 text-zinc-200 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-medium transition text-left">
               💰 Quanto custa?
             </button>
             <button onclick="sendSimulatedMessage('Quero uma demonstração no meu WhatsApp!')" 
-                    class="bg-[#202C33] hover:bg-emerald-500/20 hover:border-emerald-500/50 text-zinc-200 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-medium transition text-left">
+                    class="bg-[#142024] hover:bg-[#48C1B4]/20 hover:border-[#48C1B4]/50 text-zinc-200 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-medium transition text-left">
               🚀 Quero testar
             </button>
           </div>
         </div>
 
         <!-- Input do Chat -->
-        <div class="bg-[#202C33] p-2.5 flex items-center gap-2 border-t border-white/5">
+        <div class="bg-[#142024] p-2.5 flex items-center gap-2 border-t border-white/5">
           <input type="text" id="simulatedInput" placeholder="Digite uma dúvida..." 
                  onkeypress="if(event.key === 'Enter') handleCustomInput()"
-                 class="flex-1 bg-[#2A3942] text-white text-xs rounded-full px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-emerald-500 placeholder-zinc-500">
-          <button onclick="handleCustomInput()" class="w-9 h-9 rounded-full bg-emerald-500 text-black flex items-center justify-center shrink-0 hover:bg-emerald-400 transition">
+                 class="flex-1 bg-[#1C2C31] text-white text-xs rounded-full px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#48C1B4] placeholder-[#90A8A6]/60">
+          <button onclick="handleCustomInput()" class="w-9 h-9 rounded-full bg-[#48C1B4] text-[#080C0E] flex items-center justify-center shrink-0 hover:bg-[#36A99D] transition">
             <i data-lucide="send" class="w-4 h-4 translate-x-0.5"></i>
           </button>
         </div>
@@ -281,28 +297,28 @@
   </section>
 
   <!-- SEÇÃO DE RECURSOS & TECNOLOGIA -->
-  <section id="recursos" class="py-20 md:py-28 bg-[#07090E] border-t border-white/5">
+  <section id="recursos" class="py-20 md:py-28 bg-[#080C0E] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold">Automação Inteligente</span>
+        <span class="text-xs uppercase tracking-widest text-[#48C1B4] font-bold">Automação Inteligente</span>
         <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
           Por que sua empresa precisa do SeuBot?
         </h2>
-        <p class="text-zinc-400 text-sm">
+        <p class="text-[#90A8A6] text-sm">
           9 em cada 10 clientes que chamam no WhatsApp desistem da compra se não forem respondidos em até 5 minutos.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {{#features}}
-        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/5 flex flex-col justify-between space-y-4 hover:border-emerald-500/40 transition">
+        <div class="bg-[#0F171A] p-8 rounded-3xl border border-white/5 flex flex-col justify-between space-y-4 hover:border-[#48C1B4]/40 transition group">
           <div class="space-y-4">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-2xl bg-[#48C1B4]/10 text-[#48C1B4] border border-[#48C1B4]/20 flex items-center justify-center group-hover:scale-110 transition-transform">
               <i data-lucide="{{icon}}" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-display text-xl font-bold text-white uppercase">{{title}}</h3>
-            <p class="text-zinc-400 text-xs leading-relaxed font-light">{{description}}</p>
+            <h3 class="font-display text-xl font-bold text-white uppercase group-hover:text-[#48C1B4] transition">{{title}}</h3>
+            <p class="text-[#90A8A6] text-xs leading-relaxed font-light">{{description}}</p>
           </div>
         </div>
         {{/features}}
@@ -311,24 +327,53 @@
     </div>
   </section>
 
+  <!-- SEÇÃO DE SEGMENTOS -->
+  <section id="segmentos" class="py-20 md:py-24 bg-[#0B1013] border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-[#F89999] font-bold">Solução Sob Medida</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
+          Segmentos Atendidos
+        </h2>
+        <p class="text-[#90A8A6] text-sm">
+          Adaptado para os fluxos e particularidades de cada tipo de negócio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {{#segments}}
+        <div class="bg-[#0F171A] p-6 rounded-3xl border border-white/5 hover:border-[#F89999]/40 transition space-y-3 flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-[#F89999]/15 text-[#F89999] text-[10px] font-bold uppercase tracking-wider border border-[#F89999]/25">
+              {{tag}}
+            </span>
+            <h3 class="font-display text-lg font-bold text-white uppercase">{{title}}</h3>
+            <p class="text-xs text-[#90A8A6] leading-relaxed font-light">{{subtitle}}</p>
+          </div>
+        </div>
+        {{/segments}}
+      </div>
+    </div>
+  </section>
+
   <!-- O ECOSSISTEMA DO GRUPO (VENDA CASADA INTELIGENTE: SITE + BOT) -->
-  <section id="combo" class="py-20 md:py-28 bg-gradient-to-b from-[#0B0F19] to-black border-t border-white/5 relative overflow-hidden">
-    <div class="absolute -top-40 right-0 w-[500px] h-[500px] bg-emerald-500/10 blur-[130px] pointer-events-none"></div>
+  <section id="combo" class="py-20 md:py-28 bg-gradient-to-b from-[#0B1013] to-[#080C0E] border-t border-white/5 relative overflow-hidden">
+    <div class="absolute -top-40 right-0 w-[550px] h-[550px] bg-gradient-to-bl from-[#48C1B4]/15 via-[#F89999]/10 to-transparent blur-[140px] pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
       
-      <div class="rounded-3xl border-2 border-emerald-500/40 bg-zinc-950/90 p-8 sm:p-12 lg:p-16 glow-green relative overflow-hidden">
+      <div class="rounded-3xl border-2 border-[#48C1B4]/40 bg-[#0F171A]/95 p-8 sm:p-12 lg:p-16 glow-combo relative overflow-hidden">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest border border-emerald-500/30">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F89999]/15 text-[#F89999] text-xs font-bold uppercase tracking-widest border border-[#F89999]/30">
               <i data-lucide="link-2" class="w-4 h-4"></i>
               <span>O Poder do Ecossistema Grupo SeuSite</span>
             </div>
 
             <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight leading-tight">
-              O que acontece quando você junta um <span class="text-emerald-400">Site Oficial</span> com um <span class="text-cyan-400">Chatbot com IA</span>?
+              O que acontece quando você junta um <span class="text-[#F89999]">Site Oficial</span> com um <span class="text-[#48C1B4]">Chatbot com IA</span>?
             </h2>
 
             <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
@@ -338,26 +383,26 @@
 
             <div class="space-y-3 pt-2">
               <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-3.5">
-                <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5 font-bold">1</div>
+                <div class="w-8 h-8 rounded-xl bg-[#F89999]/20 text-[#F89999] flex items-center justify-center shrink-0 mt-0.5 font-bold">1</div>
                 <div>
                   <h4 class="font-bold text-white text-xs uppercase">SeuSite atrai e gera autoridade</h4>
-                  <p class="text-xs text-zinc-400 mt-0.5">Sua empresa ganha endereço oficial no Google (.com.br) e passa a confiança necessária para o cliente não pedir desconto.</p>
+                  <p class="text-xs text-[#90A8A6] mt-0.5">Sua empresa ganha endereço oficial no Google (.com.br) e passa a confiança necessária para o cliente não pedir desconto.</p>
                 </div>
               </div>
 
               <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-3.5">
-                <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 font-bold">2</div>
+                <div class="w-8 h-8 rounded-xl bg-[#48C1B4]/20 text-[#48C1B4] flex items-center justify-center shrink-0 mt-0.5 font-bold">2</div>
                 <div>
                   <h4 class="font-bold text-white text-xs uppercase">SeuBot atende e fecha no WhatsApp</h4>
-                  <p class="text-xs text-zinc-400 mt-0.5">O visitante clica no botão do site, cai no WhatsApp e é recebido no mesmo segundo pela IA treinada para qualificar e agendar.</p>
+                  <p class="text-xs text-[#90A8A6] mt-0.5">O visitante clica no botão do site, cai no WhatsApp e é recebido no mesmo segundo pela IA treinada para qualificar e agendar.</p>
                 </div>
               </div>
             </div>
 
             <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
               <a href="{{contact.whatsappUrl}}&text=Ol%C3%A1!%20Tenho%20interesse%20no%20Combo%20SeuBot%20%2B%20SeuSite." target="_blank"
-                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-lg shadow-emerald-500/30">
-                <i data-lucide="sparkles" class="w-4 h-4 fill-black"></i>
+                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#48C1B4] to-[#F89999] hover:opacity-95 text-[#080C0E] px-7 py-3.5 rounded-full text-xs font-black uppercase tracking-wider transition shadow-lg shadow-[#48C1B4]/30 transform hover:-translate-y-0.5">
+                <i data-lucide="sparkles" class="w-4 h-4 fill-[#080C0E]"></i>
                 <span>Garantir o Combo com 30% de Desconto</span>
               </a>
 
@@ -371,27 +416,27 @@
           </div>
 
           <div class="lg:col-span-5">
-            <div class="p-6 sm:p-8 rounded-3xl bg-black/60 border border-white/10 text-center space-y-6">
-              <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <div class="p-6 sm:p-8 rounded-3xl bg-[#080C0E]/80 border border-white/10 text-center space-y-6">
+              <span class="inline-block px-3 py-1 rounded-full bg-[#F89999]/15 text-[#F89999] text-xs font-bold uppercase tracking-wider border border-[#F89999]/30">
                 Vantagem do Grupo
               </span>
               
               <div class="space-y-2">
-                <p class="text-xs text-zinc-400 uppercase font-semibold">Contratando Separado:</p>
+                <p class="text-xs text-[#90A8A6] uppercase font-semibold">Contratando Separado:</p>
                 <p class="text-sm line-through text-zinc-500">Site (R$ 497) + Bot (R$ 597) = R$ 1.094</p>
                 <div class="pt-2">
-                  <p class="text-xs text-emerald-400 uppercase font-extrabold tracking-wider">No Combo Oficial:</p>
+                  <p class="text-xs text-[#48C1B4] uppercase font-extrabold tracking-wider">No Combo Oficial:</p>
                   <p class="font-display text-4xl sm:text-5xl font-black text-white">R$ 897</p>
-                  <p class="text-xs text-zinc-400 mt-1">Setup Único com <strong>ambos inclusos e integrados</strong></p>
+                  <p class="text-xs text-[#90A8A6] mt-1">Setup Único com <strong>ambos inclusos e integrados</strong></p>
                 </div>
               </div>
 
               <hr class="border-white/10">
 
               <ul class="text-xs text-zinc-300 space-y-2.5 text-left">
-                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> 1 só suporte para o site e para o robô</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Integração nativa sem erro de código</li>
-                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Desconto fixo na mensalidade combinada</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#48C1B4] shrink-0"></i> 1 só suporte para o site e para o robô</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#48C1B4] shrink-0"></i> Integração nativa sem erro de código</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#48C1B4] shrink-0"></i> Desconto fixo na mensalidade combinada</li>
               </ul>
             </div>
           </div>
@@ -404,39 +449,39 @@
   </section>
 
   <!-- PLANOS & PREÇOS -->
-  <section id="planos" class="py-20 md:py-28 bg-[#07090E] border-t border-white/5">
+  <section id="planos" class="py-20 md:py-28 bg-[#080C0E] border-t border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold">Investimento Transparente</span>
+        <span class="text-xs uppercase tracking-widest text-[#48C1B4] font-bold">Investimento Transparente</span>
         <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
           Escolha o Plano Ideal
         </h2>
-        <p class="text-zinc-400 text-sm">
+        <p class="text-[#90A8A6] text-sm">
           Sem contratos de fidelidade abusivos. Você aluga a inteligência e o suporte contínuo.
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         {{#plans}}
-        <div class="bg-zinc-950/80 rounded-3xl p-8 border border-white/10 flex flex-col justify-between hover:border-emerald-500/40 transition relative">
+        <div class="bg-[#0F171A] rounded-3xl p-8 border border-white/10 flex flex-col justify-between hover:border-[#48C1B4]/40 transition relative group">
           
           <div class="space-y-6">
             <div class="space-y-2">
-              <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/5 text-[#48C1B4] text-xs font-bold uppercase tracking-wider border border-white/5">
                 {{badge}}
               </span>
-              <h3 class="font-display text-2xl font-bold text-white uppercase">{{name}}</h3>
-              <p class="text-xs text-zinc-400">{{tagline}}</p>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-[#48C1B4] transition">{{name}}</h3>
+              <p class="text-xs text-[#90A8A6]">{{tagline}}</p>
               
               <div class="pt-4 border-t border-white/5">
-                <p class="text-[11px] text-zinc-400 uppercase font-semibold">Setup de Implantação:</p>
+                <p class="text-[11px] text-[#90A8A6] uppercase font-semibold">Setup de Implantação:</p>
                 <div class="flex items-baseline gap-1">
-                  <span class="text-zinc-400 text-xs">R$</span>
+                  <span class="text-[#90A8A6] text-xs">R$</span>
                   <span class="font-display text-4xl font-extrabold text-white">{{setupPrice}}</span>
-                  <span class="text-zinc-400 text-xs">(único)</span>
+                  <span class="text-[#90A8A6] text-xs">(único)</span>
                 </div>
-                <p class="text-xs text-emerald-400 font-semibold mt-1">+ R$ {{monthlyPrice}}/mês (Tudo incluso)</p>
+                <p class="text-xs text-[#48C1B4] font-semibold mt-1">+ R$ {{monthlyPrice}}/mês (Tudo incluso)</p>
               </div>
             </div>
 
@@ -445,7 +490,7 @@
             <ul class="space-y-3 text-xs text-zinc-300">
               {{#features}}
               <li class="flex items-start gap-2.5">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <i data-lucide="check" class="w-4 h-4 text-[#48C1B4] shrink-0 mt-0.5"></i>
                 <span>{{.}}</span>
               </li>
               {{/features}}
@@ -454,7 +499,7 @@
 
           <div class="pt-8">
             <a href="https://wa.me/{{contact.whatsappClean}}?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20{{name}}%20do%20SeuBot." target="_blank"
-               class="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider transition shadow-lg shadow-emerald-500/20">
+               class="w-full inline-flex items-center justify-center gap-2 bg-[#48C1B4] hover:bg-[#36A99D] text-[#080C0E] py-3.5 px-6 rounded-full text-xs font-black uppercase tracking-wider transition shadow-lg shadow-[#48C1B4]/20">
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
               <span>{{cta}}</span>
             </a>
@@ -468,11 +513,11 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-20 md:py-28 bg-[#0B0F19] border-t border-white/5">
+  <section id="faq" class="py-20 md:py-28 bg-[#0B1013] border-t border-white/5">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold">Tire Suas Dúvidas</span>
+        <span class="text-xs uppercase tracking-widest text-[#48C1B4] font-bold">Tire Suas Dúvidas</span>
         <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white uppercase">
           Perguntas Frequentes
         </h2>
@@ -480,14 +525,14 @@
 
       <div class="space-y-4">
         {{#faq}}
-        <details class="group bg-zinc-950 rounded-2xl border border-white/5 p-6 open:border-emerald-500/40 transition">
+        <details class="group bg-[#0F171A] rounded-2xl border border-white/5 p-6 open:border-[#48C1B4]/40 transition">
           <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white uppercase tracking-wider">
             <span>{{question}}</span>
-            <span class="text-emerald-400 group-open:rotate-180 transition-transform duration-300">
+            <span class="text-[#48C1B4] group-open:rotate-180 transition-transform duration-300">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
           </summary>
-          <p class="text-xs text-zinc-400 mt-4 leading-relaxed pl-1 font-light">
+          <p class="text-xs text-[#90A8A6] mt-4 leading-relaxed pl-1 font-light">
             {{answer}}
           </p>
         </details>
@@ -498,25 +543,25 @@
   </section>
 
   <!-- CTA FINAL -->
-  <section class="py-20 md:py-28 bg-black border-t border-white/5 text-center relative overflow-hidden">
+  <section class="py-20 md:py-28 bg-[#05080A] border-t border-white/5 text-center relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8 relative z-10">
       <h2 class="font-display text-3xl sm:text-6xl font-black text-white uppercase tracking-tight">
         Pare de perder clientes por demora no atendimento.
       </h2>
-      <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
+      <p class="text-[#90A8A6] text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
         Coloque a Inteligência Artificial trabalhando pelo seu negócio hoje mesmo. Chame agora no WhatsApp para ativar o seu bot.
       </p>
 
       <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer"
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-black px-9 py-4 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-2xl shadow-emerald-500/30 transition transform hover:-translate-y-0.5">
-          <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#48C1B4] to-[#F89999] hover:opacity-95 text-[#080C0E] px-9 py-4 rounded-full text-xs font-black uppercase tracking-widest shadow-2xl shadow-[#48C1B4]/30 transition transform hover:-translate-y-0.5">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-[#080C0E]"></i>
           <span>Falar no WhatsApp com o Time SeuBot</span>
         </a>
 
         <a href="{{contact.sisterCompanyUrl}}" target="_blank"
            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition">
-          <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
+          <i data-lucide="globe" class="w-4 h-4 text-[#48C1B4]"></i>
           <span>Conhecer o Grupo SeuSite</span>
         </a>
       </div>
@@ -524,10 +569,10 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#05070A] text-zinc-500 py-12 text-xs border-t border-white/5 text-center">
+  <footer class="bg-[#040608] text-zinc-500 py-12 text-xs border-t border-white/5 text-center">
     <div class="max-w-6xl mx-auto px-4 space-y-3">
       <p class="font-display text-2xl font-black text-white uppercase tracking-wider">{{profile.name}}</p>
-      <p class="text-zinc-400">Uma empresa do ecossistema <a href="{{contact.sisterCompanyUrl}}" target="_blank" class="text-emerald-400 underline font-bold">Grupo SeuSite</a></p>
+      <p class="text-[#90A8A6]">Uma empresa do ecossistema <a href="{{contact.sisterCompanyUrl}}" target="_blank" class="text-[#48C1B4] underline font-bold hover:text-[#F89999] transition">Grupo SeuSite</a></p>
       <p class="text-[11px] text-zinc-600 pt-3">
         © 2026 {{profile.name}} & SeuSite. Todos os direitos reservados.
       </p>
@@ -537,20 +582,20 @@
   <!-- WhatsApp Flutuante no Desktop -->
   <div class="hidden md:flex fixed bottom-6 right-6 z-50 items-center gap-3">
     <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
-       class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+       class="w-14 h-14 bg-[#48C1B4] hover:bg-[#36A99D] text-[#080C0E] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
        aria-label="Falar no WhatsApp">
-      <i data-lucide="message-circle" class="w-8 h-8 fill-white/20"></i>
+      <i data-lucide="message-circle" class="w-8 h-8 fill-[#080C0E]"></i>
     </a>
   </div>
 
   <!-- Barra Fixa Mobile (Bottom Bar) -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#07090E]/95 backdrop-blur-lg border-t border-white/10 p-3 flex items-center gap-3">
-    <a href="#combo" class="w-12 h-12 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400" title="Ver Combo">
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#080C0E]/95 backdrop-blur-lg border-t border-white/10 p-3 flex items-center gap-3">
+    <a href="#combo" class="w-12 h-12 shrink-0 rounded-2xl bg-[#F89999]/15 border border-[#F89999]/30 flex items-center justify-center text-[#F89999]" title="Ver Combo">
       <i data-lucide="sparkles" class="w-5 h-5"></i>
     </a>
     <a href="{{contact.whatsappUrl}}" target="_blank" rel="noopener noreferrer" 
-       class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black py-3.5 px-4 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg shadow-emerald-500/20">
-      <i data-lucide="message-circle" class="w-4 h-4 fill-black shrink-0"></i>
+       class="flex-1 inline-flex items-center justify-center gap-2 bg-[#48C1B4] hover:bg-[#36A99D] text-[#080C0E] py-3.5 px-4 rounded-2xl text-xs font-black uppercase tracking-wider shadow-lg shadow-[#48C1B4]/20">
+      <i data-lucide="message-circle" class="w-4 h-4 fill-[#080C0E] shrink-0"></i>
       <span class="truncate">Testar no WhatsApp</span>
     </a>
   </div>
@@ -566,7 +611,7 @@
       
       "quais são os valores e planos?": "Temos 3 opções práticas:\n\n1. **Plano Start Bot:** R$ 597 setup + R$ 119/mês\n2. **Combo Máquina de Vendas (Site + Bot):** R$ 897 setup + R$ 169/mês *(Mais Escolhido)*\n3. **Combo Escala & CRM:** R$ 1.297 setup + R$ 249/mês\n\nTudo sem fidelidade!",
       
-      "quero uma demonstração no meu whatsapp!": "Excelente! 🎉\n\nClique no botão verde 'Falar no WhatsApp com o Time SeuBot' logo abaixo ou mande mensagem para o nosso time. Vamos criar um fluxo teste personalizado para o seu nicho agora mesmo!"
+      "quero uma demonstração no meu whatsapp!": "Excelente! 🎉\n\nClique no botão 'Falar no WhatsApp com o Time SeuBot' logo abaixo ou mande mensagem para o nosso time. Vamos criar um fluxo teste personalizado para o seu nicho agora mesmo!"
     };
 
     function getTime() {

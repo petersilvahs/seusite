@@ -27,12 +27,14 @@
     "whatsappProductionUrl": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20SeuBot%20e%20como%20automatizar%20o%20WhatsApp%20da%20minha%20empresa."
   },
   "theme": {
-    "primary": "#10B981",
-    "primaryDark": "#059669",
-    "accent": "#06B6D4",
-    "secondary": "#0B0F19",
+    "primary": "#48C1B4",
+    "primaryDark": "#36A99D",
+    "accent": "#F89999",
+    "accentDark": "#E07E7E",
+    "secondary": "#080C0E",
+    "card": "#0F171A",
     "textMain": "#F8FAFC",
-    "textMuted": "#94A3B8"
+    "textMuted": "#90A8A6"
   },
   "stats": [
     {
