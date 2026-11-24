@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="primaryGradH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722" />
+      <stop offset="60%" stop-color="#FF3D00" />
+      <stop offset="100%" stop-color="#E62A00" />
+    </linearGradient>
+    <linearGradient id="sparkGradH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC107" />
+      <stop offset="100%" stop-color="#FF3D00" />
+    </linearGradient>
+  </defs>
+
+  <!-- Símbolo Ícone -->
+  <g transform="translate(40, 20)">
+    <!-- Fundo do Ícone -->
+    <rect width="200" height="200" rx="54" fill="#0C0D11" />
+    <rect width="200" height="200" rx="54" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+    
+    <!-- S Geométrico -->
+    <path d="M 125 65 
+             C 125 55, 115 45, 95 45 
+             L 80 45 
+             C 60 45, 45 60, 45 80 
+             C 45 102, 65 115, 90 122 
+             L 105 127 
+             C 125 133, 138 143, 138 160 
+             C 138 182, 122 195, 95 195 
+             L 70 195 
+             C 50 195, 40 185, 40 175" 
+          fill="none" 
+          stroke="url(#primaryGradH)" 
+          stroke-width="24" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Spark Ponto -->
+    <circle cx="150" cy="55" r="11" fill="url(#sparkGradH)" />
+  </g>
+
+  <!-- Tipografia Wordmark "SeuSite." -->
+  <text x="275" y="142" 
+        font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="86" 
+        font-weight="900" 
+        fill="#FFFFFF" 
+        letter-spacing="-2">
+    SeuSite<tspan fill="url(#primaryGradH)">.</tspan>
+  </text>
+
+  <!-- Tagline Subtitle -->
+  <text x="280" y="180" 
+        font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="16" 
+        font-weight="700" 
+        fill="#94A3B8" 
+        letter-spacing="5">
+    SITES DE ALTA CONVERSÃO
+  </text>
+</svg>
