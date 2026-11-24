@@ -2,130 +2,84 @@
   "id": "grupo-phjb",
   "template": "agencia-grupo",
   "meta": {
-    "title": "SeuSite & SeuBot | Agência Criativa de Sites & Inteligência Artificial no WhatsApp",
-    "description": "Agência digital especializada em criar presenças marcantes na web (SeuSite) e automações inteligentes com IA no WhatsApp 24/7 (SeuBot). Conheça nossos cases e projetos.",
-    "keywords": "seusite, seubot, agencia digital, criacao de sites, chatbot whatsapp ia, inteligencia artificial, landing page profissional"
+    "title": "Grupo PHJB | Comunicação, Tecnologia & Produção Digital",
+    "description": "Portal institucional do Grupo PHJB. Conheça nossos projetos, clientes e atuação em tecnologia web, inteligência artificial e produção audiovisual.",
+    "keywords": "grupo phjb, phjb comunicacao, tecnologia digital, producao audiovisual, desenvolvimento web, inteligencia artificial"
   },
   "profile": {
-    "name": "SeuSite & SeuBot",
-    "studioName": "SeuSite Studio",
-    "tagline": "Sites Profissionais & Inteligência Artificial no WhatsApp",
-    "headline": "Criamos sites que convertem e robôs de IA que nunca dormem.",
-    "subheadline": "Unimos a autoridade de uma presença digital impecável (SeuSite) com a velocidade do atendimento instantâneo com Inteligência Artificial no WhatsApp (SeuBot).",
-    "locationBadge": "São Paulo • Brasil • Atendimento Nacional",
-    "badge": "Agência Criativa & Tecnologia de Vendas"
+    "name": "Grupo PHJB",
+    "tagline": "Comunicação, Tecnologia & Conteúdo",
+    "headline": "Projetos digitais, tecnologia e experiências que comunicam marcas.",
+    "subheadline": "O Grupo PHJB atua no desenvolvimento de plataformas web, soluções de inteligência artificial, engenharia digital e produções audiovisuais para diferentes segmentos.",
+    "badge": "Grupo PHJB • Comunicação & Tecnologia"
   },
   "contact": {
-    "whatsapp": "5511999999999",
-    "whatsappFormatted": "+55 (11) 99999-9999",
-    "whatsappMessage": "Olá! Gostaria de conversar com a equipe do SeuSite & SeuBot sobre um projeto para minha empresa.",
-    "email": "contato@seusite.com.br"
+    "email": "contato@grupophjb.com.br"
   },
-  "theme": {
-    "blue": "#008fe3",
-    "yellow": "#fbaa0c",
-    "red": "#e90706",
-    "black": "#080808",
-    "canvas": "#FAF8F5"
-  },
-  "stats": [
-    { "value": "+700", "label": "Projetos & Campanhas Entregues" },
-    { "value": "0s", "label": "Tempo de Resposta com IA no WhatsApp" },
-    { "value": "+180%", "label": "Aumento Médio em Conversão de Leads" },
-    { "value": "24/7", "label": "Atendimento Automático sem Parar" }
-  ],
   "tickerBrands": [
-    { "name": "SEUSITE PRO" },
-    { "name": "SEUBOT IA" },
     { "name": "VORTEX AUDIOVISUAL" },
-    { "name": "MANTECORP SKINCARE" },
-    { "name": "CLÍNICA COPACABANA" },
+    { "name": "DR. LUCAS CARVALHO" },
+    { "name": "DRA. BRENDA SANTOS" },
     { "name": "ANBLICK ENGENHARIA" },
-    { "name": "DRA. BRENDA SANTOS" }
+    { "name": "SEUSITE" },
+    { "name": "SEUBOT IA" }
   ],
-  "pillars": [
+  "areas": [
     {
-      "id": "seusite",
-      "brand": "SeuSite",
-      "tag": "Presença & Autoridade Web",
-      "title": "Sites & Landing Pages de Alta Performance",
-      "description": "Desenvolvimento sob medida de sites modernos, ultrarrápidos e otimizados para o Google (SEO). Páginas construídas para transmitir credibilidade e transformar visitantes em clientes qualificados.",
-      "link": "/seusite",
-      "linkLabel": "Conhecer o SeuSite ↗",
-      "badgeColor": "#008fe3",
-      "features": [
-        "Carregamento ultrarrápido em menos de 1 segundo",
-        "Design responsivo com experiência perfeita no celular",
-        "Otimização para campanhas no Google e Meta Ads",
-        "Domínio próprio .com.br e infraestrutura em nuvem"
-      ]
+      "title": "Tecnologia & Plataformas Web",
+      "description": "Engenharia de software, design de interfaces e desenvolvimento de plataformas digitais rápidas, seguras e responsivas."
     },
     {
-      "id": "seubot",
-      "brand": "SeuBot",
-      "tag": "Atendimento & Automação com IA",
-      "title": "Inteligência Artificial 24/7 no WhatsApp",
-      "description": "Robô inteligente treinado com o catálogo, preços e regras da sua empresa. Atende no exato segundo em que o lead chama, tira dúvidas complexas, qualifica o perfil e agenda compromissos automaticamente.",
-      "link": "/seubot",
-      "linkLabel": "Testar Simulador do SeuBot ↗",
-      "badgeColor": "#fbaa0c",
-      "features": [
-        "Respostas naturais e instantâneas a qualquer hora do dia ou da noite",
-        "Triagem personalizada e agendamento direto na sua agenda",
-        "Transbordo inteligente para equipe humana em um clique",
-        "Hospedagem 100% em nuvem sem necessidade de PC ligado"
-      ]
+      "title": "Inteligência Artificial & Automação",
+      "description": "Implementação de agentes inteligentes e fluxos automatizados para atendimento, triagem e suporte digital."
+    },
+    {
+      "title": "Produção Audiovisual & Conteúdo",
+      "description": "Infraestrutura de estúdio, captação cinematográfica, criação de podcasts e edição de vídeos institucionais."
     }
   ],
   "cases": [
     {
       "client": "Vortex Audiovisual",
       "segment": "Audiovisual & Estúdio",
-      "description": "Landing page de alto impacto para produtora e aluguel de estúdio profissional, com cases de gravações de campanhas e podcasts.",
+      "description": "Desenvolvimento do site institucional para estúdio de gravação profissional, locação para podcasts e produção de filmes comerciais.",
       "tag": "Estúdio & Produção",
       "link": "/vortex-audiovisual"
     },
     {
       "client": "Dr. Lucas Carvalho",
-      "segment": "Medicina Integrativa • Copacabana",
-      "description": "Presença médica de alta autoridade na Zona Sul do Rio de Janeiro, com foco em agendamentos diretos e clareza de tratamentos.",
+      "segment": "Medicina Integrativa",
+      "description": "Presença médica institucional em Copacabana, com apresentação clara de tratamentos integrativos e canal direto de agendamento.",
       "tag": "Saúde & Medicina",
       "link": "/dr-lucas-carvalho-copacabana"
     },
     {
       "client": "Dra. Brenda Santos",
-      "segment": "Odontologia & Estética Orofacial",
-      "description": "Site elegante para harmonização e estética dental com galeria de transformações e canal direto no WhatsApp.",
-      "tag": "Estética & Beleza",
+      "segment": "Odontologia & Estética",
+      "description": "Plataforma institucional para harmonização orofacial e estética dental, com apresentação de portfólio clínico e diferenciais de atendimento.",
+      "tag": "Estética & Saúde",
       "link": "/dra-brenda-santos"
     },
     {
       "client": "Anblick Engenharia",
-      "segment": "Engenharia Mecânica & Laudos Técnicos",
-      "description": "Site corporativo B2B estruturado para grandes indústrias, com foco em laudos NR-13, ART e conformidade de equipamentos.",
-      "tag": "B2B & Engenharia",
+      "segment": "Engenharia Mecânica B2B",
+      "description": "Ambiente corporativo técnico focado em laudos de conformidade NR-13, responsabilidade técnica (ART) e inspeções industriais.",
+      "tag": "Engenharia & Indústria",
       "link": "/anblick-engenharia"
     },
     {
-      "client": "SeuBot IA WhatsApp",
-      "segment": "Inteligência Artificial & Atendimento",
-      "description": "Plataforma interativa com simulador de WhatsApp ao vivo para demonstração de velocidade de resposta e triagem.",
-      "tag": "Tecnologia & IA",
+      "client": "SeuSite",
+      "segment": "Plataforma Digital",
+      "description": "Arquitetura web voltada à criação rápida e estruturada de páginas profissionais com alta performance e SEO.",
+      "tag": "Tecnologia Web",
+      "link": "/seusite"
+    },
+    {
+      "client": "SeuBot",
+      "segment": "Inteligência Artificial",
+      "description": "Solução de atendimento inteligente automatizado com inteligência artificial para canais de mensageria.",
+      "tag": "Inteligência Artificial",
       "link": "/seubot"
     }
-  ],
-  "clientBrands": [
-    { "name": "MANTECORP SKINCARE" },
-    { "name": "VORTEX AUDIOVISUAL" },
-    { "name": "CLÍNICA COPACABANA" },
-    { "name": "ANBLICK ENGENHARIA" },
-    { "name": "DRA. BRENDA SANTOS" },
-    { "name": "SEUBOT IA" }
-  ],
-  "synergy": {
-    "title": "A Conexão Perfeita entre Site e Atendimento",
-    "description": "Quando você conecta um site profissional com atendimento inteligente no WhatsApp, você fecha o ciclo de vendas da sua empresa sem deixar clientes esperando.",
-    "step1": "O SeuSite gera credibilidade imediata no Google, apresenta seu trabalho e faz o visitante clicar.",
-    "step2": "O SeuBot recebe o cliente no WhatsApp em 0 segundos, responde dúvidas com IA e agenda o atendimento."
-  }
+  ]
 }
