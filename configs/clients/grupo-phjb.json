@@ -2,178 +2,161 @@
   "id": "grupo-phjb",
   "template": "agencia-grupo",
   "meta": {
-    "title": "Grupo PHJB | Agência de Tecnologia, Criatividade & Crescimento Comercial",
-    "description": "Ecossistema integrado de aceleração digital: Sites de Ultra Conversão (PHJB Web), Automação IA 24/7 no WhatsApp (PHJB Bot), Produção Audiovisual & Estúdio (PHJB Studio) e Tráfego Pago.",
-    "keywords": "grupo phjb, agencia digital, ecossistema de vendas, sites profissionais, chatbot whatsapp ia, producao audiovisual, trafego pago"
+    "title": "Grupo PHJB | Holding de Comunicação, Tecnologia & Produção Audiovisual",
+    "description": "Holding brasileira independente de comunicação integrada, tecnologia e inteligência criativa. Ecossistema composto por PHJB Web, PHJB Intelligence & AI, Vortex Studio e PHJB Media.",
+    "keywords": "grupo phjb, holding de comunicacao, agencia institucional, ecossistema criativo, inteligencia artificial, producao audiovisual, inovacao"
   },
   "profile": {
     "name": "Grupo PHJB",
-    "legalName": "PHJB Soluções Digitais & Criativas",
-    "tagline": "Tecnologia, Criatividade & Máquinas de Vendas",
-    "headline": "Criamos experiências digitais e ecossistemas de vendas que aceleram marcas.",
-    "subheadline": "Não vendemos serviços soltos. Integramos presença na web, inteligência artificial no WhatsApp, produção audiovisual de estúdio e tráfego pago em uma máquina previsível de receita.",
-    "locationBadge": "São Paulo • Brasil • Atendimento Global",
-    "ctaText": "Falar com o Grupo PHJB",
-    "badge": "Ecossistema Digital Integrado"
+    "legalName": "PHJB Comunicação, Tecnologia & Participações",
+    "tagline": "Comunicação, Tecnologia & Negócios",
+    "headline": "Ideias que constroem legado. Tecnologia que transforma negócios.",
+    "subheadline": "O Grupo PHJB é uma holding independente de comunicação integrada, inteligência digital e produção de conteúdo. Unimos criatividade estratégica, dados e alta tecnologia para impulsionar o valor de marcas líderes.",
+    "badge": "Holding Independente de Comunicação & Tecnologia",
+    "establishedYear": "2020",
+    "locations": "São Paulo • Rio de Janeiro • Brasil"
   },
   "contact": {
+    "email": "contato@grupophjb.com.br",
+    "pressEmail": "imprensa@grupophjb.com.br",
     "whatsapp": "5511999999999",
-    "whatsappFormatted": "(11) 99999-9999",
-    "whatsappMessage": "Olá! Gostaria de falar com o time do Grupo PHJB sobre o ecossistema de soluções para o meu negócio.",
-    "whatsappComboMessage": "Olá! Gostaria de entender como funciona o Combo Ecossistema Completo do Grupo PHJB."
-  },
-  "theme": {
-    "primary": "#008fe3",
-    "primaryDark": "#0072b8",
-    "accentYellow": "#fbaa0c",
-    "accentRed": "#e90706",
-    "dark": "#080808",
-    "cardDark": "#111111",
-    "canvas": "#FAF8F5",
-    "textDark": "#0A0A0A",
-    "textMuted": "#64748B"
+    "whatsappFormatted": "+55 (11) 99999-9999",
+    "whatsappMessage": "Olá! Gostaria de conversar com a diretoria de Novos Negócios do Grupo PHJB.",
+    "offices": [
+      {
+        "city": "São Paulo",
+        "role": "Hub de Estratégia, Tecnologia & Negócios",
+        "address": "Av. Brigadeiro Faria Lima, São Paulo - SP"
+      },
+      {
+        "city": "Rio de Janeiro",
+        "role": "Hub de Produção Criativa & Estúdio Audiovisual",
+        "address": "Copacabana & Barra da Tijuca, Rio de Janeiro - RJ"
+      }
+    ]
   },
   "stats": [
-    { "value": "+700", "label": "Projetos & Ações Realizadas" },
-    { "value": "0s", "label": "Tempo de Resposta com IA" },
-    { "value": "+180%", "label": "Aumento Médio em Conversão de Leads" },
-    { "value": "4 em 1", "label": "Pilares Unificados em 1 Só Contrato" }
+    { "value": "+700", "label": "Projetos e Campanhas Entregues" },
+    { "value": "4", "label": "Unidades Estratégicas de Negócio" },
+    { "value": "100%", "label": "Capital Independente Nacional" },
+    { "value": "+98%", "label": "Índice de Retenção & Satisfação" }
   ],
-  "tickerBrands": [
-    { "name": "VORTEX STUDIO" },
-    { "name": "SEUBOT IA" },
-    { "name": "SEUSITE PRO" },
-    { "name": "CLÍNICA COPACABANA" },
-    { "name": "ANBLICK ENGENHARIA" },
-    { "name": "DRA. BRENDA SANTOS" },
-    { "name": "META & GOOGLE ADS" }
-  ],
-  "pillars": [
+  "manifesto": {
+    "title": "Nossa Força & Nosso Manifesto",
+    "quote": "Não acreditamos em silos ou departamentos isolados. Acreditamos na convergência entre criatividade humana inegociável e inteligência tecnológica de ponta.",
+    "p1": "O mercado tradicional de agências fragmentou-se em fornecedores desconectados: quem cuida da tecnologia não entende de narrativa; quem cria filmes não domina performance; quem analisa dados ignora a sensibilidade da marca.",
+    "p2": "O Grupo PHJB nasceu para quebrar essa ineficiência. Criamos uma estrutura corporativa fluida onde engenharia de software, modelos de IA, produção cinematográfica de estúdio e inteligência de mídia operam como um organismo único.",
+    "p3": "Construímos pontes entre marcas e seus públicos através de conversas memoráveis, soluções proprietárias e relevância cultural duradoura."
+  },
+  "ecosystem": [
     {
-      "id": "web",
+      "id": "phjb-web",
       "brand": "PHJB Web",
-      "poweredBy": "SeuSite",
-      "tag": "Presença & Autoridade",
-      "title": "Arquitetura Web & Landing Pages de Alta Conversão",
-      "description": "Desenvolvimento de páginas ultrarrápidas, otimizadas para o Google (SEO) e pensadas exclusivamente para transformar cliques de anúncios em dinheiro no caixa.",
+      "unit": "Digital Engineering & Platforms",
+      "description": "Engenharia de software, design de produto e arquitetura de plataformas web de alta velocidade e máxima conversão para marcas corporativas.",
       "link": "/seusite",
-      "linkLabel": "Explorar PHJB Web ↗",
-      "accentColor": "#008fe3",
-      "features": ["Carregamento em menos de 1s", "Design responsivo cirúrgico", "Otimizado para campanhas do Google & Meta", "Domínio próprio .com.br"]
+      "linkLabel": "Conhecer PHJB Web",
+      "capabilities": ["Plataformas Web Proprietárias", "Arquitetura Cloud & Alta Escalabilidade", "Otimização Orgânica Avançada (SEO)", "Experiência de Usuário (UX/UI)"]
     },
     {
-      "id": "bot",
-      "brand": "PHJB Bot",
-      "poweredBy": "SeuBot IA",
-      "tag": "Automação & Conversão 24/7",
-      "title": "Inteligência Artificial Generativa para WhatsApp",
-      "description": "Atendimento instantâneo em zero segundos. Triagem de clientes, tira-dúvidas de catálogo, agendamento de consultas e transbordo humano sem deixar ninguém no vácuo.",
+      "id": "phjb-intelligence",
+      "brand": "PHJB Intelligence",
+      "unit": "Artificial Intelligence & Conversational Tech",
+      "description": "Desenvolvimento de agentes de inteligência artificial generativa, automação conversacional para WhatsApp e soluções cognitivas de atendimento em tempo real.",
       "link": "/seubot",
-      "linkLabel": "Testar Simulador do Bot ↗",
-      "accentColor": "#fbaa0c",
-      "features": ["Atendimento dia, noite e finais de semana", "Treinado na base de dados da sua empresa", "100% em nuvem sem necessidade de PC ligado", "Aumento comprovado de fechamento"]
+      "linkLabel": "Conhecer PHJB Intelligence",
+      "capabilities": ["Modelos LLM Treinados em Negócios", "Atendimento Conversacional 24/7", "Automação de Funis Comerciais", "Integrações Nativas de CRM"]
     },
     {
-      "id": "studio",
-      "brand": "PHJB Studio",
-      "poweredBy": "Vortex Audiovisual",
-      "tag": "Criatividade & Audiovisual",
-      "title": "Produção Audiovisual, Estúdio & Conteúdo de Impacto",
-      "description": "Estúdio profissional equipado para podcast, videocasts, reels de autoridade, fotos institucionais e criativos em alta definição que capturam a atenção e vendem.",
+      "id": "vortex-studio",
+      "brand": "Vortex Studio",
+      "unit": "Content & Audiovisual Lab",
+      "description": "Hub criativo de produção audiovisual de alto padrão cinematográfico, estúdio acústico próprio, videocasts, filmes publicitários e narrativa de marca.",
       "link": "/vortex-audiovisual",
-      "linkLabel": "Conhecer o Estúdio Vortex ↗",
-      "accentColor": "#e90706",
-      "features": ["Estúdio completo com isolamento acústico", "Câmeras 4K e iluminação cinematográfica", "Edição ágil e entrega para redes sociais", "Aluguel avulso ou pacote contínuo"]
+      "linkLabel": "Conhecer Vortex Studio",
+      "capabilities": ["Estúdio Físico Profissional 4K", "Filmes Publicitários & Comerciais", "Podcasts & Conteúdo de Autoridade", "Pós-Produção & Color Grading"]
     },
     {
-      "id": "growth",
-      "brand": "PHJB Growth",
-      "poweredBy": "Performance Ads",
-      "tag": "Demanda & Escala",
-      "title": "Tráfego Pago & Captação Ativa de Clientes",
-      "description": "Gestão de campanhas estratégicas no Meta Ads (Instagram/Facebook) e Google Ads para atrair o público ideal com menor custo por lead e máxima taxa de retorno (ROAS).",
+      "id": "phjb-media",
+      "brand": "PHJB Media & Performance",
+      "unit": "Data Intelligence & Growth",
+      "description": "Planejamento estratégico de mídia digital, aquisição de demanda, análise preditiva de comportamento do consumidor e aceleração de receita.",
       "link": "#contato",
-      "linkLabel": "Falar sobre Tráfego ↗",
-      "accentColor": "#008fe3",
-      "features": ["Segmentação hiperlocal e por interesse", "Testes A/B de criativos e copys", "Otimização diária de CPA e ROI", "Dashboards em tempo real de resultados"]
+      "linkLabel": "Falar com Novos Negócios",
+      "capabilities": ["Gestão Estratégica de Mídia Paga", "Modelagem de Atribuição & Dados", "Testes Contínuos de Performance", "Expansão de Market Share"]
     }
   ],
   "cases": [
     {
-      "client": "Vortex Audiovisual",
-      "segment": "Audiovisual & Estúdio",
-      "description": "Landing page de alta conversão para aluguel de estúdio e produção de podcasts e comerciais.",
-      "tag": "Estúdio & Produção",
+      "title": "Mantecorp Skincare • Episol & Pielus",
+      "unit": "Vortex Studio",
+      "category": "Produção Audiovisual & Beauty Care",
+      "summary": "Direção criativa, produção de cena e criação de conteúdos audiovisuais de alta definição destacando a linha de dermocosméticos líderes de mercado.",
       "link": "/vortex-audiovisual",
-      "color": "#04cddb"
+      "year": "2024 / 2025"
     },
     {
-      "client": "SeuBot IA WhatsApp",
-      "segment": "Inteligência Artificial & Atendimento",
-      "description": "Plataforma de IA com simulador de WhatsApp ao vivo integrada para conversão e agendamentos.",
-      "tag": "Automação & IA",
+      "title": "Ecossistema de IA Conversacional • SeuBot Labs",
+      "unit": "PHJB Intelligence",
+      "category": "Inteligência Artificial & Conversação",
+      "summary": "Implementação de infraestrutura em nuvem e agentes cognitivos com capacidade de resposta instantânea em zero segundos para qualificação em tempo real.",
       "link": "/seubot",
-      "color": "#48c1b4"
+      "year": "2025 / 2026"
     },
     {
-      "client": "Dr. Lucas Carvalho",
-      "segment": "Medicina & Clínica Integrativa",
-      "description": "Presença médica de autoridade em Copacabana com agendamento direto pelo WhatsApp.",
-      "tag": "Saúde & Medicina",
+      "title": "Clínica Médica Integrativa • Dr. Lucas Carvalho",
+      "unit": "PHJB Web & Media",
+      "category": "Saúde & Posicionamento de Autoridade",
+      "summary": "Desenvolvimento de plataforma oficial e narrativa institucional conectando pacientes da Zona Sul do Rio de Janeiro à excelência em medicina integrativa.",
       "link": "/dr-lucas-carvalho-copacabana",
-      "color": "#008fe3"
+      "year": "2024"
     },
     {
-      "client": "Dra. Brenda Santos",
-      "segment": "Odontologia & Estética Orofacial",
-      "description": "Posicionamento premium para harmonização e odontologia com galeria de casos reais.",
-      "tag": "Estética & Beleza",
-      "link": "/dra-brenda-santos",
-      "color": "#fbaa0c"
-    },
-    {
-      "client": "Anblick Engenharia",
-      "segment": "Engenharia Mecânica & Laudos NR",
-      "description": "Site corporativo B2B com foco em conformidade técnica, ART e laudos de segurança.",
-      "tag": "B2B & Engenharia",
+      "title": "Anblick Engenharia • Infraestrutura & Conformidade",
+      "unit": "PHJB Web",
+      "category": "Engenharia B2B & Relações Corporativas",
+      "summary": "Plataforma institucional de alta solidez técnica focada em projetos industriais, laudos NR-13 e conformidade para grandes complexos corporativos.",
       "link": "/anblick-engenharia",
-      "color": "#e90706"
+      "year": "2024"
+    },
+    {
+      "title": "Dra. Brenda Santos • Odontologia Estética",
+      "unit": "PHJB Web & Vortex",
+      "category": "Estética Avançada & Branding",
+      "summary": "Construção de ecossistema digital elegante com portfólio visual detalhado e captação de pacientes para procedimentos orofaciais de alto padrão.",
+      "link": "/dra-brenda-santos",
+      "year": "2024"
     }
   ],
-  "combos": [
-    {
-      "name": "Combo Presença & Conversão",
-      "tag": "Mais Popular",
-      "modules": "PHJB Web + PHJB Bot",
-      "savings": "Economia de 30%",
-      "description": "Seu site institucional de alta velocidade no ar com o robô de IA atendendo no WhatsApp no mesmo segundo.",
-      "isHighlight": true
-    },
-    {
-      "name": "Combo Máquina Completa de Vendas",
-      "tag": "Escala Máxima",
-      "modules": "PHJB Web + PHJB Bot + PHJB Growth + PHJB Studio",
-      "savings": "Economia de 35%",
-      "description": "Ecossistema ponta a ponta: do criativo gravado no estúdio até o anúncio, site, qualificação no WhatsApp e fechamento.",
-      "isHighlight": false
-    }
+  "clientBrands": [
+    { "name": "MANTECORP SKINCARE", "segment": "Dermocosméticos" },
+    { "name": "EPISOL COLOR", "segment": "Proteção Solar" },
+    { "name": "PIELUS FORTE", "segment": "Cuidado Capilar" },
+    { "name": "VORTEX PRODUÇÕES", "segment": "Entretenimento & Mídia" },
+    { "name": "ANBLICK ENGENHARIA", "segment": "Indústria & B2B" },
+    { "name": "INSTITUTO CARVALHO", "segment": "Saúde & Medicina" },
+    { "name": "STUDIO BRENDA SANTOS", "segment": "Estética & Bem-Estar" }
   ],
-  "faq": [
+  "values": [
     {
-      "question": "Posso contratar apenas um serviço ou preciso contratar o grupo todo?",
-      "answer": "Você tem total liberdade! Todas as empresas do Grupo PHJB operam tanto de forma independente quanto integrada. Você pode contratar apenas o seu site, apenas a automação do WhatsApp ou o aluguel do estúdio. E caso queira o ecossistema completo, ganha uma condição especial de combo com até 35% de desconto e suporte único unificado."
+      "num": "01",
+      "title": "Relevância Cultural & Comercial",
+      "desc": "Criamos ideias e produtos que não apenas geram cliques passageiros, mas constroem valor de marca consistente e duradouro no imaginário do público."
     },
     {
-      "question": "Como funciona o suporte sendo tudo de um único grupo?",
-      "answer": "Essa é a maior vantagem para a sua empresa. Acabou o jogo de 'empurra-empurra' entre a pessoa do site, a do robô e a do tráfego. No Grupo PHJB você fala com um único gerente de conta que alinha todos os pilares para funcionarem em perfeita sincronia."
+      "num": "02",
+      "title": "Engenharia de Precisão",
+      "desc": "Apoiamos nossa criatividade em arquitetura robusta de dados, inteligência artificial e código proprietário, garantindo estabilidade e velocidade incomparáveis."
     },
     {
-      "question": "Qual o prazo de implantação dos projetos?",
-      "answer": "Trabalhamos com metodologia ágil. Sites e chatbots de IA são entregues e colocados no ar em média entre 48 horas e 5 dias úteis após a aprovação do briefing e materiais."
+      "num": "03",
+      "title": "Independência & Agilidade",
+      "desc": "Por sermos um grupo 100% independente, tomamos decisões ágeis sem burocracias de holdings transnacionais engessadas, entregando inovação real no tempo do mercado."
     },
     {
-      "question": "Onde fica o estúdio do Grupo PHJB?",
-      "answer": "Nosso estúdio físico da Vortex Audiovisual conta com infraestrutura completa de isolamento acústico, câmeras 4K e cenário modular, disponível para agendamento de gravações e sessões fotográficas."
+      "num": "04",
+      "title": "Ética, Transparência & Governança",
+      "desc": "Conduzimos todas as relações com clientes, colaboradores e parceiros com integridade irrestrita, clareza contratual e rigor ético em todas as operações."
     }
   ]
 }

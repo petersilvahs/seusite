@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grupo PHJB | Agência de Tecnologia, Criatividade & Crescimento Comercial</title>
-  <meta name="description" content="Ecossistema integrado de aceleração digital: Sites de Ultra Conversão (PHJB Web), Automação IA 24/7 no WhatsApp (PHJB Bot), Produção Audiovisual & Estúdio (PHJB Studio) e Tráfego Pago.">
-  <meta name="keywords" content="grupo phjb, agencia digital, ecossistema de vendas, sites profissionais, chatbot whatsapp ia, producao audiovisual, trafego pago">
+  <title>Grupo PHJB | Holding de Comunicação, Tecnologia & Produção Audiovisual</title>
+  <meta name="description" content="Holding brasileira independente de comunicação integrada, tecnologia e inteligência criativa. Ecossistema composto por PHJB Web, PHJB Intelligence & AI, Vortex Studio e PHJB Media.">
+  <meta name="keywords" content="grupo phjb, holding de comunicacao, agencia institucional, ecossistema criativo, inteligencia artificial, producao audiovisual, inovacao">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Grupo PHJB | Agência de Tecnologia, Criatividade & Crescimento Comercial">
-  <meta property="og:description" content="Ecossistema integrado de aceleração digital: Sites de Ultra Conversão (PHJB Web), Automação IA 24/7 no WhatsApp (PHJB Bot), Produção Audiovisual & Estúdio (PHJB Studio) e Tráfego Pago.">
+  <meta property="og:title" content="Grupo PHJB | Holding de Comunicação, Tecnologia & Produção Audiovisual">
+  <meta property="og:description" content="Holding brasileira independente de comunicação integrada, tecnologia e inteligência criativa. Ecossistema composto por PHJB Web, PHJB Intelligence & AI, Vortex Studio e PHJB Media.">
   
   <!-- Fontes do Google: Plus Jakarta Sans & Syne -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,39 +24,19 @@
       theme: {
         extend: {
           colors: {
-            phjb: {
-              blue: '#008fe3',
-              blueDark: '#0072b8',
-              yellow: '#fbaa0c',
-              yellowHover: '#e09805',
-              red: '#e90706',
-              redDark: '#c70505',
-              black: '#080808',
-              cardDark: '#121212',
-              canvas: '#FAF8F5',
-              muted: '#64748B',
+            brand: {
+              black: '#0A0A0A',
+              card: '#121212',
+              cardBorder: 'rgba(255, 255, 255, 0.08)',
+              paper: '#FAF9F6',
+              accent: '#E63946',
+              blue: '#0055FF',
+              muted: '#71717A',
             }
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             display: ['"Syne"', 'sans-serif'],
-          },
-          animation: {
-            'spin-slow': 'spin 18s linear infinite',
-            'float-slow': 'float 5s ease-in-out infinite',
-            'float-delayed': 'float 6s ease-in-out 2s infinite',
-            'float-fast': 'float 4s ease-in-out 1s infinite',
-            'marquee': 'marquee 25s linear infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px) rotate(var(--tw-rotate, 0deg))' },
-              '50%': { transform: 'translateY(-12px) rotate(var(--tw-rotate, 0deg))' },
-            },
-            marquee: {
-              '0%': { transform: 'translateX(0%)' },
-              '100%': { transform: 'translateX(-50%)' },
-            }
           }
         }
       }
@@ -65,104 +45,67 @@
 
   <style>
     body {
-      background-color: #FAF8F5;
-      color: #0A0A0A;
+      background-color: #0A0A0A;
+      color: #F4F4F5;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
     .font-display {
       font-family: 'Syne', sans-serif;
     }
-    /* Efeito de rotação do selo circular de agência */
-    @keyframes spinClockwise {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    /* Linha sutil de divisão editorial */
+    .border-subtle {
+      border-color: rgba(255, 255, 255, 0.1);
     }
-    .rotate-stamp {
-      animation: spinClockwise 16s linear infinite;
-    }
-    /* Efeito de marcador de texto */
-    .highlighter-yellow {
-      background-color: #fbaa0c;
-      box-shadow: 0 4px 14px rgba(251, 170, 12, 0.4);
-    }
-    .highlighter-blue {
-      background-color: #008fe3;
-      box-shadow: 0 4px 14px rgba(0, 143, 227, 0.4);
-    }
-    .highlighter-red {
-      background-color: #e90706;
-      box-shadow: 0 4px 14px rgba(233, 7, 6, 0.4);
-    }
-    /* Scrollbar */
+    /* Scrollbar minimalista */
     ::-webkit-scrollbar {
-      width: 7px;
+      width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #FAF8F5;
+      background: #0A0A0A;
     }
     ::-webkit-scrollbar-thumb {
-      background: #008fe3;
-      border-radius: 4px;
+      background: #27272A;
+      border-radius: 3px;
     }
   </style>
 </head>
-<body class="antialiased selection:bg-[#fbaa0c] selection:text-black">
+<body class="antialiased selection:bg-white selection:text-black">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-[#080808] text-white text-xs py-2 px-4 border-b border-white/10 flex items-center justify-between overflow-hidden">
-    <div class="max-w-7xl mx-auto w-full flex items-center justify-between text-[11px] font-semibold tracking-wider uppercase">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-[#fbaa0c] animate-ping"></span>
-        <span class="text-zinc-300">Ecossistema Digital Integrado</span>
-      </div>
-      <div class="hidden md:flex items-center gap-4 text-zinc-400">
-        <span>São Paulo • Brasil • Atendimento Global</span>
-        <span class="text-white">•</span>
-        <a href="#combo" class="text-[#fbaa0c] hover:underline font-bold">Ver Combo Ecossistema (35% OFF)</a>
-      </div>
-      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio." target="_blank" class="text-[#008fe3] hover:text-white transition font-bold">
-        WhatsApp Direto ↗
-      </a>
-    </div>
-  </div>
-
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-black/5 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+  <!-- Header Institucional Minimalista -->
+  <header class="sticky top-0 z-50 bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-subtle transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-24 flex items-center justify-between gap-4">
       
-      <!-- Logo do Grupo PHJB -->
+      <!-- Marca do Grupo PHJB -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-2xl bg-[#080808] text-white flex items-center justify-center font-black text-xl shadow-md group-hover:scale-105 transition-transform">
-          <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#008fe3] via-[#fbaa0c] to-[#e90706]">P</span>
+        <div class="w-10 h-10 rounded-lg bg-white text-black flex items-center justify-center font-black text-xl tracking-tighter group-hover:bg-zinc-200 transition">
+          <span>P</span>
         </div>
-        <div>
-          <span class="font-display text-2xl font-black tracking-tight text-[#080808] uppercase block leading-none">
+        <div class="flex flex-col">
+          <span class="font-display text-2xl font-black tracking-tight text-white uppercase leading-none">
             Grupo PHJB
           </span>
-          <span class="text-[9px] uppercase tracking-widest font-extrabold text-[#64748B] block mt-1">
-            Ecosystem & Agency
+          <span class="text-[9px] uppercase tracking-widest text-zinc-400 font-semibold mt-1">
+            Holding & Ecossistema
           </span>
         </div>
       </a>
 
-      <!-- Menu Principal -->
-      <nav class="hidden lg:flex items-center gap-8 text-xs font-black uppercase tracking-wider text-[#080808]/75">
-        <a href="#solucoes" class="hover:text-[#008fe3] transition">Soluções</a>
-        <a href="#ecossistema" class="hover:text-[#008fe3] transition">O Grupo</a>
-        <a href="#combo" class="text-[#e90706] hover:text-[#080808] transition flex items-center gap-1.5 font-extrabold">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5 fill-[#e90706]"></i>
-          <span>Combo Máquina de Vendas</span>
-        </a>
-        <a href="#cases" class="hover:text-[#008fe3] transition">Cases & Portfólio</a>
-        <a href="#faq" class="hover:text-[#008fe3] transition">FAQ</a>
+      <!-- Navegação Editorial -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-zinc-400">
+        <a href="#manifesto" class="hover:text-white transition">O Grupo & Manifesto</a>
+        <a href="#ecossistema" class="hover:text-white transition">Unidades de Negócio</a>
+        <a href="#cases" class="hover:text-white transition">Cases & Trabalhos</a>
+        <a href="#clientes" class="hover:text-white transition">Clientes</a>
+        <a href="#valores" class="hover:text-white transition">Governança</a>
+        <a href="#presenca" class="hover:text-white transition">Escritórios</a>
       </nav>
 
-      <!-- CTA Botão -->
-      <div class="flex items-center gap-3">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center gap-2 bg-[#080808] hover:bg-[#008fe3] text-white px-5 sm:px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-lg shadow-black/15 hover:shadow-[#008fe3]/30 transform hover:-translate-y-0.5">
-          <span>Iniciar Projeto</span>
+      <!-- Contato Institucional -->
+      <div class="flex items-center gap-4">
+        <a href="#contato" 
+           class="inline-flex items-center gap-2 bg-white hover:bg-zinc-200 text-black px-5 sm:px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300">
+          <span>Falar com o Grupo</span>
           <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
         </a>
       </div>
@@ -170,751 +113,523 @@
     </div>
   </header>
 
-  <!-- Hero Section Interativo com Elementos Flutuantes -->
-  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-[#FAF8F5]">
+  <!-- Hero Section Institucional (Vibe Artplan / Holding de Grande Porte) -->
+  <section class="relative pt-20 pb-24 md:pt-32 md:pb-40 border-b border-subtle overflow-hidden">
     
-    <!-- Elementos Flutuantes Interativos (Visual da Agência) -->
-    
-    <!-- 1. Floating Pill Location Top Right -->
-    <div class="hidden lg:flex items-center gap-2 bg-[#008fe3] text-white px-4 py-2 rounded-2xl text-xs font-bold shadow-xl absolute top-12 right-12 animate-float-slow z-20 cursor-default" style="--tw-rotate: 3deg;">
-      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-white"></i>
-      <span>São Paulo • Atendimento Brasil & Global</span>
-    </div>
+    <!-- Linhas e luzes de fundo sutis -->
+    <div class="absolute -top-40 right-1/4 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[140px] pointer-events-none"></div>
 
-    <!-- 2. Floating Pill Tag Top Left -->
-    <div class="hidden lg:flex items-center gap-2.5 bg-[#fbaa0c] text-black px-4 py-2 rounded-2xl text-xs font-black shadow-xl absolute top-16 left-10 animate-float-delayed z-20 cursor-default" style="--tw-rotate: -4deg;">
-      <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
-      <span>Ecossistema 4 em 1</span>
-    </div>
-
-    <!-- 3. Floating Sticker Card com Ilustração Surreal da Referência -->
-    <div class="hidden md:block absolute -bottom-10 right-8 lg:right-20 w-44 lg:w-56 rounded-3xl bg-white p-2.5 shadow-2xl border-4 border-black animate-float-fast z-30 transform hover:scale-105 transition-transform" style="--tw-rotate: 6deg;">
-      <div class="overflow-hidden rounded-2xl aspect-square relative bg-[#008fe3]">
-        <img src="/assets/phjb/illustration.jpg" alt="Universo Criativo Grupo PHJB" class="w-full h-full object-cover">
-        <span class="absolute bottom-2 left-2 right-2 bg-black/85 text-white text-[9px] font-black uppercase tracking-wider py-1 text-center rounded-lg backdrop-blur-sm">
-          Criatividade & Escala
-        </span>
-      </div>
-    </div>
-
-    <!-- 4. Selo Circular Giratório "LET'S BUILD • GRUPO PHJB" -->
-    <div class="hidden sm:block absolute top-1/2 -translate-y-1/2 left-4 lg:left-12 z-20 pointer-events-none">
-      <div class="relative w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center">
-        <!-- SVG com texto circular girando -->
-        <svg class="w-full h-full rotate-stamp" viewBox="0 0 100 100">
-          <defs>
-            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"></path>
-          </defs>
-          <text font-size="9.5" font-weight="bold" fill="#080808" letter-spacing="2">
-            <textPath href="#circlePath" startOffset="0%">
-              • GRUPO PHJB • DIGITAL MAGIC • 2026 •
-            </textPath>
-          </text>
-        </svg>
-        <div class="absolute inset-0 m-auto w-10 h-10 rounded-full bg-[#fbaa0c] text-black flex items-center justify-center font-black text-xs shadow-md">
-          <i data-lucide="sparkles" class="w-5 h-5 fill-black"></i>
-        </div>
-      </div>
-    </div>
-
-    <!-- Conteúdo Central Hero -->
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 space-y-12">
       
-      <!-- Tag Pílula Hero -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/5 border border-black/10 text-xs uppercase tracking-widest text-[#080808] font-black">
-        <span class="w-2 h-2 rounded-full bg-[#008fe3] animate-pulse"></span>
-        <span>Aceleradora de Marcas & Negócios</span>
+      <!-- Badge de Posicionamento -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-zinc-300 font-semibold">
+        <span class="w-2 h-2 rounded-full bg-white"></span>
+        <span>Holding Independente de Comunicação & Tecnologia</span>
       </div>
 
-      <!-- Headline Gigante com Efeito Marcador de Texto Estilo Agência -->
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-[#080808] tracking-tight leading-[1.08] uppercase max-w-4xl mx-auto">
-        Elevamos sua marca com nosso <br class="hidden sm:block"/>
-        <span class="relative inline-block text-black px-4 py-1 rounded-2xl bg-[#fbaa0c] font-black -rotate-1 shadow-lg shadow-[#fbaa0c]/30">
-          ecossistema digital
-        </span> de alta conversão.
-      </h1>
+      <!-- Grande Manifesto Hero -->
+      <div class="space-y-6 max-w-5xl">
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white tracking-tight leading-[1.02] uppercase">
+          Ideias que constroem legado. <br class="hidden sm:block"/>
+          <span class="text-zinc-500">Tecnologia que transforma negócios.</span>
+        </h1>
 
-      <p class="text-base sm:text-xl text-[#64748B] max-w-2xl mx-auto leading-relaxed font-normal">
-        Integramos <strong class="text-[#080808]">Sites Profissionais</strong>, <strong class="text-[#080808]">Automação com IA no WhatsApp</strong>, <strong class="text-[#080808]">Estúdio Audiovisual</strong> e <strong class="text-[#080808]">Tráfego Pago</strong> sob uma única gestão inteligente.
-      </p>
-
-      <!-- Botões de Ação Hero -->
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener noreferrer" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#080808] hover:bg-[#008fe3] text-white px-8 py-4 rounded-full font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-black/20 transform hover:-translate-y-1">
-          <span>Solicitar Proposta</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-
-        <a href="#solucoes" 
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-black/5 text-[#080808] border-2 border-black/10 px-7 py-4 rounded-full font-extrabold text-xs uppercase tracking-wider transition">
-          <i data-lucide="layers" class="w-4 h-4 text-[#008fe3]"></i>
-          <span>Ver os 4 Pilares</span>
-        </a>
-      </div>
-
-      <!-- Micro Badges de Confiança -->
-      <div class="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-[#64748B] font-semibold">
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-[#008fe3]"></i> Contrato único sem ruídos</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-[#fbaa0c]"></i> Entrega ágil em dias</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-[#e90706]"></i> Desconto especial de combo</span>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Marquee Infinito de Marcas & Cases (Vibe Agência Vibrante) -->
-  <div class="py-5 bg-[#080808] border-y border-white/10 overflow-hidden relative">
-    <div class="flex whitespace-nowrap animate-marquee items-center gap-10">
-      <div class="flex items-center gap-10 text-white font-display text-sm sm:text-base font-black uppercase tracking-widest shrink-0">
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>VORTEX STUDIO</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>SEUBOT IA</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>SEUSITE PRO</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>CLÍNICA COPACABANA</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>ANBLICK ENGENHARIA</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>DRA. BRENDA SANTOS</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#fbaa0c]"></span>
-          <span>META & GOOGLE ADS</span>
-        </span>
-        
-      </div>
-      <div class="flex items-center gap-10 text-white font-display text-sm sm:text-base font-black uppercase tracking-widest shrink-0" aria-hidden="true">
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>VORTEX STUDIO</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>SEUBOT IA</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>SEUSITE PRO</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>CLÍNICA COPACABANA</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>ANBLICK ENGENHARIA</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>DRA. BRENDA SANTOS</span>
-        </span>
-        
-        <span class="flex items-center gap-3">
-          <span class="w-2 h-2 rounded-full bg-[#008fe3]"></span>
-          <span>META & GOOGLE ADS</span>
-        </span>
-        
-      </div>
-    </div>
-  </div>
-
-  <!-- SEÇÃO 2: MANIFESTO DA AGÊNCIA (GRANDE BLOCO PRETO ARREDONDADO) -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 bg-[#FAF8F5]">
-    <div class="max-w-7xl mx-auto bg-[#080808] rounded-[36px] sm:rounded-[48px] p-8 sm:p-14 lg:p-20 text-white relative overflow-hidden shadow-2xl">
-      
-      <!-- Detalhes de Fundo / Iluminação -->
-      <div class="absolute -top-32 -right-32 w-96 h-96 bg-[#008fe3]/20 rounded-full blur-[100px] pointer-events-none"></div>
-      <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-[#fbaa0c]/15 rounded-full blur-[100px] pointer-events-none"></div>
-
-      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        
-        <div class="lg:col-span-8 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#fbaa0c] text-xs font-black uppercase tracking-widest">
-            <i data-lucide="target" class="w-3.5 h-3.5"></i>
-            <span>Nossa Filosofia de Trabalho</span>
-          </div>
-
-          <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight leading-[1.15]">
-            Nós criamos <span class="text-[#008fe3]">experiências de alto impacto</span> para os clientes das nossas marcas a cada ponto de contato.
-          </h2>
-
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light max-w-2xl">
-            Empresas que contratam fornecedores desconectados perdem dinheiro todos os dias. O programador culpa o designer, o designer culpa o gestor de tráfego, e o atendente demora horas para responder no WhatsApp. 
-            No <strong class="text-white">Grupo PHJB</strong>, unificamos todas as engrenagens em uma orquestra sincronizada.
-          </p>
-        </div>
-
-        <!-- Métricas Rápidas Estilo Agência -->
-        <div class="lg:col-span-4 grid grid-cols-2 gap-4">
-          
-          <div class="bg-white/5 border border-white/10 rounded-3xl p-5 hover:border-[#fbaa0c]/50 transition group">
-            <p class="font-display text-3xl sm:text-4xl font-black text-[#fbaa0c] group-hover:scale-105 transition-transform">+700</p>
-            <p class="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-400 font-bold mt-1 leading-tight">Projetos & Ações Realizadas</p>
-          </div>
-          
-          <div class="bg-white/5 border border-white/10 rounded-3xl p-5 hover:border-[#fbaa0c]/50 transition group">
-            <p class="font-display text-3xl sm:text-4xl font-black text-[#fbaa0c] group-hover:scale-105 transition-transform">0s</p>
-            <p class="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-400 font-bold mt-1 leading-tight">Tempo de Resposta com IA</p>
-          </div>
-          
-          <div class="bg-white/5 border border-white/10 rounded-3xl p-5 hover:border-[#fbaa0c]/50 transition group">
-            <p class="font-display text-3xl sm:text-4xl font-black text-[#fbaa0c] group-hover:scale-105 transition-transform">+180%</p>
-            <p class="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-400 font-bold mt-1 leading-tight">Aumento Médio em Conversão de Leads</p>
-          </div>
-          
-          <div class="bg-white/5 border border-white/10 rounded-3xl p-5 hover:border-[#fbaa0c]/50 transition group">
-            <p class="font-display text-3xl sm:text-4xl font-black text-[#fbaa0c] group-hover:scale-105 transition-transform">4 em 1</p>
-            <p class="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-400 font-bold mt-1 leading-tight">Pilares Unificados em 1 Só Contrato</p>
-          </div>
-          
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO 3: OS 4 PILARES DO GRUPO PHJB (NOSSA EXPERTISE BENTO GRID) -->
-  <section id="solucoes" class="py-16 sm:py-24 bg-[#FAF8F5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div class="space-y-3 max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#008fe3]/10 text-[#008fe3] text-xs font-black uppercase tracking-widest">
-            <span>Soluções Modulares & Integradas</span>
-          </div>
-          <h2 class="font-display text-3xl sm:text-5xl font-black uppercase text-[#080808]">
-            Os 4 Pilares do Grupo PHJB
-          </h2>
-          <p class="text-[#64748B] text-sm sm:text-base">
-            Contrate cada braço de forma avulsa conforme sua necessidade, ou combine em nosso combo de aceleração contínua.
-          </p>
-        </div>
-
-        <div class="shrink-0">
-          <a href="#combo" class="inline-flex items-center gap-2 bg-[#fbaa0c] hover:bg-[#e09805] text-black px-6 py-3.5 rounded-full font-black text-xs uppercase tracking-wider transition shadow-md">
-            <i data-lucide="layers" class="w-4 h-4 fill-black"></i>
-            <span>Ver Combo Completo (35% OFF)</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Grid dos 4 Pilares -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1">
-          
-          <div class="space-y-5">
-            <!-- Header do Card com Tag e Botão de Ação -->
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-[#080808] text-[10px] font-black uppercase tracking-wider">
-                Presença & Autoridade
-              </span>
-              <div class="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#008fe3] transition-colors">
-                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-              </div>
-            </div>
-
-            <!-- Marca e Título -->
-            <div class="space-y-1.5">
-              <span class="text-xs font-black uppercase tracking-widest text-[#008fe3]">PHJB Web</span>
-              <h3 class="font-display text-xl font-black text-[#080808] uppercase leading-tight">Arquitetura Web & Landing Pages de Alta Conversão</h3>
-            </div>
-
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">
-              Desenvolvimento de páginas ultrarrápidas, otimizadas para o Google (SEO) e pensadas exclusivamente para transformar cliques de anúncios em dinheiro no caixa.
-            </p>
-
-            <hr class="border-black/5">
-
-            <!-- Lista de Destaques -->
-            <ul class="space-y-2 text-xs text-[#080808]/80 font-medium">
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Carregamento em menos de 1s</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Design responsivo cirúrgico</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Otimizado para campanhas do Google & Meta</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Domínio próprio .com.br</span>
-              </li>
-              
-            </ul>
-          </div>
-
-          <!-- Link Inferior do Card -->
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/seusite" class="inline-flex items-center gap-1.5 font-black text-xs uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Explorar PHJB Web ↗</span>
-            </a>
-          </div>
-
-        </div>
-        
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1">
-          
-          <div class="space-y-5">
-            <!-- Header do Card com Tag e Botão de Ação -->
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-[#080808] text-[10px] font-black uppercase tracking-wider">
-                Automação & Conversão 24/7
-              </span>
-              <div class="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#008fe3] transition-colors">
-                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-              </div>
-            </div>
-
-            <!-- Marca e Título -->
-            <div class="space-y-1.5">
-              <span class="text-xs font-black uppercase tracking-widest text-[#008fe3]">PHJB Bot</span>
-              <h3 class="font-display text-xl font-black text-[#080808] uppercase leading-tight">Inteligência Artificial Generativa para WhatsApp</h3>
-            </div>
-
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">
-              Atendimento instantâneo em zero segundos. Triagem de clientes, tira-dúvidas de catálogo, agendamento de consultas e transbordo humano sem deixar ninguém no vácuo.
-            </p>
-
-            <hr class="border-black/5">
-
-            <!-- Lista de Destaques -->
-            <ul class="space-y-2 text-xs text-[#080808]/80 font-medium">
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Atendimento dia, noite e finais de semana</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Treinado na base de dados da sua empresa</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">100% em nuvem sem necessidade de PC ligado</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Aumento comprovado de fechamento</span>
-              </li>
-              
-            </ul>
-          </div>
-
-          <!-- Link Inferior do Card -->
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/seubot" class="inline-flex items-center gap-1.5 font-black text-xs uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Testar Simulador do Bot ↗</span>
-            </a>
-          </div>
-
-        </div>
-        
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1">
-          
-          <div class="space-y-5">
-            <!-- Header do Card com Tag e Botão de Ação -->
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-[#080808] text-[10px] font-black uppercase tracking-wider">
-                Criatividade & Audiovisual
-              </span>
-              <div class="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#008fe3] transition-colors">
-                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-              </div>
-            </div>
-
-            <!-- Marca e Título -->
-            <div class="space-y-1.5">
-              <span class="text-xs font-black uppercase tracking-widest text-[#008fe3]">PHJB Studio</span>
-              <h3 class="font-display text-xl font-black text-[#080808] uppercase leading-tight">Produção Audiovisual, Estúdio & Conteúdo de Impacto</h3>
-            </div>
-
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">
-              Estúdio profissional equipado para podcast, videocasts, reels de autoridade, fotos institucionais e criativos em alta definição que capturam a atenção e vendem.
-            </p>
-
-            <hr class="border-black/5">
-
-            <!-- Lista de Destaques -->
-            <ul class="space-y-2 text-xs text-[#080808]/80 font-medium">
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Estúdio completo com isolamento acústico</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Câmeras 4K e iluminação cinematográfica</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Edição ágil e entrega para redes sociais</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Aluguel avulso ou pacote contínuo</span>
-              </li>
-              
-            </ul>
-          </div>
-
-          <!-- Link Inferior do Card -->
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/vortex-audiovisual" class="inline-flex items-center gap-1.5 font-black text-xs uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Conhecer o Estúdio Vortex ↗</span>
-            </a>
-          </div>
-
-        </div>
-        
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1">
-          
-          <div class="space-y-5">
-            <!-- Header do Card com Tag e Botão de Ação -->
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-[#080808] text-[10px] font-black uppercase tracking-wider">
-                Demanda & Escala
-              </span>
-              <div class="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center group-hover:bg-[#008fe3] transition-colors">
-                <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-              </div>
-            </div>
-
-            <!-- Marca e Título -->
-            <div class="space-y-1.5">
-              <span class="text-xs font-black uppercase tracking-widest text-[#008fe3]">PHJB Growth</span>
-              <h3 class="font-display text-xl font-black text-[#080808] uppercase leading-tight">Tráfego Pago & Captação Ativa de Clientes</h3>
-            </div>
-
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">
-              Gestão de campanhas estratégicas no Meta Ads (Instagram/Facebook) e Google Ads para atrair o público ideal com menor custo por lead e máxima taxa de retorno (ROAS).
-            </p>
-
-            <hr class="border-black/5">
-
-            <!-- Lista de Destaques -->
-            <ul class="space-y-2 text-xs text-[#080808]/80 font-medium">
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Segmentação hiperlocal e por interesse</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Testes A/B de criativos e copys</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Otimização diária de CPA e ROI</span>
-              </li>
-              
-              <li class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#008fe3] shrink-0"></i>
-                <span class="truncate">Dashboards em tempo real de resultados</span>
-              </li>
-              
-            </ul>
-          </div>
-
-          <!-- Link Inferior do Card -->
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="#contato" class="inline-flex items-center gap-1.5 font-black text-xs uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Falar sobre Tráfego ↗</span>
-            </a>
-          </div>
-
-        </div>
-        
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO 4: O COMBO MÁQUINA DE VENDAS (A FORÇA DA VENDA CASADA) -->
-  <section id="combo" class="py-16 sm:py-24 bg-[#080808] text-white relative overflow-hidden">
-    
-    <!-- Elementos visuais de fundo -->
-    <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#e90706]/15 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-[#008fe3]/20 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-      
-      <div class="bg-gradient-to-r from-zinc-900 to-black rounded-[36px] sm:rounded-[48px] border-2 border-white/10 p-8 sm:p-14 lg:p-20 shadow-2xl relative overflow-hidden">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#fbaa0c] text-black text-xs font-black uppercase tracking-widest shadow-md">
-              <i data-lucide="zap" class="w-4 h-4 fill-black"></i>
-              <span>Vantagem Exclusiva do Ecossistema PHJB</span>
-            </div>
-
-            <h2 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[1.05]">
-              Por que contratar serviços soltos se você pode ter o <br>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#008fe3] via-[#fbaa0c] to-[#e90706]">Combo Completo</span>?
-            </h2>
-
-            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
-              Quando você contrata o combo integrado, seu negócio ganha uma esteira contínua de atração, qualificação e fechamento com até <strong>35% de economia</strong> em relação à contratação avulsa.
-            </p>
-
-            <div class="space-y-3.5 pt-2">
-              <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
-                <div class="w-8 h-8 rounded-xl bg-[#008fe3] text-white flex items-center justify-center shrink-0 font-black text-sm">1</div>
-                <div>
-                  <h4 class="font-black text-white text-xs uppercase tracking-wider">PHJB Web atrai e constrói autoridade</h4>
-                  <p class="text-xs text-zinc-400 mt-0.5">Sua empresa ganha posicionamento oficial e páginas feitas para converter cliques em oportunidades reais.</p>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
-                <div class="w-8 h-8 rounded-xl bg-[#fbaa0c] text-black flex items-center justify-center shrink-0 font-black text-sm">2</div>
-                <div>
-                  <h4 class="font-black text-white text-xs uppercase tracking-wider">PHJB Bot recebe em 0s e qualifica no WhatsApp</h4>
-                  <p class="text-xs text-zinc-400 mt-0.5">Sem tempo de espera. A inteligência artificial responde dúvidas, filtra clientes e agenda automaticamente.</p>
-                </div>
-              </div>
-
-              <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
-                <div class="w-8 h-8 rounded-xl bg-[#e90706] text-white flex items-center justify-center shrink-0 font-black text-sm">3</div>
-                <div>
-                  <h4 class="font-black text-white text-xs uppercase tracking-wider">PHJB Studio & Growth alimentam a máquina com clientes</h4>
-                  <p class="text-xs text-zinc-400 mt-0.5">Criativos profissionais gravados em estúdio e campanhas pagas otimizadas para tracionar o funil.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio.&text=Ol%C3%A1!%20Tenho%20interesse%20no%20Combo%20Ecossistema%20do%20Grupo%20PHJB." target="_blank"
-                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#fbaa0c] hover:bg-[#e09805] text-black px-8 py-4 rounded-full text-xs font-black uppercase tracking-wider transition shadow-xl shadow-[#fbaa0c]/25 transform hover:-translate-y-0.5">
-                <i data-lucide="sparkles" class="w-4 h-4 fill-black"></i>
-                <span>Garantir Condição de Combo</span>
-              </a>
-
-              <a href="#solucoes"
-                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white px-6 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition border border-white/10">
-                <span>Conhecer Serviços Avulsos</span>
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Card do Pacote Combo -->
-          <div class="lg:col-span-5">
-            <div class="bg-[#121212] p-8 sm:p-10 rounded-3xl border-2 border-[#fbaa0c] text-center space-y-6 shadow-2xl relative">
-              
-              <div class="inline-block px-3.5 py-1 rounded-full bg-[#fbaa0c]/20 text-[#fbaa0c] text-xs font-black uppercase tracking-wider border border-[#fbaa0c]/40">
-                Mais Escolhido por Empresas
-              </div>
-
-              <div class="space-y-2">
-                <h3 class="font-display text-2xl font-black text-white uppercase">Combo Máquina de Vendas</h3>
-                <p class="text-xs text-zinc-400">Site + Bot IA WhatsApp + Suporte Unificado</p>
-                
-                <div class="py-4 border-y border-white/10 my-4">
-                  <p class="text-xs line-through text-zinc-500 uppercase font-semibold">Valor dos Serviços Separados: R$ 1.094</p>
-                  <p class="text-xs text-[#008fe3] uppercase font-black tracking-widest mt-2">No Combo Oficial Grupo PHJB:</p>
-                  <p class="font-display text-5xl font-black text-white mt-1">R$ 897</p>
-                  <p class="text-xs text-zinc-400 mt-1">Setup Único com <strong>ambos inclusos e integrados</strong></p>
-                </div>
-              </div>
-
-              <ul class="text-xs text-zinc-300 space-y-3 text-left">
-                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#fbaa0c] shrink-0"></i> 1 Gerente de Conta dedicado</li>
-                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#fbaa0c] shrink-0"></i> Integração nativa sem falha técnica</li>
-                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#fbaa0c] shrink-0"></i> Desconto fixo na mensalidade combinada</li>
-                <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#fbaa0c] shrink-0"></i> 100% hospedado em nuvem sem PC ligado</li>
-              </ul>
-
-              <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio.&text=Ol%C3%A1!%20Quero%20contratar%20o%20Combo%20M%C3%A1quina%20de%20Vendas%20do%20Grupo%20PHJB." target="_blank"
-                 class="w-full inline-flex items-center justify-center gap-2 bg-[#008fe3] hover:bg-[#0072b8] text-white py-3.5 px-6 rounded-full text-xs font-black uppercase tracking-wider transition shadow-lg shadow-[#008fe3]/25">
-                <i data-lucide="check-circle" class="w-4 h-4"></i>
-                <span>Contratar o Combo Agora</span>
-              </a>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SEÇÃO 5: CASOS DE SUCESSO & PORTFÓLIO DO GRUPO PHJB -->
-  <section id="cases" class="py-16 sm:py-24 bg-[#FAF8F5]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-[#008fe3] font-black">Cases & Demonstrações Reais</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-black uppercase text-[#080808]">
-          Trabalhos Recentes do Grupo
-        </h2>
-        <p class="text-[#64748B] text-sm sm:text-base">
-          Conheça algumas das plataformas e experiências digitais desenvolvidas pelas empresas do nosso ecossistema.
+        <p class="text-lg sm:text-2xl text-zinc-300 font-light leading-relaxed max-w-3xl pt-2">
+          O Grupo PHJB é uma holding independente de comunicação integrada, inteligência digital e produção de conteúdo. Unimos criatividade estratégica, dados e alta tecnologia para impulsionar o valor de marcas líderes.
         </p>
       </div>
 
-      <!-- Grid de Cases Interativos -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Hubs e Unidades Rápidas -->
+      <div class="pt-8 border-t border-subtle grid grid-cols-2 md:grid-cols-4 gap-8">
         
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-xs font-black uppercase tracking-wider text-[#080808]">
-                Estúdio & Produção
-              </span>
-              <div class="w-8 h-8 rounded-full bg-[#FAF8F5] group-hover:bg-[#080808] group-hover:text-white transition-colors flex items-center justify-center">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
-            </div>
+        <div class="space-y-1">
+          <p class="font-display text-4xl sm:text-5xl font-black text-white">+700</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-400 font-medium">Projetos e Campanhas Entregues</p>
+        </div>
+        
+        <div class="space-y-1">
+          <p class="font-display text-4xl sm:text-5xl font-black text-white">4</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-400 font-medium">Unidades Estratégicas de Negócio</p>
+        </div>
+        
+        <div class="space-y-1">
+          <p class="font-display text-4xl sm:text-5xl font-black text-white">100%</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-400 font-medium">Capital Independente Nacional</p>
+        </div>
+        
+        <div class="space-y-1">
+          <p class="font-display text-4xl sm:text-5xl font-black text-white">+98%</p>
+          <p class="text-xs uppercase tracking-wider text-zinc-400 font-medium">Índice de Retenção & Satisfação</p>
+        </div>
+        
+      </div>
 
-            <h3 class="font-display text-2xl font-black text-[#080808] uppercase">Vortex Audiovisual</h3>
-            <p class="text-xs text-[#008fe3] font-bold uppercase tracking-wider">Audiovisual & Estúdio</p>
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">Landing page de alta conversão para aluguel de estúdio e produção de podcasts e comerciais.</p>
-          </div>
+    </div>
+  </section>
 
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/vortex-audiovisual" class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Acessar Projeto ↗</span>
+  <!-- Seção 2: O Manifesto & A Força do Grupo PHJB -->
+  <section id="manifesto" class="py-24 sm:py-36 bg-[#0E0E0E] border-b border-subtle relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        
+        <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-36">
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Quem Somos & Nosso Papel</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight leading-tight">
+            Uma estrutura construída para o tempo de hoje.
+          </h2>
+          <p class="text-sm text-zinc-400 leading-relaxed font-light">
+            O Grupo PHJB consolidou uma posição estratégica no mercado ao articular criatividade, tecnologia e operação de forma proprietária, tornando as marcas de nossos clientes mais relevantes, eficientes e preparadas para o futuro.
+          </p>
+          <div class="pt-4">
+            <a href="#ecossistema" class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-white hover:text-zinc-300 underline underline-offset-8 transition">
+              <span>Conhecer nossas unidades de negócio</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
+
+        <div class="lg:col-span-7 space-y-10">
+          
+          <div class="border-l-2 border-white pl-6 sm:pl-8 py-2">
+            <blockquote class="font-display text-xl sm:text-3xl text-white font-bold leading-snug uppercase">
+              "Não acreditamos em silos ou departamentos isolados. Acreditamos na convergência entre criatividade humana inegociável e inteligência tecnológica de ponta."
+            </blockquote>
+          </div>
+
+          <div class="space-y-6 text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+            <p>O mercado tradicional de agências fragmentou-se em fornecedores desconectados: quem cuida da tecnologia não entende de narrativa; quem cria filmes não domina performance; quem analisa dados ignora a sensibilidade da marca.</p>
+            <p>O Grupo PHJB nasceu para quebrar essa ineficiência. Criamos uma estrutura corporativa fluida onde engenharia de software, modelos de IA, produção cinematográfica de estúdio e inteligência de mídia operam como um organismo único.</p>
+            <p>Construímos pontes entre marcas e seus públicos através de conversas memoráveis, soluções proprietárias e relevância cultural duradoura.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
+            <div class="p-6 rounded-2xl bg-zinc-900/60 border border-subtle space-y-2">
+              <h4 class="font-bold text-white text-xs uppercase tracking-wider">Independência Criativa</h4>
+              <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                Agilidade na tomada de decisão e liberdade total para implementar as soluções mais eficazes sem entraves burocráticos.
+              </p>
+            </div>
+            <div class="p-6 rounded-2xl bg-zinc-900/60 border border-subtle space-y-2">
+              <h4 class="font-bold text-white text-xs uppercase tracking-wider">Integração de Ponta a Ponta</h4>
+              <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                Da linha de código inicial até a pós-produção audiovisual e os algoritmos de conversão, tudo sob uma mesma visão de negócio.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção 3: Ecossistema de Empresas & Unidades de Negócio -->
+  <section id="ecossistema" class="py-24 sm:py-36 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-subtle pb-8">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Estrutura Corporativa</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+            Unidades Estratégicas de Negócio
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base font-light">
+            Quatro divisões especializadas que atuam com autonomia e somam forças para criar soluções integradas de alto impacto.
+          </p>
+        </div>
+        <div class="text-xs text-zinc-400 uppercase tracking-widest font-semibold">
+          04 Empresas • 1 Só Visão
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-xs font-black uppercase tracking-wider text-[#080808]">
-                Automação & IA
-              </span>
-              <div class="w-8 h-8 rounded-full bg-[#FAF8F5] group-hover:bg-[#080808] group-hover:text-white transition-colors flex items-center justify-center">
+        <div class="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-subtle hover:border-white/30 transition-all duration-300 flex flex-col justify-between group space-y-8">
+          
+          <div class="space-y-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-zinc-400 block">Digital Engineering & Platforms</span>
+                <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase mt-1">PHJB Web</h3>
+              </div>
+              <div class="w-10 h-10 rounded-full border border-subtle flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
                 <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </div>
             </div>
 
-            <h3 class="font-display text-2xl font-black text-[#080808] uppercase">SeuBot IA WhatsApp</h3>
-            <p class="text-xs text-[#008fe3] font-bold uppercase tracking-wider">Inteligência Artificial & Atendimento</p>
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">Plataforma de IA com simulador de WhatsApp ao vivo integrada para conversão e agendamentos.</p>
+            <p class="text-zinc-400 text-sm leading-relaxed font-light">
+              Engenharia de software, design de produto e arquitetura de plataformas web de alta velocidade e máxima conversão para marcas corporativas.
+            </p>
+
+            <div class="pt-4 border-t border-subtle space-y-3">
+              <span class="text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">Capacidades & Especialidades:</span>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300 font-normal">
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Plataformas Web Proprietárias</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Arquitetura Cloud & Alta Escalabilidade</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Otimização Orgânica Avançada (SEO)</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Experiência de Usuário (UX/UI)</span>
+                </li>
+                
+              </ul>
+            </div>
           </div>
 
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/seubot" class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Acessar Projeto ↗</span>
+          <div class="pt-6 border-t border-subtle flex items-center justify-between">
+            <a href="/seusite" class="text-xs font-black uppercase tracking-wider text-white group-hover:underline transition flex items-center gap-2">
+              <span>Conhecer PHJB Web</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
+          </div>
+
+        </div>
+        
+        <div class="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-subtle hover:border-white/30 transition-all duration-300 flex flex-col justify-between group space-y-8">
+          
+          <div class="space-y-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-zinc-400 block">Artificial Intelligence & Conversational Tech</span>
+                <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase mt-1">PHJB Intelligence</h3>
+              </div>
+              <div class="w-10 h-10 rounded-full border border-subtle flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <p class="text-zinc-400 text-sm leading-relaxed font-light">
+              Desenvolvimento de agentes de inteligência artificial generativa, automação conversacional para WhatsApp e soluções cognitivas de atendimento em tempo real.
+            </p>
+
+            <div class="pt-4 border-t border-subtle space-y-3">
+              <span class="text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">Capacidades & Especialidades:</span>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300 font-normal">
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Modelos LLM Treinados em Negócios</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Atendimento Conversacional 24/7</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Automação de Funis Comerciais</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Integrações Nativas de CRM</span>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-subtle flex items-center justify-between">
+            <a href="/seubot" class="text-xs font-black uppercase tracking-wider text-white group-hover:underline transition flex items-center gap-2">
+              <span>Conhecer PHJB Intelligence</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+        
+        <div class="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-subtle hover:border-white/30 transition-all duration-300 flex flex-col justify-between group space-y-8">
+          
+          <div class="space-y-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-zinc-400 block">Content & Audiovisual Lab</span>
+                <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase mt-1">Vortex Studio</h3>
+              </div>
+              <div class="w-10 h-10 rounded-full border border-subtle flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <p class="text-zinc-400 text-sm leading-relaxed font-light">
+              Hub criativo de produção audiovisual de alto padrão cinematográfico, estúdio acústico próprio, videocasts, filmes publicitários e narrativa de marca.
+            </p>
+
+            <div class="pt-4 border-t border-subtle space-y-3">
+              <span class="text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">Capacidades & Especialidades:</span>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300 font-normal">
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Estúdio Físico Profissional 4K</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Filmes Publicitários & Comerciais</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Podcasts & Conteúdo de Autoridade</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Pós-Produção & Color Grading</span>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-subtle flex items-center justify-between">
+            <a href="/vortex-audiovisual" class="text-xs font-black uppercase tracking-wider text-white group-hover:underline transition flex items-center gap-2">
+              <span>Conhecer Vortex Studio</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+        
+        <div class="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-subtle hover:border-white/30 transition-all duration-300 flex flex-col justify-between group space-y-8">
+          
+          <div class="space-y-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-zinc-400 block">Data Intelligence & Growth</span>
+                <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase mt-1">PHJB Media & Performance</h3>
+              </div>
+              <div class="w-10 h-10 rounded-full border border-subtle flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+
+            <p class="text-zinc-400 text-sm leading-relaxed font-light">
+              Planejamento estratégico de mídia digital, aquisição de demanda, análise preditiva de comportamento do consumidor e aceleração de receita.
+            </p>
+
+            <div class="pt-4 border-t border-subtle space-y-3">
+              <span class="text-[10px] uppercase tracking-wider text-zinc-300 font-bold block">Capacidades & Especialidades:</span>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300 font-normal">
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Gestão Estratégica de Mídia Paga</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Modelagem de Atribuição & Dados</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Testes Contínuos de Performance</span>
+                </li>
+                
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-white shrink-0"></span>
+                  <span class="truncate">Expansão de Market Share</span>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-subtle flex items-center justify-between">
+            <a href="#contato" class="text-xs font-black uppercase tracking-wider text-white group-hover:underline transition flex items-center gap-2">
+              <span>Falar com Novos Negócios</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção 4: Cases & Trabalhos de Destaque -->
+  <section id="cases" class="py-24 sm:py-36 bg-[#0E0E0E] border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-subtle pb-8">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Portfólio & Impacto</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+            Casos de Sucesso & Entregas
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base font-light">
+            Conheça alguns dos projetos desenvolvidos pelas unidades do Grupo PHJB em múltiplos segmentos.
+          </p>
+        </div>
+        <div class="text-xs text-zinc-400 uppercase tracking-widest font-semibold">
+          Excelência Criativa & Operacional
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#141414] border border-subtle hover:border-white/30 transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <div class="lg:col-span-8 space-y-3">
+              <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                <span class="text-white">Vortex Studio</span>
+                <span>•</span>
+                <span>Produção Audiovisual & Beauty Care</span>
+                <span>•</span>
+                <span>2024 / 2025</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase tracking-tight group-hover:text-zinc-200 transition">
+                Mantecorp Skincare • Episol & Pielus
+              </h3>
+              <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed max-w-3xl">
+                Direção criativa, produção de cena e criação de conteúdos audiovisuais de alta definição destacando a linha de dermocosméticos líderes de mercado.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 flex lg:justify-end">
+              <a href="/vortex-audiovisual" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-black text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition duration-300">
+                <span>Ver Case Completo</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
           </div>
         </div>
         
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-xs font-black uppercase tracking-wider text-[#080808]">
-                Saúde & Medicina
-              </span>
-              <div class="w-8 h-8 rounded-full bg-[#FAF8F5] group-hover:bg-[#080808] group-hover:text-white transition-colors flex items-center justify-center">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#141414] border border-subtle hover:border-white/30 transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <div class="lg:col-span-8 space-y-3">
+              <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                <span class="text-white">PHJB Intelligence</span>
+                <span>•</span>
+                <span>Inteligência Artificial & Conversação</span>
+                <span>•</span>
+                <span>2025 / 2026</span>
               </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase tracking-tight group-hover:text-zinc-200 transition">
+                Ecossistema de IA Conversacional • SeuBot Labs
+              </h3>
+              <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed max-w-3xl">
+                Implementação de infraestrutura em nuvem e agentes cognitivos com capacidade de resposta instantânea em zero segundos para qualificação em tempo real.
+              </p>
             </div>
 
-            <h3 class="font-display text-2xl font-black text-[#080808] uppercase">Dr. Lucas Carvalho</h3>
-            <p class="text-xs text-[#008fe3] font-bold uppercase tracking-wider">Medicina & Clínica Integrativa</p>
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">Presença médica de autoridade em Copacabana com agendamento direto pelo WhatsApp.</p>
-          </div>
+            <div class="lg:col-span-4 flex lg:justify-end">
+              <a href="/seubot" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-black text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition duration-300">
+                <span>Ver Case Completo</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
 
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/dr-lucas-carvalho-copacabana" class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Acessar Projeto ↗</span>
-            </a>
           </div>
         </div>
         
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-xs font-black uppercase tracking-wider text-[#080808]">
-                Estética & Beleza
-              </span>
-              <div class="w-8 h-8 rounded-full bg-[#FAF8F5] group-hover:bg-[#080808] group-hover:text-white transition-colors flex items-center justify-center">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#141414] border border-subtle hover:border-white/30 transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <div class="lg:col-span-8 space-y-3">
+              <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                <span class="text-white">PHJB Web & Media</span>
+                <span>•</span>
+                <span>Saúde & Posicionamento de Autoridade</span>
+                <span>•</span>
+                <span>2024</span>
               </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase tracking-tight group-hover:text-zinc-200 transition">
+                Clínica Médica Integrativa • Dr. Lucas Carvalho
+              </h3>
+              <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed max-w-3xl">
+                Desenvolvimento de plataforma oficial e narrativa institucional conectando pacientes da Zona Sul do Rio de Janeiro à excelência em medicina integrativa.
+              </p>
             </div>
 
-            <h3 class="font-display text-2xl font-black text-[#080808] uppercase">Dra. Brenda Santos</h3>
-            <p class="text-xs text-[#008fe3] font-bold uppercase tracking-wider">Odontologia & Estética Orofacial</p>
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">Posicionamento premium para harmonização e odontologia com galeria de casos reais.</p>
-          </div>
+            <div class="lg:col-span-4 flex lg:justify-end">
+              <a href="/dr-lucas-carvalho-copacabana" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-black text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition duration-300">
+                <span>Ver Case Completo</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
 
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/dra-brenda-santos" class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Acessar Projeto ↗</span>
-            </a>
           </div>
         </div>
         
-        <div class="bg-white rounded-3xl p-7 border-2 border-black/5 hover:border-black/20 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="inline-block px-3 py-1 rounded-full bg-black/5 text-xs font-black uppercase tracking-wider text-[#080808]">
-                B2B & Engenharia
-              </span>
-              <div class="w-8 h-8 rounded-full bg-[#FAF8F5] group-hover:bg-[#080808] group-hover:text-white transition-colors flex items-center justify-center">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#141414] border border-subtle hover:border-white/30 transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <div class="lg:col-span-8 space-y-3">
+              <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                <span class="text-white">PHJB Web</span>
+                <span>•</span>
+                <span>Engenharia B2B & Relações Corporativas</span>
+                <span>•</span>
+                <span>2024</span>
               </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase tracking-tight group-hover:text-zinc-200 transition">
+                Anblick Engenharia • Infraestrutura & Conformidade
+              </h3>
+              <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed max-w-3xl">
+                Plataforma institucional de alta solidez técnica focada em projetos industriais, laudos NR-13 e conformidade para grandes complexos corporativos.
+              </p>
             </div>
 
-            <h3 class="font-display text-2xl font-black text-[#080808] uppercase">Anblick Engenharia</h3>
-            <p class="text-xs text-[#008fe3] font-bold uppercase tracking-wider">Engenharia Mecânica & Laudos NR</p>
-            <p class="text-xs text-[#64748B] leading-relaxed font-normal">Site corporativo B2B com foco em conformidade técnica, ART e laudos de segurança.</p>
-          </div>
+            <div class="lg:col-span-4 flex lg:justify-end">
+              <a href="/anblick-engenharia" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-black text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition duration-300">
+                <span>Ver Case Completo</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
 
-          <div class="pt-6 border-t border-black/5 mt-6">
-            <a href="/anblick-engenharia" class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-[#080808] group-hover:text-[#008fe3] transition">
-              <span>Acessar Projeto ↗</span>
-            </a>
+          </div>
+        </div>
+        
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#141414] border border-subtle hover:border-white/30 transition-all duration-300 group">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <div class="lg:col-span-8 space-y-3">
+              <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                <span class="text-white">PHJB Web & Vortex</span>
+                <span>•</span>
+                <span>Estética Avançada & Branding</span>
+                <span>•</span>
+                <span>2024</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl font-black text-white uppercase tracking-tight group-hover:text-zinc-200 transition">
+                Dra. Brenda Santos • Odontologia Estética
+              </h3>
+              <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed max-w-3xl">
+                Construção de ecossistema digital elegante com portfólio visual detalhado e captação de pacientes para procedimentos orofaciais de alto padrão.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 flex lg:justify-end">
+              <a href="/dra-brenda-santos" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white hover:text-black text-white px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition duration-300">
+                <span>Ver Case Completo</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
           </div>
         </div>
         
@@ -923,139 +638,250 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 6: PERGUNTAS FREQUENTES (FAQ) -->
-  <section id="faq" class="py-16 sm:py-24 bg-white border-t border-black/5">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+  <!-- Seção 5: Marcas & Clientes Atendidos -->
+  <section id="clientes" class="py-24 sm:py-36 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
       
-      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <span class="text-xs uppercase tracking-widest text-[#fbaa0c] font-black">Tire Suas Dúvidas</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-black uppercase text-[#080808]">
-          Perguntas Frequentes
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Confiança & Credibilidade</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+          Marcas que Confiam no Nosso Ecossistema
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base font-light">
+          Atendemos de líderes de mercado e marcas de consumo a profissionais de alta relevância e grandes operações corporativas.
+        </p>
+      </div>
+
+      <!-- Grid Institucional de Marcas -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">MANTECORP SKINCARE</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Dermocosméticos</span>
+        </div>
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">EPISOL COLOR</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Proteção Solar</span>
+        </div>
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">PIELUS FORTE</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Cuidado Capilar</span>
+        </div>
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">VORTEX PRODUÇÕES</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Entretenimento & Mídia</span>
+        </div>
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">ANBLICK ENGENHARIA</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Indústria & B2B</span>
+        </div>
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">INSTITUTO CARVALHO</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Saúde & Medicina</span>
+        </div>
+        
+        <div class="p-8 rounded-2xl bg-[#121212] border border-subtle flex flex-col items-center justify-center text-center space-y-2 hover:border-white/30 transition group">
+          <p class="font-display text-base sm:text-lg font-black text-white uppercase tracking-wider group-hover:scale-105 transition-transform">STUDIO BRENDA SANTOS</p>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Estética & Bem-Estar</span>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção 6: Valores Corporativos & Governança -->
+  <section id="valores" class="py-24 sm:py-36 bg-[#0E0E0E] border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      
+      <div class="max-w-2xl space-y-3">
+        <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Nossa Cultura</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+          Princípios que Guiam Nossas Ações
         </h2>
       </div>
 
-      <div class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <details class="group bg-[#FAF8F5] rounded-2xl border border-black/5 p-6 open:border-[#008fe3] transition">
-          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-black text-[#080808] uppercase tracking-wider">
-            <span>Posso contratar apenas um serviço ou preciso contratar o grupo todo?</span>
-            <span class="text-[#008fe3] group-open:rotate-180 transition-transform duration-300">
-              <i data-lucide="chevron-down" class="w-5 h-5"></i>
-            </span>
-          </summary>
-          <p class="text-xs text-[#64748B] mt-4 leading-relaxed pl-1 font-normal">
-            Você tem total liberdade! Todas as empresas do Grupo PHJB operam tanto de forma independente quanto integrada. Você pode contratar apenas o seu site, apenas a automação do WhatsApp ou o aluguel do estúdio. E caso queira o ecossistema completo, ganha uma condição especial de combo com até 35% de desconto e suporte único unificado.
-          </p>
-        </details>
+        <div class="space-y-4 border-t border-subtle pt-6">
+          <span class="font-display text-3xl font-black text-zinc-400 block">01</span>
+          <h4 class="font-display text-xl font-black text-white uppercase tracking-tight">Relevância Cultural & Comercial</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-light">Criamos ideias e produtos que não apenas geram cliques passageiros, mas constroem valor de marca consistente e duradouro no imaginário do público.</p>
+        </div>
         
-        <details class="group bg-[#FAF8F5] rounded-2xl border border-black/5 p-6 open:border-[#008fe3] transition">
-          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-black text-[#080808] uppercase tracking-wider">
-            <span>Como funciona o suporte sendo tudo de um único grupo?</span>
-            <span class="text-[#008fe3] group-open:rotate-180 transition-transform duration-300">
-              <i data-lucide="chevron-down" class="w-5 h-5"></i>
-            </span>
-          </summary>
-          <p class="text-xs text-[#64748B] mt-4 leading-relaxed pl-1 font-normal">
-            Essa é a maior vantagem para a sua empresa. Acabou o jogo de 'empurra-empurra' entre a pessoa do site, a do robô e a do tráfego. No Grupo PHJB você fala com um único gerente de conta que alinha todos os pilares para funcionarem em perfeita sincronia.
-          </p>
-        </details>
+        <div class="space-y-4 border-t border-subtle pt-6">
+          <span class="font-display text-3xl font-black text-zinc-400 block">02</span>
+          <h4 class="font-display text-xl font-black text-white uppercase tracking-tight">Engenharia de Precisão</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-light">Apoiamos nossa criatividade em arquitetura robusta de dados, inteligência artificial e código proprietário, garantindo estabilidade e velocidade incomparáveis.</p>
+        </div>
         
-        <details class="group bg-[#FAF8F5] rounded-2xl border border-black/5 p-6 open:border-[#008fe3] transition">
-          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-black text-[#080808] uppercase tracking-wider">
-            <span>Qual o prazo de implantação dos projetos?</span>
-            <span class="text-[#008fe3] group-open:rotate-180 transition-transform duration-300">
-              <i data-lucide="chevron-down" class="w-5 h-5"></i>
-            </span>
-          </summary>
-          <p class="text-xs text-[#64748B] mt-4 leading-relaxed pl-1 font-normal">
-            Trabalhamos com metodologia ágil. Sites e chatbots de IA são entregues e colocados no ar em média entre 48 horas e 5 dias úteis após a aprovação do briefing e materiais.
-          </p>
-        </details>
+        <div class="space-y-4 border-t border-subtle pt-6">
+          <span class="font-display text-3xl font-black text-zinc-400 block">03</span>
+          <h4 class="font-display text-xl font-black text-white uppercase tracking-tight">Independência & Agilidade</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-light">Por sermos um grupo 100% independente, tomamos decisões ágeis sem burocracias de holdings transnacionais engessadas, entregando inovação real no tempo do mercado.</p>
+        </div>
         
-        <details class="group bg-[#FAF8F5] rounded-2xl border border-black/5 p-6 open:border-[#008fe3] transition">
-          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-black text-[#080808] uppercase tracking-wider">
-            <span>Onde fica o estúdio do Grupo PHJB?</span>
-            <span class="text-[#008fe3] group-open:rotate-180 transition-transform duration-300">
-              <i data-lucide="chevron-down" class="w-5 h-5"></i>
-            </span>
-          </summary>
-          <p class="text-xs text-[#64748B] mt-4 leading-relaxed pl-1 font-normal">
-            Nosso estúdio físico da Vortex Audiovisual conta com infraestrutura completa de isolamento acústico, câmeras 4K e cenário modular, disponível para agendamento de gravações e sessões fotográficas.
-          </p>
-        </details>
+        <div class="space-y-4 border-t border-subtle pt-6">
+          <span class="font-display text-3xl font-black text-zinc-400 block">04</span>
+          <h4 class="font-display text-xl font-black text-white uppercase tracking-tight">Ética, Transparência & Governança</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed font-light">Conduzimos todas as relações com clientes, colaboradores e parceiros com integridade irrestrita, clareza contratual e rigor ético em todas as operações.</p>
+        </div>
         
       </div>
 
     </div>
   </section>
 
-  <!-- SEÇÃO 7: CTA FINAL AGÊNCIA IMPACTANTE -->
-  <section class="py-20 sm:py-28 bg-[#080808] text-white text-center relative overflow-hidden">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8 relative z-10">
+  <!-- Seção 7: Presença & Escritórios -->
+  <section id="presenca" class="py-24 sm:py-36 border-b border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
       
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#fbaa0c] text-xs font-black uppercase tracking-widest">
-        <i data-lucide="flame" class="w-4 h-4 fill-[#fbaa0c]"></i>
-        <span>Pronto para acelerar?</span>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-subtle pb-8">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Nossa Presença</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
+            Escritórios & Hubs de Operação
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base font-light">
+            Baseados nos dois maiores polos de negócios e cultura do país, com capacidade de atendimento nacional e internacional.
+          </p>
+        </div>
+        <div class="text-xs text-zinc-400 uppercase tracking-widest font-semibold">
+          São Paulo • Rio de Janeiro
+        </div>
       </div>
 
-      <h2 class="font-display text-3xl sm:text-6xl font-black uppercase tracking-tight leading-[1.08]">
-        Vamos construir a sua <br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#008fe3] via-[#fbaa0c] to-[#e90706]">Máquina de Vendas</span> juntos.
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#121212] border border-subtle space-y-4">
+          <div class="flex items-center gap-2 text-white">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+            <h3 class="font-display text-2xl font-black uppercase">São Paulo</h3>
+          </div>
+          <p class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Hub de Estratégia, Tecnologia & Novos Negócios</p>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">
+            Av. Brigadeiro Faria Lima, São Paulo - SP. Coordenação corporativa, engenharia de plataformas digitais e inteligência de mídia.
+          </p>
+        </div>
+
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#121212] border border-subtle space-y-4">
+          <div class="flex items-center gap-2 text-white">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+            <h3 class="font-display text-2xl font-black uppercase">Rio de Janeiro</h3>
+          </div>
+          <p class="text-xs uppercase tracking-wider text-zinc-400 font-bold">Hub de Produção Criativa & Estúdio Audiovisual</p>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">
+            Copacabana & Barra da Tijuca, Rio de Janeiro - RJ. Estúdio físico acústico próprio, set de filmagens, podcasts e pós-produção cinematográfica.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção 8: Contato Institucional / Novos Negócios -->
+  <section id="contato" class="py-24 sm:py-36 bg-[#0E0E0E] text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-10">
+      
+      <span class="text-xs uppercase tracking-widest text-zinc-400 font-black">Novos Negócios & Relações Corporativas</span>
+      
+      <h2 class="font-display text-3xl sm:text-6xl font-black uppercase tracking-tight leading-tight max-w-4xl mx-auto">
+        Vamos abrir uma conversa sobre o futuro da sua marca?
       </h2>
 
-      <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
-        Agende uma conversa estratégica com o time do Grupo PHJB. Entendemos seu momento de negócio e desenhamos o plano exato de tecnologia, IA e criatividade.
+      <p class="text-zinc-400 text-sm sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+        Seja para desenhar uma plataforma proprietária, implementar soluções de IA, produzir conteúdos cinematográficos ou acelerar sua presença digital, nosso time de liderança está à disposição.
       </p>
 
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener noreferrer"
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#fbaa0c] hover:bg-[#e09805] text-black px-9 py-4 rounded-full text-xs font-black uppercase tracking-widest shadow-2xl shadow-[#fbaa0c]/30 transition transform hover:-translate-y-0.5">
-          <i data-lucide="message-circle" class="w-5 h-5 fill-black"></i>
-          <span>Falar no WhatsApp com o Grupo PHJB</span>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20diretoria%20de%20Novos%20Neg%C3%B3cios%20do%20Grupo%20PHJB." target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white hover:bg-zinc-200 text-black px-9 py-4 rounded-full text-xs font-black uppercase tracking-widest transition duration-300">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
+          <span>Falar com Novos Negócios</span>
         </a>
 
-        <a href="#solucoes"
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white border border-white/10 px-7 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition">
-          <i data-lucide="eye" class="w-4 h-4 text-[#008fe3]"></i>
-          <span>Rever Soluções</span>
+        <a href="mailto:contato@grupophjb.com.br" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/20 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>contato@grupophjb.com.br</span>
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[#050505] text-zinc-500 py-12 text-xs border-t border-white/5 text-center">
-    <div class="max-w-6xl mx-auto px-4 space-y-4">
-      <div class="flex items-center justify-center gap-2">
-        <div class="w-8 h-8 rounded-xl bg-white text-black flex items-center justify-center font-black text-sm">
-          <span>P</span>
+  <!-- Rodapé Institucional -->
+  <footer class="bg-[#050505] text-zinc-500 py-16 text-xs border-t border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-subtle">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center font-black text-sm">
+            <span>P</span>
+          </div>
+          <div>
+            <span class="font-display text-lg font-black text-white uppercase">Grupo PHJB</span>
+            <p class="text-[10px] text-zinc-400 uppercase tracking-widest">PHJB Comunicação, Tecnologia & Participações</p>
+          </div>
         </div>
-        <p class="font-display text-xl font-black text-white uppercase tracking-wider">Grupo PHJB</p>
+
+        <div class="text-xs text-zinc-400">
+          São Paulo • Rio de Janeiro • Brasil
+        </div>
       </div>
 
-      <p class="text-zinc-400">
-        Holding e Ecossistema Digital: 
-        <strong class="text-white">PHJB Web</strong> (SeuSite) • 
-        <strong class="text-white">PHJB Bot</strong> (SeuBot IA) • 
-        <strong class="text-white">PHJB Studio</strong> (Vortex) • 
-        <strong class="text-white">PHJB Growth</strong>
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-zinc-400 text-xs">
+        <div>
+          <p class="font-bold text-white uppercase tracking-wider mb-2">Unidades de Negócio</p>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="/seusite" class="hover:text-white transition">PHJB Web (Plataformas)</a></li>
+            <li><a href="/seubot" class="hover:text-white transition">PHJB Intelligence (IA)</a></li>
+            <li><a href="/vortex-audiovisual" class="hover:text-white transition">Vortex Studio (Audiovisual)</a></li>
+            <li><a href="#contato" class="hover:text-white transition">PHJB Media & Performance</a></li>
+          </ul>
+        </div>
 
-      <p class="text-[11px] text-zinc-600 pt-2">
-        © 2026 PHJB Soluções Digitais & Criativas. Todos os direitos reservados.
-      </p>
+        <div>
+          <p class="font-bold text-white uppercase tracking-wider mb-2">O Grupo</p>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="#manifesto" class="hover:text-white transition">Manifesto & Força</a></li>
+            <li><a href="#cases" class="hover:text-white transition">Cases & Trabalhos</a></li>
+            <li><a href="#clientes" class="hover:text-white transition">Marcas Atendidas</a></li>
+            <li><a href="#valores" class="hover:text-white transition">Governança & Ética</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-bold text-white uppercase tracking-wider mb-2">Casos & Portfólio</p>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="/vortex-audiovisual" class="hover:text-white transition">Mantecorp Skincare</a></li>
+            <li><a href="/dr-lucas-carvalho-copacabana" class="hover:text-white transition">Dr. Lucas Carvalho</a></li>
+            <li><a href="/dra-brenda-santos" class="hover:text-white transition">Dra. Brenda Santos</a></li>
+            <li><a href="/anblick-engenharia" class="hover:text-white transition">Anblick Engenharia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-bold text-white uppercase tracking-wider mb-2">Contato Corporativo</p>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li>Novos Negócios: contato@grupophjb.com.br</li>
+            <li>Relações com a Imprensa: imprensa@grupophjb.com.br</li>
+            <li>Atendimento Executivo: +55 (11) 99999-9999</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-subtle flex flex-col sm:flex-row items-center justify-between text-[11px] text-zinc-400 gap-4">
+        <p>© 2026 PHJB Comunicação, Tecnologia & Participações. Todos os direitos reservados.</p>
+        <p>Holding Independente de Comunicação Integrada, Inteligência Artificial e Conteúdo.</p>
+      </div>
+
     </div>
   </footer>
-
-  <!-- WhatsApp Flutuante no Desktop -->
-  <div class="hidden md:flex fixed bottom-6 right-6 z-50 items-center gap-3">
-    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20time%20do%20Grupo%20PHJB%20sobre%20o%20ecossistema%20de%20solu%C3%A7%C3%B5es%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener noreferrer" 
-       class="w-14 h-14 bg-[#080808] hover:bg-[#008fe3] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/10"
-       aria-label="Falar no WhatsApp">
-      <i data-lucide="message-circle" class="w-7 h-7"></i>
-    </a>
-  </div>
 
   <script>
     lucide.createIcons();
