@@ -3,17 +3,17 @@
   "template": "chatbot-ia",
   "meta": {
     "title": "SeuBot | Atendimento Automático com IA no WhatsApp 24/7",
-    "description": "Automatize o WhatsApp da sua empresa com Inteligência Artificial. Atendimento imediato, triagem de leads, agendamento 24h e integração com o Grupo SeuSite.",
+    "description": "Automatize o WhatsApp da sua empresa com Inteligência Artificial. Atendimento imediato, triagem de leads, agendamento 24h e integração com o Grupo PHJB.",
     "keywords": "chatbot whatsapp, inteligencia artificial whatsapp, automacao de atendimento, seubot, chatbot para clinicas, chatbot para vendas"
   },
   "profile": {
     "name": "SeuBot",
-    "companyGroup": "Grupo SeuSite",
+    "companyGroup": "Grupo PHJB",
     "tagline": "Atendimento & Vendas no WhatsApp com IA 24/7",
     "headline": "Transforme seu WhatsApp em uma Máquina de Vendas 24h com Inteligência Artificial.",
     "subheadline": "Responda novos clientes em segundos, tire dúvidas complexas, qualifique leads e agende compromissos no automático — sem depender de atendentes humanos ou deixar clientes esperando.",
     "ctaText": "Criar Meu Bot no WhatsApp",
-    "badge": "IA para WhatsApp • Ecossistema Grupo SeuSite"
+    "badge": "IA para WhatsApp • Ecossistema Grupo PHJB"
   },
   "contact": {
     "whatsapp": "5511999999999",
@@ -82,7 +82,7 @@
     },
     {
       "icon": "layers",
-      "title": "Ecossistema Integrado Grupo SeuSite",
+      "title": "Ecossistema Integrado Grupo PHJB",
       "description": "Conecte o bot à sua landing page oficial, formulários e campanhas de anúncios para um funil de conversão sem pontas soltas."
     }
   ],
@@ -134,7 +134,7 @@
       "badge": "Mais Escolhido • Economia de 30%",
       "features": [
         "Chatbot IA no WhatsApp 24/7 com treinamento completo",
-        "Site Profissional Oficial pelo Grupo SeuSite incluso",
+        "Site Profissional Oficial pelo Grupo PHJB incluso",
         "Domínio próprio (.com.br) + Hospedagem ultrarrápida",
         "Integração do botão do site direto com a IA do WhatsApp",
         "Triagem de leads e agendamento automático",
@@ -165,7 +165,7 @@
       "answer": "Não! O SeuBot roda 100% em nossos servidores em nuvem de alta segurança. Seu atendimento continuará funcionando normalmente mesmo se seu telefone estiver desligado ou sem bateria."
     },
     {
-      "question": "Como funciona o Combo com o Grupo SeuSite?",
+      "question": "Como funciona o Combo com o Grupo PHJB?",
       "answer": "O SeuBot e o SeuSite fazem parte do mesmo ecossistema. Quando você contrata o combo, nós desenvolvemos seu site profissional e já entregamos o robô de WhatsApp 100% configurado e conectado à página. Você economiza mais de 30% no valor avulso e ganha uma máquina completa de captação e atendimento."
     },
     {
