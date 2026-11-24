@@ -2,161 +2,130 @@
   "id": "grupo-phjb",
   "template": "agencia-grupo",
   "meta": {
-    "title": "Grupo PHJB | Holding de Comunicação, Tecnologia & Produção Audiovisual",
-    "description": "Holding brasileira independente de comunicação integrada, tecnologia e inteligência criativa. Ecossistema composto por PHJB Web, PHJB Intelligence & AI, Vortex Studio e PHJB Media.",
-    "keywords": "grupo phjb, holding de comunicacao, agencia institucional, ecossistema criativo, inteligencia artificial, producao audiovisual, inovacao"
+    "title": "SeuSite & SeuBot | Agência Criativa de Sites & Inteligência Artificial no WhatsApp",
+    "description": "Agência digital especializada em criar presenças marcantes na web (SeuSite) e automações inteligentes com IA no WhatsApp 24/7 (SeuBot). Conheça nossos cases e projetos.",
+    "keywords": "seusite, seubot, agencia digital, criacao de sites, chatbot whatsapp ia, inteligencia artificial, landing page profissional"
   },
   "profile": {
-    "name": "Grupo PHJB",
-    "legalName": "PHJB Comunicação, Tecnologia & Participações",
-    "tagline": "Comunicação, Tecnologia & Negócios",
-    "headline": "Ideias que constroem legado. Tecnologia que transforma negócios.",
-    "subheadline": "O Grupo PHJB é uma holding independente de comunicação integrada, inteligência digital e produção de conteúdo. Unimos criatividade estratégica, dados e alta tecnologia para impulsionar o valor de marcas líderes.",
-    "badge": "Holding Independente de Comunicação & Tecnologia",
-    "establishedYear": "2020",
-    "locations": "São Paulo • Rio de Janeiro • Brasil"
+    "name": "SeuSite & SeuBot",
+    "studioName": "SeuSite Studio",
+    "tagline": "Sites Profissionais & Inteligência Artificial no WhatsApp",
+    "headline": "Criamos sites que convertem e robôs de IA que nunca dormem.",
+    "subheadline": "Unimos a autoridade de uma presença digital impecável (SeuSite) com a velocidade do atendimento instantâneo com Inteligência Artificial no WhatsApp (SeuBot).",
+    "locationBadge": "São Paulo • Brasil • Atendimento Nacional",
+    "badge": "Agência Criativa & Tecnologia de Vendas"
   },
   "contact": {
-    "email": "contato@grupophjb.com.br",
-    "pressEmail": "imprensa@grupophjb.com.br",
     "whatsapp": "5511999999999",
     "whatsappFormatted": "+55 (11) 99999-9999",
-    "whatsappMessage": "Olá! Gostaria de conversar com a diretoria de Novos Negócios do Grupo PHJB.",
-    "offices": [
-      {
-        "city": "São Paulo",
-        "role": "Hub de Estratégia, Tecnologia & Negócios",
-        "address": "Av. Brigadeiro Faria Lima, São Paulo - SP"
-      },
-      {
-        "city": "Rio de Janeiro",
-        "role": "Hub de Produção Criativa & Estúdio Audiovisual",
-        "address": "Copacabana & Barra da Tijuca, Rio de Janeiro - RJ"
-      }
-    ]
+    "whatsappMessage": "Olá! Gostaria de conversar com a equipe do SeuSite & SeuBot sobre um projeto para minha empresa.",
+    "email": "contato@seusite.com.br"
+  },
+  "theme": {
+    "blue": "#008fe3",
+    "yellow": "#fbaa0c",
+    "red": "#e90706",
+    "black": "#080808",
+    "canvas": "#FAF8F5"
   },
   "stats": [
-    { "value": "+700", "label": "Projetos e Campanhas Entregues" },
-    { "value": "4", "label": "Unidades Estratégicas de Negócio" },
-    { "value": "100%", "label": "Capital Independente Nacional" },
-    { "value": "+98%", "label": "Índice de Retenção & Satisfação" }
+    { "value": "+700", "label": "Projetos & Campanhas Entregues" },
+    { "value": "0s", "label": "Tempo de Resposta com IA no WhatsApp" },
+    { "value": "+180%", "label": "Aumento Médio em Conversão de Leads" },
+    { "value": "24/7", "label": "Atendimento Automático sem Parar" }
   ],
-  "manifesto": {
-    "title": "Nossa Força & Nosso Manifesto",
-    "quote": "Não acreditamos em silos ou departamentos isolados. Acreditamos na convergência entre criatividade humana inegociável e inteligência tecnológica de ponta.",
-    "p1": "O mercado tradicional de agências fragmentou-se em fornecedores desconectados: quem cuida da tecnologia não entende de narrativa; quem cria filmes não domina performance; quem analisa dados ignora a sensibilidade da marca.",
-    "p2": "O Grupo PHJB nasceu para quebrar essa ineficiência. Criamos uma estrutura corporativa fluida onde engenharia de software, modelos de IA, produção cinematográfica de estúdio e inteligência de mídia operam como um organismo único.",
-    "p3": "Construímos pontes entre marcas e seus públicos através de conversas memoráveis, soluções proprietárias e relevância cultural duradoura."
-  },
-  "ecosystem": [
+  "tickerBrands": [
+    { "name": "SEUSITE PRO" },
+    { "name": "SEUBOT IA" },
+    { "name": "VORTEX AUDIOVISUAL" },
+    { "name": "MANTECORP SKINCARE" },
+    { "name": "CLÍNICA COPACABANA" },
+    { "name": "ANBLICK ENGENHARIA" },
+    { "name": "DRA. BRENDA SANTOS" }
+  ],
+  "pillars": [
     {
-      "id": "phjb-web",
-      "brand": "PHJB Web",
-      "unit": "Digital Engineering & Platforms",
-      "description": "Engenharia de software, design de produto e arquitetura de plataformas web de alta velocidade e máxima conversão para marcas corporativas.",
+      "id": "seusite",
+      "brand": "SeuSite",
+      "tag": "Presença & Autoridade Web",
+      "title": "Sites & Landing Pages de Alta Performance",
+      "description": "Desenvolvimento sob medida de sites modernos, ultrarrápidos e otimizados para o Google (SEO). Páginas construídas para transmitir credibilidade e transformar visitantes em clientes qualificados.",
       "link": "/seusite",
-      "linkLabel": "Conhecer PHJB Web",
-      "capabilities": ["Plataformas Web Proprietárias", "Arquitetura Cloud & Alta Escalabilidade", "Otimização Orgânica Avançada (SEO)", "Experiência de Usuário (UX/UI)"]
+      "linkLabel": "Conhecer o SeuSite ↗",
+      "badgeColor": "#008fe3",
+      "features": [
+        "Carregamento ultrarrápido em menos de 1 segundo",
+        "Design responsivo com experiência perfeita no celular",
+        "Otimização para campanhas no Google e Meta Ads",
+        "Domínio próprio .com.br e infraestrutura em nuvem"
+      ]
     },
     {
-      "id": "phjb-intelligence",
-      "brand": "PHJB Intelligence",
-      "unit": "Artificial Intelligence & Conversational Tech",
-      "description": "Desenvolvimento de agentes de inteligência artificial generativa, automação conversacional para WhatsApp e soluções cognitivas de atendimento em tempo real.",
+      "id": "seubot",
+      "brand": "SeuBot",
+      "tag": "Atendimento & Automação com IA",
+      "title": "Inteligência Artificial 24/7 no WhatsApp",
+      "description": "Robô inteligente treinado com o catálogo, preços e regras da sua empresa. Atende no exato segundo em que o lead chama, tira dúvidas complexas, qualifica o perfil e agenda compromissos automaticamente.",
       "link": "/seubot",
-      "linkLabel": "Conhecer PHJB Intelligence",
-      "capabilities": ["Modelos LLM Treinados em Negócios", "Atendimento Conversacional 24/7", "Automação de Funis Comerciais", "Integrações Nativas de CRM"]
-    },
-    {
-      "id": "vortex-studio",
-      "brand": "Vortex Studio",
-      "unit": "Content & Audiovisual Lab",
-      "description": "Hub criativo de produção audiovisual de alto padrão cinematográfico, estúdio acústico próprio, videocasts, filmes publicitários e narrativa de marca.",
-      "link": "/vortex-audiovisual",
-      "linkLabel": "Conhecer Vortex Studio",
-      "capabilities": ["Estúdio Físico Profissional 4K", "Filmes Publicitários & Comerciais", "Podcasts & Conteúdo de Autoridade", "Pós-Produção & Color Grading"]
-    },
-    {
-      "id": "phjb-media",
-      "brand": "PHJB Media & Performance",
-      "unit": "Data Intelligence & Growth",
-      "description": "Planejamento estratégico de mídia digital, aquisição de demanda, análise preditiva de comportamento do consumidor e aceleração de receita.",
-      "link": "#contato",
-      "linkLabel": "Falar com Novos Negócios",
-      "capabilities": ["Gestão Estratégica de Mídia Paga", "Modelagem de Atribuição & Dados", "Testes Contínuos de Performance", "Expansão de Market Share"]
+      "linkLabel": "Testar Simulador do SeuBot ↗",
+      "badgeColor": "#fbaa0c",
+      "features": [
+        "Respostas naturais e instantâneas a qualquer hora do dia ou da noite",
+        "Triagem personalizada e agendamento direto na sua agenda",
+        "Transbordo inteligente para equipe humana em um clique",
+        "Hospedagem 100% em nuvem sem necessidade de PC ligado"
+      ]
     }
   ],
   "cases": [
     {
-      "title": "Mantecorp Skincare • Episol & Pielus",
-      "unit": "Vortex Studio",
-      "category": "Produção Audiovisual & Beauty Care",
-      "summary": "Direção criativa, produção de cena e criação de conteúdos audiovisuais de alta definição destacando a linha de dermocosméticos líderes de mercado.",
-      "link": "/vortex-audiovisual",
-      "year": "2024 / 2025"
+      "client": "Vortex Audiovisual",
+      "segment": "Audiovisual & Estúdio",
+      "description": "Landing page de alto impacto para produtora e aluguel de estúdio profissional, com cases de gravações de campanhas e podcasts.",
+      "tag": "Estúdio & Produção",
+      "link": "/vortex-audiovisual"
     },
     {
-      "title": "Ecossistema de IA Conversacional • SeuBot Labs",
-      "unit": "PHJB Intelligence",
-      "category": "Inteligência Artificial & Conversação",
-      "summary": "Implementação de infraestrutura em nuvem e agentes cognitivos com capacidade de resposta instantânea em zero segundos para qualificação em tempo real.",
-      "link": "/seubot",
-      "year": "2025 / 2026"
+      "client": "Dr. Lucas Carvalho",
+      "segment": "Medicina Integrativa • Copacabana",
+      "description": "Presença médica de alta autoridade na Zona Sul do Rio de Janeiro, com foco em agendamentos diretos e clareza de tratamentos.",
+      "tag": "Saúde & Medicina",
+      "link": "/dr-lucas-carvalho-copacabana"
     },
     {
-      "title": "Clínica Médica Integrativa • Dr. Lucas Carvalho",
-      "unit": "PHJB Web & Media",
-      "category": "Saúde & Posicionamento de Autoridade",
-      "summary": "Desenvolvimento de plataforma oficial e narrativa institucional conectando pacientes da Zona Sul do Rio de Janeiro à excelência em medicina integrativa.",
-      "link": "/dr-lucas-carvalho-copacabana",
-      "year": "2024"
+      "client": "Dra. Brenda Santos",
+      "segment": "Odontologia & Estética Orofacial",
+      "description": "Site elegante para harmonização e estética dental com galeria de transformações e canal direto no WhatsApp.",
+      "tag": "Estética & Beleza",
+      "link": "/dra-brenda-santos"
     },
     {
-      "title": "Anblick Engenharia • Infraestrutura & Conformidade",
-      "unit": "PHJB Web",
-      "category": "Engenharia B2B & Relações Corporativas",
-      "summary": "Plataforma institucional de alta solidez técnica focada em projetos industriais, laudos NR-13 e conformidade para grandes complexos corporativos.",
-      "link": "/anblick-engenharia",
-      "year": "2024"
+      "client": "Anblick Engenharia",
+      "segment": "Engenharia Mecânica & Laudos Técnicos",
+      "description": "Site corporativo B2B estruturado para grandes indústrias, com foco em laudos NR-13, ART e conformidade de equipamentos.",
+      "tag": "B2B & Engenharia",
+      "link": "/anblick-engenharia"
     },
     {
-      "title": "Dra. Brenda Santos • Odontologia Estética",
-      "unit": "PHJB Web & Vortex",
-      "category": "Estética Avançada & Branding",
-      "summary": "Construção de ecossistema digital elegante com portfólio visual detalhado e captação de pacientes para procedimentos orofaciais de alto padrão.",
-      "link": "/dra-brenda-santos",
-      "year": "2024"
+      "client": "SeuBot IA WhatsApp",
+      "segment": "Inteligência Artificial & Atendimento",
+      "description": "Plataforma interativa com simulador de WhatsApp ao vivo para demonstração de velocidade de resposta e triagem.",
+      "tag": "Tecnologia & IA",
+      "link": "/seubot"
     }
   ],
   "clientBrands": [
-    { "name": "MANTECORP SKINCARE", "segment": "Dermocosméticos" },
-    { "name": "EPISOL COLOR", "segment": "Proteção Solar" },
-    { "name": "PIELUS FORTE", "segment": "Cuidado Capilar" },
-    { "name": "VORTEX PRODUÇÕES", "segment": "Entretenimento & Mídia" },
-    { "name": "ANBLICK ENGENHARIA", "segment": "Indústria & B2B" },
-    { "name": "INSTITUTO CARVALHO", "segment": "Saúde & Medicina" },
-    { "name": "STUDIO BRENDA SANTOS", "segment": "Estética & Bem-Estar" }
+    { "name": "MANTECORP SKINCARE" },
+    { "name": "VORTEX AUDIOVISUAL" },
+    { "name": "CLÍNICA COPACABANA" },
+    { "name": "ANBLICK ENGENHARIA" },
+    { "name": "DRA. BRENDA SANTOS" },
+    { "name": "SEUBOT IA" }
   ],
-  "values": [
-    {
-      "num": "01",
-      "title": "Relevância Cultural & Comercial",
-      "desc": "Criamos ideias e produtos que não apenas geram cliques passageiros, mas constroem valor de marca consistente e duradouro no imaginário do público."
-    },
-    {
-      "num": "02",
-      "title": "Engenharia de Precisão",
-      "desc": "Apoiamos nossa criatividade em arquitetura robusta de dados, inteligência artificial e código proprietário, garantindo estabilidade e velocidade incomparáveis."
-    },
-    {
-      "num": "03",
-      "title": "Independência & Agilidade",
-      "desc": "Por sermos um grupo 100% independente, tomamos decisões ágeis sem burocracias de holdings transnacionais engessadas, entregando inovação real no tempo do mercado."
-    },
-    {
-      "num": "04",
-      "title": "Ética, Transparência & Governança",
-      "desc": "Conduzimos todas as relações com clientes, colaboradores e parceiros com integridade irrestrita, clareza contratual e rigor ético em todas as operações."
-    }
-  ]
+  "synergy": {
+    "title": "A Conexão Perfeita entre Site e Atendimento",
+    "description": "Quando você conecta um site profissional com atendimento inteligente no WhatsApp, você fecha o ciclo de vendas da sua empresa sem deixar clientes esperando.",
+    "step1": "O SeuSite gera credibilidade imediata no Google, apresenta seu trabalho e faz o visitante clicar.",
+    "step2": "O SeuBot recebe o cliente no WhatsApp em 0 segundos, responde dúvidas com IA e agenda o atendimento."
+  }
 }
