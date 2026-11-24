@@ -1,0 +1,182 @@
+{
+  "id": "seubot",
+  "template": "chatbot-ia",
+  "meta": {
+    "title": "SeuBot | Atendimento Automático com IA no WhatsApp 24/7",
+    "description": "Automatize o WhatsApp da sua empresa com Inteligência Artificial. Atendimento imediato, triagem de leads, agendamento 24h e integração com o Grupo SeuSite.",
+    "keywords": "chatbot whatsapp, inteligencia artificial whatsapp, automacao de atendimento, seubot, chatbot para clinicas, chatbot para vendas"
+  },
+  "profile": {
+    "name": "SeuBot",
+    "companyGroup": "Grupo SeuSite",
+    "tagline": "Atendimento & Vendas no WhatsApp com IA 24/7",
+    "headline": "Transforme seu WhatsApp em uma Máquina de Vendas 24h com Inteligência Artificial.",
+    "subheadline": "Responda novos clientes em segundos, tire dúvidas complexas, qualifique leads e agende compromissos no automático — sem depender de atendentes humanos ou deixar clientes esperando.",
+    "ctaText": "Criar Meu Bot no WhatsApp",
+    "badge": "IA para WhatsApp • Ecossistema Grupo SeuSite"
+  },
+  "contact": {
+    "whatsapp": "5511999999999",
+    "whatsappFormatted": "(11) 99999-9999",
+    "whatsappMessage": "Olá! Gostaria de saber mais sobre o SeuBot e como automatizar o WhatsApp da minha empresa.",
+    "whatsappComboMessage": "Olá! Tenho interesse no Combo SeuBot (Chatbot IA) + SeuSite (Página Oficial). Gostaria de ver uma demonstração.",
+    "sisterCompanyUrl": "https://seusite.seusite-agr-br.workers.dev",
+    "whatsappClean": "5511999999999",
+    "whatsappUrl": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20SeuBot%20e%20como%20automatizar%20o%20WhatsApp%20da%20minha%20empresa.",
+    "whatsappRentUrl": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20SeuBot%20e%20como%20automatizar%20o%20WhatsApp%20da%20minha%20empresa.",
+    "whatsappProductionUrl": "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20SeuBot%20e%20como%20automatizar%20o%20WhatsApp%20da%20minha%20empresa."
+  },
+  "theme": {
+    "primary": "#10B981",
+    "primaryDark": "#059669",
+    "accent": "#06B6D4",
+    "secondary": "#0B0F19",
+    "textMain": "#F8FAFC",
+    "textMuted": "#94A3B8"
+  },
+  "stats": [
+    {
+      "value": "0s",
+      "label": "Tempo de Resposta Imediato"
+    },
+    {
+      "value": "24/7",
+      "label": "Atendimento Dia, Noite e Feriados"
+    },
+    {
+      "value": "+42%",
+      "label": "Aumento Médio em Conversão de Leads"
+    },
+    {
+      "value": "100%",
+      "label": "Hospedagem em Nuvem sem PC Ligado"
+    }
+  ],
+  "features": [
+    {
+      "icon": "zap",
+      "title": "Atendimento Imediato em Segundos",
+      "description": "Acabe com a perda de clientes por demora. O SeuBot responde no exato segundo em que o lead chama no WhatsApp."
+    },
+    {
+      "icon": "brain",
+      "title": "IA Treinada no Seu Negócio",
+      "description": "Alimentamos o bot com seus preços, serviços, horários, catálogo e regras. Ele responde com naturalidade humana, sem parecer um robô engessado."
+    },
+    {
+      "icon": "calendar-check",
+      "title": "Triagem e Agendamento Automático",
+      "description": "Qualifica se o cliente tem perfil, coleta nome, cidade, necessidade e já agenda direto na sua agenda ou passa pro especialista."
+    },
+    {
+      "icon": "user-check",
+      "title": "Transbordo Humano Inteligente",
+      "description": "Sua equipe pode assumir a conversa a qualquer instante. A IA pausa automaticamente quando uma pessoa humana começa a digitar."
+    },
+    {
+      "icon": "cloud",
+      "title": "100% em Nuvem (Sem PC Ligado)",
+      "description": "Roda nos nossos servidores de alta disponibilidade. Você não precisa deixar celular nem computador conectado na tomada."
+    },
+    {
+      "icon": "layers",
+      "title": "Ecossistema Integrado Grupo SeuSite",
+      "description": "Conecte o bot à sua landing page oficial, formulários e campanhas de anúncios para um funil de conversão sem pontas soltas."
+    }
+  ],
+  "segments": [
+    {
+      "title": "Clínicas & Consultórios",
+      "subtitle": "Agendamento de consultas, confirmação de horários, dúvidas sobre convênios e localização.",
+      "tag": "Saúde & Estética"
+    },
+    {
+      "title": "Prestadores de Serviços",
+      "subtitle": "Orçamentos rápidos, coleta de requisitos de projetos e envio de portfólio instantâneo.",
+      "tag": "B2B & Serviços"
+    },
+    {
+      "title": "Imobiliárias & Corretores",
+      "subtitle": "Filtro de perfil de imóvel (compra/aluguel, bairro, faixa de preço) e envio de fotos.",
+      "tag": "Imóveis"
+    },
+    {
+      "title": "Infoprodutores & Cursos",
+      "subtitle": "Recuperação de carrinhos, dúvidas sobre módulos, links de pagamento e suporte a alunos.",
+      "tag": "Digital & Educação"
+    }
+  ],
+  "plans": [
+    {
+      "name": "Plano Start Bot",
+      "tagline": "Ideal para quem quer automatizar o WhatsApp",
+      "setupPrice": "597",
+      "monthlyPrice": "119",
+      "isFeatured": false,
+      "badge": "Atendimento Rápido",
+      "features": [
+        "Chatbot Inteligente no seu WhatsApp Oficial",
+        "IA treinada com as informações da sua empresa",
+        "Respostas ilimitadas 24 horas por dia",
+        "Transbordo para atendentes humanos",
+        "Hospedagem em nuvem inclusa sem PC ligado"
+      ],
+      "cta": "Contratar Apenas o Bot"
+    },
+    {
+      "name": "Combo Máquina de Vendas",
+      "tagline": "O ecossistema completo: Site Oficial + Atendimento IA",
+      "setupPrice": "897",
+      "monthlyPrice": "169",
+      "isFeatured": true,
+      "badge": "Mais Escolhido • Economia de 30%",
+      "features": [
+        "Chatbot IA no WhatsApp 24/7 com treinamento completo",
+        "Site Profissional Oficial pelo Grupo SeuSite incluso",
+        "Domínio próprio (.com.br) + Hospedagem ultrarrápida",
+        "Integração do botão do site direto com a IA do WhatsApp",
+        "Triagem de leads e agendamento automático",
+        "Suporte prioritário e manutenção técnica contínua"
+      ],
+      "cta": "Garantir o Combo com Desconto"
+    },
+    {
+      "name": "Combo Escala & CRM",
+      "tagline": "Para empresas que gerenciam grande volume de leads",
+      "setupPrice": "1.297",
+      "monthlyPrice": "249",
+      "isFeatured": false,
+      "badge": "Alta Performance",
+      "features": [
+        "Tudo do Combo Máquina de Vendas",
+        "Integração com CRM / Planilhas Google em tempo real",
+        "Múltiplos atendentes humanos no mesmo número",
+        "Disparo de lembretes e follow-ups automáticos",
+        "Relatórios semanais de conversão e conversas"
+      ],
+      "cta": "Falar com Consultor"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Preciso deixar meu computador ou celular ligados?",
+      "answer": "Não! O SeuBot roda 100% em nossos servidores em nuvem de alta segurança. Seu atendimento continuará funcionando normalmente mesmo se seu telefone estiver desligado ou sem bateria."
+    },
+    {
+      "question": "Como funciona o Combo com o Grupo SeuSite?",
+      "answer": "O SeuBot e o SeuSite fazem parte do mesmo ecossistema. Quando você contrata o combo, nós desenvolvemos seu site profissional e já entregamos o robô de WhatsApp 100% configurado e conectado à página. Você economiza mais de 30% no valor avulso e ganha uma máquina completa de captação e atendimento."
+    },
+    {
+      "question": "Posso atender manualmente quando quiser?",
+      "answer": "Sim! Você tem total controle. Assim que qualquer pessoa da sua equipe envia uma mensagem na conversa, o robô reconhece e entra em pausa automaticamente para não interferir na conversa humana."
+    },
+    {
+      "question": "O bot parece uma pessoa real ou aqueles menus chatos?",
+      "answer": "Nosso bot utiliza Inteligência Artificial generativa avançada. Ele entende áudio, responde com linguagem acolhedora e natural em português, tira dúvidas específicas e só direciona para agendamento quando o cliente estiver qualificado."
+    },
+    {
+      "question": "Quanto tempo demora para ficar pronto?",
+      "answer": "Após o preenchimento do formulário com as informações do seu negócio (horários, serviços e preços), colocamos o bot funcionando no seu WhatsApp em até 48 horas úteis."
+    }
+  ]
+}
